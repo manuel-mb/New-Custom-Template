@@ -39573,3 +39573,14 @@ node_modules/node-sass/vendor/darwin-x64-72/binding.node
 node_modules/normalize-package-data/node_modules/.bin/semver
 node_modules/tsconfig-paths/node_modules/.bin/json5
 package-lock.json
+node_modules/normalize.css/CHANGELOG.md
+node_modules/normalize.css/LICENSE.md
+node_modules/normalize.css/normalize.css
+node_modules/normalize.css/package.json
+node_modules/normalize.css/README.md
+node_modules/sass-mq/_mq.import.scss
+node_modules/sass-mq/_mq.scss
+node_modules/sass-mq/CHANGELOG.md
+node_modules/sass-mq/LICENSE.md
+node_modules/sass-mq/package.json
+node_modules/sass-mq/README.md

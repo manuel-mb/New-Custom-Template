@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <defs>
+        <radialGradient cx="50.276%" cy="49.2711096%" fx="50.276%" fy="49.2711096%" r="242.45%" gradientTransform="translate(0.502760,0.492711),scale(0.200000,1.000000),scale(1.000000,0.213446),translate(-0.502760,-0.492711)" id="radialGradient-1">
+            <stop stop-color="#020202" stop-opacity="0.5" offset="0%"/>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+    </defs>
+    <g id="opportunity2030-pin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <ellipse id="Oval" fill="url(#radialGradient-1)" fill-rule="nonzero" cx="5" cy="15" rx="5" ry="1"/>
+        <path d="M5,15 C4.88235294,15 0,7.95488824 0,4.51044379 C0,2.06599935 2.00048828,0 5,0 C7.99951172,0 10,1.95488824 10,4.51044379 C10,7.95488824 5.11764706,15 5,15 Z" id="Path" fill="#0756AF"/>
+    </g>
+</svg>
