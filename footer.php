@@ -11,7 +11,7 @@
 
 ?>
 
-	<<footer class="footer">
+<footer class="footer">
 	<h2 class="screen-reader-text"><?php esc_html_e( 'Site footer', 'Manuel' ); ?></h2>
 
 	<?php get_template_part( 'template-parts/footer-branding' ); ?>
@@ -26,7 +26,6 @@
 		</div>
 	</div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>
