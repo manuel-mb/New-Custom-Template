@@ -1,0 +1,47 @@
+/**
+ * Settings and overrides for the sass-mq mixin
+ *
+ * @package New Template\Theme.
+ */
+
+/**
+ * To enable support for browsers that do not support @media queries,
+ * (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+ * Create a separate stylesheet served exclusively to these browsers,
+ * meaning @media queries will be rasterized, relying on the cascade itself.
+ */
+$mq-responsive: true;
+
+/**
+ * Name your breakpoints in a way that creates a ubiquitous language
+ * across team members. It will improve communication between
+ * stakeholders, designers, developers, and testers.
+ *
+ * If the **large** value of 992 changes, it needs updating in
+ * global-navigation.js & logo-animation.js as well.
+ */
+
+$mq-breakpoints: (
+	small: 320px,
+	medium: 768px,
+	wpadmin: 783px,
+	large: 992px,
+	larger: 1024px, // this breakpoint is used in the design system for fonts only
+	content-large: 1140px, // Specific breakpoint to account for the width of the widest content container.
+	xlarge: 1440px
+);
+
+/**
+ * Define the breakpoint from the $mq-breakpoints list that should
+ * be used as the target width when outputting a static stylesheet
+ * (when $mq-responsive is set to 'false').
+ */
+$mq-static-breakpoint: large;
+
+/**
+ * If you want to display the currently active breakpoint in the top
+ * right corner of your site during development, add the breakpoints
+ * to this list, ordered by width. For example: (mobile, tablet, desktop).
+ */
+ 
+$mq-show-breakpoints: (small, medium, large, xlarge);
