@@ -1,2 +1,46 @@
-$size__site-main: 100%;
-$size__site-sidebar: 25%;
+/**
+ * Default Structure used throughout the theme.
+ *
+ * @package Manuel\Theme.
+*/
+
+/*
+ * Gutters and spacing
+*/
+
+$vertical-spacing: 16px;
+$vertical-spacing-double: 32px;
+
+$typography-margins: 15px;
+
+$container-gutter-xs: 16px;
+$container-gutter-xlg: 24px;
+
+/**
+ * 4. Container widths & layout
+ * 
+ */
+
+$content-width-mc-max-xlg: 1392px; 
+$content-width-mc-large: 1140px; 
+$content-width-mc-med: 945px; 
+$content-width-mc-sm: 750px;
+
+$content-width-mc-max-xs: 345px; 
+
+$content-width-mc-one-quarter: 263px; 
+$content-width-mc-one-third: 360px; 
+$content-width-mc-one-half: 555px; 
+
+$content-width-mc-faqs: 1100px; 
+$content-width-mc-article: 653px; 
+$content-width-mc-cookie-bar: 380px; 
+
+$eyebrow-mc-height: 26px;
+$header-container-mc-height: 108px;
+$header-mc-height: $header-container-height + $eyebrow-height;
+
+$logo-desktop-mc-height: 62px;
+$logo-desktop-mc-width: 157px;
+
+$border-radius-mc: 8px;
