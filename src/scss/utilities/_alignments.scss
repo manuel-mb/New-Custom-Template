@@ -1,27 +1,17 @@
+/**
+ * Default theme alignments.
+ *
+ * @package Manuel\Theme.
+ */
+
 .alignleft {
-
-	/*rtl:ignore*/
-	float: left;
-
-	/*rtl:ignore*/
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
+	@include align( left );
 }
 
 .alignright {
-
-	/*rtl:ignore*/
-	float: right;
-
-	/*rtl:ignore*/
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
+	@include align( right );
 }
 
 .aligncenter {
-	clear: both;
-
-	@include center-block;
-
-	margin-bottom: 1.5em;
+	@include align( center );
 }
