@@ -1,0 +1,20 @@
+/**
+ * Styles for the header.
+ *
+ * Also includes any other global styles set to adhere to brand guidelines
+ * if they do not have a specific place to live.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+
+.header-site-branding {
+    max-width: 143px;
+    height: 56px; // heights are needed for IE11.
+    margin: 2em 0;
+
+    @include mq( $from: medium ) {
+        max-width: 120px;
+        height: 47px;
+    }
+}
