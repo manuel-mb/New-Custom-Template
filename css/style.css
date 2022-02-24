@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/*!
+Theme Name: Manuel
+Theme URI: http://underscores.me/
+Author: Manuel Catena
+Author URI: http://www.manuelcatena.com
+Description: Template for MB
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: manuel
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Manuel is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/* Header
+--------------------------------------------- */
+/**
+ * Styles for the header.
+ *
+ * Also includes any other global styles set to adhere to brand guidelines
+ * if they do not have a specific place to live.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+.header-site-branding {
+  width: 143px;
+  height: 56px;
+  margin: 2em 0; }
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+/* Jetpack infinite scroll
+--------------------------------------------- */
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  display: none; }
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+/* Accessibility
+--------------------------------------------- */
+/**
+ * Accessibility styles.
+ *
+ * @package Manuel\Theme.
+ */
+/**
+ * Completely remove from the flow and screen readers.
+ */
+/* stylelint-disable selector-no-is-hidden, declaration-no-important */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/* stylelint-enable selector-no-is-hidden, declaration-no-important */
+/**
+ * Hide text from vision that is useful only for screen readers users.
+ * See https://make.wordpress.org/accessibility/handbook/best-practices/markup/the-css-class-screen-reader-text/
+ */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  /* stylelint-disable-line declaration-no-important */
+  width: 1px;
+  word-wrap: normal !important;
+  /* stylelint-disable-line declaration-no-important */ }
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    /* stylelint-disable-line declaration-no-important */
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: z-index(".screen-reader-text"); }
+
+/* Alignments
+--------------------------------------------- */
+/**
+ * Default theme alignments.
+ *
+ * @package Manuel\Theme.
+ */
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/**
+ * Import all utility stylesheets.
+ * This would usually include any functions, mixins, variables,
+ * custom properties and anything else that is needed globably across the theme.
+ *
+ * @package Manuel\Theme.
+ */
+/**
+ * Default Colours used throughout the theme.
+ *
+ * @package Manuel\Theme.
+ */
+/**
+ * Primary Colors
+*/
+/**
+ * Tints
+*/
+/**
+ * Shades
+*/
+/**
+ * Charts
+*/
+/**
+ * Gradients
+*/
+/**
+ * Greys
+*/
+/**
+ * Opacity Colors
+ */
+/**
+ * Elevation
+ */
+/**
+ * Text
+ */
+/**
+ * Default Structure used throughout the theme.
+ *
+ * @package Manuel\Theme.
+*/
+/*
+ * Gutters and spacing
+*/
+/**
+ * 4. Container widths & layout
+ * 
+ */
+/**
+ * Default Typography used throughout the theme.
+ *
+ * @package Manuel\Theme.
+*/
+/*
+ * Font weights are set using font families rather than actual weights.
+*/
+/*
+ * Font Sizes: Large Viewport (≥ 1024px)
+ * Variables are defined $font-size-mc-{viewport-size}-{text-type}-{text-size}
+*/
+/*
+ * Font Sizes: XS Viewport (≥ 320px)
+ * Variables are defined $font-size-{viewport-size}-{text-type}-{text-size}
+ */
+/*
+ * Line heights
+ * These are consistent across all breakpoints
+ */
+/**
+ * Settings and overrides for the sass-mq mixin
+ *
+ * @package New Template\Theme.
+ */
+/**
+ * To enable support for browsers that do not support @media queries,
+ * (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+ * Create a separate stylesheet served exclusively to these browsers,
+ * meaning @media queries will be rasterized, relying on the cascade itself.
+ */
+/**
+ * Name your breakpoints in a way that creates a ubiquitous language
+ * across team members. It will improve communication between
+ * stakeholders, designers, developers, and testers.
+ *
+ * If the **large** value of 992 changes, it needs updating in
+ * global-navigation.js & logo-animation.js as well.
+ */
+/**
+ * Define the breakpoint from the $mq-breakpoints list that should
+ * be used as the target width when outputting a static stylesheet
+ * (when $mq-responsive is set to 'false').
+ */
+/**
+ * If you want to display the currently active breakpoint in the top
+ * right corner of your site during development, add the breakpoints
+ * to this list, ordered by width. For example: (mobile, tablet, desktop).
+ */
+/**
+ * Default Mixed variables used throughout the theme.
+ *
+ * @package Manuel\Theme.
+*/
+/**
+ * Default colors
+ */
+/**
+ * Animation Duration
+ */
+/**
+ * Animation Easing
+ */
+/**
+* Encoding reference for SVG.
+*/
+/**
+ * SVG Drawings
+ */
+/**
+ * General SASS Functions.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+/**
+ * Generic clearfix helper.
+ *
+ * Usage: @include clearfix;
+ */
+/**
+ * Alignment
+ *
+ * Mixin to handle alignment in various directions. Handles mobile styles.
+ *
+ * @param  {string} $direction: left, right or center.
+ *
+ * Usage: @include align( left );
+ * Usage: @include align( right );
+ * Usage: @include align( center );
+ */
+/*
+ * For all those times we really don't need list styles!
+ */
+/*
+ * For all those times we actually want a button to look like a link!
+ */
+/*
+ * Reset link hover and active styles.
+ */
+/**
+ * General container mixin.
+ * Used in the header and footer.
+ *
+ * Expected Usage:
+ * @include container;
+ */
+/**
+ * Example mixin of link with directional arrow SVG.
+ *
+ * Expected Usage:
+ * @include link-arrow( left, blue );
+ *
+ * @param $direction String Determines whether the aroow points forwards or backwards.
+ * @param $colour String Determines the colour of the arrow. Note, hex colours don't work here.
+ */

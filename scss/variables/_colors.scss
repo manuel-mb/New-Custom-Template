@@ -63,7 +63,7 @@ $color-mc-graph-darker-green: #147165;
 
 $gradient-mc-blue-start: #2c3a88;
 $gradient-mc-blue-end: #0061cb;
-$gradient-mc-blue: linear-gradient( 90deg, $gradient-blue-start 0%, $gradient-blue-end 100% );
+$gradient-mc-blue: linear-gradient( 90deg, $gradient-mc-blue-start 0%, $gradient-mc-blue-end 100% );
 $gradient-mc-dark: linear-gradient( 90deg, rgba( 0, 0, 0, 0.8 ) 0%, rgba( 0, 0, 0, 1 ) 100% );
 
 /**

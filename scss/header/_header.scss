@@ -9,12 +9,7 @@
  */
 
 .header-site-branding {
-    max-width: 143px;
+    width: 143px;
     height: 56px; // heights are needed for IE11.
     margin: 2em 0;
-
-    @include mq( $from: medium ) {
-        max-width: 120px;
-        height: 47px;
-    }
 }

@@ -38,7 +38,7 @@ $content-width-mc-cookie-bar: 380px;
 
 $eyebrow-mc-height: 26px;
 $header-container-mc-height: 108px;
-$header-mc-height: $header-container-height + $eyebrow-height;
+$header-mc-height: $header-container-mc-height + $eyebrow-mc-height;
 
 $logo-desktop-mc-height: 62px;
 $logo-desktop-mc-width: 157px;
