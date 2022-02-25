@@ -1,0 +1,15 @@
+/**
+ * Styles for the footer.
+ *
+ * Also includes any other global styles set to adhere to brand guidelines
+ * if they do not have a specific place to live.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+
+.footer-site-branding {
+    width: 143px;
+    height: 56px; // heights are needed for IE11.
+    margin: 2em 0;
+}

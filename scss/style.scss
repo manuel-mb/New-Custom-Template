@@ -22,11 +22,21 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-
+/* Variables
+--------------------------------------------------------------*/
+@import "variables/index";
 
 /* Header
 --------------------------------------------- */
 @import "header/header";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/footer";
+
+/* Components
+--------------------------------------------- */
+@import "components/hero-home";
 
 /*--------------------------------------------------------------
 # Plugins
@@ -47,8 +57,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
-
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-@import "variables/index";

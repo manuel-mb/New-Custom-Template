@@ -1,0 +1,58 @@
+/**
+ * Styles for the Home Hero component.
+ *
+ * @package Manuel.
+ *
+ */
+
+ .hero-home-container {
+
+ 	background-color: $gradient-mc-blue;
+ 	padding: 0px 0px 96px 0px;
+ 	width: 1440px;
+ 	height: 746px;
+
+ 	.hero-home-title-container {
+
+ 		width: 535px;
+  		display: inline-block;
+		margin-right: 30px;
+  		position: relative;
+ 		top: 18px;
+
+ 		.hero-home-title-intro {
+ 			font-family: $font-family-mc-medium;
+			font-style: normal;
+			font-weight: normal;
+			font-size: $font-size-mc-lg-base;
+			line-height: $line-height-mc-h5;
+			color: $color-mc-white-70;
+ 		}
+
+ 		.hero-home-main-title {
+ 			font-family: $font-family-mc-medium;
+			font-style: normal;
+			font-weight: normal;
+			font-size: $font-size-mc-lg-h1;
+			line-height: $line-height-mc-h1;
+			margin: 0 0 64px;
+			color: $color-mc-white;
+
+			&::before {
+				content: "ª";
+				display: inline-block;
+				margin: 0;
+				color: $color-mc-blue;
+				position: absolute;
+				left: -41px;
+			}
+
+			&::after {
+				content: "º";
+				display: inline-block;
+				margin: 0;
+				color: $color-mc-green;
+			}
+ 		}
+ 	}
+ }

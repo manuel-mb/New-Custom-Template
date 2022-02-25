@@ -22,98 +22,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-/* Header
---------------------------------------------- */
-/**
- * Styles for the header.
- *
- * Also includes any other global styles set to adhere to brand guidelines
- * if they do not have a specific place to live.
- *
- * @package Manuel\Theme.
- *
- */
-.header-site-branding {
-  width: 143px;
-  height: 56px;
-  margin: 2em 0; }
-
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-/* Jetpack infinite scroll
---------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none; }
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-  display: block; }
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-/* Accessibility
---------------------------------------------- */
-/**
- * Accessibility styles.
- *
- * @package Manuel\Theme.
- */
-/**
- * Completely remove from the flow and screen readers.
- */
-/* stylelint-disable selector-no-is-hidden, declaration-no-important */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important; }
-
-/* stylelint-enable selector-no-is-hidden, declaration-no-important */
-/**
- * Hide text from vision that is useful only for screen readers users.
- * See https://make.wordpress.org/accessibility/handbook/best-practices/markup/the-css-class-screen-reader-text/
- */
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  /* stylelint-disable-line declaration-no-important */
-  width: 1px;
-  word-wrap: normal !important;
-  /* stylelint-disable-line declaration-no-important */ }
-  .screen-reader-text:focus {
-    background-color: #eee;
-    clip: auto !important;
-    /* stylelint-disable-line declaration-no-important */
-    clip-path: none;
-    color: #444;
-    display: block;
-    font-size: 1em;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: z-index(".screen-reader-text"); }
-
-/* Alignments
---------------------------------------------- */
-/**
- * Default theme alignments.
- *
- * @package Manuel\Theme.
- */
-/*--------------------------------------------------------------
-# Variables
+/* Variables
 --------------------------------------------------------------*/
 /**
  * Import all utility stylesheets.
@@ -281,4 +190,152 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  *
  * @param $direction String Determines whether the aroow points forwards or backwards.
  * @param $colour String Determines the colour of the arrow. Note, hex colours don't work here.
+ */
+/* Header
+--------------------------------------------- */
+/**
+ * Styles for the header.
+ *
+ * Also includes any other global styles set to adhere to brand guidelines
+ * if they do not have a specific place to live.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+.header-site-branding {
+  width: 143px;
+  height: 56px;
+  margin: 2em 0; }
+
+/* Footer
+--------------------------------------------- */
+/**
+ * Styles for the footer.
+ *
+ * Also includes any other global styles set to adhere to brand guidelines
+ * if they do not have a specific place to live.
+ *
+ * @package Manuel\Theme.
+ *
+ */
+.footer-site-branding {
+  width: 143px;
+  height: 56px;
+  margin: 2em 0; }
+
+/* Components
+--------------------------------------------- */
+/**
+ * Styles for the Home Hero component.
+ *
+ * @package Manuel.
+ *
+ */
+.hero-home-container .hero-home-title-container {
+  width: 535px;
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+  top: 18px; }
+  .hero-home-container .hero-home-title-container .hero-home-title-intro {
+    font-family: SC Prosper Sans Medium, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.7); }
+  .hero-home-container .hero-home-title-container .hero-home-main-title {
+    font-family: "SC Prosper Sans Medium", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 0 0 64px;
+    color: #ffffff .hero-home-container .hero-home-title-container .hero-home-main-title; }
+    .hero-home-container .hero-home-title-container .hero-home-main-title ::before {
+      content: "ª";
+      display: inline-block;
+      margin: 0;
+      color: #0473EA;
+      position: absolute;
+      left: -41px; }
+    .hero-home-container .hero-home-title-container .hero-home-main-title::after {
+      content: "º";
+      display: inline-block;
+      margin: 0;
+      color: #38D200; }
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+/* Jetpack infinite scroll
+--------------------------------------------- */
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  display: none; }
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+/* Accessibility
+--------------------------------------------- */
+/**
+ * Accessibility styles.
+ *
+ * @package Manuel\Theme.
+ */
+/**
+ * Completely remove from the flow and screen readers.
+ */
+/* stylelint-disable selector-no-is-hidden, declaration-no-important */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/* stylelint-enable selector-no-is-hidden, declaration-no-important */
+/**
+ * Hide text from vision that is useful only for screen readers users.
+ * See https://make.wordpress.org/accessibility/handbook/best-practices/markup/the-css-class-screen-reader-text/
+ */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  /* stylelint-disable-line declaration-no-important */
+  width: 1px;
+  word-wrap: normal !important;
+  /* stylelint-disable-line declaration-no-important */ }
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    /* stylelint-disable-line declaration-no-important */
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: z-index(".screen-reader-text"); }
+
+/* Alignments
+--------------------------------------------- */
+/**
+ * Default theme alignments.
+ *
+ * @package Manuel\Theme.
  */
