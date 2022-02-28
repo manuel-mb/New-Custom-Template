@@ -1,0 +1,66 @@
+/**
+ * Import the official SC font.
+ */
+
+@font-face {
+	font-family: "SC Prosper Sans Thin";
+	src: url( "../src/fonts/SCProsperSans-Thin.eot" );
+	src:
+		url( "../src/fonts/SCProsperSans-Thin.eot?#iefix" ) format( "embedded-opentype" ),
+		url( "../src/fonts/SCProsperSans-Thin.woff" ) format( "woff" ),
+		url( "../src/fonts/SCProsperSans-Thin.ttf" ) format( "truetype" );
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SC Prosper Sans Light";
+	src: url( "../src/fonts/SCProsperSans-Light.eot" );
+	src:
+		url( "../src/fonts/SCProsperSans-Light.eot?#iefix" ) format( "embedded-opentype" ),
+		url( "../src/fonts/SCProsperSans-Light.woff" ) format( "woff" ),
+		url( "../src/fonts/SCProsperSans-Light.ttf" ) format( "truetype" );
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SC Prosper Sans Regular";
+	src: url( "../fonts/SCProsperSans-Regular.eot" );
+	src:
+		url( "../src/fonts/SCProsperSans-Regular.eot?#iefix" ) format( "embedded-opentype" ),
+		url( "../src/fonts/SCProsperSans-Regular.woff2" ) format( "woff2" ),
+		url( "../src/fonts/SCProsperSans-Regular.woff" ) format( "woff" ),
+		url( "../src/fonts/SCProsperSans-Regular.ttf" ) format( "truetype" );
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SC Prosper Sans Medium";
+	src: url( "../src/fonts/SCProsperSans-Medium.eot" );
+	src:
+		url( "../src/fonts/SCProsperSans-Medium.eot?#iefix" ) format( "embedded-opentype" ),
+		url( "../src/fonts/SCProsperSans-Medium.woff2" ) format( "woff2" ),
+		url( "../src/fonts/SCProsperSans-Medium.woff" ) format( "woff" ),
+		url( "../src/fonts/SCProsperSans-Medium.ttf" ) format( "truetype" );
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SC Prosper Sans Bold";
+	src: url( "../src/fonts/SCProsperSans-Bold.eot" );
+	src:
+		url( "../src/fonts/SCProsperSans-Bold.eot?#iefix" ) format( "embedded-opentype" ),
+		url( "../src/fonts/SCProsperSans-Bold.woff2" ) format( "woff2" ),
+		url( "../src/fonts/SCProsperSans-Bold.woff" ) format( "woff" ),
+		url( "../src/fonts/SCProsperSans-Bold.ttf" ) format( "truetype" );
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

@@ -5,54 +5,70 @@
  *
  */
 
- .hero-home-container {
+ .home-hero-container {
+ 	
+ 	background: $gradient-mc-blue;
 
- 	background-color: $gradient-mc-blue;
- 	padding: 0px 0px 96px 0px;
- 	width: 1440px;
- 	height: 746px;
+	.hero-home-container {
 
- 	.hero-home-title-container {
+	 	padding: 96px 0px 96px 0px;
+	 	max-width: 1440px;
+	    margin: 0 auto;
+	    display: flex;
 
- 		width: 535px;
-  		display: inline-block;
-		margin-right: 30px;
-  		position: relative;
- 		top: 18px;
+	 	.hero-home-title-container {
 
- 		.hero-home-title-intro {
- 			font-family: $font-family-mc-medium;
-			font-style: normal;
-			font-weight: normal;
-			font-size: $font-size-mc-lg-base;
-			line-height: $line-height-mc-h5;
-			color: $color-mc-white-70;
- 		}
+	 		width: 535px;
+	  		display: inline-block;
+			margin-right: 30px;
+	  		position: relative;
+	 		top: 18px;
+		    margin-left: 136px;
 
- 		.hero-home-main-title {
- 			font-family: $font-family-mc-medium;
-			font-style: normal;
-			font-weight: normal;
-			font-size: $font-size-mc-lg-h1;
-			line-height: $line-height-mc-h1;
-			margin: 0 0 64px;
-			color: $color-mc-white;
+	 		.hero-home-title-intro {
+	 			font-family: $font-family-mc-medium;
+				font-style: normal;
+				font-weight: normal;
+				font-size: $font-size-mc-lg-base;
+				line-height: $line-height-mc-h5;
+				color: $color-mc-white-70;
+	 		}
 
-			&::before {
-				content: "ª";
-				display: inline-block;
-				margin: 0;
-				color: $color-mc-blue;
-				position: absolute;
-				left: -41px;
-			}
+	 		.hero-home-main-title {
+	 			font-family: $font-family-mc-medium;
+				font-style: normal;
+				font-weight: normal;
+				font-size: $font-size-mc-lg-h1;
+				line-height: $line-height-mc-h1;
+				margin: 0 0 64px;
+				color: $color-mc-white;
 
-			&::after {
-				content: "º";
-				display: inline-block;
-				margin: 0;
-				color: $color-mc-green;
-			}
- 		}
- 	}
- }
+				&::before {
+					content: "ª";
+					display: inline-block;
+					margin: 0;
+					color: $color-mc-blue;
+					position: absolute;
+					left: -41px;
+				}
+
+				&::after {
+					content: "º";
+					display: inline-block;
+					margin: 0;
+					color: $color-mc-green;
+				}
+	 		}
+	 	}
+
+	 	.image-hero-home-container{
+	 		margin-right: 88px;
+
+	 		img{
+	 			width: 778px;
+	 			max-height: 778px;
+	 			border-radius: 16px;
+	 		}
+	 	}
+	 }
+}
