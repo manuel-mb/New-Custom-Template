@@ -5,9 +5,206 @@
 */
 
 
-/* Button and Cta */
+/* Button and Cta 
+* 1. Home hero cta
+* 2. a.Primary b.Primary no Arrow
+* 3  a.Text Only b. Text Only no Arrow
+*
+*/
 
-.primary-dark-button {
+/* 1. Home Hero Cta */
+
+.primary-blue-button-home {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background:$color-mc-blue;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-white;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background:$color-mc-blue-darkest;
+        color: $color-mc-white;
+        text-decoration: underline;
+
+        &:after { 
+            color: $color-mc-white;  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'help'; 
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        color: $color-mc-white;
+    }
+}
+
+.primary-white-button-home {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background:$color-mc-white;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background:$color-mc-blue-darkest;
+        color: $color-mc-white;
+        text-decoration: underline;
+
+        &:after { 
+            color: $color-mc-white;  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'help';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga'; 
+        color: $color-mc-blue;  
+    }
+}
+
+/* 2. 
+* a.Primary Button
+*/ 
+
+.primary-blue-button {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background:$color-mc-blue;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-white;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background:$color-mc-blue-darkest;
+        color: $color-mc-white;
+        text-decoration: underline;
+
+        &:after { 
+            color: $color-mc-white;  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right'; 
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        color: $color-mc-white;
+    }
+}
+
+.primary-white-button {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background:$color-mc-white;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background:$color-mc-blue-darkest;
+        color: $color-mc-white;
+        text-decoration: underline;
+
+        &:after { 
+            color: $color-mc-white;  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga'; 
+        color: $color-mc-blue;  
+    }
+}
+
+/* b.Primary button no Arrow */
+
+.primary-blue-button-arrow {
     min-width: 180px;
     height: 51px;
     align-items: center;
@@ -16,28 +213,23 @@
     background:$color-mc-blue;
     border-style: none;
     border-color: transparent;
-
-    a {
-        color: $color-mc-white;
-        font-family: $font-family-mc-regular;
-        font-style: normal;
-        font-weight: 600;
-        font-size: $font-size-mc-lg-base;
-        line-height: $line-height-display-big;
-        text-decoration: none;
-    }
+    color: $color-mc-white;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
 
     &:hover {
-        text-decoration: underline;
         background:$color-mc-blue-darkest;
-    }
-    &:after {
-        content: "";
-        background-image: url('../src/images/white-arrow-right@2x.png')
+        color: $color-mc-white;
+        text-decoration: underline;
     }
 }
 
-.primary-white-button {
+.primary-white-button-no-arrow {
     min-width: 180px;
     height: 51px;
     align-items: center;
@@ -46,24 +238,186 @@
     background:$color-mc-white;
     border-style: none;
     border-color: transparent;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
 
-    a {
-        color: $color-mc-blue;
-        font-family: $font-family-mc-regular;
-        font-style: normal;
-        font-weight: 600;
-        font-size: $font-size-mc-lg-base;
-        line-height: $line-height-display-big;
-        text-decoration: none;
+    &:hover {
+        background:$color-mc-blue-darkest;
+        color: $color-mc-white;
+        text-decoration: underline;
     }
+}
+
+/* 3. 
+* a.Text only cta
+*/
+
+.text-only-blue-cta {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: tranparent;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
 
     &:hover {
         text-decoration: underline;
-        background:$color-mc-blue-darkest;
     }
 
     &:after {
-        content: "";
-        background-image: url('../src/images/blu-arrow-right@2x.png')
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right'; 
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        color: $color-mc-blue;
+    }
+}
+
+.text-only-white-cta {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-white;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga'; 
+        color: $color-mc-white;  
+    }
+}
+
+/* b. Text only cta no arrow */
+
+.text-only-blue-cta-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: tranparent;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.text-only-white-cta-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: $color-mc-white;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Button Circle  
+* add the class to a Div 
+*/
+
+.btn-circle-primary-blue {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: $color-mc-blue;
+    background-image: url(../src/images/forward.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-mc-blue-darkest;
+    }
+}
+
+.btn-circle-primary-white {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: $color-mc-white;
+    background-image: url(../src/images/backward-blue.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-mc-blue-darkest;
+        background-image: url(../src/images/backward.svg);
     }
 }

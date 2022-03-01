@@ -74,6 +74,40 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-style: normal;
   font-display: swap; }
 
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  src: url("../src/fonts/MaterialIcons-Regular.eot");
+  src: url("../src/fonts/MaterialIcons-Regular.eot?#iefix") format("embedded-opentype"), url("../src/fonts/MaterialIcons-Regular.woff2") format("woff2"), url("../src/fonts/MaterialIcons-Regular.woff") format("woff"), url("../src/fonts/MaterialIcons-Regular.ttf") format("truetype"), url("../src/fonts/MaterialIcons-Regular.svg#MaterialIcons-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+@font-face {
+  font-family: 'Material Icons Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/MaterialIcons-Round.woff2") format("woff2"), url("../src/fonts/MaterialIcons-Round.otf") format("truetype");
+  font-display: block; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased; }
+
+.stencil-numbers {
+  font-feature-settings: 'ss01' on, 'ss02' on; }
+
 /**
  * Default Colours used throughout the theme.
  *
@@ -245,8 +279,174 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  *
  * @package Manuel\Theme.
 */
-/* Button and Cta */
-.primary-dark-button {
+/* Button and Cta 
+* 1. Home hero cta
+* 2. a.Primary b.Primary no Arrow
+* 3  a.Text Only b. Text Only no Arrow
+*
+*/
+/* 1. Home Hero Cta */
+.primary-blue-button-home {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  padding: 12px 20px 12px 30px;
+  border-radius: 50px;
+  background: #0473EA;
+  border-style: none;
+  border-color: transparent;
+  color: #ffffff;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-blue-button-home:hover {
+    background: #061D33;
+    color: #ffffff;
+    text-decoration: underline; }
+    .primary-blue-button-home:hover:after {
+      color: #ffffff; }
+  .primary-blue-button-home:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'help';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #ffffff; }
+
+.primary-white-button-home {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  padding: 12px 20px 12px 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  border-style: none;
+  border-color: transparent;
+  color: #0473EA;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-white-button-home:hover {
+    background: #061D33;
+    color: #ffffff;
+    text-decoration: underline; }
+    .primary-white-button-home:hover:after {
+      color: #ffffff; }
+  .primary-white-button-home:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'help';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #0473EA; }
+
+/* 2. 
+* a.Primary Button
+*/
+.primary-blue-button {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  padding: 12px 20px 12px 30px;
+  border-radius: 50px;
+  background: #0473EA;
+  border-style: none;
+  border-color: transparent;
+  color: #ffffff;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-blue-button:hover {
+    background: #061D33;
+    color: #ffffff;
+    text-decoration: underline; }
+    .primary-blue-button:hover:after {
+      color: #ffffff; }
+  .primary-blue-button:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'chevron_right';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #ffffff; }
+
+.primary-white-button {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  padding: 12px 20px 12px 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  border-style: none;
+  border-color: transparent;
+  color: #0473EA;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-white-button:hover {
+    background: #061D33;
+    color: #ffffff;
+    text-decoration: underline; }
+    .primary-white-button:hover:after {
+      color: #ffffff; }
+  .primary-white-button:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'chevron_right';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #0473EA; }
+
+/* b.Primary button no Arrow */
+.primary-blue-button-arrow {
   min-width: 180px;
   height: 51px;
   align-items: center;
@@ -254,23 +454,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border-radius: 50px;
   background: #0473EA;
   border-style: none;
-  border-color: transparent; }
-  .primary-dark-button a {
+  border-color: transparent;
+  color: #ffffff;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-blue-button-arrow:hover {
+    background: #061D33;
     color: #ffffff;
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2;
-    text-decoration: none; }
-  .primary-dark-button:hover {
-    text-decoration: underline;
-    background: #061D33; }
-  .primary-dark-button:after {
-    content: "";
-    background-image: url("../src/images/white-arrow-right@2x.png"); }
+    text-decoration: underline; }
 
-.primary-white-button {
+.primary-white-button-no-arrow {
   min-width: 180px;
   height: 51px;
   align-items: center;
@@ -278,21 +476,162 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border-radius: 50px;
   background: #ffffff;
   border-style: none;
-  border-color: transparent; }
-  .primary-white-button a {
-    color: #0473EA;
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2;
-    text-decoration: none; }
-  .primary-white-button:hover {
-    text-decoration: underline;
-    background: #061D33; }
-  .primary-white-button:after {
-    content: "";
-    background-image: url("../src/images/blu-arrow-right@2x.png"); }
+  border-color: transparent;
+  color: #0473EA;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .primary-white-button-no-arrow:hover {
+    background: #061D33;
+    color: #ffffff;
+    text-decoration: underline; }
+
+/* 3. 
+* a.Text only cta
+*/
+.text-only-blue-cta {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  border-radius: 50px;
+  background: tranparent;
+  border-style: none;
+  border-color: transparent;
+  color: #0473EA;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .text-only-blue-cta:hover {
+    text-decoration: underline; }
+  .text-only-blue-cta:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'chevron_right';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #0473EA; }
+
+.text-only-white-cta {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  border-radius: 50px;
+  background: transparent;
+  border-style: none;
+  border-color: transparent;
+  color: #ffffff;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .text-only-white-cta:hover {
+    text-decoration: underline; }
+  .text-only-white-cta:after {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    top: 7px;
+    right: 6px;
+    background-image: none;
+    content: 'chevron_right';
+    font-weight: 300;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    font-feature-settings: 'liga';
+    color: #ffffff; }
+
+/* b. Text only cta no arrow */
+.text-only-blue-cta-no-arrow {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  padding: 12px 20px 12px 30px;
+  border-radius: 50px;
+  background: tranparent;
+  border-style: none;
+  border-color: transparent;
+  color: #0473EA;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .text-only-blue-cta-no-arrow:hover {
+    text-decoration: underline; }
+
+.text-only-white-cta-no-arrow {
+  min-width: 180px;
+  height: 51px;
+  align-items: center;
+  border-radius: 50px;
+  background: transparent;
+  border-style: none;
+  border-color: transparent;
+  color: #ffffff;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .3s; }
+  .text-only-white-cta-no-arrow:hover {
+    text-decoration: underline; }
+
+/* Button Circle  
+* add the class to a Div 
+*/
+.btn-circle-primary-blue {
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+  background-color: #0473EA;
+  background-image: url(../src/images/forward.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  transition: all .3s;
+  cursor: pointer; }
+  .btn-circle-primary-blue:hover {
+    background-color: #061D33; }
+
+.btn-circle-primary-white {
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  background-image: url(../src/images/backward-blue.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  transition: all .3s;
+  cursor: pointer; }
+  .btn-circle-primary-white:hover {
+    background-color: #061D33;
+    background-image: url(../src/images/backward.svg); }
 
 /* Header
 --------------------------------------------- */
@@ -347,7 +686,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin-right: 30px;
       position: relative;
       top: 18px;
-      margin-left: 136px; }
+      margin-left: 72px; }
       .home-hero-container .hero-home-container .hero-home-title-container .hero-home-title-intro {
         font-family: "SC Prosper Sans Medium", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
@@ -369,7 +708,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           margin: 0;
           color: #0473EA;
           position: absolute;
-          left: -41px; }
+          left: -15px; }
         .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::after {
           content: "º";
           display: inline-block;

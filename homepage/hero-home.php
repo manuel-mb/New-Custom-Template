@@ -12,9 +12,9 @@
 			</h1>
 
 			<?php if( get_sub_field('need_button') ) :?>
-				<button class="primary-white-button">
-			  		<a class="button-hero-home-content" href="<?php the_sub_field ( 'button_url'); ?>"><?php the_sub_field ( 'button_text' ); ?></a>
-			  	</button>
+				<div class="button-hero-home-content">
+			  		<a class="<?php the_sub_field('type_button'); ?>" href="<?php the_sub_field ( 'button_url'); ?>"><?php the_sub_field ( 'button_text' ); ?></a>
+			  	</div>
 			<?php endif; ?>
 
 		</div>

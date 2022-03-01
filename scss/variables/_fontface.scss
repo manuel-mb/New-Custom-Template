@@ -64,3 +64,47 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+/* fallback */
+@font-face {
+	font-family: 'Material Icons';
+	src: url("../src/fonts/MaterialIcons-Regular.eot");
+	src: url("../src/fonts/MaterialIcons-Regular.eot?#iefix") format("embedded-opentype"),
+	url("../src/fonts/MaterialIcons-Regular.woff2") format("woff2"),
+	url("../src/fonts/MaterialIcons-Regular.woff") format("woff"),
+	url("../src/fonts/MaterialIcons-Regular.ttf") format("truetype"),
+	url("../src/fonts/MaterialIcons-Regular.svg#MaterialIcons-Regular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Material Icons Round';
+	font-style: normal;
+	font-weight: 400;
+	src: url("../src/fonts/MaterialIcons-Round.woff2") format('woff2'),
+	url("../src/fonts/MaterialIcons-Round.otf") format("truetype");
+	font-display: block;
+}
+
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+
+.stencil-numbers {
+	font-feature-settings: 'ss01' on, 'ss02' on;
+}
