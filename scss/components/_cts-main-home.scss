@@ -1,0 +1,32 @@
+/**
+ * Styles for the Home CTA main component.
+ *
+ * @package Manuel.
+ *
+ */
+
+.home-main-cta-container {
+	max-width: 1440px;
+	height: 530px;
+	padding:  0 150px;
+
+	.home-cta-title {
+		font-family: $font-family-mc-regular;
+		font-style: normal;
+		font-weight: 500;
+		font-size: $font-size-mc-lg-h2;
+		line-height: $line-height-mc-h2;
+		font-feature-settings: 'ss01' on;
+		color:$color-mc-blue-dark;
+	}
+
+	.ctas-home-container {
+		display: flex;
+		justify-content: center;
+
+		.card-link-image {
+			margin-right: 30px;
+			flex:1;
+		}
+	}
+}

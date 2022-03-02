@@ -282,8 +282,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Button and Cta 
 * 1. Home hero cta
 * 2. a.Primary b.Primary no Arrow
-* 3  a.Text Only b. Text Only no Arrow
-*
+* 3. a.Text Only  b.Text Only no Arrow
+* 4. Circle carousel buttons 
+* 5. Content Chip  
 */
 /* 1. Home Hero Cta */
 .primary-blue-button-home {
@@ -308,22 +309,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #ffffff;
     text-decoration: underline; }
     .primary-blue-button-home:hover:after {
-      color: #ffffff; }
+      background-image: url(../src/images/question-mark.svg); }
   .primary-blue-button-home:after {
     display: inline-block;
     position: relative;
     width: 50px;
     height: 100%;
-    text-align: center;
-    top: 7px;
-    right: 6px;
-    background-image: none;
-    content: 'help';
-    font-weight: 300;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    font-feature-settings: 'liga';
-    color: #ffffff; }
+    top: 4px;
+    right: -5px;
+    background-image: url(../src/images/question-mark-white.svg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 18px;
+    width: 50px;
+    height: 18px; }
 
 .primary-white-button-home {
   min-width: 180px;
@@ -347,22 +346,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #ffffff;
     text-decoration: underline; }
     .primary-white-button-home:hover:after {
-      color: #ffffff; }
+      background-image: url(../src/images/question-mark-white.svg); }
   .primary-white-button-home:after {
     display: inline-block;
     position: relative;
     width: 50px;
     height: 100%;
-    text-align: center;
-    top: 7px;
-    right: 6px;
-    background-image: none;
-    content: 'help';
-    font-weight: 300;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    font-feature-settings: 'liga';
-    color: #0473EA; }
+    top: 4px;
+    right: -5px;
+    background-image: url(../src/images/question-mark.svg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 18px;
+    width: 50px;
+    height: 18px; }
 
 /* 2. 
 * a.Primary Button
@@ -498,19 +495,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   height: 51px;
   align-items: center;
   border-radius: 50px;
-  background: tranparent;
+  background: transparent;
   border-style: none;
   border-color: transparent;
-  color: #0473EA;
-  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.2;
-  text-decoration: none;
   transition: all .3s; }
-  .text-only-blue-cta:hover {
-    text-decoration: underline; }
+  .text-only-blue-cta a {
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none; }
+    .text-only-blue-cta a:hover {
+      text-decoration: underline; }
   .text-only-blue-cta:after {
     display: inline-block;
     position: relative;
@@ -604,7 +602,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Button Circle  
 * add the class to a Div 
 */
-.btn-circle-primary-blue {
+.btn-circle-forward-blue {
   width: 51px;
   height: 51px;
   border-radius: 100%;
@@ -615,10 +613,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-position-y: center;
   transition: all .3s;
   cursor: pointer; }
-  .btn-circle-primary-blue:hover {
+  .btn-circle-forward-blue:hover {
     background-color: #061D33; }
 
-.btn-circle-primary-white {
+.btn-circle-backward-blue {
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+  background-color: #0473EA;
+  background-image: url(../src/images/backward.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  transition: all .3s;
+  cursor: pointer; }
+  .btn-circle-backward-blue:hover {
+    background-color: #061D33; }
+
+.btn-circle-forward-white {
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  background-image: url(../src/images/forward-blue.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  transition: all .3s;
+  cursor: pointer; }
+  .btn-circle-forward-white:hover {
+    background-color: #061D33;
+    background-image: url(../src/images/forward.svg); }
+
+.btn-circle-backward-white {
   width: 51px;
   height: 51px;
   border-radius: 100%;
@@ -629,9 +656,96 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-position-y: center;
   transition: all .3s;
   cursor: pointer; }
-  .btn-circle-primary-white:hover {
+  .btn-circle-backward-white:hover {
     background-color: #061D33;
     background-image: url(../src/images/backward.svg); }
+
+/* Content Chip  
+*  Used most for taxonomies
+*/
+.content-chip {
+  padding: 4px 8px;
+  height: 26px;
+  background: #EBFAE5;
+  border-radius: 14px;
+  margin-right: 8px;
+  min-width: 49px;
+  text-align: center;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1B6600;
+  text-decoration: none;
+  transition: all .3s;
+  cursor: pointer; }
+  .content-chip:hover {
+    background: #061D33;
+    color: #ffffff; }
+    .content-chip:hover a {
+      color: #ffffff; }
+
+.content-chip-video {
+  padding: 4px 8px;
+  height: 26px;
+  background: #E7F1FD;
+  border-radius: 14px;
+  margin-right: 8px;
+  min-width: 49px;
+  text-align: center;
+  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #0473EA;
+  text-decoration: none;
+  transition: all .3s;
+  cursor: pointer; }
+  .content-chip-video a {
+    color: #0473EA; }
+    .content-chip-video a:before {
+      background-image: url(../src/images/play-circle-fill.svg);
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 13px;
+      width: 13px;
+      height: 13px;
+      float: left;
+      margin-top: 6px;
+      margin-right: 3px; }
+  .content-chip-video:hover {
+    background: #061D33;
+    color: #ffffff; }
+    .content-chip-video:hover a {
+      color: #ffffff; }
+      .content-chip-video:hover a:before {
+        background-image: url(../src/images/play-circle-fill-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 13px;
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin-top: 6px;
+        margin-right: 3px; }
+
+/**
+ * Style for Card link Block.
+ *
+ * @package Manuel\Theme.
+*/
+.card-link-image {
+  display: flex;
+  min-width: 360px;
+  height: 96px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+  border-radius: 16px; }
+  .card-link-image .card-link-img-container {
+    width: 96px;
+    object-fit: contain; }
 
 /* Header
 --------------------------------------------- */
@@ -667,6 +781,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Components
 --------------------------------------------- */
+/**
+ * Import all compnents stylesheets.
+ *
+ * @package Manuel\Theme.
+ */
 /**
  * Styles for the Home Hero component.
  *
@@ -720,6 +839,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         width: 778px;
         max-height: 778px;
         border-radius: 16px; }
+
+/**
+ * Styles for the Home CTA main component.
+ *
+ * @package Manuel.
+ *
+ */
+.home-main-cta-container {
+  max-width: 1440px;
+  height: 530px;
+  padding: 0 150px; }
+  .home-main-cta-container .home-cta-title {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.2;
+    font-feature-settings: 'ss01' on;
+    color: #0B56A8; }
+  .home-main-cta-container .ctas-home-container {
+    display: flex;
+    justify-content: center; }
+    .home-main-cta-container .ctas-home-container .card-link-image {
+      margin-right: 30px;
+      flex: 1; }
 
 /*--------------------------------------------------------------
 # Plugins

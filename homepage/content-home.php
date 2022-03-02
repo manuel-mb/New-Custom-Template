@@ -13,8 +13,8 @@
             if( get_row_layout() == 'hero_home' )
             get_template_part('homepage/hero', 'home');
 
-        	if( get_row_layout() == 'home_what_we_do' )
-            get_template_part('homepage/home', 'wwd');
+        	if( get_row_layout() == 'main_cta_home' )
+            get_template_part('homepage/main-cta', 'home');
 
         endwhile; 
     endif;

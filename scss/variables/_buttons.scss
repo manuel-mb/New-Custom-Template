@@ -8,8 +8,9 @@
 /* Button and Cta 
 * 1. Home hero cta
 * 2. a.Primary b.Primary no Arrow
-* 3  a.Text Only b. Text Only no Arrow
-*
+* 3. a.Text Only  b.Text Only no Arrow
+* 4. Circle carousel buttons 
+* 5. Content Chip  
 */
 
 /* 1. Home Hero Cta */
@@ -38,7 +39,7 @@
         text-decoration: underline;
 
         &:after { 
-            color: $color-mc-white;  
+            background-image: url(../src/images/question-mark.svg);  
         }
     }
 
@@ -47,16 +48,14 @@
         position: relative;
         width: 50px;
         height: 100%;
-        text-align: center;
-        top: 7px;
-        right: 6px;
-        background-image: none;
-        content: 'help'; 
-        font-weight: 300;
-        font-family: 'Material Icons';
-        font-size: 1.5rem;
-        font-feature-settings: 'liga';
-        color: $color-mc-white;
+        top: 4px;
+        right: -5px;
+        background-image: url(../src/images/question-mark-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        width: 50px;
+        height: 18px;
     }
 }
 
@@ -84,7 +83,7 @@
         text-decoration: underline;
 
         &:after { 
-            color: $color-mc-white;  
+            background-image: url(../src/images/question-mark-white.svg);
         }
     }
 
@@ -93,16 +92,14 @@
         position: relative;
         width: 50px;
         height: 100%;
-        text-align: center;
-        top: 7px;
-        right: 6px;
-        background-image: none;
-        content: 'help';
-        font-weight: 300;
-        font-family: 'Material Icons';
-        font-size: 1.5rem;
-        font-feature-settings: 'liga'; 
-        color: $color-mc-blue;  
+        top: 4px;
+        right: -5px;
+        background-image: url(../src/images/question-mark.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        width: 50px;
+        height: 18px;  
     }
 }
 
@@ -263,20 +260,23 @@
     height: 51px;
     align-items: center;
     border-radius: 50px;
-    background: tranparent;
+    background: transparent;
     border-style: none;
     border-color: transparent;
-    color: $color-mc-blue;
-    font-family: $font-family-mc-regular;
-    font-style: normal;
-    font-weight: 600;
-    font-size: $font-size-mc-lg-base;
-    line-height: $line-height-display-big;
-    text-decoration: none;
     transition: all .3s;
 
-    &:hover {
-        text-decoration: underline;
+    a{
+        color: $color-mc-blue;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-mc-lg-base;
+        line-height: $line-height-display-big;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &:after {
@@ -387,7 +387,7 @@
 * add the class to a Div 
 */
 
-.btn-circle-primary-blue {
+.btn-circle-forward-blue {
     width: 51px;
     height: 51px;
     border-radius: 100%;
@@ -404,7 +404,42 @@
     }
 }
 
-.btn-circle-primary-white {
+.btn-circle-backward-blue {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: $color-mc-blue;
+    background-image: url(../src/images/backward.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-mc-blue-darkest;
+    }
+}
+
+.btn-circle-forward-white {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: $color-mc-white;
+    background-image: url(../src/images/forward-blue.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-mc-blue-darkest;
+        background-image: url(../src/images/forward.svg);
+    }
+}
+
+.btn-circle-backward-white {
     width: 51px;
     height: 51px;
     border-radius: 100%;
@@ -419,5 +454,93 @@
     &:hover {
         background-color: $color-mc-blue-darkest;
         background-image: url(../src/images/backward.svg);
+    }
+}
+
+/* Content Chip  
+*  Used most for taxonomies
+*/
+
+.content-chip {
+    padding: 4px 8px;
+    height: 26px;
+    background: $color-mc-green-lightest;
+    border-radius: 14px;
+    margin-right: 8px;
+    min-width: 49px;
+    text-align: center;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size-mc-lg-body-xs;
+    line-height: $line-height-mc-body-xs;
+    color: $color-mc-green-darker;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-mc-blue-darkest;
+        color: $color-mc-white;
+
+        a {
+            color: $color-mc-white;
+        }
+    }
+}
+
+.content-chip-video {
+    padding: 4px 8px;
+    height: 26px;
+    background: $color-mc-blue-lightest;
+    border-radius: 14px;
+    margin-right: 8px;
+    min-width: 49px;
+    text-align: center;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size-mc-lg-body-xs;
+    line-height: $line-height-mc-body-xs;
+    color: $color-mc-blue;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+
+    a {
+        color: $color-mc-blue; 
+
+        &:before {
+            background-image: url(../src/images/play-circle-fill.svg);
+            content:'' ;
+            background-repeat: no-repeat;
+            background-size: 13px;
+            width: 13px;
+            height: 13px;
+            float: left;
+            margin-top: 6px;
+            margin-right: 3px;
+        }
+    }
+    
+    &:hover {
+        background: $color-mc-blue-darkest;
+        color: $color-mc-white;
+
+        a {
+            color: $color-mc-white;
+
+            &:before {
+                background-image: url(../src/images/play-circle-fill-white.svg);
+                content:'' ;
+                background-repeat: no-repeat;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                float: left;
+                margin-top: 6px;
+                margin-right: 3px;
+            }
+        }
     }
 }
