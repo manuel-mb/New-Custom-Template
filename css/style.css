@@ -745,7 +745,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border-radius: 16px; }
   .card-link-image .card-link-img-container {
     width: 96px;
-    object-fit: contain; }
+    background-size: cover;
+    border-radius: 16px 0 0 16px; }
+  .card-link-image .text-only-blue-cta {
+    position: relative;
+    top: 20px;
+    margin-left: 12px; }
+    .card-link-image .text-only-blue-cta:after {
+      margin-left: 25px; }
 
 /* Header
 --------------------------------------------- */
@@ -850,17 +857,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   max-width: 1440px;
   height: 530px;
   padding: 0 150px; }
-  .home-main-cta-container .home-cta-title {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 44px;
-    line-height: 1.2;
-    font-feature-settings: 'ss01' on;
-    color: #0B56A8; }
+  .home-main-cta-container .home-cta-title-container {
+    margin-bottom: 32px; }
+    .home-main-cta-container .home-cta-title-container .home-cta-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 1.2;
+      font-feature-settings: 'ss01' on;
+      color: #0B56A8; }
   .home-main-cta-container .ctas-home-container {
     display: flex;
-    justify-content: center; }
+    justify-content: flex-start; }
     .home-main-cta-container .ctas-home-container .card-link-image {
       margin-right: 30px;
       flex: 1; }

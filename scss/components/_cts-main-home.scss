@@ -10,19 +10,23 @@
 	height: 530px;
 	padding:  0 150px;
 
-	.home-cta-title {
-		font-family: $font-family-mc-regular;
-		font-style: normal;
-		font-weight: 500;
-		font-size: $font-size-mc-lg-h2;
-		line-height: $line-height-mc-h2;
-		font-feature-settings: 'ss01' on;
-		color:$color-mc-blue-dark;
-	}
+	.home-cta-title-container {
+		margin-bottom: 32px;
+
+		.home-cta-title {
+			font-family: $font-family-mc-regular;
+			font-style: normal;
+			font-weight: 500;
+			font-size: $font-size-mc-lg-h2;
+			line-height: $line-height-mc-h2;
+			font-feature-settings: 'ss01' on;
+			color:$color-mc-blue-dark;
+		}
+	}	
 
 	.ctas-home-container {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 
 		.card-link-image {
 			margin-right: 30px;

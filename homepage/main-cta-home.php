@@ -15,8 +15,7 @@
 
 					<div class="card-link-image">
 
-						<div class="card-link-img-container">
-							<img src="<?php the_sub_field('img'); ?>">
+						<div class="card-link-img-container" style="background-image:url('<?php the_sub_field('img'); ?>');" >
 						</div>
 
 						<div class="text-only-blue-cta">

@@ -14,7 +14,8 @@
 
     .card-link-img-container {
         width: 96px;
-        object-fit: contain;
+        background-size: cover;
+        border-radius: 16px 0 0 16px;
     }
     .text-only-blue-cta {
         position: relative;
