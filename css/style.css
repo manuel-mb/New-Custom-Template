@@ -874,6 +874,105 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin-right: 30px;
       flex: 1; }
 
+.hero-text-only-container {
+  margin-top: 96px;
+  background: linear-gradient(90deg, #2c3a88 0%, #0061cb 100%); }
+  .hero-text-only-container .hero-text-only-title-container {
+    padding: 96px 0px 96px 0px;
+    max-width: 1440px;
+    margin: 0 auto; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.2;
+      margin: 16px 0px;
+      position: relative;
+      left: 96px;
+      color: rgba(255, 255, 255, 0.7); }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 86px;
+      line-height: 1.2;
+      margin: 0 0 64px;
+      position: relative;
+      left: 96px;
+      width: 890px;
+      color: #ffffff; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 0px auto;
+      width: 754px;
+      text-align: left;
+      color: #ffffff; }
+
+.two-columns-hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly; }
+  .two-columns-hero-container .hero-two-columns-title-container {
+    width: 458px;
+    margin: 121px 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+      text-align: left;
+      margin-bottom: 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #666666;
+      opacity: 0.5;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+      font-size: 55px;
+      line-height: 66px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 16px;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #525355; }
+    .two-columns-hero-container .hero-two-columns-title-container .button-hero-two-columns-content {
+      margin-top: 16px; }
+
+.image-hero-two-columns-container {
+  display: inline-block;
+  width: 555px;
+  height: 555px;
+  background-color: #CDF4BF;
+  border-radius: 16px; }
+  .image-hero-two-columns-container img {
+    width: 555px;
+    height: 312px;
+    border-radius: 16px;
+    position: relative;
+    top: 121px;
+    right: 64px; }
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
