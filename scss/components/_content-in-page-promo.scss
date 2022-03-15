@@ -1,0 +1,31 @@
+.content-in-page-promo-container {
+    width: 1392px;
+    height: 783px;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px auto;
+
+  .content-in-page-promo {
+    height: 163px;
+    width: 555px;
+    background-color: #fff;
+    box-shadow: $box-shadow-mc-grey2;
+    border-radius: 16px;
+    position: relative;
+    padding: 24px;
+    top: 520px;
+    margin-left: 64px;
+    margin-bottom: 64px;
+
+    .content-in-page-promo-content {
+      width: 507px;
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      margin: 8px 0px 16px;
+    }
+  }
+}

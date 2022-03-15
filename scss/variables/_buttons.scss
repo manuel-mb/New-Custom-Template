@@ -201,7 +201,7 @@
 
 /* b.Primary button no Arrow */
 
-.primary-blue-button-arrow {
+.primary-blue-button-no-arrow {
     min-width: 180px;
     height: 51px;
     align-items: center;
@@ -264,8 +264,19 @@
     border-style: none;
     border-color: transparent;
     transition: all .3s;
+    color: $color-mc-blue;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-display-big;
+    text-decoration: none;
 
-    a{
+    &:hover {
+        text-decoration: underline;
+    }
+
+    a {
         color: $color-mc-blue;
         font-family: $font-family-mc-regular;
         font-style: normal;
