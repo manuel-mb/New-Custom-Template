@@ -1054,14 +1054,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 36px;
       margin: 8px 0px 16px; }
 
-.card-container {
+.wp-block-scca-cards-container {
   width: 1440px;
   background: #E7F1FD;
   padding: 96px 150px;
   margin: 20px auto; }
-  .card-container .card-titles-container {
+  .wp-block-scca-cards-container .card-titles-container {
     width: 754px; }
-    .card-container .card-titles-container .card-container-title {
+    .wp-block-scca-cards-container .card-titles-container .card-container-title {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -1069,7 +1069,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 1.2;
       color: #0B56A8;
       margin: 0; }
-    .card-container .card-titles-container .card-container-paragraph {
+    .wp-block-scca-cards-container .card-titles-container .card-container-paragraph {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -1077,11 +1077,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 1.5;
       color: #525355;
       margin: 16px 0px; }
-  .card-container .card-cards-container {
+  .wp-block-scca-cards-container .card-cards-container {
     display: flex;
     /* Promo Card */
     /* Contact Card */ }
-    .card-container .card-cards-container .single-promo-card-container {
+    .wp-block-scca-cards-container .card-cards-container .single-promo-card-container {
       width: 360px;
       height: 504px;
       box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
@@ -1091,13 +1091,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
-    .card-container .card-cards-container .single-card-promo-title-container {
+    .wp-block-scca-cards-container .card-cards-container .single-card-promo-title-container {
       position: relative;
       top: 380px;
       margin-left: 16px; }
-      .card-container .card-cards-container .single-card-promo-title-container a {
+      .wp-block-scca-cards-container .card-cards-container .single-card-promo-title-container a {
         text-decoration: none; }
-        .card-container .card-cards-container .single-card-promo-title-container a h4 {
+        .wp-block-scca-cards-container .card-cards-container .single-card-promo-title-container a h4 {
           font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
           font-style: normal;
           font-weight: 500;
@@ -1106,7 +1106,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           color: #ffffff;
           width: 288px;
           margin: 0; }
-        .card-container .card-cards-container .single-card-promo-title-container a p {
+        .wp-block-scca-cards-container .card-cards-container .single-card-promo-title-container a p {
           font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -1115,7 +1115,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           color: #ffffff;
           margin: 8px 0px;
           width: 288px; }
-    .card-container .card-cards-container .single-contact-card-container {
+    .wp-block-scca-cards-container .card-cards-container .single-contact-card-container {
       width: 263px;
       height: 241px;
       background: #ffffff;
@@ -1123,7 +1123,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       border-radius: 16px;
       margin-right: 30px;
       padding: 24px; }
-      .card-container .card-cards-container .single-contact-card-container .single-contact-card-name {
+      .wp-block-scca-cards-container .card-cards-container .single-contact-card-container .single-contact-card-name {
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -1132,7 +1132,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #525355;
         margin: 0;
         width: 507px; }
-      .card-container .card-cards-container .single-contact-card-container .job-title {
+      .wp-block-scca-cards-container .card-cards-container .single-contact-card-container .job-title {
         height: 18px;
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
@@ -1141,7 +1141,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 1.2;
         color: #525355;
         margin: 0; }
-      .card-container .card-cards-container .single-contact-card-container .address {
+      .wp-block-scca-cards-container .card-cards-container .single-contact-card-container .address {
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -1149,7 +1149,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 1.2;
         margin: 16px 0px;
         color: #525355; }
-      .card-container .card-cards-container .single-contact-card-container a {
+      .wp-block-scca-cards-container .card-cards-container .single-contact-card-container a {
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -1159,6 +1159,133 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: block;
         margin: 16px 0;
         text-decoration: none; }
+
+.single-featured-card-container {
+  width: 555px;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(11, 86, 168, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding: 24px; }
+  .single-featured-card-container .single-featured-main-text {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: #525355;
+    margin: 8px 0px;
+    width: 507px; }
+  .single-featured-card-container .single-featured-paragraph {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355; }
+  .single-featured-card-container:hover {
+    background: #0473EA;
+    box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
+    transition: all .3s; }
+    .single-featured-card-container:hover .single-featured-main-text {
+      color: #ffffff;
+      text-decoration: underline; }
+    .single-featured-card-container:hover .text-only-blue-cta {
+      transition: all .3s;
+      color: #ffffff;
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.2;
+      text-decoration: underline; }
+      .single-featured-card-container:hover .text-only-blue-cta:after {
+        color: #ffffff; }
+
+.single-standard-card-container {
+  width: 263px;
+  height: 274px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding-bottom: 24px; }
+  .single-standard-card-container img {
+    width: 263px;
+    height: 149px;
+    border-radius: 16px 16px 0 0; }
+  .single-standard-card-container .single-standard-card-container h4 {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: #525355;
+    margin: 24px;
+    width: 312px; }
+  .single-standard-card-container .single-standard-card-container p {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355; }
+  .single-standard-card-container.is-style-large {
+    width: 555px;
+    height: 446px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px; }
+    .single-standard-card-container.is-style-large img {
+      width: 555px;
+      height: 312px;
+      border-radius: 16px 16px 0 0; }
+    .single-standard-card-container.is-style-large .single-standard-card-container h4 {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #525355;
+      margin: 24px;
+      width: 312px; }
+    .single-standard-card-container.is-style-large .single-standard-card-container p {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #525355; }
+  .single-standard-card-container.is-style-square {
+    width: 360px;
+    height: 494px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px; }
+    .single-standard-card-container.is-style-square img {
+      width: 360px;
+      height: 360px;
+      border-radius: 16px 16px 0 0; }
+    .single-standard-card-container.is-style-square .single-standard-card-container h4 {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #525355;
+      margin: 24px;
+      width: 312px; }
+    .single-standard-card-container.is-style-square .single-standard-card-container p {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #525355; }
 
 /*--------------------------------------------------------------
 # Plugins

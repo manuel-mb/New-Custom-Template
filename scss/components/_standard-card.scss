@@ -1,0 +1,109 @@
+.single-standard-card-container {
+    width: 263px;
+    height: 274px;
+    background: #FFFFFF;
+    box-shadow: $box-shadow-mc-grey2;
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px;
+
+	img {
+		width: 263px;
+		height: 149px;
+		border-radius: 16px 16px 0 0;
+	}
+
+	.single-standard-card-container h4 {
+		font-family: SC Prosper Sans;
+	    font-style: normal;
+	    font-weight: 500;
+	    font-size: 18px;
+	    line-height: 36px;
+	    color: #525355;
+	    margin: 24px;
+	    width: 312px;
+	}
+
+	.single-standard-card-container p {
+    	font-family: SC Prosper Sans;
+    	font-style: normal;
+    	font-weight: normal;
+    	font-size: 18px;
+    	line-height: 27px;
+    	color: #525355;
+    }	
+
+	&.is-style-large {
+		
+	    width: 555px;
+	    height: 446px;
+	    background: #FFFFFF;
+	    box-shadow: $box-shadow-mc-grey2;
+	    border-radius: 16px;
+	    margin-right: 30px;
+	    padding-bottom: 24px;
+
+		img {
+			width: 555px;
+			height: 312px;
+			border-radius: 16px 16px 0 0;
+		}
+
+		.single-standard-card-container h4 {
+			font-family: SC Prosper Sans;
+		    font-style: normal;
+		    font-weight: 500;
+		    font-size: 28px;
+		    line-height: 36px;
+		    color: #525355;
+		    margin: 24px;
+		    width: 312px;
+		}
+
+		.single-standard-card-container p {
+	    	font-family: SC Prosper Sans;
+	    	font-style: normal;
+	    	font-weight: normal;
+	    	font-size: 18px;
+	    	line-height: 27px;
+	    	color: #525355;
+	    }
+	}
+
+	&.is-style-square {
+		
+	    width: 360px;
+	    height: 494px;
+	    background: #FFFFFF;
+	    box-shadow: $box-shadow-mc-grey2;
+	    border-radius: 16px;
+	    margin-right: 30px;
+	    padding-bottom: 24px;
+
+		img {
+			width: 360px;
+			height: 360px;
+			border-radius: 16px 16px 0 0;
+		}
+
+		.single-standard-card-container h4 {
+			font-family: SC Prosper Sans;
+		    font-style: normal;
+		    font-weight: 500;
+		    font-size: 28px;
+		    line-height: 36px;
+		    color: #525355;
+		    margin: 24px;
+		    width: 312px;
+		}
+
+		.single-standard-card-container p {
+	    	font-family: SC Prosper Sans;
+	    	font-style: normal;
+	    	font-weight: normal;
+	    	font-size: 18px;
+	    	line-height: 27px;
+	    	color: #525355;
+	    }
+	}	
+}
