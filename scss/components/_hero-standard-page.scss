@@ -1,0 +1,43 @@
+.standard-page-hero-container {
+  margin-top: 96px;
+  background: $color-mc-grey-lightest;
+
+  .standard-page-hero-title-container { 
+
+    padding: 96px 0px 96px 0px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .standard-page-hero-title-intro {
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-base;
+      line-height: $line-height-display-big;
+      margin: 16px auto;
+      color: $color-mc-grey;
+    }
+
+    .standard-page-hero-main-title {
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-display-big;
+      line-height: $line-height-display-big;
+      margin: 16px auto;
+      width: 1264px;
+      color: $color-mc-grey;
+    }
+
+    .standard-page-hero-paragraph {
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-h4;
+      line-height: $line-height-mc-h4;
+      margin: 0px auto;
+      width: 748px;
+      color: $color-mc-grey;
+    }
+  }
+}

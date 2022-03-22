@@ -1,0 +1,35 @@
+.accordions-container {
+  width: 1440px;
+  background: $color-mc-white;
+  padding: 96px 150px;
+  margin: 20px auto;
+
+  .container-accordions {
+        width: 750px;
+        background: #FFFFFF;
+        box-shadow: $box-shadow-mc-blu2;
+        border-radius: 16px;
+        padding: 32px;
+        margin: 32px auto;
+
+        .accordions-container-title {
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-size-mc-lg-h2;
+            line-height: $line-height-mc-h1;
+            color: $color-mc-blue-dark;
+            margin: 0;
+        }
+
+        .accordions-container-paragraph {
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-size-mc-lg-base;
+            line-height: $line-height-mc-body;
+            color: $color-mc-grey;
+            margin: 16px 0px;
+        }
+    }
+}
