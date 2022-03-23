@@ -4,6 +4,10 @@
     padding: 96px 150px;
     margin: 20px auto;
 
+    &.is-style-white {
+        background: $color-mc-white;
+    }
+
     .card-titles-container {
         width: 754px;
 
@@ -47,7 +51,7 @@
 
         .single-card-promo-title-container {
             position: relative;
-            top: 380px;
+            top: 365px;
             margin-left: 16px;
             
             a {
@@ -62,7 +66,9 @@
                     color: $color-mc-white;
                     width: 288px;
                     margin: 0;
+                    display: inline-block;
                 }
+                
                 p {
                     font-family: $font-family-mc-regular;
                     font-style: normal;
@@ -72,6 +78,19 @@
                     color: $color-mc-white;
                     margin: 8px 0px;
                     width: 288px;
+                    display: inline-block; 
+                }
+
+                &:after {
+                    content: 'chevron_right'; 
+                    font-weight: 300;
+                    font-family: 'Material Icons';
+                    font-size: 1.5rem;
+                    font-feature-settings: 'liga';
+                    color: $color-mc-green; 
+                    display: inline-block; 
+                    position: relative;
+                    right: -24px;
                 }
             }
         }
