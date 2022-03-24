@@ -1,12 +1,12 @@
 .content-media-square-container {
 
-  .block-content-media-square-container-left {
+  .block-content-media-square-container {
     display: flex;
     width: 1140px;
     margin: 20px auto;
     flex-flow: row;
 
-    .image-media-square-content-container-left {
+    .image-media-square-content-container {
       margin-right: 127px;
       
       img {
@@ -17,19 +17,13 @@
     }
   }
 
-  .block-content-media-square-container-right {
-    display: flex;
-    width: 1140px;
-    margin: 20px auto;
-    flex-flow: row-reverse;
+  &.is-style-flipped {
+  
+    .block-content-media-square-container {
+      flex-flow: row-reverse;
 
-    .image-media-square-content-container-right {
-      margin-left: 127px;
-      
-      img {
-        width: 555px;
-        height: 555px;
-        border-radius: 16px;
+      .image-media-square-content-container {
+        margin-right: 0;
       }
     }
   }

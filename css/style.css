@@ -1016,29 +1016,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       width: 748px;
       color: #525355; }
 
-.content-media-square-container .block-content-media-square-container-left {
+.content-media-square-container .block-content-media-square-container {
   display: flex;
   width: 1140px;
   margin: 20px auto;
   flex-flow: row; }
-  .content-media-square-container .block-content-media-square-container-left .image-media-square-content-container-left {
+  .content-media-square-container .block-content-media-square-container .image-media-square-content-container {
     margin-right: 127px; }
-    .content-media-square-container .block-content-media-square-container-left .image-media-square-content-container-left img {
+    .content-media-square-container .block-content-media-square-container .image-media-square-content-container img {
       width: 555px;
       height: 555px;
       border-radius: 16px; }
 
-.content-media-square-container .block-content-media-square-container-right {
-  display: flex;
-  width: 1140px;
-  margin: 20px auto;
+.content-media-square-container.is-style-flipped .block-content-media-square-container {
   flex-flow: row-reverse; }
-  .content-media-square-container .block-content-media-square-container-right .image-media-square-content-container-right {
-    margin-left: 127px; }
-    .content-media-square-container .block-content-media-square-container-right .image-media-square-content-container-right img {
-      width: 555px;
-      height: 555px;
-      border-radius: 16px; }
+  .content-media-square-container.is-style-flipped .block-content-media-square-container .image-media-square-content-container {
+    margin-right: 0; }
 
 .content-media-square-container .text-media-square-content-container {
   position: relative;
