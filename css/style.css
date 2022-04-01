@@ -974,13 +974,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   height: 555px;
   background-color: #CDF4BF;
   border-radius: 16px; }
-  .image-hero-two-columns-container img {
+  .image-hero-two-columns-container .landscape {
     width: 555px;
     height: 312px;
     border-radius: 16px;
     position: relative;
     top: 121px;
     right: 64px; }
+  .image-hero-two-columns-container .square {
+    width: 555px;
+    height: 555px;
+    top: 0;
+    right: 0;
+    background-color: transparent; }
 
 .standard-page-hero-container {
   margin-top: 96px;
@@ -1023,9 +1029,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   flex-flow: row; }
   .content-media-square-container .block-content-media-square-container .image-media-square-content-container {
     margin-right: 127px; }
-    .content-media-square-container .block-content-media-square-container .image-media-square-content-container img {
+    .content-media-square-container .block-content-media-square-container .image-media-square-content-container .square {
       width: 555px;
       height: 555px;
+      border-radius: 16px; }
+    .content-media-square-container .block-content-media-square-container .image-media-square-content-container .landscape {
+      height: 311px;
+      width: 555px;
       border-radius: 16px; }
 
 .content-media-square-container.is-style-flipped .block-content-media-square-container {
@@ -1069,9 +1079,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     border-radius: 16px;
     position: relative;
     padding: 24px;
-    top: 520px;
-    margin-left: 64px;
-    margin-bottom: 64px; }
+    top: 64px;
+    left: 64px; }
+    .content-in-page-promo-container .content-in-page-promo.top-right {
+      left: 724px;
+      top: 64px;
+      margin-left: 0; }
+    .content-in-page-promo-container .content-in-page-promo.bottom-right {
+      left: 724px;
+      top: 520px;
+      margin-left: 0; }
+    .content-in-page-promo-container .content-in-page-promo.bottom-left {
+      top: 520px; }
     .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-content {
       width: 507px;
       font-family: 'SC Prosper Sans';
@@ -1080,6 +1099,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 28px;
       line-height: 36px;
       margin: 8px 0px 16px; }
+    .content-in-page-promo-container .content-in-page-promo .button-container {
+      position: absolute;
+      bottom: 24px;
+      left: 24px; }
 
 .content-callout-container {
   margin-top: 96px;
@@ -1265,7 +1288,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .single-featured-card-container:hover .single-featured-main-text {
       color: #ffffff;
       text-decoration: underline; }
-    .single-featured-card-container:hover .text-only-blue-cta {
+    .single-featured-card-container:hover .text-only-button {
       transition: all .3s;
       color: #ffffff;
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
@@ -1274,7 +1297,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 18px;
       line-height: 1.2;
       text-decoration: underline; }
-      .single-featured-card-container:hover .text-only-blue-cta:after {
+      .single-featured-card-container:hover .text-only-button:after {
+        color: #ffffff; }
+    .single-featured-card-container:hover a {
+      color: #ffffff;
+      text-decoration: underline; }
+      .single-featured-card-container:hover a:after {
         color: #ffffff; }
 
 .single-standard-card-container {
@@ -1794,7 +1822,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   line-height: 1.2;
   text-decoration: none; }
   .text-only-button:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #ffffff; }
+    .text-only-button:hover:after {
+      color: #ffffff; }
   .text-only-button a {
     color: #0473EA;
     font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
@@ -1857,7 +1888,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     min-width: 180px;
     height: 51px;
     align-items: center;
-    padding: 12px 20px 12px 30px;
     border-radius: 50px;
     background: tranparent;
     border-style: none;
@@ -1874,6 +1904,126 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       text-decoration: underline; }
     .text-only-button.is-style-blue-only-text-no-arrow:after {
       display: none; }
+  .text-only-button.is-style-blue-only-text-download {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s; }
+    .text-only-button.is-style-blue-only-text-download:hover {
+      text-decoration: underline; }
+      .text-only-button.is-style-blue-only-text-download:hover:after {
+        background-image: url(../src/images/download-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px; }
+    .text-only-button.is-style-blue-only-text-download:after {
+      background-image: url(../src/images/download.svg);
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 18px;
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 18px;
+      top: 4px;
+      right: -5px; }
+  .text-only-button.is-style-blue-only-text-play {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s; }
+    .text-only-button.is-style-blue-only-text-play:hover {
+      text-decoration: underline; }
+      .text-only-button.is-style-blue-only-text-play:hover:after {
+        background-image: url(../src/images/play-circle-fill-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px; }
+    .text-only-button.is-style-blue-only-text-play:after {
+      background-image: url(../src/images/play-circle-fill.svg);
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 18px;
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 18px;
+      top: 4px;
+      right: -5px; }
+  .text-only-button.is-style-blue-only-text-external-link {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s; }
+    .text-only-button.is-style-blue-only-text-external-link:hover {
+      text-decoration: underline; }
+      .text-only-button.is-style-blue-only-text-external-link:hover:after {
+        background-image: url(../src/images/external-link-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px; }
+    .text-only-button.is-style-blue-only-text-external-link:after {
+      background-image: url(../src/images/external-link.svg);
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 18px;
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 18px;
+      top: 4px;
+      right: -5px; }
   .text-only-button.is-style-white-no-arrow {
     min-width: 180px;
     height: 51px;

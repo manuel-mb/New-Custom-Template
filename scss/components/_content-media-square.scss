@@ -9,9 +9,15 @@
     .image-media-square-content-container {
       margin-right: 127px;
       
-      img {
+      .square{
         width: 555px;
         height: 555px;
+        border-radius: 16px;
+      }
+
+      .landscape {
+        height: 311px;
+        width: 555px;
         border-radius: 16px;
       }
     }

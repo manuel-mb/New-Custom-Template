@@ -14,9 +14,24 @@
     border-radius: 16px;
     position: relative;
     padding: 24px;
-    top: 520px;
-    margin-left: 64px;
-    margin-bottom: 64px;
+    top: 64px;
+    left: 64px;
+
+    &.top-right {
+      left: 724px;
+      top: 64px;
+      margin-left: 0;    
+    }
+
+    &.bottom-right {
+      left: 724px;
+      top: 520px;
+      margin-left: 0;
+    }
+
+    &.bottom-left {
+      top: 520px;
+    } 
 
     .content-in-page-promo-content {
       width: 507px;
@@ -26,6 +41,12 @@
       font-size: 28px;
       line-height: 36px;
       margin: 8px 0px 16px;
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
     }
   }
 }

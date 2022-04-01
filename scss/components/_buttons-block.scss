@@ -321,6 +321,11 @@
 
     &:hover {
         text-decoration: underline;
+        color: $color-mc-white;
+
+        &:after {
+            color: $color-mc-white; 
+        }
     }
 
     a {
@@ -397,7 +402,6 @@
         min-width: 180px;
         height: 51px;
         align-items: center;
-        padding: 12px 20px 12px 30px;
         border-radius: 50px;
         background: tranparent;
         border-style: none;
@@ -417,6 +421,150 @@
 
         &:after {
             display: none;
+        }
+    }
+
+    &.is-style-blue-only-text-download {
+        min-width: 180px;
+        height: 51px;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+        border-style: none;
+        border-color: transparent;
+        color: $color-mc-blue;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-mc-lg-base;
+        line-height: $line-height-display-big;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: underline;
+
+            &:after {
+                background-image: url(../src/images/download-white.svg);
+                content: '' ;
+                background-repeat: no-repeat;
+                background-size: 18px; 
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 18px;
+                top: 4px;
+                right: -5px;
+            }
+        }
+
+        &:after {
+            background-image: url(../src/images/download.svg);
+            content: '' ;
+            background-repeat: no-repeat;
+            background-size: 18px; 
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 18px;
+            top: 4px;
+            right: -5px;
+        }
+    }
+
+    &.is-style-blue-only-text-play {
+        min-width: 180px;
+        height: 51px;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+        border-style: none;
+        border-color: transparent;
+        color: $color-mc-blue;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-mc-lg-base;
+        line-height: $line-height-display-big;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: underline;
+
+            &:after {
+                background-image: url(../src/images/play-circle-fill-white.svg);
+                content: '' ;
+                background-repeat: no-repeat;
+                background-size: 18px; 
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 18px;
+                top: 4px;
+                right: -5px;
+            }
+        }
+
+        &:after {
+            background-image: url(../src/images/play-circle-fill.svg);
+            content: '' ;
+            background-repeat: no-repeat;
+            background-size: 18px; 
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 18px;
+            top: 4px;
+            right: -5px;
+        }
+    }
+
+    &.is-style-blue-only-text-external-link {
+        min-width: 180px;
+        height: 51px;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+        border-style: none;
+        border-color: transparent;
+        color: $color-mc-blue;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-mc-lg-base;
+        line-height: $line-height-display-big;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: underline;
+
+            &:after {
+                background-image: url(../src/images/external-link-white.svg);
+                content: '' ;
+                background-repeat: no-repeat;
+                background-size: 18px; 
+                display: inline-block;
+                position: relative;
+                width: 50px;
+                height: 18px;
+                top: 4px;
+                right: -5px;
+            }
+        }
+
+        &:after {
+            background-image: url(../src/images/external-link.svg);
+            content: '' ;
+            background-repeat: no-repeat;
+            background-size: 18px; 
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 18px;
+            top: 4px;
+            right: -5px;
         }
     }
 

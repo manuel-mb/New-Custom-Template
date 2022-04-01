@@ -49,12 +49,20 @@
   background-color: #CDF4BF;
   border-radius: 16px;
 
-  img {
+  .landscape {
     width: 555px;
     height: 312px;
     border-radius: 16px;
     position: relative;
     top: 121px;
     right: 64px;
+  } 
+
+  .square {
+    width: 555px;
+    height: 555px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
   }
 }

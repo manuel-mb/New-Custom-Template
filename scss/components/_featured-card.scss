@@ -37,7 +37,7 @@
             text-decoration: underline;
         }
 
-        .text-only-blue-cta {
+        .text-only-button {
             transition: all .3s;
             color: $color-mc-white;
             font-family: $font-family-mc-regular;
@@ -50,6 +50,16 @@
             &:after {
                 color: $color-mc-white;
             }
+        }
+
+        a {
+            color: $color-mc-white;
+            text-decoration: underline;
+
+            &:after {
+                color: $color-mc-white;
+            }
+
         }
     }
 }	
