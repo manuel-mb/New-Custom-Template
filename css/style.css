@@ -1396,7 +1396,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding: 96px 150px;
   margin: 20px auto; }
   .accordions-container .container-accordions {
-    width: 750px;
+    max-width: 1140px;
     background: #FFFFFF;
     box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
     border-radius: 16px;
@@ -1418,6 +1418,117 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 1.5;
       color: #525355;
       margin: 16px 0px; }
+
+.accordions-container {
+  width: 1440px;
+  background: #ffffff;
+  padding: 96px 150px;
+  margin: 20px auto; }
+  .accordions-container .accordions-container-title {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 1.2;
+    color: #0B56A8;
+    margin: 0; }
+  .accordions-container .accordions-container-paragraph {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #525355;
+    margin: 16px 0px; }
+  .accordions-container .accordion-xlarge-container {
+    max-width: 1140px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+    border-radius: 16px;
+    margin: 16px auto; }
+    .accordions-container .accordion-xlarge-container .accordion.xlarge {
+      cursor: pointer;
+      padding: 12px 18px;
+      width: 1140px;
+      text-align: left;
+      outline: none;
+      border-bottom: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      border-radius: 16px; }
+      .accordions-container .accordion-xlarge-container .accordion.xlarge:hover {
+        border: 2px solid #0473EA;
+        border-radius: 16px; }
+      .accordions-container .accordion-xlarge-container .accordion.xlarge .custom-collapse-text {
+        display: none; }
+      .accordions-container .accordion-xlarge-container .accordion.xlarge .custom-expand-text {
+        width: 100%;
+        position: relative;
+        left: 992px; }
+      .accordions-container .accordion-xlarge-container .accordion.xlarge .image-container-accordions-xlarge {
+        width: 130px;
+        height: 130px; }
+        .accordions-container .accordion-xlarge-container .accordion.xlarge .image-container-accordions-xlarge img {
+          width: 130px;
+          height: 130px;
+          object-fit: cover; }
+      .accordions-container .accordion-xlarge-container .accordion.xlarge.tab-active {
+        background-color: #0473EA;
+        background: #0473EA;
+        border-bottom: 0px solid #E5E5E5;
+        color: #ffffff; }
+        .accordions-container .accordion-xlarge-container .accordion.xlarge.tab-active .custom-expand-text {
+          display: none; }
+        .accordions-container .accordion-xlarge-container .accordion.xlarge.tab-active .custom-collapse-text {
+          display: block !important;
+          width: 100%;
+          position: relative;
+          left: 992px; }
+    .accordions-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge {
+      width: 922px; }
+      .accordions-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge h4 {
+        font-family: SC Prosper Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 36px;
+        color: #525355;
+        margin: 0;
+        width: 992px; }
+        .accordions-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge h4.tab-active {
+          font-family: SC Prosper Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 28px;
+          line-height: 36px;
+          color: #0473EA;
+          margin: 0;
+          width: 992px; }
+    .accordions-container .accordion-xlarge-container .accordion.xlarge:after {
+      content: none;
+      font-size: 10px;
+      color: #0473EA;
+      float: right;
+      transform: scale(0.33); }
+    .accordions-container .accordion-xlarge-container .accordion.xlarge.tab-active:after {
+      content: none;
+      float: right;
+      font-size: 10px;
+      color: #0473EA;
+      transform: scale(0.33); }
+
+.panel.xlarge {
+  padding: 12px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-bottom: 1px solid #E5E5E5;
+  width: 992px; }
 
 .accordion {
   cursor: pointer;
