@@ -5,23 +5,23 @@
   margin: 20px auto;
 
   .accordions-container-title {
-      font-family: $font-family-mc-regular;
-      font-style: normal;
-      font-weight: normal;
-      font-size: $font-size-mc-lg-h2;
-      line-height: $line-height-mc-h1;
-      color: $color-mc-blue-dark;
-      margin: 0;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-mc-lg-h2;
+    line-height: $line-height-mc-h1;
+    color: $color-mc-blue-dark;
+    margin: 0;
   }
 
   .accordions-container-paragraph {
-      font-family: $font-family-mc-regular;
-      font-style: normal;
-      font-weight: normal;
-      font-size: $font-size-mc-lg-base;
-      line-height: $line-height-mc-body;
-      color: $color-mc-grey;
-      margin: 16px 0px;
+    font-family: $font-family-mc-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-mc-lg-base;
+    line-height: $line-height-mc-body;
+    color: $color-mc-grey;
+    margin: 16px 0px;
   }
 
   .accordion-xlarge-container {
@@ -92,51 +92,50 @@
         }
       }
 
-        .text-container-accordions-xlarge{
-          width:922px;
+      .text-container-accordions-xlarge{
+        width:922px;
 
-          h4{
+        h4{
+          font-family: SC Prosper Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 28px;
+          line-height: 36px;
+          color: #525355;
+          margin: 0;
+          width: 992px;
+        
+          &.tab-active {
             font-family: SC Prosper Sans;
             font-style: normal;
             font-weight: normal;
             font-size: 28px;
             line-height: 36px;
-            color: #525355;
+            color: #0473EA;
             margin: 0;
             width: 992px;
-          
-            &.tab-active {
-              font-family: SC Prosper Sans;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 28px;
-              line-height: 36px;
-              color: #0473EA;
-              margin: 0;
-              width: 992px;
-            }
-          }
-        }
-
-        &.xlarge{
-          &:after {
-          content: none;
-          font-size: 10px;
-          color: #0473EA;
-          float: right; 
-          transform: scale(.33);
-          }
-
-          &.tab-active:after {
-            content: none;
-            float: right; 
-            font-size: 10px;
-            color: #0473EA;
-            transform: scale(.33);
           }
         }
       }
-    
+
+      &.xlarge{
+        &:after {
+        content: none;
+        font-size: 10px;
+        color: #0473EA;
+        float: right; 
+        transform: scale(.33);
+        }
+
+        &.tab-active:after {
+          content: none;
+          float: right; 
+          font-size: 10px;
+          color: #0473EA;
+          transform: scale(.33);
+        }
+      }
+    }    
   }
 }
 
