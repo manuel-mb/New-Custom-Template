@@ -849,12 +849,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           display: inline-block;
           margin: 0;
           color: #38D200; }
-    .home-hero-container .hero-home-container .image-hero-home-container {
-      margin-right: 88px; }
-      .home-hero-container .hero-home-container .image-hero-home-container img {
-        width: 778px;
-        max-height: 778px;
-        border-radius: 16px; }
+    .home-hero-container .hero-home-container .image-hero-home-container img {
+      width: 778px;
+      max-height: 778px;
+      border-radius: 16px; }
 
 /**
  * Styles for the Home CTA main component.
@@ -964,9 +962,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-weight: normal;
       font-size: 18px;
       line-height: 27px;
-      color: #525355; }
-    .two-columns-hero-container .hero-two-columns-title-container .button-hero-two-columns-content {
-      margin-top: 16px; }
+      color: #525355;
+      margin-bottom: 16px; }
 
 .image-hero-two-columns-container {
   display: inline-block;
@@ -987,6 +984,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     top: 0;
     right: 0;
     background-color: transparent; }
+    .image-hero-two-columns-container .square.play-button:after {
+      background-image: url(../src/images/play-circle-fill.svg);
+      content: '';
+      background-repeat: no-repeat;
+      background-size: 51px;
+      width: 51px;
+      height: 51px;
+      float: left;
+      position: relative;
+      top: -72px;
+      left: 24px; }
 
 .standard-page-hero-container {
   margin-top: 96px;

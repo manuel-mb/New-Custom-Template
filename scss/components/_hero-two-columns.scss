@@ -35,10 +35,7 @@
       font-size: 18px;
       line-height: 27px;
       color: #525355;
-    }
-
-    .button-hero-two-columns-content {
-      margin-top: 16px;
+      margin-bottom: 16px;
     }
   }
 }
@@ -51,7 +48,7 @@
 
   .landscape {
     width: 555px;
-    height: 312px;
+    height: 312px; 
     border-radius: 16px;
     position: relative;
     top: 121px;
@@ -64,5 +61,22 @@
     top: 0;
     right: 0;
     background-color: transparent;
+
+    &.play-button {
+      &:after {
+        background-image: url(../src/images/play-circle-fill.svg);
+        content:'' ;
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 51px;
+        float: left;
+        position: relative;
+        top: -72px;
+        left: 24px;
+      }
+    }
   }
+  
 }
+
