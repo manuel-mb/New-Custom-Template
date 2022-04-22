@@ -68,7 +68,7 @@
           font-size: 18px;
           line-height: 27px;
           color: $color-mc-blue;
-          background-image: url(../src/images/plus-blue@2x.png);
+          background-image: url(../src/images/plus-blue.svg);
           background-position: 0;
           background-repeat: no-repeat;
           background-size: 16px;
@@ -78,6 +78,7 @@
         .image-container-accordions-xlarge {
           width: 130px;
           height:130px;
+          margin-top: 32px;  
 
           img {
             width: 130px;
@@ -92,6 +93,7 @@
           border-bottom: 0px solid #E5E5E5;
           color: $color-mc-white;
           border-radius: 16px 16px 0 0;
+          transition: all .7s ease;
 
           .custom-expand-text {
             display: none;
@@ -107,21 +109,22 @@
             font-size: 18px;
             line-height: 27px;
             color: $color-mc-white;
-            background-image: url(../src/images/minus-white-2x.png);
+            background-image: url(../src/images/minus-white.svg);
             background-position: 0;
             background-repeat: no-repeat;
             background-size: 16px;
             padding-left: 26px;
           }
 
-          h4 {
+          h4,p {
             color: $color-mc-white;
           }
         }
       }
 
       .text-container-accordions-xlarge {
-        width:922px;
+        width: 922px;
+        margin-top: 32px;  
 
         h4 {
           font-family: SC Prosper Sans;
@@ -131,7 +134,16 @@
           line-height: 36px;
           color: #525355;
           margin: 0;
-          width: 992px;
+        }
+
+        p {
+          font-family: SC Prosper Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          color: #525355;
+          margin-top: 24px;   
         }
       }
 
@@ -177,7 +189,7 @@
       font-size: 18px;
       line-height: 27px;
       color: $color-mc-blue;
-      background-image: url(../src/images/minus-blue@2x.png);
+      background-image: url(../src/images/minus-blue.svg);
       background-position: 0;
       background-repeat: no-repeat;
       background-size: 16px;
