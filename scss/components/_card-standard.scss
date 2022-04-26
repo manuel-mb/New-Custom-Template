@@ -1,6 +1,6 @@
 .single-standard-card-container {
     width: 263px;
-    height: 274px;
+    height: auto;
     background: #FFFFFF;
     box-shadow: $box-shadow-mc-grey2;
     border-radius: 16px;
@@ -36,7 +36,7 @@
 	&.is-style-large {
 		
 	    width: 555px;
-	    height: 446px;
+	    height: auto;
 	    background: #FFFFFF;
 	    box-shadow: $box-shadow-mc-grey2;
 	    border-radius: 16px;
@@ -73,7 +73,7 @@
 	&.is-style-square {
 		
 	    width: 360px;
-	    height: 494px;
+	    height: auto;
 	    background: #FFFFFF;
 	    box-shadow: $box-shadow-mc-grey2;
 	    border-radius: 16px;
