@@ -5,6 +5,7 @@
     background: $color-mc-white;
     box-shadow: $box-shadow-mc-blu2;
     border-radius: 16px;
+    margin-right: 30px;
 
     .card-link-img-container {
         width: 96px;
@@ -15,9 +16,13 @@
         position: relative;
         top: 30px;
         margin-left: 12px;
+        flex: 2;
 
         &:after {
-            margin-left: 25px;
+            float:right;
+            position: relative;
+            top: 0;
+            right: 0;
         }
     } 
 }
