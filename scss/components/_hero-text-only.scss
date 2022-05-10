@@ -1,11 +1,10 @@
 .hero-text-only-container {
-  margin-top: 96px;
   background: $gradient-mc-blue;
+  padding-bottom: 96px;
 
   .hero-text-only-title-container {
-
     padding: 96px 0px 96px 0px;
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
 
     .hero-text-only-title-intro {
@@ -59,6 +58,135 @@
       width: 754px;
       text-align: left;
       color: $color-mc-white;
+    }
+  }
+}
+
+@media screen and (max-width: 723px) {
+  .hero-text-only-container {
+    
+    .hero-text-only-title-container {
+
+      padding: 96px 0px 96px 0px;
+      width: 345px;
+      margin: 0 auto;
+
+      .hero-text-only-title-intro {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0px;
+        position: relative;
+        left: 0;
+        color: $color-mc-white-70;
+      }
+
+      .hero-text-only-main-title {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 58px;
+        margin: 0 0 64px;
+        position: relative;
+        left: 0;
+        color: $color-mc-white;
+        width: 345px;
+
+        &::before {
+          content: "ª";
+          display: none;
+          margin: 0;
+          color: $color-mc-blue;
+          position: absolute;
+          left: -15px;
+        }
+
+        &::after {
+          content: "º";
+          display: none;
+          margin: 0;
+          color: $color-mc-green;
+        }
+      }
+
+      .hero-text-only-paragraph {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 30px;
+        margin: 0px auto;
+        text-align: left;
+        color: $color-mc-white;
+        width: 345px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 724px) and (max-width: 1140px) {
+  .hero-text-only-container {
+    
+    .hero-text-only-title-container {
+
+      padding: 96px 0px 96px 0px;
+      width: 595px;
+      margin: 0 auto;
+
+      .hero-text-only-title-intro {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0px;
+        position: relative;
+        left: 0;
+        color: $color-mc-white-70;
+      }
+
+      .hero-text-only-main-title {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 58px;
+        margin: 0 0 64px;
+        position: relative;
+        left: 0;
+        color: $color-mc-white;
+        width: 595px;
+
+        &::before {
+          content: "ª";
+          display: inline-block;
+          margin: 0;
+          color: $color-mc-blue;
+          position: absolute;
+          left: -15px;
+        }
+
+        &::after {
+          content: "º";
+          display: inline-block;
+          margin: 0;
+          color: $color-mc-green;
+        }
+      }
+
+      .hero-text-only-paragraph {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 30px;
+        margin: 0px auto;
+        text-align: left;
+        color: $color-mc-white;
+        width:470px;
+      }
     }
   }
 }

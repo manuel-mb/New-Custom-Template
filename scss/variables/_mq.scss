@@ -1,47 +1,34 @@
-/**
- * Settings and overrides for the sass-mq mixin
- *
- * @package New Template\Theme.
- */
-
-/**
- * To enable support for browsers that do not support @media queries,
- * (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
- * Create a separate stylesheet served exclusively to these browsers,
- * meaning @media queries will be rasterized, relying on the cascade itself.
- */
-$mq-responsive: true;
-
-/**
- * Name your breakpoints in a way that creates a ubiquitous language
- * across team members. It will improve communication between
- * stakeholders, designers, developers, and testers.
- *
- * If the **large** value of 992 changes, it needs updating in
- * global-navigation.js & logo-animation.js as well.
- */
-
-$mq-breakpoints: (
-	small: 320px,
-	medium: 768px,
-	wpadmin: 783px,
-	large: 992px,
-	larger: 1024px, // this breakpoint is used in the design system for fonts only
-	content-large: 1140px, // Specific breakpoint to account for the width of the widest content container.
-	xlarge: 1440px
-);
-
-/**
- * Define the breakpoint from the $mq-breakpoints list that should
- * be used as the target width when outputting a static stylesheet
- * (when $mq-responsive is set to 'false').
- */
-$mq-static-breakpoint: large;
-
-/**
- * If you want to display the currently active breakpoint in the top
- * right corner of your site during development, add the breakpoints
- * to this list, ordered by width. For example: (mobile, tablet, desktop).
- */
- 
-$mq-show-breakpoints: (small, medium, large, xlarge);
+$sc__1700:   new-breakpoint(min-width 1700px);
+$sc__1580:   new-breakpoint(min-width 1580px);
+$sc__outer:  new-breakpoint(min-width 1410px);
+$sc__1440:   new-breakpoint(min-width 1440px);
+$sc__1400:   new-breakpoint(min-width 1400px);
+$sc__1340:   new-breakpoint(min-width 1340px);
+$sc__1300:   new-breakpoint(min-width 1300px);
+$sc__1250:   new-breakpoint(min-width 1250px);
+$sc__1200:   new-breakpoint(min-width 1200px);
+$sc__wide:   new-breakpoint(min-width 1170px);
+$sc__1140:   new-breakpoint(min-width 1140px);
+$sc__1130:   new-breakpoint(min-width 1130px);
+$sc__1100:   new-breakpoint(min-width 1100px);
+$sc__1090:   new-breakpoint(min-width 1090px);
+$sc__1030:   new-breakpoint(min-width 1030px);
+$sc__1000:   new-breakpoint(min-width 1000px);
+$sc__tablet: new-breakpoint(min-width 992px);
+$sc__940:    new-breakpoint(min-width 940px);
+$sc__920:    new-breakpoint(min-width 920px);
+$sc__900:    new-breakpoint(min-width 900px);
+$sc__mobile: new-breakpoint(min-width 800px);
+$sc__783:    new-breakpoint(min-width 783px);
+$sc__768:    new-breakpoint(min-width 768px);
+$sc__680:    new-breakpoint(min-width 680px);
+$sc__600:    new-breakpoint(min-width 600px);
+$sc__580:    new-breakpoint(min-width 580px);
+$sc__540:    new-breakpoint(min-width 540px);
+$sc__520:    new-breakpoint(min-width 520px);
+$sc__480:    new-breakpoint(min-width 480px);
+$sc__460:    new-breakpoint(min-width 460px);
+$sc__430:    new-breakpoint(min-width 430px);
+$sc__phone:  new-breakpoint(min-width 400px);
+$sc__380:    new-breakpoint(min-width 380px);
+$sc__300:    new-breakpoint(min-width 300px); 

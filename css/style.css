@@ -179,35 +179,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * These are consistent across all breakpoints
  */
 /**
- * Settings and overrides for the sass-mq mixin
- *
- * @package New Template\Theme.
- */
-/**
- * To enable support for browsers that do not support @media queries,
- * (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
- * Create a separate stylesheet served exclusively to these browsers,
- * meaning @media queries will be rasterized, relying on the cascade itself.
- */
-/**
- * Name your breakpoints in a way that creates a ubiquitous language
- * across team members. It will improve communication between
- * stakeholders, designers, developers, and testers.
- *
- * If the **large** value of 992 changes, it needs updating in
- * global-navigation.js & logo-animation.js as well.
- */
-/**
- * Define the breakpoint from the $mq-breakpoints list that should
- * be used as the target width when outputting a static stylesheet
- * (when $mq-responsive is set to 'false').
- */
-/**
- * If you want to display the currently active breakpoint in the top
- * right corner of your site during development, add the breakpoints
- * to this list, ordered by width. For example: (mobile, tablet, desktop).
- */
-/**
  * Default Mixed variables used throughout the theme.
  *
  * @package Manuel\Theme.
@@ -849,10 +820,205 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           display: inline-block;
           margin: 0;
           color: #38D200; }
-    .home-hero-container .hero-home-container .image-hero-home-container img {
-      width: 778px;
-      max-height: 778px;
-      border-radius: 16px; }
+    .home-hero-container .hero-home-container .image-hero-home-container {
+      max-width: 778px; }
+      .home-hero-container .hero-home-container .image-hero-home-container .square {
+        max-height: 778px;
+        border-radius: 16px; }
+      .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+        max-height: 434px;
+        border-radius: 16px; }
+
+@media screen and (max-width: 375px) {
+  .home-hero-container .hero-home-container {
+    display: block;
+    padding: 32px 0px 1px 0px; }
+    .home-hero-container .hero-home-container .hero-home-title-container {
+      width: 260px;
+      margin: 0 auto;
+      display: block; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title {
+        font-size: 40px;
+        line-height: 48px; }
+        .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::before {
+          content: "ª";
+          display: inline-block;
+          margin: 0;
+          color: #0473EA;
+          position: absolute;
+          left: -2px; }
+        .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::after {
+          content: "º";
+          display: inline-block;
+          margin: 0;
+          color: #38D200; }
+    .home-hero-container .hero-home-container .image-hero-home-container {
+      max-width: 315px;
+      margin: 44px auto; }
+      .home-hero-container .hero-home-container .image-hero-home-container .square {
+        max-height: 315px;
+        width: 315px;
+        border-radius: 16px; }
+      .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+        max-height: 195px;
+        border-radius: 16px;
+        width: 315px; } }
+
+@media screen and (min-width: 376px) and (max-width: 760px) {
+  .home-hero-container .hero-home-container {
+    display: block;
+    padding: 32px 0px 1px 0px; }
+    .home-hero-container .hero-home-container .hero-home-title-container {
+      width: 260px;
+      margin: 0 auto;
+      display: block; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title {
+        font-size: 40px;
+        line-height: 48px; }
+        .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::before {
+          content: "ª";
+          display: inline-block;
+          margin: 0;
+          color: #0473EA;
+          position: absolute;
+          left: -15px; }
+        .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::after {
+          content: "º";
+          display: inline-block;
+          margin: 0;
+          color: #38D200; }
+    .home-hero-container .hero-home-container .image-hero-home-container {
+      max-width: 345px;
+      margin: 44px auto; }
+      .home-hero-container .hero-home-container .image-hero-home-container .square {
+        max-height: 345px;
+        border-radius: 16px;
+        width: 345px; }
+      .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+        max-height: 195px;
+        border-radius: 16px;
+        width: 345px; } }
+
+@media screen and (min-width: 761px) and (max-width: 800px) {
+  .home-hero-container .hero-home-container .hero-home-title-container {
+    width: 251px;
+    margin-left: 52px; }
+    .home-hero-container .hero-home-container .hero-home-title-container .hero-home-title-intro {
+      font-size: 16px;
+      line-height: 24px; }
+    .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title {
+      font-size: 40px;
+      line-height: 48px; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .home-hero-container .hero-home-container .hero-home-title-container .hero-home-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+  .home-hero-container .hero-home-container .image-hero-home-container {
+    max-width: 408px; }
+    .home-hero-container .hero-home-container .image-hero-home-container .square {
+      max-height: 408px;
+      border-radius: 16px;
+      width: 408px; }
+    .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+      max-height: 230px;
+      border-radius: 16px;
+      position: relative;
+      top: 109px;
+      width: 408px; } }
+
+@media screen and (min-width: 800px) and (max-width: 1140px) {
+  .home-hero-container .hero-home-title-container {
+    width: 251px;
+    margin-left: 52px; }
+    .home-hero-container .hero-home-title-container .hero-home-title-intro {
+      font-size: 16px;
+      line-height: 24px; }
+    .home-hero-container .hero-home-title-container .hero-home-main-title {
+      font-size: 40px;
+      line-height: 48px; }
+      .home-hero-container .hero-home-title-container .hero-home-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .home-hero-container .hero-home-title-container .hero-home-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+  .home-hero-container .image-hero-home-container {
+    max-width: 408px; }
+    .home-hero-container .image-hero-home-container .square {
+      max-height: 408px;
+      border-radius: 16px;
+      width: 408px; }
+    .home-hero-container .image-hero-home-container .landscape {
+      max-height: 230px;
+      border-radius: 16px;
+      position: relative;
+      top: 109px;
+      width: 408px; } }
+
+@media screen and (min-width: 1141px) and (max-width: 1440px) {
+  .home-hero-container .hero-home-title-container {
+    width: 535px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 52px; }
+    .home-hero-container .hero-home-title-container .hero-home-title-intro {
+      font-family: "SC Prosper Sans Medium", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.7); }
+    .home-hero-container .hero-home-title-container .hero-home-main-title {
+      font-family: "SC Prosper Sans Medium", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 55px;
+      line-height: 1.2;
+      margin: 0 0 64px;
+      color: #ffffff; }
+      .home-hero-container .hero-home-title-container .hero-home-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .home-hero-container .hero-home-title-container .hero-home-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+  .home-hero-container .image-hero-home-container {
+    max-width: 678px;
+    padding-right: 12px; }
+    .home-hero-container .image-hero-home-container .square {
+      max-height: 678px;
+      border-radius: 16px;
+      width: 678px; }
+    .home-hero-container .image-hero-home-container .landscape {
+      max-height: 400px;
+      border-radius: 16px;
+      width: 678px; } }
 
 /**
  * Styles for the Home CTA main component.
@@ -882,11 +1048,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       flex: 1; }
 
 .hero-text-only-container {
-  margin-top: 96px;
-  background: linear-gradient(90deg, #2c3a88 0%, #0061cb 100%); }
+  background: linear-gradient(90deg, #2c3a88 0%, #0061cb 100%);
+  padding-bottom: 96px; }
   .hero-text-only-container .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto; }
     .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
@@ -931,6 +1097,104 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       width: 754px;
       text-align: left;
       color: #ffffff; }
+
+@media screen and (max-width: 723px) {
+  .hero-text-only-container .hero-text-only-title-container {
+    padding: 96px 0px 96px 0px;
+    width: 345px;
+    margin: 0 auto; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 16px 0px;
+      position: relative;
+      left: 0;
+      color: rgba(255, 255, 255, 0.7); }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 58px;
+      margin: 0 0 64px;
+      position: relative;
+      left: 0;
+      color: #ffffff;
+      width: 345px; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
+        content: "ª";
+        display: none;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::after {
+        content: "º";
+        display: none;
+        margin: 0;
+        color: #38D200; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 30px;
+      margin: 0px auto;
+      text-align: left;
+      color: #ffffff;
+      width: 345px; } }
+
+@media screen and (min-width: 724px) and (max-width: 1140px) {
+  .hero-text-only-container .hero-text-only-title-container {
+    padding: 96px 0px 96px 0px;
+    width: 595px;
+    margin: 0 auto; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 16px 0px;
+      position: relative;
+      left: 0;
+      color: rgba(255, 255, 255, 0.7); }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 58px;
+      margin: 0 0 64px;
+      position: relative;
+      left: 0;
+      color: #ffffff;
+      width: 595px; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+    .hero-text-only-container .hero-text-only-title-container .hero-text-only-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 30px;
+      margin: 0px auto;
+      text-align: left;
+      color: #ffffff;
+      width: 470px; } }
 
 .two-columns-hero-container {
   max-width: 1440px;
@@ -997,6 +1261,254 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       top: -72px;
       left: 24px; }
 
+@media screen and (min-width: 320px) and (max-width: 499px) {
+  .two-columns-hero-container {
+    display: block; }
+    .two-columns-hero-container .hero-two-columns-title-container {
+      width: 345px;
+      margin: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+        text-align: left;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #666666;
+        opacity: 0.5;
+        margin-top: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 16px;
+        margin-top: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #525355;
+        margin-bottom: 16px; }
+  .image-hero-two-columns-container {
+    display: inline-block;
+    width: 355px;
+    height: 194px;
+    background-color: #CDF4BF;
+    border-radius: 16px;
+    margin-top: 52px; }
+    .image-hero-two-columns-container .landscape {
+      width: 325px;
+      height: 185px;
+      border-radius: 16px;
+      position: relative;
+      top: -10px;
+      right: 0;
+      left: 15px; }
+    .image-hero-two-columns-container .square {
+      width: 355px;
+      height: 355px;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border-radius: 16px; }
+      .image-hero-two-columns-container .square.play-button:after {
+        background-image: url(../src/images/play-circle-fill.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 51px;
+        float: left;
+        position: relative;
+        top: -72px;
+        left: 24px; } }
+
+@media screen and (min-width: 500px) and (max-width: 657px) {
+  .two-columns-hero-container {
+    display: block; }
+    .two-columns-hero-container .hero-two-columns-title-container {
+      width: 345px;
+      margin: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+        text-align: left;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #666666;
+        opacity: 0.5;
+        margin-top: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 16px;
+        margin-top: 0; }
+      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #525355;
+        margin-bottom: 16px; }
+  .image-hero-two-columns-container {
+    display: inline-block;
+    width: 375px;
+    height: 194px;
+    background-color: #CDF4BF;
+    border-radius: 16px;
+    margin-top: 52px; }
+    .image-hero-two-columns-container .landscape {
+      width: 345px;
+      height: 194px;
+      border-radius: 16px;
+      position: relative;
+      top: -10px;
+      right: 0;
+      left: 15px; }
+    .image-hero-two-columns-container .square {
+      width: 375px;
+      height: 375px;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border-radius: 16px; }
+      .image-hero-two-columns-container .square.play-button:after {
+        background-image: url(../src/images/play-circle-fill.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 51px;
+        float: left;
+        position: relative;
+        top: -72px;
+        left: 24px; } }
+
+@media screen and (min-width: 658px) and (max-width: 700px) {
+  .two-columns-hero-container .hero-two-columns-title-container {
+    width: 345px;
+    margin: 35px 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+      text-align: left;
+      margin-bottom: 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #666666;
+      opacity: 0.5;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+      font-size: 40px;
+      line-height: 48px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 16px;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 27px;
+      color: #525355;
+      margin-bottom: 16px; }
+  .image-hero-two-columns-container {
+    display: inline-block;
+    width: 345px;
+    height: 345px;
+    background-color: #CDF4BF;
+    border-radius: 16px; }
+    .image-hero-two-columns-container .landscape {
+      width: 345px;
+      height: 194px;
+      border-radius: 16px;
+      position: relative;
+      top: 75px;
+      right: 5px; }
+    .image-hero-two-columns-container .square {
+      width: 345px;
+      height: 345px;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border-radius: 16px; }
+      .image-hero-two-columns-container .square.play-button:after {
+        background-image: url(../src/images/play-circle-fill.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 51px;
+        float: left;
+        position: relative;
+        top: -72px;
+        left: 24px; } }
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .two-columns-hero-container .hero-two-columns-title-container {
+    width: 345px;
+    margin: 35px 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+      text-align: left;
+      margin-bottom: 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #666666;
+      opacity: 0.5;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+      font-size: 40px;
+      line-height: 48px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 16px;
+      margin-top: 0; }
+    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 27px;
+      color: #525355;
+      margin-bottom: 16px; }
+  .image-hero-two-columns-container {
+    display: inline-block;
+    width: 345px;
+    height: 345px;
+    background-color: #CDF4BF;
+    border-radius: 16px; }
+    .image-hero-two-columns-container .landscape {
+      width: 345px;
+      height: 194px;
+      border-radius: 16px;
+      position: relative;
+      top: 75px;
+      right: 25px; }
+    .image-hero-two-columns-container .square {
+      width: 345px;
+      height: 345px;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border-radius: 16px; }
+      .image-hero-two-columns-container .square.play-button:after {
+        background-image: url(../src/images/play-circle-fill.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 51px;
+        width: 51px;
+        height: 51px;
+        float: left;
+        position: relative;
+        top: -72px;
+        left: 24px; } }
+
 .standard-page-hero-container {
   margin-top: 96px;
   background: #F7F7F7; }
@@ -1031,33 +1543,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       width: 748px;
       color: #525355; }
 
-.content-media-square-container .block-content-media-square-container {
+.content-media-container .block-content-media-container {
   display: flex;
   width: 1140px;
   margin: 20px auto;
   flex-flow: row;
   justify-content: space-around; }
-  .content-media-square-container .block-content-media-square-container .image-media-square-content-container {
+  .content-media-container .block-content-media-container .image-media-content-container {
     margin-right: 127px; }
-    .content-media-square-container .block-content-media-square-container .image-media-square-content-container .square {
+    .content-media-container .block-content-media-container .image-media-content-container .square {
       width: 555px;
       height: 555px;
       border-radius: 16px; }
-    .content-media-square-container .block-content-media-square-container .image-media-square-content-container .landscape {
+    .content-media-container .block-content-media-container .image-media-content-container .landscape {
       height: 311px;
       width: 555px;
       border-radius: 16px; }
+  .content-media-container .block-content-media-container.is-style-flipped {
+    flex-flow: row-reverse; }
+    .content-media-container .block-content-media-container.is-style-flipped .image-media-content-container {
+      margin-right: 0; }
 
-.content-media-square-container.is-style-flipped .block-content-media-square-container {
-  flex-flow: row-reverse; }
-  .content-media-square-container.is-style-flipped .block-content-media-square-container .image-media-square-content-container {
-    margin-right: 0; }
-
-.content-media-square-container .text-media-square-content-container {
+.content-media-container .text-media-content-container {
   position: relative;
   top: 100px;
   width: 458px; }
-  .content-media-square-container .text-media-square-content-container .content-media-square-title {
+  .content-media-container .text-media-content-container .content-media-title {
     font-family: 'SC Sans Regular';
     font-style: normal;
     font-weight: normal;
@@ -1065,7 +1576,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     line-height: 45px;
     margin: 16px 0px;
     color: #525355; }
-  .content-media-square-container .text-media-square-content-container .content-media-square-paragraph {
+    .content-media-container .text-media-content-container .content-media-title.white {
+      color: #ffffff; }
+  .content-media-container .text-media-content-container .content-media-paragraph {
     font-family: 'SC Sans Regular';
     font-style: normal;
     font-weight: normal;
@@ -1073,6 +1586,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #525355;
     line-height: 27px;
     margin: 16px 0px 32px; }
+    .content-media-container .text-media-content-container .content-media-paragraph.white {
+      color: #ffffff; }
+
+.content-in-page-promo-title-container {
+  width: 1392px;
+  margin: 64px auto; }
+  .content-in-page-promo-title-container .content-in-page-promo-title {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 1.2;
+    color: #0B56A8;
+    margin: 0; }
+  .content-in-page-promo-title-container .content-in-page-promo-paragraph {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #525355;
+    margin: 16px 0px; }
 
 .content-in-page-promo-container {
   width: 1392px;
@@ -1082,7 +1617,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-size: cover;
   margin: 20px auto; }
   .content-in-page-promo-container .content-in-page-promo {
-    height: 163px;
+    height: auto;
     width: 555px;
     background-color: #fff;
     box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
@@ -1101,7 +1636,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin-left: 0; }
     .content-in-page-promo-container .content-in-page-promo.bottom-left {
       top: 520px; }
-    .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-content {
+    .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-title {
       width: 507px;
       font-family: 'SC Prosper Sans';
       font-style: normal;
@@ -1109,10 +1644,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 28px;
       line-height: 36px;
       margin: 8px 0px 16px; }
-    .content-in-page-promo-container .content-in-page-promo .button-container {
-      position: absolute;
-      bottom: 24px;
-      left: 24px; }
+    .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-paragraph {
+      width: 507px;
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      margin: 8px 0px 16px; }
 
 .content-callout-container {
   margin-top: 96px;
@@ -1149,33 +1688,144 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       display: flex;
       justify-content: center; }
 
-.content-text-only-container {
-  margin-top: 96px; }
+.content-text-only-container .content-text-only-title-container {
+  padding: 96px 0px 96px 0px;
+  max-width: 1440px;
+  margin: 0 auto; }
+  .content-text-only-container .content-text-only-title-container .content-text-only-title-intro {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 16px 0px;
+    position: relative;
+    left: 96px;
+    color: #666666; }
+  .content-text-only-container .content-text-only-title-container .content-text-only-main-title {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 86px;
+    line-height: 1.2;
+    margin: 0 0 64px;
+    position: relative;
+    left: 96px;
+    width: 890px;
+    color: #525355; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-main-title::before {
+      content: "ª";
+      display: inline-block;
+      margin: 0;
+      color: #0473EA;
+      position: absolute;
+      left: -15px; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-main-title::after {
+      content: "º";
+      display: inline-block;
+      margin: 0;
+      color: #38D200; }
+  .content-text-only-container .content-text-only-title-container .content-text-only-paragraph {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 0px auto;
+    width: 754px;
+    text-align: left;
+    color: #525355; }
+
+.content-text-only-container.is-style-white .content-text-only-title-intro {
+  color: #ffffff; }
+
+.content-text-only-container.is-style-white .content-text-only-main-title {
+  color: #ffffff; }
+
+.content-text-only-container.is-style-white .content-text-only-paragraph {
+  color: #ffffff; }
+
+@media screen and (max-width: 723px) {
   .content-text-only-container .content-text-only-title-container {
     padding: 96px 0px 96px 0px;
-    max-width: 1440px;
+    width: 345px;
     margin: 0 auto; }
     .content-text-only-container .content-text-only-title-container .content-text-only-title-intro {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
-      line-height: 1.2;
+      font-size: 16px;
+      line-height: 24px;
       margin: 16px 0px;
       position: relative;
-      left: 96px;
+      left: 0;
       color: #666666; }
     .content-text-only-container .content-text-only-title-container .content-text-only-main-title {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 86px;
-      line-height: 1.2;
+      font-size: 48px;
+      line-height: 58px;
       margin: 0 0 64px;
       position: relative;
-      left: 96px;
-      width: 890px;
-      color: #525355; }
+      left: 0;
+      color: #525355;
+      width: 345px; }
+      .content-text-only-container .content-text-only-title-container .content-text-only-main-title::before {
+        content: "ª";
+        display: none;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .content-text-only-container .content-text-only-title-container .content-text-only-main-title::after {
+        content: "º";
+        display: none;
+        margin: 0;
+        color: #38D200; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 30px;
+      margin: 0px auto;
+      text-align: left;
+      color: #525355;
+      width: 345px; }
+  .content-text-only-container.is-style-white .content-text-only-title-intro {
+    color: #ffffff; }
+  .content-text-only-container.is-style-white .content-text-only-main-title {
+    color: #ffffff; }
+  .content-text-only-container.is-style-white .content-text-only-paragraph {
+    color: #ffffff; } }
+
+@media screen and (min-width: 724px) and (max-width: 1140px) {
+  .content-text-only-container .content-text-only-title-container {
+    padding: 96px 0px 96px 0px;
+    width: 595px;
+    margin: 0 auto; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-title-intro {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 16px 0px;
+      position: relative;
+      left: 0;
+      color: #666666; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-main-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 58px;
+      margin: 0 0 64px;
+      position: relative;
+      left: 0;
+      color: #525355;
+      width: 595px; }
       .content-text-only-container .content-text-only-title-container .content-text-only-main-title::before {
         content: "ª";
         display: inline-block;
@@ -1192,18 +1842,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 28px;
-      line-height: 1.3;
+      font-size: 23px;
+      line-height: 30px;
       margin: 0px auto;
-      width: 754px;
       text-align: left;
-      color: #525355; }
+      color: #525355;
+      width: 470px; }
   .content-text-only-container.is-style-white .content-text-only-title-intro {
     color: #ffffff; }
   .content-text-only-container.is-style-white .content-text-only-main-title {
     color: #ffffff; }
   .content-text-only-container.is-style-white .content-text-only-paragraph {
-    color: #ffffff; }
+    color: #ffffff; } }
 
 .card-container {
   width: 1440px;
@@ -2652,3 +3302,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  *
  * @package Manuel\Theme.
  */
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }

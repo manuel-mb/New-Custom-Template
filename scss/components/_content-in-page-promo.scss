@@ -1,3 +1,28 @@
+.content-in-page-promo-title-container {
+    width: 1392px;
+    margin: 64px auto;
+
+    .content-in-page-promo-title {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size-mc-lg-h2;
+        line-height: $line-height-mc-h1;
+        color: $color-mc-blue-dark;
+        margin: 0;
+    }
+
+    .content-in-page-promo-paragraph {
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size-mc-lg-base;
+        line-height: $line-height-mc-body;
+        color: $color-mc-grey;
+        margin: 16px 0px;
+    }
+}
+
 .content-in-page-promo-container {
     width: 1392px;
     height: 783px;
@@ -7,7 +32,7 @@
     margin: 20px auto;
 
   .content-in-page-promo {
-    height: 163px;
+    height: auto;
     width: 555px;
     background-color: #fff;
     box-shadow: $box-shadow-mc-grey2;
@@ -33,7 +58,7 @@
       top: 520px;
     } 
 
-    .content-in-page-promo-content {
+    .content-in-page-promo-title {
       width: 507px;
       font-family: 'SC Prosper Sans';
       font-style: normal;
@@ -43,10 +68,15 @@
       margin: 8px 0px 16px;
     }
 
-    .button-container {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
+    .content-in-page-promo-paragraph {
+      width: 507px;
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      margin: 8px 0px 16px;
     }
   }
 }
+ 
