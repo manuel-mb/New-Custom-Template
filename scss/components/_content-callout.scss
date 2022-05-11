@@ -4,6 +4,7 @@
   width: 1140px;
   margin: 0 auto;
   text-align: center;
+  border-radius: 16px;
 
   &.is-style-green {
     background: $color-mc-green-lightest;
@@ -23,6 +24,7 @@
   .content-callout-title-container { 
     padding: 64px 32px;
     width: 1076px;
+    text-align:center;
 
     .content-callout-main-title {
       font-family: $font-family-mc-regular;
@@ -42,11 +44,60 @@
       line-height: $line-height-mc-body-lg;
       margin: 0px auto;
       color: $color-mc-grey;
+      margin-bottom: 32px;
     }
 
     .button-callout-container {
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .content-callout-container {
+    background: $color-mc-blue-lightest;
+    width: 345px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 16px;
+    padding: 32px 16px;
+
+    &.is-style-green {
+      background: $color-mc-green-lightest;
+    }
+
+    &.is-style-grey {
+      background: $color-mc-grey-lightest;
+
+      .content-callout-title-container { 
+
+        .content-callout-main-title {
+          color: $color-mc-grey;
+        }
+      }
+    }
+
+    .content-callout-title-container { 
+      width: 313px;
+      text-align:center;
+
+      .content-callout-main-title {
+        font-size: 33px;
+        line-height: 40px;
+      }
+
+      .content-callout-paragraph {
+        font-size: 19px;
+        line-height: 28px;
+        margin: 16px 0;
+      }
+
+      .button-callout-container {
+        display: grid;
+        justify-content: center;
+      }
     }
   }
 }

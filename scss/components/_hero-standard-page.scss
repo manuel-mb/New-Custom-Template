@@ -1,6 +1,6 @@
 .standard-page-hero-container {
-  margin-top: 96px;
   background: $color-mc-grey-lightest;
+  border-radius: 16px;
 
   .standard-page-hero-title-container { 
 
@@ -41,3 +41,62 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+
+  .standard-page-hero-container {
+
+    .standard-page-hero-title-container { 
+      padding: 32px 16px;
+
+      .standard-page-hero-title-intro {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px auto;
+      }
+
+      .standard-page-hero-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 16px auto;
+        width: 313px;
+      }
+
+      .standard-page-hero-paragraph {
+        font-size: 23px;
+        line-height: 30px;
+        width: 313px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+
+  .standard-page-hero-container {
+
+    .standard-page-hero-title-container { 
+      padding: 48px;
+
+      .standard-page-hero-title-intro {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px auto;
+      }
+
+      .standard-page-hero-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 16px auto;
+        width: 624px;
+      }
+
+      .standard-page-hero-paragraph {
+        font-size: 23px;
+        line-height: 30px;
+        width: 624px;
+      }
+    }
+  }
+}
+  
