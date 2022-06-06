@@ -2077,9 +2077,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #ffffff; } }
 
 .card-container {
-  width: 1440px;
   background: #E7F1FD;
-  padding: 96px 150px;
+  padding: 96px 150px 96px 150px;
   margin: 20px auto; }
   .card-container.is-style-white {
     background: #ffffff; }
@@ -2102,99 +2101,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       color: #525355;
       margin: 16px 0px; }
   .card-container .card-cards-container {
-    display: flex;
-    /* Promo Card */
-    /* Contact Card */ }
-    .card-container .card-cards-container .single-promo-card-container {
-      width: 360px;
-      height: 504px;
-      box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-      border-radius: 16px;
-      margin-right: 30px;
-      padding-bottom: 24px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .card-container .card-cards-container .single-card-promo-title-container {
-      position: relative;
-      top: 365px;
-      margin-left: 16px; }
-      .card-container .card-cards-container .single-card-promo-title-container a {
-        text-decoration: none; }
-        .card-container .card-cards-container .single-card-promo-title-container a h4 {
-          font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 28px;
-          line-height: 1.3;
-          color: #ffffff;
-          width: 288px;
-          margin: 0;
-          display: inline-block; }
-        .card-container .card-cards-container .single-card-promo-title-container a p {
-          font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 15px;
-          line-height: 1.2;
-          color: #ffffff;
-          margin: 8px 0px;
-          width: 288px;
-          display: inline-block; }
-        .card-container .card-cards-container .single-card-promo-title-container a:after {
-          content: 'chevron_right';
-          font-weight: 300;
-          font-family: 'Material Icons';
-          font-size: 1.5rem;
-          font-feature-settings: 'liga';
-          color: #38D200;
-          display: inline-block;
-          position: relative;
-          right: -24px; }
-    .card-container .card-cards-container .single-contact-card-container {
-      width: 263px;
-      height: 241px;
-      background: #ffffff;
-      box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-      border-radius: 16px;
-      margin-right: 30px;
-      padding: 24px; }
-      .card-container .card-cards-container .single-contact-card-container .single-contact-card-name {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 1.3;
-        color: #525355;
-        margin: 0;
-        width: 507px; }
-      .card-container .card-cards-container .single-contact-card-container .job-title {
-        height: 18px;
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 1.2;
-        color: #525355;
-        margin: 0; }
-      .card-container .card-cards-container .single-contact-card-container .address {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 1.2;
-        margin: 16px 0px;
-        color: #525355; }
-      .card-container .card-cards-container .single-contact-card-container a {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 1.2;
-        color: #0473EA;
-        display: block;
-        margin: 16px 0;
-        text-decoration: none; }
+    display: flex; }
+
+@media screen and (max-width: 767px) {
+  .card-container {
+    padding: 48px 0px 48px 0; }
+    .card-container .card-titles-container {
+      width: 345px;
+      text-align: center; }
+      .card-container .card-titles-container .card-container-title {
+        font-size: 33px;
+        line-height: 40px; }
+      .card-container .card-titles-container .card-container-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .card-container .card-cards-container {
+      display: block; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .card-container {
+    padding: 64px 24px; }
+    .card-container .card-titles-container {
+      width: 713px;
+      text-align: left; }
+    .card-container .card-cards-container {
+      display: flex;
+      flex-wrap: wrap; } }
 
 .single-contact-card-container {
   width: 263px;
@@ -2243,7 +2175,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .card-tabs {
   width: 482px;
-  height: 35px;
+  height: 37px;
   background: #C3DEFA;
   border-radius: 20px;
   margin: 32px 0px;
@@ -2251,7 +2183,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   flex-direction: row;
   align-items: flex-start;
   padding: 4px;
-  list-style-type: none; }
+  list-style-type: none;
+  flex-wrap: wrap; }
   .card-tabs li {
     padding: 2px 12px;
     position: static;
@@ -2271,7 +2204,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-style: normal;
       font-weight: 600;
       font-size: 15px;
-      line-height: 30px;
+      line-height: 25px;
       text-decoration: none;
       color: #0C3A66;
       margin: 0px 10px; }
@@ -2283,6 +2216,77 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .tab-content .info.deactive {
   display: none; }
+
+@media screen and (max-width: 767px) {
+  .single-contact-card-container {
+    margin: 1em auto; }
+    .single-contact-card-container .single-contact-card-name {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #525355;
+      margin: 0;
+      width: 507px; }
+    .single-contact-card-container .job-title {
+      height: 18px;
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 1.2;
+      color: #525355;
+      margin: 0; }
+    .single-contact-card-container .address {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 1.2;
+      margin: 16px 0px;
+      color: #525355; }
+    .single-contact-card-container a {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 1.2;
+      color: #0473EA;
+      display: block;
+      margin: 16px 0;
+      text-decoration: none; }
+  .card-tabs {
+    width: 360px;
+    margin: 32px auto; }
+    .card-tabs li {
+      padding: 2px 12px;
+      position: static;
+      height: 27px;
+      background: #C3DEFA;
+      border-radius: 16px;
+      margin-right: 4px; }
+      .card-tabs li:hover {
+        background: #FFFFFF; }
+      .card-tabs li.active {
+        background: #0C3A66; }
+        .card-tabs li.active a {
+          color: #fff; }
+      .card-tabs li a {
+        font-family: SC Prosper Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        text-decoration: none;
+        color: #0C3A66;
+        margin: 0px 10px; }
+  .tab-content .info.active {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; }
+  .tab-content .info.deactive {
+    display: none; } }
 
 .single-featured-card-container {
   width: 555px;
@@ -2368,6 +2372,41 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       text-decoration: underline; }
       .single-featured-card-container:hover a:after {
         color: #ffffff; }
+
+@media screen and (max-width: 767px) {
+  .single-featured-card-container {
+    width: 265px;
+    margin: 1em auto;
+    padding: 24px; }
+    .single-featured-card-container .single-featured-main-text {
+      font-size: 23px;
+      line-height: 30px;
+      width: 217px; }
+    .single-featured-card-container .single-featured-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-featured-card-container:hover .text-only-button {
+      font-size: 16px;
+      line-height: 24px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .single-featured-card-container {
+    width: 282px;
+    margin: 0 auto; }
+    .single-featured-card-container .single-featured-main-text {
+      font-size: 23px;
+      line-height: 30px;
+      width: 234px; }
+    .single-featured-card-container .single-featured-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-featured-card-container:hover .text-only-button {
+      font-size: 16px;
+      line-height: 24px; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1350px) {
+  .single-featured-card-container {
+    width: 400px; } }
 
 .single-standard-card-container {
   width: 263px;
@@ -2480,6 +2519,114 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #1B6600;
         text-decoration: none; }
 
+@media screen and (max-width: 767px) {
+  .single-standard-card-container {
+    width: 265px;
+    margin: 1em auto; }
+    .single-standard-card-container img {
+      width: 265px;
+      height: 150px; }
+    .single-standard-card-container .single-standard-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 233px; }
+    .single-standard-card-container .single-standard-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-standard-card-container.is-style-large {
+      width: 305px;
+      margin: 1em auto; }
+      .single-standard-card-container.is-style-large img {
+        width: 305px;
+        height: 171px; }
+      .single-standard-card-container.is-style-large .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-large .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container.is-style-square {
+      width: 305px;
+      margin: 1em auto; }
+      .single-standard-card-container.is-style-square img {
+        width: 305px;
+        height: 305px;
+        border-radius: 16px 16px 0 0; }
+      .single-standard-card-container.is-style-square .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-square .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0 24px; }
+      .single-standard-card-container ul .hero-category {
+        padding: 2px 6px;
+        height: 21px;
+        border-radius: 14px;
+        min-width: 42px; }
+        .single-standard-card-container ul .hero-category a {
+          font-size: 11px;
+          line-height: 16px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .single-standard-card-container {
+    width: 282px; }
+    .single-standard-card-container img {
+      width: 282px;
+      height: 158px; }
+    .single-standard-card-container .single-standard-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 233px; }
+    .single-standard-card-container .single-standard-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-standard-card-container.is-style-large {
+      width: 345px;
+      justify-content: space-around; }
+      .single-standard-card-container.is-style-large img {
+        width: 345px;
+        height: 193px; }
+      .single-standard-card-container.is-style-large .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-large .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container.is-style-square {
+      width: 220px; }
+      .single-standard-card-container.is-style-square img {
+        width: 220px;
+        height: 220px;
+        border-radius: 16px 16px 0 0; }
+      .single-standard-card-container.is-style-square .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-square .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0 24px; }
+      .single-standard-card-container ul .hero-category {
+        padding: 2px 6px;
+        height: 26px;
+        border-radius: 14px;
+        min-width: 49px; }
+        .single-standard-card-container ul .hero-category a {
+          font-size: 12px;
+          line-height: 18px; } }
+
 .single-people-card-container {
   width: 310px;
   height: 462px;
@@ -2508,6 +2655,37 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     font-size: 18px;
     line-height: 27px;
     color: #525355; }
+
+@media screen and (max-width: 767px) {
+  .single-people-card-container {
+    width: 305px;
+    margin: 1em auto; }
+    .single-people-card-container img {
+      width: 305px;
+      height: 305px;
+      border-radius: 16px 16px 0 0; }
+    .single-people-card-container .single-people-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 273px; }
+    .single-people-card-container .single-people-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .single-people-card-container {
+    width: 220px; }
+    .single-people-card-container img {
+      width: 220px;
+      height: 220px;
+      border-radius: 16px 16px 0 0; }
+    .single-people-card-container .single-people-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 273px; }
+    .single-people-card-container .single-people-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .single-promo-card-container {
   width: 360px;

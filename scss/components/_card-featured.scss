@@ -116,4 +116,67 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 767px) {
+
+    .single-featured-card-container {
+        width: 265px;
+        margin: 1em auto;
+        padding: 24px;
+
+
+        .single-featured-main-text {
+            font-size: 23px;
+            line-height: 30px;
+            width: 217px;
+        }
+
+        .single-featured-paragraph {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &:hover {
+
+            .text-only-button {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .single-featured-card-container {
+        width: 282px;
+        margin: 0 auto;
+
+        .single-featured-main-text {
+            font-size: 23px;
+            line-height: 30px;
+            width: 234px;
+        }
+
+        .single-featured-paragraph {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &:hover {
+
+            .text-only-button {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1350px) {
+
+    .single-featured-card-container {
+        width: 400px;
+    } 
 }	

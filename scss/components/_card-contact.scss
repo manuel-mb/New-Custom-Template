@@ -55,7 +55,7 @@
 
 .card-tabs {
     width: 482px;
-    height: 35px;
+    height: 37px;
     background: #C3DEFA;
     border-radius: 20px;
     margin: 32px 0px;
@@ -64,6 +64,7 @@
     align-items: flex-start;
     padding: 4px;
     list-style-type: none;
+    flex-wrap: wrap;
 
     li {
         padding: 2px 12px;
@@ -91,7 +92,7 @@
             font-style: normal;
             font-weight: 600;
             font-size: 15px;
-            line-height: 30px;
+            line-height: 25px;
             text-decoration: none;
             color: #0C3A66;
             margin: 0px 10px;
@@ -111,6 +112,111 @@
 
         &.deactive {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .single-contact-card-container {
+
+        margin: 1em auto;
+
+        .single-contact-card-name {
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: 500;
+            font-size: $font-size-mc-lg-h4;
+            line-height: $line-height-mc-h4;
+            color: $color-mc-grey;
+            margin: 0;
+            width: 507px;
+        }
+
+        .job-title {
+            height: 18px;
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: bold;
+            font-size: $font-size-mc-lg-body-xs;
+            line-height: $line-height-display-big;
+            color: $color-mc-grey;
+            margin: 0;
+        }
+
+        .address {
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $font-size-mc-lg-body-sm;
+            line-height: $line-height-display-big;
+            margin: 16px 0px;
+            color: $color-mc-grey;
+        }
+
+        a {
+            font-family: $font-family-mc-regular;
+            font-style: normal;
+            font-weight: bold;
+            font-size: $font-size-mc-lg-body-sm;
+            line-height: $line-height-display-big;
+            color: $color-mc-blue;
+            display: block; 
+            margin: 16px 0;
+            text-decoration: none;
+        }
+    }
+
+    .card-tabs {
+        width: 360px;
+        margin: 32px auto;
+
+        li {
+            padding: 2px 12px;
+            position: static;
+            height: 27px;
+            background: #C3DEFA;
+            border-radius: 16px;
+            margin-right: 4px;
+
+            &:hover {
+                background: #FFFFFF;
+            }
+
+            &.active {
+                background: #0C3A66;
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            a {
+                font-family: SC Prosper Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 25px;
+                text-decoration: none;
+                color: #0C3A66;
+                margin: 0px 10px;
+            }
+        }
+    }
+
+    .tab-content {
+
+        .info{
+        
+            &.active {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            &.deactive {
+                display: none;
+            }
         }
     }
 }
