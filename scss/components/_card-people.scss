@@ -1,16 +1,17 @@
 .single-people-card-container {
 		
     width: 310px;
-    height: 462px;
+    height: auto;
     background: #FFFFFF;
     box-shadow: $box-shadow-mc-grey2;
     border-radius: 16px;
     margin-right: 30px;
-    padding: 24px;
-
+    padding-bottom: 24px;
+   
 	img {
 		width: 310px;
 		height: 310px;
+		border-radius: 16px 16px 0 0;
 	}
 
 	.single-people-card-main-text  {
@@ -23,6 +24,7 @@
 	    margin-top: 34px;
 	    margin-bottom: 8px;
 	    width: 314px;
+	    padding: 0 24px;
 	}
 
 	.single-people-card-paragraph {
@@ -32,6 +34,7 @@
     	font-size: 18px;
     	line-height: 27px;
     	color: #525355;
+    	padding: 0 24px;
     }
 }
 
