@@ -10,6 +10,8 @@
 
     .card-titles-container {
         width: 754px;
+        margin-right: 0;
+        display: inline-block;
 
         .card-container-title {
             font-family: $font-family-mc-regular;
@@ -32,9 +34,21 @@
         }
     }
 
-    .card-cards-container {
-        display: flex;
-    }  
+    #resource-slider{
+        margin-top: 64px;
+
+        .card-cards-container {
+            display: flex;
+        } 
+    } 
+
+    .slider-control {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: 60px;
+        right: 150px;
+    }
 }
 @media screen and (max-width: 767px) {
 
@@ -56,10 +70,15 @@
                 line-height: 24px;
             }
         }
+        #resource-slider {
+            .card-cards-container {
+                display: block;
+            } 
+        }
 
-        .card-cards-container {
-            display: block;
-        }  
+        .slider-control {
+            display: none;
+        } 
     }
 }
 
