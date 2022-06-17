@@ -2105,8 +2105,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin: 16px 0px; }
   .card-container #resource-slider {
     margin-top: 64px; }
-    .card-container #resource-slider .card-cards-container {
-      display: flex; }
+    .card-container #resource-slider .card-cards-container .slide {
+      display: flex;
+      overflow: hidden;
+      flex-wrap: nowrap; }
   .card-container .slider-control {
     display: inline-block;
     float: right;
@@ -2129,6 +2131,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 24px; }
     .card-container #resource-slider .card-cards-container {
       display: block; }
+      .card-container #resource-slider .card-cards-container .slide {
+        flex-wrap: wrap; }
     .card-container .slider-control {
       display: none; } }
 
@@ -2137,65 +2141,69 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     padding: 64px 24px;
     width: 768px; }
     .card-container .card-titles-container {
-      width: 713px;
+      width: 578px;
       text-align: left; }
-    .card-container .card-cards-container {
-      display: flex;
-      flex-wrap: wrap; } }
+    .card-container #resource-slider {
+      margin-top: 64px; }
+    .card-container .slider-control {
+      display: inline-block;
+      float: right;
+      position: relative;
+      top: 140px;
+      right: 0px; } }
 
-.tab-content .slide {
+.tab-content .info.active {
   display: flex;
-  overflow: hidden; }
-  .tab-content .slide .info.active {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; }
-  .tab-content .slide .info.deactive {
-    display: none; }
-  .tab-content .slide .info .single-contact-card-container {
-    width: 263px;
-    height: 241px;
-    background: #ffffff;
-    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-    border-radius: 16px;
-    margin-right: 30px;
-    padding: 24px; }
-    .tab-content .slide .info .single-contact-card-container .single-contact-card-name {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 1.3;
-      color: #525355;
-      margin: 0;
-      width: 507px; }
-    .tab-content .slide .info .single-contact-card-container .job-title {
-      height: 18px;
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 1.2;
-      color: #525355;
-      margin: 0; }
-    .tab-content .slide .info .single-contact-card-container .address {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 1.2;
-      margin: 16px 0px;
-      color: #525355; }
-    .tab-content .slide .info .single-contact-card-container a {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 1.2;
-      color: #0473EA;
-      display: block;
-      margin: 16px 0;
-      text-decoration: none; }
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.tab-content .info.deactive {
+  display: none; }
+
+.tab-content .info .slide .single-contact-card-container {
+  width: 263px;
+  height: 241px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding: 24px; }
+  .tab-content .info .slide .single-contact-card-container .single-contact-card-name {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #525355;
+    margin: 0;
+    width: 507px; }
+  .tab-content .info .slide .single-contact-card-container .job-title {
+    height: 18px;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #525355;
+    margin: 0; }
+  .tab-content .info .slide .single-contact-card-container .address {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 16px 0px;
+    color: #525355; }
+  .tab-content .info .slide .single-contact-card-container a {
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #0473EA;
+    display: block;
+    margin: 16px 0;
+    text-decoration: none; }
 
 .card-tabs {
   width: 482px;
@@ -2234,53 +2242,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin: 0px 10px; }
 
 @media screen and (max-width: 767px) {
-  .tab-content .slide {
-    display: block;
-    overflow: hidden; }
-    .tab-content .slide .info.active {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row; }
-    .tab-content .slide .info.deactive {
-      display: none; }
-    .tab-content .slide .info .single-contact-card-container {
-      margin: 1em auto; }
-      .tab-content .slide .info .single-contact-card-container .single-contact-card-name {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 1.3;
-        color: #525355;
-        margin: 0;
-        width: 507px; }
-      .tab-content .slide .info .single-contact-card-container .job-title {
-        height: 18px;
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 1.2;
-        color: #525355;
-        margin: 0; }
-      .tab-content .slide .info .single-contact-card-container .address {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 1.2;
-        margin: 16px 0px;
-        color: #525355; }
-      .tab-content .slide .info .single-contact-card-container a {
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 1.2;
-        color: #0473EA;
-        display: block;
-        margin: 16px 0;
-        text-decoration: none; }
+  .tab-content .info.active {
+    display: block; }
+  .tab-content .info.deactive {
+    display: none; }
+  .tab-content .info .slide .single-contact-card-container {
+    margin: 1em auto; }
+    .tab-content .info .slide .single-contact-card-container .single-contact-card-name {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 0;
+      width: 215px; }
+    .tab-content .info .slide .single-contact-card-container .job-title {
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0; }
+    .tab-content .info .slide .single-contact-card-container .address {
+      font-size: 15px;
+      line-height: 22px;
+      margin: 16px 0px; }
+    .tab-content .info .slide .single-contact-card-container a {
+      font-size: 15px;
+      line-height: 22px;
+      color: #0473EA;
+      margin: 16px 0;
+      text-decoration: none; }
   .card-tabs {
     width: 360px;
     margin: 32px auto; }
@@ -2307,117 +2293,112 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #0C3A66;
         margin: 0px 10px; } }
 
-.slide {
-  display: flex;
-  overflow: hidden; }
-  .slide .single-featured-card-container {
-    width: 555px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 16px rgba(11, 86, 168, 0.2);
-    border-radius: 16px;
-    margin-right: 30px;
-    padding: 24px; }
-    .slide .single-featured-card-container .single-featured-main-text {
-      font-family: SC Prosper Sans;
+.single-featured-card-container {
+  width: 555px;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(11, 86, 168, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding: 24px; }
+  .single-featured-card-container:last-child {
+    margin-right: 0; }
+  .single-featured-card-container .single-featured-main-text {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    color: #525355;
+    margin: 8px 0px;
+    width: 507px; }
+  .single-featured-card-container .single-featured-paragraph {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355; }
+  .single-featured-card-container:hover {
+    background: #0473EA;
+    box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
+    transition: all .3s; }
+    .single-featured-card-container:hover .single-featured-main-text {
+      color: #ffffff;
+      text-decoration: underline; }
+    .single-featured-card-container:hover .single-featured-paragraph {
+      color: #ffffff; }
+    .single-featured-card-container:hover .text-only-button {
+      transition: all .3s;
+      color: #ffffff;
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 36px;
-      color: #525355;
-      margin: 8px 0px;
-      width: 507px; }
-    .slide .single-featured-card-container .single-featured-paragraph {
-      font-family: SC Prosper Sans;
-      font-style: normal;
-      font-weight: normal;
+      font-weight: 600;
       font-size: 18px;
-      line-height: 27px;
-      color: #525355; }
-    .slide .single-featured-card-container:hover {
-      background: #0473EA;
-      box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
-      transition: all .3s; }
-      .slide .single-featured-card-container:hover .single-featured-main-text {
-        color: #ffffff;
-        text-decoration: underline; }
-      .slide .single-featured-card-container:hover .single-featured-paragraph {
+      line-height: 1.2;
+      text-decoration: underline; }
+      .single-featured-card-container:hover .text-only-button:after {
         color: #ffffff; }
-      .slide .single-featured-card-container:hover .text-only-button {
-        transition: all .3s;
-        color: #ffffff;
-        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 1.2;
-        text-decoration: underline; }
-        .slide .single-featured-card-container:hover .text-only-button:after {
-          color: #ffffff; }
-        .slide .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-download:after {
-          background-image: url(../src/images/download-white.svg);
-          content: '';
-          background-repeat: no-repeat;
-          background-size: 18px;
-          display: inline-block;
-          position: relative;
-          width: 50px;
-          height: 18px;
-          top: 4px;
-          right: -5px;
-          transition: all .3s; }
-        .slide .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-play:after {
-          background-image: url(../src/images/play-circle-fill-white.svg);
-          content: '';
-          background-repeat: no-repeat;
-          background-size: 18px;
-          display: inline-block;
-          position: relative;
-          width: 50px;
-          height: 18px;
-          top: 4px;
-          right: -5px;
-          transition: all .3s; }
-        .slide .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
-          background-image: url(../src/images/external-link-white.svg);
-          content: '';
-          background-repeat: no-repeat;
-          background-size: 18px;
-          display: inline-block;
-          position: relative;
-          width: 50px;
-          height: 18px;
-          top: 4px;
-          right: -5px;
-          transition: all .3s; }
-      .slide .single-featured-card-container:hover a {
-        color: #ffffff;
-        text-decoration: underline; }
-        .slide .single-featured-card-container:hover a:after {
-          color: #ffffff; }
+      .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-download:after {
+        background-image: url(../src/images/download-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px;
+        transition: all .3s; }
+      .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-play:after {
+        background-image: url(../src/images/play-circle-fill-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px;
+        transition: all .3s; }
+      .single-featured-card-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
+        background-image: url(../src/images/external-link-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 18px;
+        top: 4px;
+        right: -5px;
+        transition: all .3s; }
+    .single-featured-card-container:hover a {
+      color: #ffffff;
+      text-decoration: underline; }
+      .single-featured-card-container:hover a:after {
+        color: #ffffff; }
 
 @media screen and (max-width: 767px) {
-  .slide {
-    display: block;
-    overflow: hidden; }
-    .slide .single-featured-card-container {
-      width: 265px;
-      margin: 1em auto;
-      padding: 24px; }
-      .slide .single-featured-card-container .single-featured-main-text {
-        font-size: 23px;
-        line-height: 30px;
-        width: 217px; }
-      .slide .single-featured-card-container .single-featured-paragraph {
-        font-size: 16px;
-        line-height: 24px; }
-      .slide .single-featured-card-container:hover .text-only-button {
-        font-size: 16px;
-        line-height: 24px; } }
+  .single-featured-card-container {
+    width: 265px;
+    margin: 1em auto;
+    padding: 24px; }
+    .single-featured-card-container .single-featured-main-text {
+      font-size: 23px;
+      line-height: 30px;
+      width: 217px; }
+    .single-featured-card-container .single-featured-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-featured-card-container:hover .text-only-button {
+      font-size: 16px;
+      line-height: 24px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .single-featured-card-container {
-    width: 282px;
-    margin: 0 auto; }
+    width: 282px; }
     .single-featured-card-container .single-featured-main-text {
       font-size: 23px;
       line-height: 30px;
@@ -2429,33 +2410,59 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 16px;
       line-height: 24px; } }
 
-.slide {
-  display: flex;
-  overflow: hidden; }
-  .slide .single-standard-card-container {
+.single-standard-card-container {
+  width: 263px;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding-bottom: 24px; }
+  .single-standard-card-container img {
     width: 263px;
+    height: 149px;
+    border-radius: 16px 16px 0 0; }
+  .single-standard-card-container a {
+    text-decoration: none; }
+  .single-standard-card-container .single-standard-card-main-text {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: #525355;
+    margin: 24px;
+    width: 312px; }
+  .single-standard-card-container .single-standard-card-paragraph {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355;
+    padding: 0 24px; }
+  .single-standard-card-container.is-style-large {
+    width: 555px;
     height: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
     border-radius: 16px;
     margin-right: 30px;
     padding-bottom: 24px; }
-    .slide .single-standard-card-container img {
-      width: 263px;
-      height: 149px;
+    .single-standard-card-container.is-style-large img {
+      width: 555px;
+      height: 312px;
       border-radius: 16px 16px 0 0; }
-    .slide .single-standard-card-container a {
-      text-decoration: none; }
-    .slide .single-standard-card-container .single-standard-card-main-text {
+    .single-standard-card-container.is-style-large .single-standard-card-main-text {
       font-family: SC Prosper Sans;
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 28px;
       line-height: 36px;
       color: #525355;
       margin: 24px;
       width: 312px; }
-    .slide .single-standard-card-container .single-standard-card-paragraph {
+    .single-standard-card-container.is-style-large .single-standard-card-paragraph {
       font-family: SC Prosper Sans;
       font-style: normal;
       font-weight: normal;
@@ -2463,149 +2470,117 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 27px;
       color: #525355;
       padding: 0 24px; }
-    .slide .single-standard-card-container.is-style-large {
-      width: 555px;
-      height: auto;
-      background: #FFFFFF;
-      box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
-      border-radius: 16px;
-      margin-right: 30px;
-      padding-bottom: 24px; }
-      .slide .single-standard-card-container.is-style-large img {
-        width: 555px;
-        height: 312px;
-        border-radius: 16px 16px 0 0; }
-      .slide .single-standard-card-container.is-style-large .single-standard-card-main-text {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 36px;
-        color: #525355;
-        margin: 24px;
-        width: 312px; }
-      .slide .single-standard-card-container.is-style-large .single-standard-card-paragraph {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 27px;
-        color: #525355;
-        padding: 0 24px; }
-      .slide .single-standard-card-container.is-style-large.slick-slide {
-        width: 555px !important; }
-      .slide .single-standard-card-container.is-style-large.slick-active {
-        width: 555px !important; }
-      .slide .single-standard-card-container.is-style-large.slick-cloned {
-        width: 555px !important; }
-    .slide .single-standard-card-container.is-style-square {
+    .single-standard-card-container.is-style-large.slick-slide {
+      width: 555px !important; }
+    .single-standard-card-container.is-style-large.slick-active {
+      width: 555px !important; }
+    .single-standard-card-container.is-style-large.slick-cloned {
+      width: 555px !important; }
+  .single-standard-card-container.is-style-square {
+    width: 360px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px; }
+    .single-standard-card-container.is-style-square img {
       width: 360px;
-      height: auto;
-      background: #FFFFFF;
-      box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
-      border-radius: 16px;
-      margin-right: 30px;
-      padding-bottom: 24px; }
-      .slide .single-standard-card-container.is-style-square img {
-        width: 360px;
-        height: 360px;
+      height: 360px;
+      border-radius: 16px 16px 0 0; }
+    .single-standard-card-container.is-style-square .single-standard-card-main-text {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      color: #525355;
+      margin: 24px;
+      width: 312px; }
+    .single-standard-card-container.is-style-square .single-standard-card-paragraph {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #525355;
+      padding: 0 24px; }
+  .single-standard-card-container ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 24px; }
+    .single-standard-card-container ul .hero-category {
+      padding: 4px 8px;
+      height: 26px;
+      background: #EBFAE5;
+      border-radius: 14px;
+      margin-right: 10px;
+      min-width: 33px;
+      text-align: center; }
+      .single-standard-card-container ul .hero-category a {
+        font-family: SC Prosper Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 24px;
+        color: #1B6600;
+        text-decoration: none; }
+
+@media screen and (max-width: 767px) {
+  .single-standard-card-container {
+    width: 265px;
+    margin: 1em auto; }
+    .single-standard-card-container img {
+      width: 265px;
+      height: 150px; }
+    .single-standard-card-container .single-standard-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 233px; }
+    .single-standard-card-container .single-standard-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; }
+    .single-standard-card-container.is-style-large {
+      width: 305px;
+      margin: 1em auto; }
+      .single-standard-card-container.is-style-large img {
+        width: 305px;
+        height: 171px; }
+      .single-standard-card-container.is-style-large .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-large .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container.is-style-square {
+      width: 305px;
+      margin: 1em auto; }
+      .single-standard-card-container.is-style-square img {
+        width: 305px;
+        height: 305px;
         border-radius: 16px 16px 0 0; }
-      .slide .single-standard-card-container.is-style-square .single-standard-card-main-text {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 36px;
-        color: #525355;
-        margin: 24px;
-        width: 312px; }
-      .slide .single-standard-card-container.is-style-square .single-standard-card-paragraph {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 27px;
-        color: #525355;
-        padding: 0 24px; }
-    .slide .single-standard-card-container ul {
+      .single-standard-card-container.is-style-square .single-standard-card-main-text {
+        font-size: 24px;
+        line-height: 30px;
+        width: 273px; }
+      .single-standard-card-container.is-style-square .single-standard-card-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .single-standard-card-container ul {
       display: flex;
       list-style-type: none;
       padding: 0;
       margin: 0 24px; }
-      .slide .single-standard-card-container ul .hero-category {
-        padding: 4px 8px;
-        height: 26px;
-        background: #EBFAE5;
+      .single-standard-card-container ul .hero-category {
+        padding: 2px 6px;
+        height: 21px;
         border-radius: 14px;
-        margin-right: 10px;
-        min-width: 33px;
-        text-align: center; }
-        .slide .single-standard-card-container ul .hero-category a {
-          font-family: SC Prosper Sans;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 24px;
-          color: #1B6600;
-          text-decoration: none; }
-
-@media screen and (max-width: 767px) {
-  .slider .slide {
-    display: block;
-    overflow: hidden; }
-    .slider .slide .single-standard-card-container {
-      width: 265px;
-      margin: 1em auto; }
-      .slider .slide .single-standard-card-container img {
-        width: 265px;
-        height: 150px; }
-      .slider .slide .single-standard-card-container .single-standard-card-main-text {
-        font-size: 24px;
-        line-height: 30px;
-        width: 233px; }
-      .slider .slide .single-standard-card-container .single-standard-card-paragraph {
-        font-size: 16px;
-        line-height: 24px; }
-      .slider .slide .single-standard-card-container.is-style-large {
-        width: 305px;
-        margin: 1em auto; }
-        .slider .slide .single-standard-card-container.is-style-large img {
-          width: 305px;
-          height: 171px; }
-        .slider .slide .single-standard-card-container.is-style-large .single-standard-card-main-text {
-          font-size: 24px;
-          line-height: 30px;
-          width: 273px; }
-        .slider .slide .single-standard-card-container.is-style-large .single-standard-card-paragraph {
-          font-size: 16px;
-          line-height: 24px; }
-      .slider .slide .single-standard-card-container.is-style-square {
-        width: 305px;
-        margin: 1em auto; }
-        .slider .slide .single-standard-card-container.is-style-square img {
-          width: 305px;
-          height: 305px;
-          border-radius: 16px 16px 0 0; }
-        .slider .slide .single-standard-card-container.is-style-square .single-standard-card-main-text {
-          font-size: 24px;
-          line-height: 30px;
-          width: 273px; }
-        .slider .slide .single-standard-card-container.is-style-square .single-standard-card-paragraph {
-          font-size: 16px;
-          line-height: 24px; }
-      .slider .slide .single-standard-card-container ul {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0 24px; }
-        .slider .slide .single-standard-card-container ul .hero-category {
-          padding: 2px 6px;
-          height: 21px;
-          border-radius: 14px;
-          min-width: 42px; }
-          .slider .slide .single-standard-card-container ul .hero-category a {
-            font-size: 11px;
-            line-height: 16px; } }
+        min-width: 42px; }
+        .single-standard-card-container ul .hero-category a {
+          font-size: 11px;
+          line-height: 16px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .single-standard-card-container {
@@ -2660,59 +2635,53 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           font-size: 12px;
           line-height: 18px; } }
 
-.slide {
-  display: flex;
-  overflow: hidden; }
-  .slide .single-people-card-container {
+.single-people-card-container {
+  width: 310px;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding-bottom: 24px; }
+  .single-people-card-container img {
     width: 310px;
-    height: auto;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.2);
-    border-radius: 16px;
-    margin-right: 30px;
-    padding-bottom: 24px; }
-    .slide .single-people-card-container img {
-      width: 310px;
-      height: 310px;
-      border-radius: 16px 16px 0 0; }
-    .slide .single-people-card-container .single-people-card-main-text {
-      font-family: SC Prosper Sans;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 23px;
-      line-height: 34px;
-      color: #525355;
-      margin-top: 34px;
-      margin-bottom: 8px;
-      width: 314px;
-      padding: 0 24px; }
-    .slide .single-people-card-container .single-people-card-paragraph {
-      font-family: SC Prosper Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      color: #525355;
-      padding: 0 24px; }
+    height: 310px;
+    border-radius: 16px 16px 0 0; }
+  .single-people-card-container .single-people-card-main-text {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 34px;
+    color: #525355;
+    margin-top: 34px;
+    margin-bottom: 8px;
+    width: 314px;
+    padding: 0 24px; }
+  .single-people-card-container .single-people-card-paragraph {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355;
+    padding: 0 24px; }
 
 @media screen and (max-width: 767px) {
-  .slide {
-    display: block;
-    overflow: hidden; }
-    .slide .single-people-card-container {
+  .single-people-card-container {
+    width: 305px;
+    margin: 1em auto; }
+    .single-people-card-container img {
       width: 305px;
-      margin: 1em auto; }
-      .slide .single-people-card-container img {
-        width: 305px;
-        height: 305px;
-        border-radius: 16px 16px 0 0; }
-      .slide .single-people-card-container .single-people-card-main-text {
-        font-size: 24px;
-        line-height: 30px;
-        width: 273px; }
-      .slide .single-people-card-container .single-people-card-paragraph {
-        font-size: 16px;
-        line-height: 24px; } }
+      height: 305px;
+      border-radius: 16px 16px 0 0; }
+    .single-people-card-container .single-people-card-main-text {
+      font-size: 24px;
+      line-height: 30px;
+      width: 273px; }
+    .single-people-card-container .single-people-card-paragraph {
+      font-size: 16px;
+      line-height: 24px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .single-people-card-container {
@@ -2729,26 +2698,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 16px;
       line-height: 24px; } }
 
-.slide {
-  display: flex;
-  overflow: hidden; }
-  .slide .single-promo-card-container {
-    width: 360px;
-    height: 504px;
-    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-    border-radius: 16px;
-    margin-right: 30px;
-    padding-bottom: 24px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .slide .single-card-promo-title-container {
+.single-promo-card-container {
+  width: 360px;
+  height: 504px;
+  box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+  border-radius: 16px;
+  margin-right: 30px;
+  padding-bottom: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .single-promo-card-container .single-card-promo-title-container {
     position: relative;
-    top: 365px;
+    top: 488px;
     margin-left: 16px; }
-    .slide .single-card-promo-title-container a {
-      text-decoration: none; }
-      .slide .single-card-promo-title-container a h4 {
+    .single-promo-card-container .single-card-promo-title-container a {
+      text-decoration: none;
+      position: absolute;
+      bottom: 0px; }
+      .single-promo-card-container .single-card-promo-title-container a h4 {
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -2756,9 +2724,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 1.3;
         color: #ffffff;
         width: 288px;
-        margin: 0;
-        display: inline-block; }
-      .slide .single-card-promo-title-container a p {
+        margin: 0; }
+      .single-promo-card-container .single-card-promo-title-container a p {
         font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -2766,9 +2733,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 1.2;
         color: #ffffff;
         margin: 8px 0px;
-        width: 288px;
-        display: inline-block; }
-      .slide .single-card-promo-title-container a:after {
+        width: 288px; }
+      .single-promo-card-container .single-card-promo-title-container a:after {
         content: 'chevron_right';
         font-weight: 300;
         font-family: 'Material Icons';
@@ -2777,21 +2743,83 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #38D200;
         display: inline-block;
         position: relative;
-        right: -24px; }
+        right: -292px;
+        top: -27px; }
+
+@media screen and (max-width: 767px) {
+  .single-promo-card-container {
+    margin: 1em auto;
+    width: 268px; }
+    .single-promo-card-container .single-card-promo-title-container a {
+      text-decoration: none; }
+      .single-promo-card-container .single-card-promo-title-container a h4 {
+        font-size: 23px;
+        line-height: 30px;
+        width: 193px; }
+      .single-promo-card-container .single-card-promo-title-container a p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 8px 0px;
+        width: 193px; }
+      .single-promo-card-container .single-card-promo-title-container a:after {
+        content: 'chevron_right';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        position: relative;
+        right: -205px;
+        top: -27px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .single-promo-card-container {
+    width: 345px; }
+    .single-promo-card-container .single-card-promo-title-container {
+      position: relative;
+      top: 488px;
+      margin-left: 16px; }
+      .single-promo-card-container .single-card-promo-title-container a {
+        text-decoration: none;
+        position: absolute;
+        bottom: 0px; }
+        .single-promo-card-container .single-card-promo-title-container a h4 {
+          font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 23px;
+          line-height: 30px;
+          color: #ffffff;
+          width: 273px;
+          margin: 0; }
+        .single-promo-card-container .single-card-promo-title-container a p {
+          font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          margin: 8px 0px;
+          width: 273px; }
+        .single-promo-card-container .single-card-promo-title-container a:after {
+          content: 'chevron_right';
+          font-weight: 300;
+          font-family: 'Material Icons';
+          font-size: 1.5rem;
+          font-feature-settings: 'liga';
+          color: #38D200;
+          display: inline-block;
+          position: relative;
+          right: -292px;
+          top: -27px; } }
 
 .accordions-container {
   width: 1440px;
   background: #ffffff;
-  padding: 96px 150px;
   margin: 20px auto; }
-  .accordions-container .container-accordions {
-    max-width: 750px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-    border-radius: 16px;
-    padding: 32px;
-    margin: 32px auto; }
-    .accordions-container .container-accordions .accordions-container-title {
+  .accordions-container .accordions-titles-container {
+    width: 790px;
+    margin: 0 auto; }
+    .accordions-container .accordions-titles-container .accordions-container-title {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -2799,7 +2827,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 1.2;
       color: #0B56A8;
       margin: 0; }
-    .accordions-container .container-accordions .accordions-container-paragraph {
+    .accordions-container .accordions-titles-container .accordions-container-paragraph {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -2807,168 +2835,216 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       line-height: 1.5;
       color: #525355;
       margin: 16px 0px; }
-
-.accordions-xlarge-container {
-  width: 1440px;
-  background: #ffffff;
-  padding: 96px 150px;
-  margin: 20px auto; }
-  .accordions-xlarge-container .accordions-container-title {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 44px;
-    line-height: 1.2;
-    color: #0B56A8;
-    margin: 0; }
-  .accordions-xlarge-container .accordions-container-paragraph {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #525355;
-    margin: 16px 0px; }
-  .accordions-xlarge-container .accordion-xlarge-container {
-    max-width: 1140px;
+  .accordions-container .accordion-container {
+    width: 790px;
     background: #FFFFFF;
     box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
     border-radius: 16px;
-    margin: 16px auto; }
-    .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge {
-      cursor: pointer;
-      padding: 12px 18px;
+    padding: 32px;
+    margin: 32px auto; }
+    .accordions-container .accordion-container.xlarge {
       width: 1140px;
-      text-align: left;
-      outline: none;
-      border-bottom: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      background-color: #fff;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      border-radius: 16px;
-      border: 1px solid transparent; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge:hover {
-        border: 1px solid #0473EA;
-        border-radius: 16px; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge .custom-collapse-text {
-        display: none; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge .custom-expand-text {
-        width: 100%;
-        position: relative;
-        left: 992px;
-        font-family: 'SC Prosper Sans';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #0473EA;
-        background-image: url(../src/images/plus-blue.svg);
-        background-position: 0;
-        background-repeat: no-repeat;
-        background-size: 16px;
-        padding-left: 26px; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge .image-container-accordions-xlarge {
-        width: 130px;
-        height: 130px;
-        margin-top: 32px; }
-        .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge .image-container-accordions-xlarge img {
-          width: 130px;
-          height: 130px;
-          object-fit: cover; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active {
-        background-color: #0473EA;
-        background: #0473EA;
-        border-bottom: 0px solid #E5E5E5;
-        color: #ffffff;
-        border-radius: 16px 16px 0 0;
-        transition: all .7s ease; }
-        .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active .custom-expand-text {
-          display: none; }
-        .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active .custom-collapse-text {
-          display: block !important;
-          width: 100%;
-          position: relative;
-          left: 992px;
-          font-family: 'SC Prosper Sans';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 18px;
-          line-height: 27px;
-          color: #ffffff;
-          background-image: url(../src/images/minus-white.svg);
-          background-position: 0;
-          background-repeat: no-repeat;
-          background-size: 16px;
-          padding-left: 26px; }
-        .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active h4, .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active p {
-          color: #ffffff; }
-    .accordions-xlarge-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge {
-      width: 922px;
-      margin-top: 32px; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge h4 {
+      padding: 0; }
+
+@media screen and (max-width: 767px) {
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 375px; }
+    .accordions-container .accordions-titles-container {
+      width: 345px; }
+      .accordions-container .accordions-titles-container .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px; }
+      .accordions-container .accordions-titles-container .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px; }
+    .accordions-container .accordion-container {
+      width: 345px;
+      border-radius: 8px;
+      padding: 19px; }
+      .accordions-container .accordion-container.xlarge {
+        width: 345px;
+        padding: 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 768px; }
+    .accordions-container .accordions-titles-container {
+      width: 595px; }
+      .accordions-container .accordions-titles-container .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px; }
+    .accordions-container .accordion-container {
+      width: 595px;
+      border-radius: 12px;
+      padding: 16px 24px; }
+      .accordions-container .accordion-container.xlarge {
+        width: 720px;
+        padding: 0; } }
+
+.accordion-xlarge {
+  cursor: pointer;
+  padding: 0;
+  width: 1140px;
+  text-align: left;
+  outline: none;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  display: flex; }
+  .accordion-xlarge .image-container-accordions-xlarge {
+    margin: 32px 0 32px 32px; }
+    .accordion-xlarge .image-container-accordions-xlarge .img-accordions-xlarge {
+      width: 152px;
+      height: 152px; }
+  .accordion-xlarge .text-container-accordions-xlarge {
+    width: 825px;
+    margin-left: 24px;
+    margin-top: 55px; }
+    .accordion-xlarge .text-container-accordions-xlarge h4 {
+      font-family: SC Prosper Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+      color: #525355;
+      margin: 0; }
+      .accordion-xlarge .text-container-accordions-xlarge h4.tab-active {
         font-family: SC Prosper Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 28px;
         line-height: 36px;
-        color: #525355;
+        color: #0473EA;
         margin: 0; }
-      .accordions-xlarge-container .accordion-xlarge-container .accordion .text-container-accordions-xlarge p {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 27px;
-        color: #525355;
-        margin-top: 24px; }
-    .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge:after {
-      content: none;
-      font-size: 10px;
-      color: #0473EA;
-      float: right;
-      transform: scale(0.33); }
-    .accordions-xlarge-container .accordion-xlarge-container .accordion.xlarge.tab-active:after {
-      content: none;
-      float: right;
-      font-size: 10px;
-      color: #0473EA;
-      transform: scale(0.33); }
+  .accordion-xlarge:after {
+    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Plus@2x.png");
+    font-size: 16px;
+    color: #0473EA;
+    float: right;
+    transform: scale(0.33);
+    right: -55px;
+    top: 15px;
+    position: relative;
+    padding: 52px;
+    background-color: #E7F1FD;
+    border-radius: 50%;
+    margin-right: 32px; }
+  .accordion-xlarge.tab-active:after {
+    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
+    float: right;
+    font-size: 16px;
+    color: #0473EA;
+    transform: scale(0.33);
+    right: -55px;
+    top: 15px;
+    position: relative;
+    padding: 52px;
+    background-color: #E7F1FD;
+    border-radius: 50%;
+    margin-right: 32px; }
 
-.panel.xlarge {
+.tab-active {
+  background-color: #fff;
+  background: #fff;
+  border-bottom: 0px solid #E5E5E5; }
+
+.panel-xlarge {
   padding: 12px 0;
   background-color: white;
   display: none;
   overflow: hidden;
-  border-bottom: 0px solid #E5E5E5;
+  border-bottom: none;
   width: 1140px; }
-  .panel.xlarge .custom-collapse-text {
-    display: block !important;
-    width: 100%;
-    position: relative;
-    left: 992px;
-    font-family: 'SC Prosper Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    color: #0473EA;
-    background-image: url(../src/images/minus-blue.svg);
-    background-position: 0;
-    background-repeat: no-repeat;
-    background-size: 16px;
-    padding-left: 26px; }
-  .panel.xlarge .content-in-page-promo-container {
-    max-width: 1100px;
-    margin: 20px auto; }
+  .panel-xlarge p {
+    width: 638px; }
+
+@media screen and (max-width: 767px) {
+  .accordion-xlarge {
+    width: 345px;
+    display: block; }
+    .accordion-xlarge .image-container-accordions-xlarge {
+      margin: 24px 0 24px 24px; }
+      .accordion-xlarge .image-container-accordions-xlarge .img-accordions-xlarge {
+        width: 152px;
+        height: 152px; }
+    .accordion-xlarge .text-container-accordions-xlarge {
+      width: 297px;
+      margin-left: 24px; }
+      .accordion-xlarge .text-container-accordions-xlarge h4 {
+        font-size: 23px;
+        line-height: 30px; }
+        .accordion-xlarge .text-container-accordions-xlarge h4.tab-active {
+          font-size: 23px;
+          line-height: 30px; }
+    .accordion-xlarge:after {
+      right: -55px;
+      top: 15px;
+      position: relative;
+      padding: 51px;
+      margin-right: 24px; }
+    .accordion-xlarge.tab-active:after {
+      right: -55px;
+      top: 15px;
+      position: relative;
+      padding: 51px;
+      margin-right: 24px; }
+  .panel-xlarge {
+    padding: 12px 0;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-bottom: none;
+    width: 345px; }
+    .panel-xlarge .card-container {
+      width: 345px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordion-xlarge {
+    width: 720px; }
+    .accordion-xlarge .image-container-accordions-xlarge {
+      margin: 24px 0 24px 24px; }
+      .accordion-xlarge .image-container-accordions-xlarge .img-accordions-xlarge {
+        width: 152px;
+        height: 152px; }
+    .accordion-xlarge .text-container-accordions-xlarge {
+      width: 421px;
+      margin-left: 24px; }
+      .accordion-xlarge .text-container-accordions-xlarge h4 {
+        font-size: 23px;
+        line-height: 30px; }
+        .accordion-xlarge .text-container-accordions-xlarge h4.tab-active {
+          font-size: 23px;
+          line-height: 30px; }
+    .accordion-xlarge:after {
+      right: -55px;
+      top: 15px;
+      position: relative;
+      padding: 51px;
+      margin-right: 24px; }
+    .accordion-xlarge.tab-active:after {
+      right: -55px;
+      top: 15px;
+      position: relative;
+      padding: 51px;
+      margin-right: 24px; }
+  .panel-xlarge {
+    padding: 12px 0;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-bottom: none;
+    width: 720px; }
+    .panel-xlarge .card-container {
+      width: 720px; } }
 
 .accordion {
   cursor: pointer;
-  padding: 12px 18px;
-  width: 750px;
+  padding: 12px 0;
+  width: 725px;
   text-align: left;
   outline: none;
   border-bottom: 1px solid #E5E5E5;
@@ -2998,16 +3074,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       width: 638px; }
   .accordion:after {
     content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Plus@2x.png");
-    font-size: 10px;
+    font-size: 16px;
     color: #0473EA;
     float: right;
-    transform: scale(0.33); }
+    transform: scale(0.33);
+    right: -15px;
+    position: relative; }
   .accordion.tab-active:after {
     content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
     float: right;
-    font-size: 10px;
+    font-size: 16px;
     color: #0473EA;
-    transform: scale(0.33); }
+    transform: scale(0.33);
+    right: -15px;
+    position: relative; }
 
 .tab-active {
   background-color: #fff;
@@ -3015,17 +3095,63 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border-bottom: 0px solid #E5E5E5; }
 
 .panel {
-  padding: 12px 18px;
+  padding: 12px 0;
   background-color: white;
   display: none;
   overflow: hidden;
   border-bottom: 1px solid #E5E5E5;
-  width: 702px; }
+  width: 725px; }
+  .panel p {
+    width: 638px; }
+
+@media screen and (max-width: 767px) {
+  .accordion {
+    width: 305px; }
+    .accordion h4 {
+      font-size: 23px;
+      line-height: 50px;
+      width: 273px; }
+      .accordion h4.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 273px; }
+    .accordion:after {
+      right: -15px;
+      position: relative; }
+    .accordion.tab-active:after {
+      right: -15px;
+      position: relative; }
+  .panel {
+    width: 305px; }
+    .panel p {
+      width: 273px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordion {
+    width: 547px; }
+    .accordion h4 {
+      font-size: 23px;
+      line-height: 50px;
+      width: 507px; }
+      .accordion h4.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 507px; }
+    .accordion:after {
+      right: -15px;
+      position: relative; }
+    .accordion.tab-active:after {
+      right: -15px;
+      position: relative; }
+  .panel {
+    width: 547px; }
+    .panel p {
+      width: 507px; } }
 
 .accordion-small {
   cursor: pointer;
   padding: 12px 18px;
-  width: 750px;
+  width: 725px;
   text-align: left;
   outline: none;
   border-bottom: 1px solid #E5E5E5;
@@ -3059,13 +3185,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     font-size: 10px;
     color: #0473EA;
     float: right;
-    transform: scale(0.33); }
+    transform: scale(0.33);
+    right: -15px;
+    position: relative; }
   .accordion-small.tab-active:after {
     content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
     float: right;
     font-size: 10px;
     color: #0473EA;
-    transform: scale(0.33); }
+    transform: scale(0.33);
+    right: -15px;
+    position: relative; }
 
 .tab-small-active {
   background-color: #fff;
@@ -3078,12 +3208,58 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   display: none;
   overflow: hidden;
   border-bottom: 1px solid #E5E5E5;
-  width: 702px;
-  font-family: SC Prosper Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px; }
+  width: 725px; }
+  .panel-small p {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    width: 638px; }
+
+@media screen and (max-width: 767px) {
+  .accordion-small {
+    width: 305px; }
+    .accordion-small p {
+      font-size: 23px;
+      line-height: 50px;
+      width: 273px; }
+      .accordion-small p.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 273px; }
+    .accordion-small:after {
+      right: -15px;
+      position: relative; }
+    .accordion-small.tab-active:after {
+      right: -15px;
+      position: relative; }
+  .panel-small {
+    width: 305px; }
+    .panel-small p {
+      width: 273px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordion-small {
+    width: 547px; }
+    .accordion-small p {
+      font-size: 23px;
+      line-height: 50px;
+      width: 507px; }
+      .accordion-small p.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 507px; }
+    .accordion-small:after {
+      right: -15px;
+      position: relative; }
+    .accordion-small.tab-active:after {
+      right: -15px;
+      position: relative; }
+  .panel-small {
+    width: 547px; }
+    .panel-small p {
+      width: 507px; } }
 
 .card-link-image-container {
   display: flex;

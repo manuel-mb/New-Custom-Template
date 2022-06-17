@@ -1,7 +1,7 @@
 .accordion {
   cursor: pointer;
-  padding: 12px 18px;
-  width: 750px;
+  padding: 12px 0;
+  width: 725px;
   text-align: left;
   outline: none;
   border-bottom: 1px solid #E5E5E5;
@@ -24,7 +24,7 @@
     width: 638px;
   
     &.tab-active {
-      font-family: SC Prosper Sans;
+      font-family: SC Prosper Sans; 
       font-style: normal;
       font-weight: normal;
       font-size: 28px;
@@ -37,18 +37,22 @@
 
   &:after {
     content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Plus@2x.png");
-    font-size: 10px;
+    font-size: 16px;
     color: #0473EA;
     float: right; 
     transform: scale(.33);
+    right: -15px;
+    position: relative;
   }
 
   &.tab-active:after {
-  content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
-  float: right; 
-  font-size: 10px;
-  color: #0473EA;
-  transform: scale(.33);
+    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
+    float: right; 
+    font-size: 16px;
+    color: #0473EA;
+    transform: scale(.33);
+    right: -15px;
+    position: relative;
   }
 }
 
@@ -59,10 +63,86 @@
 }
 
 .panel {
-    padding: 12px 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    border-bottom: 1px solid #E5E5E5;
-    width: 702px;
+  padding: 12px 0;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-bottom: 1px solid #E5E5E5;
+  width: 725px;
+
+  p {
+    width: 638px;
   }
+}
+
+@media screen and (max-width: 767px) {
+
+  .accordion {
+    width: 305px;
+
+    h4{
+      font-size: 23px;
+      line-height: 50px;
+      width: 273px;
+    
+      &.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 273px;
+      }
+    }
+
+    &:after {
+      right: -15px;
+      position: relative;
+    }
+
+    &.tab-active:after {
+      right: -15px;
+      position: relative;
+    }
+  }
+
+  .panel {
+    width: 305px;
+
+    p {
+      width: 273px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordion {
+    width: 547px;
+
+    h4{
+      font-size: 23px;
+      line-height: 50px;
+      width: 507px;
+    
+      &.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 507px;
+      }
+    }
+
+    &:after {
+      right: -15px;
+      position: relative;
+    }
+
+    &.tab-active:after {
+      right: -15px;
+      position: relative;
+    }
+  }
+
+  .panel {
+    width: 547px;
+
+    p {
+      width: 507px;
+    }
+  }
+}

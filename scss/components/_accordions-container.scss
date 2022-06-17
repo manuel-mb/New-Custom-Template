@@ -1,35 +1,104 @@
 .accordions-container {
   width: 1440px;
   background: $color-mc-white;
-  padding: 96px 150px;
   margin: 20px auto;
 
-  .container-accordions {
-        max-width: 750px;
-        background: #FFFFFF;
-        box-shadow: $box-shadow-mc-blu2;
-        border-radius: 16px;
-        padding: 32px;
-        margin: 32px auto;
+  .accordions-titles-container {
+    width: 790px;
+    margin: 0 auto;
 
-        .accordions-container-title {
-            font-family: $font-family-mc-regular;
-            font-style: normal;
-            font-weight: normal;
-            font-size: $font-size-mc-lg-h2;
-            line-height: $line-height-mc-h1;
-            color: $color-mc-blue-dark;
-            margin: 0;
-        }
-
-        .accordions-container-paragraph {
-            font-family: $font-family-mc-regular;
-            font-style: normal;
-            font-weight: normal;
-            font-size: $font-size-mc-lg-base;
-            line-height: $line-height-mc-body;
-            color: $color-mc-grey;
-            margin: 16px 0px;
-        }
+    .accordions-container-title {
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-h2;
+      line-height: $line-height-mc-h1;
+      color: $color-mc-blue-dark;
+      margin: 0;
     }
+
+    .accordions-container-paragraph {
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-base;
+      line-height: $line-height-mc-body;
+      color: $color-mc-grey;
+      margin: 16px 0px;
+    }
+  }
+
+  .accordion-container {
+    width: 790px;
+    background: #FFFFFF;
+    box-shadow: $box-shadow-mc-blu2;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px auto;
+
+    &.xlarge{
+      width: 1140px;
+      padding:0;
+    }       
+  }
+} 
+
+@media screen and (max-width: 767px) { 
+
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 375px;
+  
+    .accordions-titles-container {
+      width: 345px;
+
+      .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .accordion-container {
+      width: 345px;
+      border-radius: 8px;
+      padding: 19px;
+
+      &.xlarge{
+        width: 345px;
+        padding:0;
+      }    
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 768px;
+  
+    .accordions-titles-container {
+      width: 595px;
+
+      .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+
+    .accordion-container {
+      width: 595px;
+      border-radius: 12px;
+      padding: 16px 24px; 
+
+      &.xlarge{
+        width: 720px;
+        padding:0;
+      }   
+    }
+  }
 }

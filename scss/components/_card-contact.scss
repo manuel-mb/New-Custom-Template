@@ -1,20 +1,18 @@
 .tab-content {
 
-    .slide {
-        display:flex; 
-        overflow: hidden;
-
-        .info {
+    .info {
             
-            &.active {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-            }
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
 
-            &.deactive {
-                display: none;
-            } 
+        &.deactive {
+            display: none;
+        } 
+
+        .slide {
 
             .single-contact-card-container {
 
@@ -124,67 +122,46 @@
 
 @media screen and (max-width: 767px) {
     .tab-content {
-
-        .slide {
-            display: block;
-            overflow: hidden;
-
-            .info{
         
-                &.active {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: row;
-                }
+        .info{
 
-                &.deactive {
-                    display: none;
-                }
+            &.active {
+                display: block;
+            }
+
+            &.deactive {
+                display: none;
+            }
+            
+            .slide {
 
                 .single-contact-card-container {
 
                     margin: 1em auto;
 
                     .single-contact-card-name {
-                        font-family: $font-family-mc-regular;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: $font-size-mc-lg-h4;
-                        line-height: $line-height-mc-h4;
-                        color: $color-mc-grey;
+                        font-size: 28px;
+                        line-height: 36px;
                         margin: 0;
-                        width: 507px;
+                        width: 215px;
                     }
 
                     .job-title {
-                        height: 18px;
-                        font-family: $font-family-mc-regular;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: $font-size-mc-lg-body-xs;
-                        line-height: $line-height-display-big;
-                        color: $color-mc-grey;
+                        font-size: 12px;
+                        line-height: 18px;
                         margin: 0;
                     }
 
                     .address {
-                        font-family: $font-family-mc-regular;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: $font-size-mc-lg-body-sm;
-                        line-height: $line-height-display-big;
+                        font-size: 15px;
+                        line-height: 22px;
                         margin: 16px 0px;
-                        color: $color-mc-grey;
                     }
 
                     a {
-                        font-family: $font-family-mc-regular;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: $font-size-mc-lg-body-sm;
-                        line-height: $line-height-display-big;
+                        font-size: 15px;
+                        line-height: 22px;
                         color: $color-mc-blue;
-                        display: block; 
                         margin: 16px 0;
                         text-decoration: none;
                     }

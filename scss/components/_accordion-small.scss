@@ -1,7 +1,7 @@
 .accordion-small {
   cursor: pointer;
   padding: 12px 18px;
-  width: 750px;
+  width: 725px;
   text-align: left;
   outline: none;
   border-bottom: 1px solid #E5E5E5;
@@ -42,14 +42,18 @@
     color: #0473EA;
     float: right; 
     transform: scale(.33);
+    right: -15px;
+    position: relative;
   }
 
   &.tab-active:after {
-  content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
-  float: right; 
-  font-size: 10px;
-  color: #0473EA;
-  transform: scale(.33);
+    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
+    float: right; 
+    font-size: 10px;
+    color: #0473EA;
+    transform: scale(.33);
+    right: -15px;
+    position: relative;
   }
 }
 
@@ -65,10 +69,87 @@
   display: none;
   overflow: hidden;
   border-bottom: 1px solid #E5E5E5;
-  width: 702px;
-  font-family: SC Prosper Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
+  width: 725px;
+
+  p {
+    font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    width: 638px;
   }
+}
+
+@media screen and (max-width: 767px) {
+
+  .accordion-small {
+    width: 305px;
+
+    p {
+      font-size: 23px;
+      line-height: 50px;
+      width: 273px;
+    
+      &.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 273px;
+      }
+    }
+
+    &:after {
+      right: -15px;
+      position: relative;
+    }
+
+    &.tab-active:after {
+      right: -15px;
+      position: relative;
+    }
+  }
+
+  .panel-small {
+    width: 305px;
+
+    p {
+      width: 273px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  
+  .accordion-small {
+    width: 547px;
+
+    p {
+      font-size: 23px;
+      line-height: 50px;
+      width: 507px;
+    
+      &.tab-active {
+        font-size: 23px;
+        line-height: 30px;
+        width: 507px;
+      }
+    }
+
+    &:after {
+      right: -15px;
+      position: relative;
+    }
+
+    &.tab-active:after {
+      right: -15px;
+      position: relative;
+    }
+  }
+
+  .panel-small {
+    width: 547px;
+
+    p {
+      width: 507px;
+    }
+  }
+}
