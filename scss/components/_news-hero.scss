@@ -1,0 +1,129 @@
+.news-hero-container {
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .news-hero-main-post-container {
+        margin-right: 30px;
+
+        .news-hero-main-post {
+
+            .news-hero-main-thumbnail {
+
+                img {
+                    width: 750px;
+                    height: 422px;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+
+            .news-hero-main-chips {
+
+                ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 0;
+
+                    li {
+
+                        &::marker {
+                            content:'';
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #1B6600;
+                        }
+                    }
+                }
+            }
+
+            .news-hero-main-content {
+
+                .news-hero-main-title {
+                    font-family: 'SC Prosper Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 35px;
+                    line-height: 45px;
+                    text-decoration: none;
+                    color: #525355;
+                    margin-top: 24px;
+
+                    h3 {
+                        margin: 0;
+                    }
+                }
+
+                .news-hero-main-paragraph {
+                    font-family: 'SC Prosper Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    margin-top: 24px;
+                }
+
+            }
+        }
+    }
+
+    .news-hero-latest-post-container {
+
+        .news-hero-latest-post {
+
+            .news-hero-latest-post-thumbnail {
+
+                img {
+                    width: 360px;
+                    height: 202px;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+
+            .news-hero-latest-post-chips {
+
+                ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 0;
+
+                    li {
+
+                        &::marker {
+                            content:'';
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #1B6600;
+
+                            &:hover {
+                                color: #ffff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .news-hero-latest-posts-content {
+
+                .news-hero-latest-post-title {
+                    font-family: 'SC Prosper Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 23px;
+                    line-height: 34px;
+                    margin-top: 12px;
+                    text-decoration: none;
+                    color: #525355;
+                }
+
+            }
+        }
+    }
+}
