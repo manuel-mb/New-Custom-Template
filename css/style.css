@@ -665,43 +665,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     color: #ffffff; }
     .content-chip:hover a {
       color: #ffffff; }
-
-.content-chip-video {
-  padding: 4px 8px;
-  height: 26px;
-  background: #E7F1FD;
-  border-radius: 14px;
-  margin-right: 8px;
-  min-width: 49px;
-  text-align: center;
-  font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #0473EA;
-  text-decoration: none;
-  transition: all .3s;
-  cursor: pointer; }
-  .content-chip-video a {
-    color: #0473EA; }
-    .content-chip-video a:before {
-      background-image: url(../src/images/play-circle-fill.svg);
-      content: '';
-      background-repeat: no-repeat;
-      background-size: 13px;
-      width: 13px;
-      height: 13px;
-      float: left;
-      margin-top: 6px;
-      margin-right: 3px; }
-  .content-chip-video:hover {
-    background: #061D33;
-    color: #ffffff; }
-    .content-chip-video:hover a {
-      color: #ffffff; }
-      .content-chip-video:hover a:before {
-        background-image: url(../src/images/play-circle-fill-white.svg);
+  .content-chip-video {
+    padding: 4px 8px;
+    height: 26px;
+    background: #E7F1FD;
+    border-radius: 14px;
+    margin-right: 8px;
+    min-width: 49px;
+    text-align: center;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #0473EA;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer; }
+    .content-chip-video a {
+      color: #0473EA; }
+      .content-chip-video a:before {
+        background-image: url(../src/images/play-circle-fill.svg);
         content: '';
         background-repeat: no-repeat;
         background-size: 13px;
@@ -710,6 +694,65 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         float: left;
         margin-top: 6px;
         margin-right: 3px; }
+    .content-chip-video:hover {
+      background: #061D33;
+      color: #ffffff; }
+      .content-chip-video:hover a {
+        color: #ffffff; }
+        .content-chip-video:hover a:before {
+          background-image: url(../src/images/play-circle-fill-white.svg);
+          content: '';
+          background-repeat: no-repeat;
+          background-size: 13px;
+          width: 13px;
+          height: 13px;
+          float: left;
+          margin-top: 6px;
+          margin-right: 3px; }
+  .content-chip-podcast {
+    padding: 4px 8px;
+    height: 26px;
+    background: #E7F1FD;
+    border-radius: 14px;
+    margin-right: 8px;
+    min-width: 49px;
+    text-align: center;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #0473EA;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer; }
+    .content-chip-podcast a {
+      color: #0473EA; }
+      .content-chip-podcast a:before {
+        background-image: url(../src/images/podcast.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 13px;
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin-top: 6px;
+        margin-right: 3px; }
+    .content-chip-podcast:hover {
+      background: #061D33;
+      color: #ffffff; }
+      .content-chip-podcast:hover a {
+        color: #ffffff; }
+        .content-chip-podcast:hover a:before {
+          background-image: url(../src/images/podcast-white.svg);
+          content: '';
+          background-repeat: no-repeat;
+          background-size: 13px;
+          width: 13px;
+          height: 13px;
+          float: left;
+          margin-top: 6px;
+          margin-right: 3px; }
 
 /**
  * Style for Card link Block.
@@ -820,14 +863,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           display: inline-block;
           margin: 0;
           color: #38D200; }
-    .home-hero-container .hero-home-container .image-hero-home-container {
-      max-width: 778px; }
-      .home-hero-container .hero-home-container .image-hero-home-container .square {
-        max-height: 778px;
-        border-radius: 16px; }
-      .home-hero-container .hero-home-container .image-hero-home-container .landscape {
-        max-height: 434px;
-        border-radius: 16px; }
+    .home-hero-container .hero-home-container .image-hero-home-container .square {
+      width: 778px;
+      height: 778px;
+      border-radius: 16px; }
+    .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+      width: 778px;
+      height: 434px;
+      border-radius: 16px; }
 
 @media screen and (max-width: 375px) {
   .home-hero-container .hero-home-container {
@@ -856,14 +899,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           margin: 0;
           color: #38D200; }
     .home-hero-container .hero-home-container .image-hero-home-container {
-      max-width: 315px;
       margin: 44px auto; }
       .home-hero-container .hero-home-container .image-hero-home-container .square {
-        max-height: 315px;
+        height: 315px;
         width: 315px;
         border-radius: 16px; }
       .home-hero-container .hero-home-container .image-hero-home-container .landscape {
-        max-height: 195px;
+        height: 195px;
         border-radius: 16px;
         width: 315px; } }
 
@@ -894,14 +936,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           margin: 0;
           color: #38D200; }
     .home-hero-container .hero-home-container .image-hero-home-container {
-      max-width: 345px;
       margin: 44px auto; }
       .home-hero-container .hero-home-container .image-hero-home-container .square {
-        max-height: 345px;
+        height: 345px;
         border-radius: 16px;
         width: 345px; }
       .home-hero-container .hero-home-container .image-hero-home-container .landscape {
-        max-height: 195px;
+        height: 195px;
         border-radius: 16px;
         width: 345px; } }
 
@@ -927,18 +968,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: inline-block;
         margin: 0;
         color: #38D200; }
-  .home-hero-container .hero-home-container .image-hero-home-container {
-    max-width: 408px; }
-    .home-hero-container .hero-home-container .image-hero-home-container .square {
-      max-height: 408px;
-      border-radius: 16px;
-      width: 408px; }
-    .home-hero-container .hero-home-container .image-hero-home-container .landscape {
-      max-height: 230px;
-      border-radius: 16px;
-      position: relative;
-      top: 109px;
-      width: 408px; } }
+  .home-hero-container .hero-home-container .image-hero-home-container .square {
+    height: 408px;
+    border-radius: 16px;
+    width: 408px; }
+  .home-hero-container .hero-home-container .image-hero-home-container .landscape {
+    height: 230px;
+    border-radius: 16px;
+    position: relative;
+    top: 109px;
+    width: 408px; } }
 
 @media screen and (min-width: 800px) and (max-width: 1140px) {
   .home-hero-container .hero-home-title-container {
@@ -962,18 +1001,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: inline-block;
         margin: 0;
         color: #38D200; }
-  .home-hero-container .image-hero-home-container {
-    max-width: 408px; }
-    .home-hero-container .image-hero-home-container .square {
-      max-height: 408px;
-      border-radius: 16px;
-      width: 408px; }
-    .home-hero-container .image-hero-home-container .landscape {
-      max-height: 230px;
-      border-radius: 16px;
-      position: relative;
-      top: 109px;
-      width: 408px; } }
+  .home-hero-container .image-hero-home-container .square {
+    height: 408px;
+    border-radius: 16px;
+    width: 408px; }
+  .home-hero-container .image-hero-home-container .landscape {
+    height: 230px;
+    border-radius: 16px;
+    position: relative;
+    top: 109px;
+    width: 408px; } }
 
 @media screen and (min-width: 1141px) and (max-width: 1440px) {
   .home-hero-container .hero-home-title-container {
@@ -1009,14 +1046,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin: 0;
         color: #38D200; }
   .home-hero-container .image-hero-home-container {
-    max-width: 678px;
     padding-right: 12px; }
     .home-hero-container .image-hero-home-container .square {
-      max-height: 678px;
+      height: 678px;
       border-radius: 16px;
       width: 678px; }
     .home-hero-container .image-hero-home-container .landscape {
-      max-height: 400px;
+      height: 400px;
       border-radius: 16px;
       width: 678px; } }
 
@@ -2510,22 +2546,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     list-style-type: none;
     padding: 0;
     margin: 0 24px; }
-    .single-standard-card-container ul .hero-category {
-      padding: 4px 8px;
-      height: 26px;
-      background: #EBFAE5;
-      border-radius: 14px;
-      margin-right: 10px;
-      min-width: 33px;
-      text-align: center; }
-      .single-standard-card-container ul .hero-category a {
-        font-family: SC Prosper Sans;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 24px;
-        color: #1B6600;
-        text-decoration: none; }
+    .single-standard-card-container ul .content-chip::marker {
+      content: ''; }
+    .single-standard-card-container ul .content-chip-video::marker, .single-standard-card-container ul .content-chip-podcast::marker {
+      content: ''; }
+    .single-standard-card-container ul .content-chip-video a, .single-standard-card-container ul .content-chip-podcast a {
+      text-decoration: none; }
+      .single-standard-card-container ul .content-chip-video a:before, .single-standard-card-container ul .content-chip-podcast a:before {
+        margin-right: 3px;
+        margin-top: 3px; }
 
 @media screen and (max-width: 767px) {
   .single-standard-card-container {
@@ -3261,103 +3290,125 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .panel-small p {
       width: 507px; } }
 
-.card-link-image-container {
-  display: flex;
-  min-width: 360px;
-  height: 96px;
-  background: #ffffff;
-  box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-  border-radius: 16px;
-  margin-right: 30px; }
-  .card-link-image-container .card-link-img-container {
-    width: 96px;
-    background-size: cover;
-    border-radius: 16px 0 0 16px; }
-  .card-link-image-container .text-only-blue-cta {
-    position: relative;
-    top: 30px;
-    margin-left: 12px;
-    flex: 2; }
-    .card-link-image-container .text-only-blue-cta:after {
-      float: right;
+.card-link-images-cards-container {
+  display: flex; }
+  .card-link-images-cards-container .card-link-image-container {
+    display: flex;
+    width: 360px;
+    height: 96px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+    border-radius: 16px;
+    margin-right: 30px; }
+    .card-link-images-cards-container .card-link-image-container .card-link-img-container {
+      width: 96px;
+      background-size: cover;
+      border-radius: 16px 0 0 16px; }
+    .card-link-images-cards-container .card-link-image-container .text-only-blue-cta {
       position: relative;
-      top: 0;
-      right: 0; }
+      top: 30px;
+      margin-left: 12px;
+      flex: 2; }
+      .card-link-images-cards-container .card-link-image-container .text-only-blue-cta:after {
+        float: right;
+        position: relative;
+        top: 0;
+        right: 0; }
 
-.card-link-container {
-  min-width: 360px;
-  height: auto;
-  background: #ffffff;
-  box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-  border-radius: 16px;
-  padding: 16px;
-  margin-right: 30px; }
-  .card-link-container .text-only-button {
-    margin-left: 12px;
-    position: relative;
-    top: 6px; }
-    .card-link-container .text-only-button:after {
-      float: right; }
-  .card-link-container p {
-    margin: 0 0 0 12px; }
-  .card-link-container:hover {
-    background: #0473EA;
-    box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
-    transition: all .3s; }
-    .card-link-container:hover p {
-      color: #ffffff; }
-    .card-link-container:hover .text-only-button {
-      transition: all .3s;
-      color: #ffffff;
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 1.2;
-      text-decoration: underline; }
-      .card-link-container:hover .text-only-button:after {
+.card-link-cards-container {
+  display: flex; }
+  .card-link-cards-container .card-link-container {
+    width: 360px;
+    height: auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+    border-radius: 16px;
+    padding: 16px;
+    margin-right: 30px; }
+    .card-link-cards-container .card-link-container .text-only-button {
+      margin-left: 12px;
+      position: relative;
+      top: 6px; }
+      .card-link-cards-container .card-link-container .text-only-button:after {
+        float: right; }
+    .card-link-cards-container .card-link-container p {
+      margin: 0 0 0 12px; }
+    .card-link-cards-container .card-link-container:hover {
+      background: #0473EA;
+      box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
+      transition: all .3s; }
+      .card-link-cards-container .card-link-container:hover p {
         color: #ffffff; }
-      .card-link-container:hover .text-only-button.is-style-blue-only-text-download:after {
-        background-image: url(../src/images/download-white.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 18px;
-        display: inline-block;
-        position: relative;
-        width: 50px;
-        height: 18px;
-        top: 4px;
-        right: -5px;
-        transition: all .3s; }
-      .card-link-container:hover .text-only-button.is-style-blue-only-text-play:after {
-        background-image: url(../src/images/play-circle-fill-white.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 18px;
-        display: inline-block;
-        position: relative;
-        width: 50px;
-        height: 18px;
-        top: 4px;
-        right: -5px;
-        transition: all .3s; }
-      .card-link-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
-        background-image: url(../src/images/external-link-white.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 18px;
-        display: inline-block;
-        position: relative;
-        width: 50px;
-        height: 18px;
-        top: 4px;
-        right: -5px;
-        transition: all .3s; }
-    .card-link-container:hover a {
-      color: #ffffff;
-      text-decoration: underline; }
-      .card-link-container:hover a:after {
-        color: #ffffff; }
+      .card-link-cards-container .card-link-container:hover .text-only-button {
+        transition: all .3s;
+        color: #ffffff;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+        text-decoration: underline; }
+        .card-link-cards-container .card-link-container:hover .text-only-button:after {
+          color: #ffffff; }
+        .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-download:after {
+          background-image: url(../src/images/download-white.svg);
+          content: '';
+          background-repeat: no-repeat;
+          background-size: 18px;
+          display: inline-block;
+          position: relative;
+          width: 50px;
+          height: 18px;
+          top: 4px;
+          right: -5px;
+          transition: all .3s; }
+        .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-play:after {
+          background-image: url(../src/images/play-circle-fill-white.svg);
+          content: '';
+          background-repeat: no-repeat;
+          background-size: 18px;
+          display: inline-block;
+          position: relative;
+          width: 50px;
+          height: 18px;
+          top: 4px;
+          right: -5px;
+          transition: all .3s; }
+        .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
+          background-image: url(../src/images/external-link-white.svg);
+          content: '';
+          background-repeat: no-repeat;
+          background-size: 18px;
+          display: inline-block;
+          position: relative;
+          width: 50px;
+          height: 18px;
+          top: 4px;
+          right: -5px;
+          transition: all .3s; }
+      .card-link-cards-container .card-link-container:hover a {
+        color: #ffffff;
+        text-decoration: underline; }
+        .card-link-cards-container .card-link-container:hover a:after {
+          color: #ffffff; }
+
+@media screen and (max-width: 767px) {
+  .card-link-cards-container {
+    display: block; }
+    .card-link-cards-container .card-link-container {
+      width: 345px;
+      height: auto;
+      margin: 16px auto; }
+      .card-link-cards-container .card-link-container .text-only-button {
+        top: 1px; }
+      .card-link-cards-container .card-link-container p {
+        margin: 0 0 0 12px; }
+      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-download:after {
+        top: 1px; }
+      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-play:after {
+        top: 1px; }
+      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
+        top: 1px; } }
 
 .primary-button {
   min-width: 180px;
@@ -3864,11 +3915,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       display: flex;
       justify-content: flex-start;
       padding-left: 0; }
-      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul li::marker {
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip::marker {
         content: ''; }
-      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul li a {
-        text-decoration: none;
-        color: #1B6600; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video::marker, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast::marker {
+        content: ''; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video a, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast a {
+        text-decoration: none; }
+        .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video a:before, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast a:before {
+          margin-right: 3px;
+          margin-top: 3px; }
     .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-content .news-hero-main-title {
       font-family: 'SC Prosper Sans';
       font-style: normal;
@@ -3896,13 +3951,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: flex;
     justify-content: flex-start;
     padding-left: 0; }
-    .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul li::marker {
+    .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip::marker {
       content: ''; }
-    .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul li a {
-      text-decoration: none;
-      color: #1B6600; }
-      .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul li a:hover {
-        color: #ffff; }
+    .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video::marker, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast::marker {
+      content: ''; }
+    .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video a, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast a {
+      text-decoration: none; }
+      .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video a:before, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast a:before {
+        margin-right: 3px;
+        margin-top: 3px; }
   .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-posts-content .news-hero-latest-post-title {
     font-family: 'SC Prosper Sans';
     font-style: normal;

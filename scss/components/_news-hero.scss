@@ -27,15 +27,26 @@
                     justify-content: flex-start;
                     padding-left: 0;
 
-                    li {
+                    .content-chip {
 
                         &::marker {
                             content:'';
                         }
 
-                        a {
-                            text-decoration: none;
-                            color: #1B6600;
+                        &-video, &-podcast {
+                            &::marker {
+                                content:'';
+                            }
+
+                            a {
+                                text-decoration: none;
+
+                                &:before {
+                                    margin-right: 3px;
+                                    margin-top: 3px;
+                                }
+                            }
+
                         }
                     }
                 }
@@ -92,19 +103,26 @@
                     justify-content: flex-start;
                     padding-left: 0;
 
-                    li {
+                    .content-chip {
 
                         &::marker {
                             content:'';
                         }
 
-                        a {
-                            text-decoration: none;
-                            color: #1B6600;
-
-                            &:hover {
-                                color: #ffff;
+                        &-video, &-podcast {
+                            &::marker {
+                                content:'';
                             }
+
+                            a {
+                                text-decoration: none;
+
+                                &:before {
+                                    margin-right: 3px;
+                                    margin-top: 3px;
+                                }
+                            }
+
                         }
                     }
                 }

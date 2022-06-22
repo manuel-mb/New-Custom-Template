@@ -132,24 +132,26 @@
 		padding: 0;
 		margin: 0 24px;
 
-		.hero-category {
-			padding: 4px 8px;
-			height: 26px;
-			background: #EBFAE5;
-			border-radius: 14px;
-			margin-right: 10px;
-			min-width: 33px;
-			text-align: center;
+		.content-chip {
 
-			a {
-				font-family: SC Prosper Sans;
-				font-style: normal;
-				font-weight: bold;
-				font-size: 12px;
-				line-height: 24px;
-				color: #1B6600;
-				text-decoration: none;
-			}
+	    &::marker {
+	        content:'';
+	    }
+
+	    &-video, &-podcast {
+        &::marker {
+            content:'';
+        }
+
+        a {
+          text-decoration: none;
+
+          &:before {
+              margin-right: 3px;
+              margin-top: 3px;
+          }
+        }
+	    }
 		}
 	}
 }

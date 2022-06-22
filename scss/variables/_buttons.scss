@@ -499,51 +499,30 @@
             color: $color-mc-white;
         }
     }
-}
 
-.content-chip-video {
-    padding: 4px 8px;
-    height: 26px;
-    background: $color-mc-blue-lightest;
-    border-radius: 14px;
-    margin-right: 8px;
-    min-width: 49px;
-    text-align: center;
-    font-family: $font-family-mc-regular;
-    font-style: normal;
-    font-weight: bold;
-    font-size: $font-size-mc-lg-body-xs;
-    line-height: $line-height-mc-body-xs;
-    color: $color-mc-blue;
-    text-decoration: none;
-    transition: all .3s;
-    cursor: pointer;
-
-    a {
-        color: $color-mc-blue; 
-
-        &:before {
-            background-image: url(../src/images/play-circle-fill.svg);
-            content:'' ;
-            background-repeat: no-repeat;
-            background-size: 13px;
-            width: 13px;
-            height: 13px;
-            float: left;
-            margin-top: 6px;
-            margin-right: 3px;
-        }
-    }
-    
-    &:hover {
-        background: $color-mc-blue-darkest;
-        color: $color-mc-white;
+    &-video {
+        padding: 4px 8px;
+        height: 26px;
+        background: $color-mc-blue-lightest;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 49px;
+        text-align: center;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $font-size-mc-lg-body-xs;
+        line-height: $line-height-mc-body-xs;
+        color: $color-mc-blue;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
 
         a {
-            color: $color-mc-white;
+            color: $color-mc-blue; 
 
             &:before {
-                background-image: url(../src/images/play-circle-fill-white.svg);
+                background-image: url(../src/images/play-circle-fill.svg);
                 content:'' ;
                 background-repeat: no-repeat;
                 background-size: 13px;
@@ -552,6 +531,83 @@
                 float: left;
                 margin-top: 6px;
                 margin-right: 3px;
+            }
+        }
+        
+        &:hover {
+            background: $color-mc-blue-darkest;
+            color: $color-mc-white;
+
+            a {
+                color: $color-mc-white;
+
+                &:before {
+                    background-image: url(../src/images/play-circle-fill-white.svg);
+                    content:'' ;
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    float: left;
+                    margin-top: 6px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    &-podcast {
+        padding: 4px 8px;
+        height: 26px;
+        background: $color-mc-blue-lightest;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 49px;
+        text-align: center;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $font-size-mc-lg-body-xs;
+        line-height: $line-height-mc-body-xs;
+        color: $color-mc-blue;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: $color-mc-blue; 
+
+            &:before {
+                background-image: url(../src/images/podcast.svg);
+                content:'' ;
+                background-repeat: no-repeat;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                float: left;
+                margin-top: 6px;
+                margin-right: 3px;
+            }
+        }
+        
+        &:hover {
+            background: $color-mc-blue-darkest;
+            color: $color-mc-white;
+
+            a {
+                color: $color-mc-white;
+
+                &:before {
+                    background-image: url(../src/images/podcast-white.svg);
+                    content:'' ;
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    float: left;
+                    margin-top: 6px;
+                    margin-right: 3px;
+                }
             }
         }
     }
