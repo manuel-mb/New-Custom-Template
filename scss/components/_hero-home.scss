@@ -5,263 +5,134 @@
  *
  */
 
- .home-hero-container {
- 	
- 	background: $gradient-mc-blue;
+.hero-home-container {
 
-	.hero-home-container {
+ 	padding: 96px 0px 96px 0px;
+ 	width: 100%;
+    margin: 16px 0;
+    display: flex;
+    background: $gradient-mc-blue;
+    justify-content: space-around;
 
-	 	padding: 96px 0px 96px 0px;
-	 	max-width: 1440px;
-	    margin: 0 auto;
-	    display: flex;
+ 	.hero-home-title-container {
+ 		width: 535px;
+  		display: inline-block;
+		margin-right: 30px;
+	    margin-left: 72px;
+
+ 		.hero-home-title-intro {
+ 			font-family: $font-family-mc-medium;
+			font-style: normal;
+			font-weight: normal;
+			font-size: $font-size-mc-lg-base;
+			line-height: $line-height-mc-h5;
+			color: $color-mc-white-70;
+ 		}
+
+ 		.hero-home-main-title {
+ 			font-family: $font-family-mc-medium;
+			font-style: normal;
+			font-weight: normal;
+			font-size: $font-size-mc-lg-h1;
+			line-height: $line-height-mc-h1;
+			margin: 0 0 64px;
+			color: $color-mc-white;
+
+			&::before {
+				content: "ª";
+				display: inline-block;
+				margin: 0;
+				color: $color-mc-blue;
+				position: absolute;
+				left: -15px;
+			}
+
+			&::after {
+				content: "º";
+				display: inline-block;
+				margin: 0;
+				color: $color-mc-green;
+			}
+ 		}
+ 	}
+
+ 	.image-hero-home-container{
+
+ 		.square {
+ 			width: 778px;
+ 			height: 778px;
+ 			border-radius: 16px;
+	 	}
+	 	
+	 	.landscape {
+	 		width: 778px;
+ 			height: 434px;
+ 			border-radius: 16px;	
+	 	}
+ 	}
+}
+
+@media screen and (max-width: 767px) {
+    .hero-home-container {
+    	display: block;
+		padding: 48px 0px 48px 0;
+    	
 
 	 	.hero-home-title-container {
-
-	 		width: 535px;
-	  		display: inline-block;
-			margin-right: 30px;
-	  		position: relative;
-	 		top: 18px;
-		    margin-left: 72px;
+	 		width: 345px;
+		    margin: 0 auto;
+		    display: block;
+		    top: 0;
 
 	 		.hero-home-title-intro {
-	 			font-family: $font-family-mc-medium;
-				font-style: normal;
-				font-weight: normal;
-				font-size: $font-size-mc-lg-base;
-				line-height: $line-height-mc-h5;
-				color: $color-mc-white-70;
+	 			font-size: 16px;
+				line-height: 24px;
 	 		}
 
 	 		.hero-home-main-title {
-	 			font-family: $font-family-mc-medium;
-				font-style: normal;
-				font-weight: normal;
-				font-size: $font-size-mc-lg-h1;
-				line-height: $line-height-mc-h1;
-				margin: 0 0 64px;
-				color: $color-mc-white;
+				font-size: 40px;
+				line-height: 48px;
 
 				&::before {
-					content: "ª";
-					display: inline-block;
-					margin: 0;
-					color: $color-mc-blue;
-					position: absolute;
-					left: -15px;
+					display: none;
 				}
 
 				&::after {
-					content: "º";
-					display: inline-block;
-					margin: 0;
-					color: $color-mc-green;
+					display: none;
 				}
 	 		}
 	 	}
 
-	 	.image-hero-home-container{
+	 	.image-hero-home-container {
+	 		margin: 32px auto;
+	 		text-align: center;
 
 	 		.square {
-	 			width: 778px;
-	 			height: 778px;
-	 			border-radius: 16px;
+	 			height: 345px;
+	 			width: 345px;
+	 			border-radius: 8px;
 		 	}
 		 	
 		 	.landscape {
-		 		width: 778px;
-	 			height: 434px;
-	 			border-radius: 16px;	
-		 	}
+	 			height: 195px;
+	 			border-radius: 8px;
+	 			width: 345px;
+		 	}	
 	 	}
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
-	.home-hero-container {
-		
-
-	    .hero-home-container {
-
-	    	display: block;
-	    	padding: 32px 0px 1px 0px;
-
-		 	.hero-home-title-container {
-		 		width: 260px;
-			    margin: 0 auto;
-			    display: block;
-
-		 		.hero-home-title-intro {
-		 			font-size: 16px;
-					line-height: 24px;
-		 		}
-
-		 		.hero-home-main-title {
-					font-size: 40px;
-					line-height: 48px;
-
-					&::before {
-						content: "ª";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-blue;
-						position: absolute;
-						left: -2px;
-					}
-
-					&::after {
-						content: "º";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-green;
-					}
-		 		}
-		 	}
-
-		 	.image-hero-home-container {
-		 		margin: 44px auto;
-
-		 		.square {
-		 			height: 315px;
-		 			width: 315px;
-		 			border-radius: 16px;
-			 	}
-			 	
-			 	.landscape {
-		 			height: 195px;
-		 			border-radius: 16px;
-		 			width: 315px;
-			 	}	
-		 	}
-		}
-    }
-}
-
-@media screen and (min-width: 376px) and (max-width: 760px) {
-
-	.home-hero-container {
-		
-
-	    .hero-home-container {
-	    	display: block;
-	    	padding: 32px 0px 1px 0px;
-
-		 	.hero-home-title-container {
-		 		width: 260px;
-			    margin: 0 auto;
-			    display: block;
-
-		 		.hero-home-title-intro {
-		 			font-size: 16px;
-					line-height: 24px;
-		 		}
-
-		 		.hero-home-main-title {
-					font-size: 40px;
-					line-height: 48px;
-
-					&::before {
-						content: "ª";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-blue;
-						position: absolute;
-						left: -15px;
-					}
-
-					&::after {
-						content: "º";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-green;
-					}
-		 		}
-		 	}
-
-		 	.image-hero-home-container {
-		 		margin: 44px auto;
-
-		 		.square {
-		 			height: 345px;
-		 			border-radius: 16px;
-		 			width: 345px;
-			 	}
-			 	
-			 	.landscape {
-		 			height: 195px;
-		 			border-radius: 16px;
-		 			width: 345px;
-			 	}	
-		 	}
-		}
-    }
-}
-
-@media screen and (min-width: 761px) and (max-width: 800px) {
-
-	.home-hero-container {
-
-	    .hero-home-container {
-
-		 	.hero-home-title-container {
-		 		width: 251px;
-			    margin-left: 52px;
-
-		 		.hero-home-title-intro {
-		 			font-size: 16px;
-					line-height: 24px;
-		 		}
-
-		 		.hero-home-main-title {
-					font-size: 40px;
-					line-height: 48px;
-
-					&::before {
-						content: "ª";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-blue;
-						position: absolute;
-						left: -15px;
-					}
-
-					&::after {
-						content: "º";
-						display: inline-block;
-						margin: 0;
-						color: $color-mc-green;
-					}
-		 		}
-		 	}
-
-		 	.image-hero-home-container {
-
-		 		.square {
-		 			height: 408px;
-		 			border-radius: 16px;
-		 			width: 408px;
-			 	}
-			 	
-			 	.landscape {
-		 			height: 230px;
-		 			border-radius: 16px;
-		 			position: relative;
-    				top: 109px;
-    				width: 408px;
-			 	}	
-		 	}
-		}
-    }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1140px) {
-
-	.home-hero-container {
+	.hero-home-container {
+		display: flex;
+		padding: 48px 0px 48px 0;
+		justify-content: space-around;
 
 	    .hero-home-title-container {
 	 		width: 251px;
+	  		display: inline-block;
+			margin-right: 30px;
 		    margin-left: 52px;
 
 	 		.hero-home-title-intro {
@@ -278,74 +149,8 @@
 					display: inline-block;
 					margin: 0;
 					color: $color-mc-blue;
-					position: absolute;
-					left: -15px;
-				}
-
-				&::after {
-					content: "º";
-					display: inline-block;
-					margin: 0;
-					color: $color-mc-green;
-				}
-	 		}
-	 	}
-
-	 	.image-hero-home-container {
-
-	 		.square {
-	 			height: 408px;
-	 			border-radius: 16px;
-	 			width: 408px;
-		 	}
-		 	
-		 	.landscape {
-	 			height: 230px;
-	 			border-radius: 16px;
-	 			position: relative;
-				top: 109px;
-				width: 408px;
-		 	}	
-		}
-    }
-}
-
-@media screen and (min-width: 1141px) and (max-width: 1440px) {
-
-	.home-hero-container {
-
-	    .hero-home-title-container {
-
-	 		width: 535px;
-	  		display: inline-block;
-			margin-right: 30px;
-		    margin-left: 52px;
-
-	 		.hero-home-title-intro {
-	 			font-family: $font-family-mc-medium;
-				font-style: normal;
-				font-weight: normal;
-				font-size: $font-size-mc-lg-base;
-				line-height: $line-height-mc-h5;
-				color: $color-mc-white-70;
-	 		}
-
-	 		.hero-home-main-title {
-	 			font-family: $font-family-mc-medium;
-				font-style: normal;
-				font-weight: normal;
-				font-size: $font-size-mc-lg-h1;
-				line-height: $line-height-mc-h1;
-				margin: 0 0 64px;
-				color: $color-mc-white;
-
-				&::before {
-					content: "ª";
-					display: inline-block;
-					margin: 0;
-					color: $color-mc-blue;
-					position: absolute;
-					left: -15px;
+					position: relative;
+					left: 0;
 				}
 
 				&::after {
@@ -358,18 +163,20 @@
 	 	}
 
 	 	.image-hero-home-container{
-	 		padding-right: 12px;
 
 	 		.square {
-	 			height: 678px;
+	 			height: 408px;
 	 			border-radius: 16px;
-	 			width: 678px;
+	 			width: 408px;
 		 	}
 		 	
 		 	.landscape {
-	 			height: 400px;
+	 			height: 230px;
 	 			border-radius: 16px;
-	 			width: 678px;	
+	 			width: 408px;
+	 			position: relative;
+    			top: 78px;
+    			right: 10px;	
 		 	}
 	 	}
 	}

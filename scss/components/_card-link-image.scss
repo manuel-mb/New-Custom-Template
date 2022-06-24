@@ -30,3 +30,50 @@
         }
     } 
 }
+
+@media screen and (max-width: 767px) {
+    .card-link-images-cards-container {
+        display: block;
+        
+        .card-link-images-container {
+            width: 345px;
+            height: auto;
+            margin: 16px auto;
+
+            .text-only-button {
+                top: 1px;
+            }
+
+            p {
+                margin: 0 0 0 12px;
+            }
+
+            &:hover {
+
+                .text-only-button {
+
+                    &.is-style-blue-only-text-download {
+
+                        &:after {
+                            top: 1px;
+                        }
+                    }
+
+                    &.is-style-blue-only-text-play {
+
+                        &:after {
+                            top: 1px;
+                        }
+                    }
+
+                    &.is-style-blue-only-text-external-link {
+
+                        &:after {
+                            top: 1px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}

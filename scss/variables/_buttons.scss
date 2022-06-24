@@ -410,6 +410,7 @@
     background-position-y: center;
     transition: all .3s;
     cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: $color-mc-blue-darkest;
@@ -427,6 +428,7 @@
     background-position-y: center;
     transition: all .3s;
     cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: $color-mc-blue-darkest;
@@ -444,6 +446,7 @@
     background-position-y: center;
     transition: all .3s;
     cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: $color-mc-blue-darkest;
@@ -462,6 +465,7 @@
     background-position-y: center;
     transition: all .3s;
     cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: $color-mc-blue-darkest;
@@ -491,6 +495,11 @@
     transition: all .3s;
     cursor: pointer;
 
+    a {
+        color: $color-mc-green-darker;
+        text-decoration: none;
+    }
+
     &:hover {
         background: $color-mc-blue-darkest;
         color: $color-mc-white;
@@ -498,6 +507,10 @@
         a {
             color: $color-mc-white;
         }
+    }
+
+    &-Post {
+        display: none;
     }
 
     &-video {

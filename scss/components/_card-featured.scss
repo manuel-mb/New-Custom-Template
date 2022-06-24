@@ -7,7 +7,7 @@
     padding: 24px;
 
     &:last-child {
-        margin-right:0;
+        margin-right: 0;
     }
 
     .single-featured-main-text {
@@ -129,6 +129,10 @@
         margin: 1em auto;
         padding: 24px;
 
+        &:last-child {
+            margin: 1em auto;
+        }
+
 
         .single-featured-main-text {
             font-size: 23px;
@@ -154,6 +158,10 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .single-featured-card-container {
         width: 282px;
+
+        &:last-child {
+            margin-right:0;
+        }
 
         .single-featured-main-text {
             font-size: 23px;
