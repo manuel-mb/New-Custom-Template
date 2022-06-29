@@ -147,6 +147,24 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .content-in-page-promo-title-container {
+      width: 768px;
+      margin: 16px auto;
+
+      .content-in-page-promo-title {
+        font-size: 35px;
+        line-height: 45px;
+        margin: 16px 0px;
+      }
+
+      .content-in-page-promo-paragraph {
+        font-size: 18px;
+        line-height: 27px;
+        margin: 16px 0px;
+      }
+  }
+
   .content-in-page-promo-container {
       width: 720px;
       height: 405px;
@@ -170,12 +188,12 @@
 
       &.bottom-right {
         left: 404px;
-        top: 160px;
+        top: 277px;
         margin-left: 0;
       }
 
       &.bottom-left {
-        top: 160px;
+        top: 277px;
       }
 
       .content-in-page-promo-title {

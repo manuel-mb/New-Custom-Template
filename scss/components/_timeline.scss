@@ -1,13 +1,33 @@
 .timeline-titles-container{
-  height: 20vw;
+  height: 30vw;
   z-index:1;
   padding: 96px 150px;
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+  margin-bottom: 16px;
+
+  h2 {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 66px;
+    color: #fff;
+  }
+
+  p {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 34px;
+    color: #fff;
+  }
 }
 
 .section-timeline {
   position: relative;
   z-index: -3;
-  background-color: #0a0a0a;
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
 
   .container {
     width: 90vw;

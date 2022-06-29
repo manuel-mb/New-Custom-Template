@@ -1595,25 +1595,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       .content-media-container .text-media-content-container .content-media-paragraph.white {
         color: #ffffff; } }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .content-media-container .block-content-media-container {
     display: flex;
-    width: 1140px;
+    width: 768px;
     margin: 20px auto;
     flex-flow: row;
-    justify-content: center; }
-    .content-media-container .block-content-media-container .image-media-content-container .square {
-      width: 345px;
-      height: 345px;
-      border-radius: 16px; }
-    .content-media-container .block-content-media-container .image-media-content-container .landscape {
-      height: 200px;
-      width: 345px;
-      border-radius: 16px; }
+    justify-content: space-around; }
+    .content-media-container .block-content-media-container .image-media-content-container {
+      margin-right: 30px; }
+      .content-media-container .block-content-media-container .image-media-content-container .square {
+        width: 345px;
+        height: 345px;
+        border-radius: 16px; }
+      .content-media-container .block-content-media-container .image-media-content-container .landscape {
+        height: 200px;
+        width: 345px;
+        border-radius: 16px; }
     .content-media-container .block-content-media-container.is-style-flipped {
       flex-flow: row-reverse; }
       .content-media-container .block-content-media-container.is-style-flipped .image-media-content-container {
-        margin-right: 0; }
+        margin-right: 0;
+        margin-left: 30px; }
   .content-media-container .text-media-content-container {
     position: relative;
     top: 0px;
@@ -1743,6 +1746,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin: 16px 0px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .content-in-page-promo-title-container {
+    width: 768px;
+    margin: 16px auto; }
+    .content-in-page-promo-title-container .content-in-page-promo-title {
+      font-size: 35px;
+      line-height: 45px;
+      margin: 16px 0px; }
+    .content-in-page-promo-title-container .content-in-page-promo-paragraph {
+      font-size: 18px;
+      line-height: 27px;
+      margin: 16px 0px; }
   .content-in-page-promo-container {
     width: 720px;
     height: 405px; }
@@ -1762,10 +1776,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-left: 0; }
       .content-in-page-promo-container .content-in-page-promo.bottom-right {
         left: 404px;
-        top: 160px;
+        top: 277px;
         margin-left: 0; }
       .content-in-page-promo-container .content-in-page-promo.bottom-left {
-        top: 160px; }
+        top: 277px; }
       .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-title {
         width: 234px;
         margin: 0 0 16px; }
@@ -1777,7 +1791,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-top: 96px;
   background: #E7F1FD;
   width: 1140px;
-  margin: 0 auto;
+  margin: 16px auto;
   text-align: center;
   border-radius: 16px; }
   .content-callout-container.is-style-green {
@@ -1813,18 +1827,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 767px) {
   .content-callout-container {
-    background: #E7F1FD;
     width: 345px;
-    margin: 0 auto;
+    margin: 16px auto;
     text-align: center;
     border-radius: 16px;
     padding: 32px 16px; }
-    .content-callout-container.is-style-green {
-      background: #EBFAE5; }
-    .content-callout-container.is-style-grey {
-      background: #F7F7F7; }
-      .content-callout-container.is-style-grey .content-callout-title-container .content-callout-main-title {
-        color: #525355; }
     .content-callout-container .content-callout-title-container {
       width: 313px;
       text-align: center; }
@@ -1837,6 +1844,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin: 16px 0; }
       .content-callout-container .content-callout-title-container .button-callout-container {
         display: grid;
+        justify-content: center; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .content-callout-container {
+    width: 720px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 48px 24px; }
+    .content-callout-container .content-callout-title-container {
+      width: 672px;
+      text-align: center; }
+      .content-callout-container .content-callout-title-container .content-callout-main-title {
+        font-size: 33px;
+        line-height: 40px; }
+      .content-callout-container .content-callout-title-container .content-callout-paragraph {
+        font-size: 19px;
+        line-height: 28px;
+        margin: 16px 0; }
+      .content-callout-container .content-callout-title-container .button-callout-container {
+        display: flex;
         justify-content: center; } }
 
 .content-text-only-container .content-text-only-title-container {
@@ -2704,7 +2731,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .single-promo-card-container .single-card-promo-title-container {
       position: relative;
       top: 488px;
-      margin-left: 16px; }
+      margin-left: 16px;
+      width: 345px; }
       .single-promo-card-container .single-card-promo-title-container a {
         text-decoration: none;
         position: absolute;
@@ -2737,7 +2765,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           display: inline-block;
           position: relative;
           right: -292px;
-          top: -27px; } }
+          top: -31px; } }
 
 .accordions-container {
   width: 1440px;
@@ -3230,6 +3258,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         top: 1px; }
       .card-link-images-cards-container .card-link-images-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
         top: 1px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-link-images-cards-container {
+    display: flex; }
+    .card-link-images-cards-container .card-link-image-container {
+      display: flex;
+      width: 345px;
+      height: 48px;
+      background: #ffffff;
+      box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+      border-radius: 16px;
+      margin-right: 15px; }
+      .card-link-images-cards-container .card-link-image-container .card-link-img-container {
+        width: 48px;
+        background-size: cover;
+        border-radius: 16px 0 0 16px; }
+      .card-link-images-cards-container .card-link-image-container .text-only-blue-cta {
+        position: relative;
+        top: 15px;
+        margin-left: 12px;
+        flex: 2; }
+        .card-link-images-cards-container .card-link-image-container .text-only-blue-cta:after {
+          float: right;
+          position: relative;
+          top: -3px;
+          right: 0; } }
 
 .card-link-cards-container {
   display: flex; }
@@ -3948,15 +4002,94 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         font-size: 19px;
         line-height: 28px; } }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .news-hero-container {
+    display: block;
+    width: 720px;
+    margin: 0 auto;
+    display: flex; }
+    .news-hero-container .news-hero-main-post-container {
+      margin: 0 auto;
+      width: 470px; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-thumbnail img {
+        width: 470px;
+        height: 265px;
+        object-fit: cover;
+        border-radius: 8px; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 0; }
+        .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip::marker {
+          content: ''; }
+        .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video::marker, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast::marker {
+          content: ''; }
+        .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video a, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast a {
+          text-decoration: none; }
+          .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-video a:before, .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-chips ul .content-chip-podcast a:before {
+            margin-right: 3px;
+            margin-top: 3px; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-content .news-hero-main-title {
+        font-size: 28px;
+        line-height: 36px;
+        color: #525355;
+        margin-top: 16px; }
+        .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-content .news-hero-main-title h3 {
+          margin: 0; }
+      .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-content .news-hero-main-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 16px; }
+    .news-hero-container .news-hero-latest-post-container {
+      width: 220px;
+      margin: 0 auto; }
+      .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-thumbnail img {
+        width: 220px;
+        height: 123px;
+        object-fit: cover;
+        border-radius: 8px; }
+      .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 0; }
+        .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip::marker {
+          content: ''; }
+        .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video::marker, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast::marker {
+          content: ''; }
+        .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video a, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast a {
+          text-decoration: none; }
+          .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-video a:before, .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-post-chips ul .content-chip-podcast a:before {
+            margin-right: 3px;
+            margin-top: 3px; }
+      .news-hero-container .news-hero-latest-post-container .news-hero-latest-post .news-hero-latest-posts-content .news-hero-latest-post-title {
+        font-size: 19px;
+        line-height: 28px; } }
+
 .timeline-titles-container {
-  height: 20vw;
+  height: 30vw;
   z-index: 1;
-  padding: 96px 150px; }
+  padding: 96px 150px;
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+  margin-bottom: 16px; }
+  .timeline-titles-container h2 {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 66px;
+    color: #fff; }
+  .timeline-titles-container p {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 34px;
+    color: #fff; }
 
 .section-timeline {
   position: relative;
   z-index: -3;
-  background-color: #0a0a0a; }
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%); }
   .section-timeline .container {
     width: 90vw;
     max-width: 1360px;
@@ -4110,14 +4243,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding: 0px 0px 32px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto; }
+  margin: 16px auto; }
   .hero-article-container .hero-article {
     position: relative;
     top: 490px;
     left: 126px;
     width: 1140px; }
     .hero-article-container .hero-article h1 {
-      font-family: 'Helvetica';
+      font-family: 'SC Prosper Sans';
       font-style: normal;
       font-weight: normal;
       font-size: 55px;
@@ -4152,14 +4285,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-right: 16px; }
       .hero-article-container .hero-article .author-box .entry-meta a {
         text-decoration: none;
-        font-family: 'Helvetica';
+        font-family: 'SC Prosper Sans';
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
         color: #fff; }
       .hero-article-container .hero-article .author-box .entry-meta p {
-        color: #525355;
-        font-family: 'Helvetica';
+        color: #fff;
+        font-family: 'SC Prosper Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
@@ -4221,12 +4354,47 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           height: 48px;
           border-radius: 50%;
           margin-right: 16px; }
-        .hero-article-container .hero-article .author-box .entry-meta p {
+        .hero-article-container .hero-article .author-box .entry-meta p, .hero-article-container .hero-article .author-box .entry-meta a {
           color: #525355;
           font-size: 13px;
           line-height: 20px; }
         .hero-article-container .hero-article .author-box .entry-meta .hero-author {
           margin: 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-article-container {
+    width: 720px;
+    height: 425px;
+    margin: 0 auto; }
+    .hero-article-container .hero-article {
+      position: relative;
+      top: 122px;
+      left: 0;
+      width: 656px;
+      margin: 0 auto; }
+      .hero-article-container .hero-article h1 {
+        font-family: 'SC Prosper Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 48px;
+        color: #fff;
+        margin: 16px 0px;
+        width: 656px; }
+      .hero-article-container .hero-article ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        .hero-article-container .hero-article ul .content-chip::marker {
+          content: ''; }
+        .hero-article-container .hero-article ul .content-chip-video::marker, .hero-article-container .hero-article ul .content-chip-podcast::marker {
+          content: ''; }
+        .hero-article-container .hero-article ul .content-chip-video a, .hero-article-container .hero-article ul .content-chip-podcast a {
+          text-decoration: none; }
+          .hero-article-container .hero-article ul .content-chip-video a:before, .hero-article-container .hero-article ul .content-chip-podcast a:before {
+            margin-right: 3px;
+            margin-top: 3px; } }
 
 .hero-article-no-image-container {
   align-items: center;
@@ -4234,14 +4402,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #CDF4BF;
   width: 1440px;
   height: 448px;
-  margin: 0 auto; }
+  margin: 16px auto; }
   .hero-article-no-image-container .hero-article-no-image {
     position: relative;
-    top: 96px;
+    top: 0;
     left: 126px;
     width: 1140px; }
     .hero-article-no-image-container .hero-article-no-image h1 {
-      font-family: 'Helvetica';
+      font-family: 'SC Prosper Sans';
       font-style: normal;
       font-weight: normal;
       font-size: 55px;
@@ -4262,8 +4430,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         .hero-article-no-image-container .hero-article-no-image ul .content-chip-video a:before, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast a:before {
           margin-right: 3px;
           margin-top: 3px; }
-    .hero-article-no-image-container .hero-article-no-image .image-mobile {
-      display: none; }
     .hero-article-no-image-container .hero-article-no-image .author-box {
       display: flex;
       height: 48px;
@@ -4276,14 +4442,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-right: 16px; }
       .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta-no-image a {
         text-decoration: none;
-        font-family: 'Helvetica';
+        font-family: 'SC Prosper Sans';
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
-        color: #fff; }
+        color: #525355; }
       .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta-no-image p {
         color: #525355;
-        font-family: 'Helvetica';
+        font-family: 'SC Prosper Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
@@ -4291,6 +4457,94 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin: 2px 0px; }
       .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta-no-image .hero-author {
         margin: 0; }
+
+@media screen and (max-width: 767px) {
+  .hero-article-no-image-container {
+    width: 375px;
+    height: auto;
+    border-radius: 0;
+    padding: 0px 0px 32px;
+    background-image: none !important;
+    margin: 0 auto; }
+    .hero-article-no-image-container .hero-article-no-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 345px;
+      margin: 0 auto; }
+      .hero-article-no-image-container .hero-article-no-image h1 {
+        font-family: 'SC Prosper Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 48px;
+        color: #525355;
+        margin: 16px 0px;
+        width: 345px; }
+      .hero-article-no-image-container .hero-article-no-image ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip::marker {
+          content: ''; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip-video::marker, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast::marker {
+          content: ''; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip-video a, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast a {
+          text-decoration: none; }
+          .hero-article-no-image-container .hero-article-no-image ul .content-chip-video a:before, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast a:before {
+            margin-right: 3px;
+            margin-top: 3px; }
+      .hero-article-no-image-container .hero-article-no-image .author-box {
+        display: flex;
+        height: 48px;
+        color: #525355;
+        margin-top: 32px; }
+        .hero-article-no-image-container .hero-article-no-image .author-box img {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          margin-right: 16px; }
+        .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta p, .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta a {
+          color: #525355;
+          font-size: 13px;
+          line-height: 20px; }
+        .hero-article-no-image-container .hero-article-no-image .author-box .entry-meta .hero-author {
+          margin: 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-article-no-image-container {
+    width: 720px;
+    margin: 0 auto; }
+    .hero-article-no-image-container .hero-article-no-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 656px;
+      margin: 0 auto; }
+      .hero-article-no-image-container .hero-article-no-image h1 {
+        font-family: 'SC Prosper Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 48px;
+        color: #525355;
+        margin: 16px 0px;
+        width: 656px; }
+      .hero-article-no-image-container .hero-article-no-image ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip::marker {
+          content: ''; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip-video::marker, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast::marker {
+          content: ''; }
+        .hero-article-no-image-container .hero-article-no-image ul .content-chip-video a, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast a {
+          text-decoration: none; }
+          .hero-article-no-image-container .hero-article-no-image ul .content-chip-video a:before, .hero-article-no-image-container .hero-article-no-image ul .content-chip-podcast a:before {
+            margin-right: 3px;
+            margin-top: 3px; } }
 
 /*--------------------------------------------------------------
 # Plugins

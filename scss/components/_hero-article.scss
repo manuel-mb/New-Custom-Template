@@ -5,7 +5,7 @@
   padding: 0px 0px 32px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  margin: 16px auto;
 
   .hero-article {
     position: relative;
@@ -14,7 +14,7 @@
     width: 1140px;
 
     h1 {
-      font-family: 'Helvetica';
+      font-family: 'SC Prosper Sans';
       font-style: normal;
       font-weight: normal;
       font-size: 55px;
@@ -74,7 +74,7 @@
 
         a {
           text-decoration: none;
-          font-family: 'Helvetica';
+          font-family: 'SC Prosper Sans';
           font-style: normal;
           font-weight: bold;
           font-size: 15px;
@@ -82,8 +82,8 @@
         }
 
         p {
-          color: #525355;
-          font-family: 'Helvetica';
+          color: #fff;
+          font-family: 'SC Prosper Sans';
           font-style: normal;
           font-weight: normal;
           font-size: 15px;
@@ -100,6 +100,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .hero-article-container {
     width: 375px;
     height: auto;
@@ -179,7 +180,8 @@
 
         .entry-meta {
 
-          p {
+
+          p, a {
             color: #525355;
             font-size: 13px;
             line-height:20px;
@@ -187,6 +189,64 @@
 
           .hero-author {
             margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .hero-article-container {
+    width: 720px;
+    height: 425px;
+    margin: 0 auto;
+
+    .hero-article {
+      position: relative;
+      top: 122px;
+      left: 0;
+      width: 656px;
+      margin: 0 auto;
+
+      h1 {
+        font-family: 'SC Prosper Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 48px;
+        color: #fff;
+        margin: 16px 0px;
+        width: 656px;
+
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .content-chip {
+
+          &::marker {
+              content: '';
+          }
+
+          &-video, &-podcast {
+            &::marker {
+                content: '';
+            }
+
+            a {
+              text-decoration: none;
+
+              &:before {
+                  margin-right: 3px;
+                  margin-top: 3px;
+              }
+            }
           }
         }
       }

@@ -139,18 +139,19 @@
   }  
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .content-media-container {
 
     .block-content-media-container {
       display: flex;
-      width: 1140px;
+      width: 768px;
       margin: 20px auto;
       flex-flow: row;
-      justify-content: center;
+      justify-content: space-around;
 
       .image-media-content-container {
+        margin-right: 30px;
         
         .square{
           width: 345px;
@@ -170,6 +171,7 @@
 
         .image-media-content-container {
           margin-right: 0;
+          margin-left: 30px;
         }
       }
     }

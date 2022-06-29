@@ -2,7 +2,7 @@
   margin-top: 96px;
   background: $color-mc-blue-lightest;
   width: 1140px;
-  margin: 0 auto;
+  margin: 16px auto;
   text-align: center;
   border-radius: 16px;
 
@@ -57,27 +57,11 @@
 @media screen and (max-width: 767px) {
   
   .content-callout-container {
-    background: $color-mc-blue-lightest;
     width: 345px;
-    margin: 0 auto;
+    margin: 16px auto;
     text-align: center;
     border-radius: 16px;
     padding: 32px 16px;
-
-    &.is-style-green {
-      background: $color-mc-green-lightest;
-    }
-
-    &.is-style-grey {
-      background: $color-mc-grey-lightest;
-
-      .content-callout-title-container { 
-
-        .content-callout-main-title {
-          color: $color-mc-grey;
-        }
-      }
-    }
 
     .content-callout-title-container { 
       width: 313px;
@@ -96,6 +80,37 @@
 
       .button-callout-container {
         display: grid;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .content-callout-container {
+    width: 720px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 48px 24px;
+
+    .content-callout-title-container { 
+      width: 672px;
+      text-align:center;
+
+      .content-callout-main-title {
+        font-size: 33px;
+        line-height: 40px;
+      }
+
+      .content-callout-paragraph {
+        font-size: 19px;
+        line-height: 28px;
+        margin: 16px 0;
+      }
+
+      .button-callout-container {
+        display: flex;
         justify-content: center;
       }
     }

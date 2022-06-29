@@ -77,3 +77,38 @@
         } 
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .card-link-images-cards-container {
+        display: flex;
+        
+        .card-link-image-container {
+            display: flex;
+            width: 345px;
+            height: 48px;
+            background: $color-mc-white;
+            box-shadow: $box-shadow-mc-blu2;
+            border-radius: 16px;
+            margin-right: 15px;
+
+            .card-link-img-container {
+                width: 48px;
+                background-size: cover;
+                border-radius: 16px 0 0 16px;
+            }
+            .text-only-blue-cta {
+                position: relative;
+                top: 15px;
+                margin-left: 12px;
+                flex: 2;
+
+                &:after {
+                    float:right;
+                    position: relative;
+                    top: -3px;
+                    right: 0;
+                }
+            }
+        } 
+    }
+}
