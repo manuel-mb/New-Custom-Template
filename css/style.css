@@ -982,7 +982,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding-bottom: 96px; }
   .hero-text-only-container .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
-    width: 1440px;
+    width: 1140px;
     margin: 0 auto; }
     .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
@@ -1003,8 +1003,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin: 0 0 64px;
       position: relative;
       left: 96px;
-      width: 890px;
-      color: #ffffff; }
+      color: #ffffff;
+      width: 860px; }
       .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
         content: "ª";
         display: inline-block;
@@ -1024,11 +1024,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 28px;
       line-height: 1.3;
       margin: 0px auto;
-      width: 754px;
       text-align: left;
-      color: #ffffff; }
+      color: #ffffff;
+      width: 756px; }
+  .hero-text-only-container.white {
+    background: #fff; }
+    .hero-text-only-container.white .hero-text-only-title-container .hero-text-only-title-intro {
+      color: #525355; }
+    .hero-text-only-container.white .hero-text-only-title-container .hero-text-only-main-title {
+      color: #525355; }
+    .hero-text-only-container.white .hero-text-only-title-container .hero-text-only-paragraph {
+      color: #525355; }
 
-@media screen and (max-width: 723px) {
+@media screen and (max-width: 767px) {
   .hero-text-only-container .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
     width: 345px;
@@ -1077,7 +1085,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       color: #ffffff;
       width: 345px; } }
 
-@media screen and (min-width: 724px) and (max-width: 1140px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-text-only-container .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
     width: 595px;
@@ -1441,11 +1449,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .standard-page-hero-container {
   background: #F7F7F7;
-  border-radius: 16px; }
+  border-radius: 16px;
+  width: 100%; }
   .standard-page-hero-container .standard-page-hero-title-container {
     padding: 96px 0px 96px 0px;
-    max-width: 1440px;
-    margin: 0 auto; }
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center; }
     .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-title-intro {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
@@ -1474,38 +1484,45 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       color: #525355; }
 
 @media screen and (max-width: 767px) {
-  .standard-page-hero-container .standard-page-hero-title-container {
-    padding: 32px 16px; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-title-intro {
-      font-size: 16px;
-      line-height: 24px;
-      margin: 16px auto; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-main-title {
-      font-size: 40px;
-      line-height: 48px;
-      margin: 16px auto;
-      width: 313px; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-paragraph {
-      font-size: 23px;
-      line-height: 30px;
-      width: 313px; } }
+  .standard-page-hero-container {
+    width: 100%; }
+    .standard-page-hero-container .standard-page-hero-title-container {
+      padding: 32px 16px;
+      width: 345px; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-title-intro {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px auto; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 16px auto;
+        width: 313px; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-paragraph {
+        font-size: 23px;
+        line-height: 30px;
+        width: 313px; } }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
-  .standard-page-hero-container .standard-page-hero-title-container {
-    padding: 48px; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-title-intro {
-      font-size: 16px;
-      line-height: 24px;
-      margin: 16px auto; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-main-title {
-      font-size: 40px;
-      line-height: 48px;
-      margin: 16px auto;
-      width: 624px; }
-    .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-paragraph {
-      font-size: 23px;
-      line-height: 30px;
-      width: 624px; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .standard-page-hero-container {
+    width: 100%; }
+    .standard-page-hero-container .standard-page-hero-title-container {
+      padding: 48px;
+      width: 720px; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-title-intro {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px auto;
+        width: 624px; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-main-title {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 16px auto;
+        width: 624px; }
+      .standard-page-hero-container .standard-page-hero-title-container .standard-page-hero-paragraph {
+        font-size: 23px;
+        line-height: 30px;
+        width: 624px; } }
 
 .content-media-container .block-content-media-container {
   display: flex;
@@ -4069,8 +4086,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   height: 30vw;
   z-index: 1;
   padding: 96px 150px;
-  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
-  margin-bottom: 16px; }
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%); }
   .timeline-titles-container h2 {
     font-family: 'SC Prosper Sans';
     font-style: normal;
@@ -4089,7 +4105,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .section-timeline {
   position: relative;
   z-index: -3;
-  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%); }
+  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+  margin-bottom: 16px; }
   .section-timeline .container {
     width: 90vw;
     max-width: 1360px;
@@ -4235,6 +4252,37 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           background-size: auto, cover; }
           .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
             max-width: 460px; }
+
+@media screen and (max-width: 767px) {
+  .timeline-titles-container {
+    height: 85vw;
+    padding: 48px; }
+    .timeline-titles-container h2 {
+      font-size: 33px;
+      line-height: 40px; }
+    .timeline-titles-container p {
+      font-size: 19px;
+      line-height: 28px; }
+  .section-timeline .container .timeline_component .single_time .timeline_item {
+    width: 100%;
+    -ms-grid-columns: 64px 1fr;
+    grid-template-columns: 64px 1fr; }
+    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left {
+      text-align: left; }
+      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
+        margin-bottom: 24px;
+        font-size: 36px; }
+    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_centre {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }
+    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
+      font-size: 20px; }
+      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 16px;
+        line-height: 1.6; } }
 
 .hero-article-container {
   width: 1440px;

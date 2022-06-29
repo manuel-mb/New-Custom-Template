@@ -4,7 +4,7 @@
 
   .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
-    width: 1440px;
+    width: 1140px;
     margin: 0 auto;
 
     .hero-text-only-title-intro {
@@ -28,8 +28,8 @@
       margin: 0 0 64px;
       position: relative;
       left: 96px;
-      width: 890px;
       color: $color-mc-white;
+      width: 860px;
 
       &::before {
         content: "ª";
@@ -55,14 +55,33 @@
       font-size: $font-size-mc-lg-h4;
       line-height: $line-height-mc-h4;
       margin: 0px auto;
-      width: 754px;
       text-align: left;
       color: $color-mc-white;
+      width: 756px;
+    }
+  }
+
+  &.white {
+    background: #fff;
+
+    .hero-text-only-title-container {
+
+      .hero-text-only-title-intro {
+        color: #525355;
+      }
+
+      .hero-text-only-main-title {
+        color: #525355;
+      }
+
+      .hero-text-only-paragraph {
+        color: #525355;
+      }
     }
   }
 }
 
-@media screen and (max-width: 723px) {
+@media screen and (max-width: 767px) {
   .hero-text-only-container {
     
     .hero-text-only-title-container {
@@ -126,7 +145,7 @@
     }
   }
 }
-@media screen and (min-width: 724px) and (max-width: 1140px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-text-only-container {
     
     .hero-text-only-title-container {

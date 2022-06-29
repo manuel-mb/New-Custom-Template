@@ -1,12 +1,14 @@
 .standard-page-hero-container {
   background: $color-mc-grey-lightest;
   border-radius: 16px;
+  width:100%;
 
   .standard-page-hero-title-container { 
 
     padding: 96px 0px 96px 0px;
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
+    text-align: center;
 
     .standard-page-hero-title-intro {
       font-family: $font-family-mc-regular;
@@ -45,9 +47,11 @@
 @media screen and (max-width: 767px) {
 
   .standard-page-hero-container {
+    width: 100%;
 
     .standard-page-hero-title-container { 
       padding: 32px 16px;
+      width: 345px;
 
       .standard-page-hero-title-intro {
         font-size: 16px;
@@ -71,17 +75,20 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .standard-page-hero-container {
+    width: 100%;
 
     .standard-page-hero-title-container { 
       padding: 48px;
+      width: 720px;
 
       .standard-page-hero-title-intro {
         font-size: 16px;
         line-height: 24px;
         margin: 16px auto;
+        width: 624px;
       }
 
       .standard-page-hero-main-title {
@@ -99,4 +106,3 @@
     }
   }
 }
-  

@@ -1,9 +1,8 @@
-.timeline-titles-container{
+.timeline-titles-container {
   height: 30vw;
   z-index:1;
   padding: 96px 150px;
   background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
-  margin-bottom: 16px;
 
   h2 {
     font-family: 'SC Prosper Sans';
@@ -28,6 +27,7 @@
   position: relative;
   z-index: -3;
   background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+  margin-bottom: 16px;
 
   .container {
     width: 90vw;
@@ -210,6 +210,73 @@
 
               .timeline-image {
                 max-width: 460px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .timeline-titles-container {
+    height: 85vw;
+    padding: 48px;
+
+    h2 {
+      font-size: 33px;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 28px;
+    }
+  }
+
+  .section-timeline {
+
+    .container {
+      .timeline_component {
+        .single_time{
+  
+          .timeline_item {
+            width: 100%;
+            -ms-grid-columns: 64px 1fr;
+            grid-template-columns: 64px 1fr;
+
+            .timeline_left {
+              text-align: left;
+
+              .timeline_date-text {
+                margin-bottom: 24px;
+                font-size: 36px;
+              }
+            }
+
+            .timeline_centre {
+              -webkit-box-pack: start;
+              -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+              justify-content: flex-start;
+            }
+            .timeline_right {
+
+              .margin-bottom-medium {
+
+                .timeline_text {
+                  font-size: 20px;
+
+                  .main_paragraph{}
+
+                  .text-colour-lightgrey{
+                    color: hsla(0, 0%, 100%, 0.65);
+                    font-size: 16px;
+                    line-height: 1.6;
+                  }   
+                }
               }
             }
           }
