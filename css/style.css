@@ -4251,7 +4251,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           background-position: 0px 0px, 0px 0px;
           background-size: auto, cover; }
           .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
-            max-width: 460px; }
+            max-width: 100%; }
 
 @media screen and (max-width: 767px) {
   .timeline-titles-container {
@@ -4263,12 +4263,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .timeline-titles-container p {
       font-size: 19px;
       line-height: 28px; }
+  .section-timeline .container .timeline_component .timeline_progress {
+    left: 6px; }
   .section-timeline .container .timeline_component .single_time .timeline_item {
     width: 100%;
-    -ms-grid-columns: 64px 1fr;
-    grid-template-columns: 64px 1fr; }
+    -ms-grid-columns: 48px 1fr;
+    grid-template-columns: 48px 1fr; }
     .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left {
-      text-align: left; }
+      text-align: left;
+      grid-column-end: 3;
+      -ms-grid-column: 2;
+      grid-column-start: 2;
+      -ms-grid-row-span: 1;
+      grid-row-end: 2;
+      -ms-grid-row: 1;
+      grid-row-start: 1; }
       .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
         margin-bottom: 24px;
         font-size: 36px; }
@@ -4276,13 +4285,34 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-      justify-content: flex-start; }
-    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
-      font-size: 20px; }
-      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
-        color: rgba(255, 255, 255, 0.65);
-        font-size: 16px;
-        line-height: 1.6; } }
+      justify-content: flex-start;
+      -ms-grid-column-span: 1;
+      grid-column-end: 2;
+      -ms-grid-column: 1;
+      grid-column-start: 1;
+      -ms-grid-row-span: 2;
+      grid-row-end: 3;
+      -ms-grid-row: 1;
+      grid-row-start: 1; }
+    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right {
+      -ms-grid-column-span: 1;
+      grid-column-end: span 1;
+      -ms-grid-column: span 1;
+      grid-column-start: span 1;
+      -ms-grid-row-span: 1;
+      grid-row-end: span 1;
+      -ms-grid-row: span 1;
+      grid-row-start: span 1; }
+      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
+        font-size: 20px; }
+        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
+          color: rgba(255, 255, 255, 0.65);
+          font-size: 16px;
+          line-height: 1.6; }
+      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block; } }
 
 .hero-article-container {
   width: 1440px;

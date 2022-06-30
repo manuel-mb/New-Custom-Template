@@ -209,7 +209,7 @@
               background-size: auto, cover;
 
               .timeline-image {
-                max-width: 460px;
+                max-width: 100%;
               }
             }
           }
@@ -240,15 +240,27 @@
 
     .container {
       .timeline_component {
+        
+        .timeline_progress {
+          left: 6px;
+        }
+
         .single_time{
   
           .timeline_item {
             width: 100%;
-            -ms-grid-columns: 64px 1fr;
-            grid-template-columns: 64px 1fr;
+            -ms-grid-columns: 48px 1fr;
+            grid-template-columns: 48px 1fr;
 
             .timeline_left {
               text-align: left;
+              grid-column-end: 3;
+              -ms-grid-column: 2;
+              grid-column-start: 2;
+              -ms-grid-row-span: 1;
+              grid-row-end: 2;
+              -ms-grid-row: 1;
+              grid-row-start: 1;
 
               .timeline_date-text {
                 margin-bottom: 24px;
@@ -261,8 +273,24 @@
               -webkit-justify-content: flex-start;
               -ms-flex-pack: start;
               justify-content: flex-start;
+              -ms-grid-column-span: 1;
+              grid-column-end: 2; 
+              -ms-grid-column: 1;
+              grid-column-start: 1;
+              -ms-grid-row-span: 2;
+              grid-row-end: 3;
+              -ms-grid-row: 1;
+              grid-row-start: 1;
             }
             .timeline_right {
+              -ms-grid-column-span: 1;
+              grid-column-end: span 1;
+              -ms-grid-column: span 1;
+              grid-column-start: span 1;
+              -ms-grid-row-span: 1;
+              grid-row-end: span 1;
+              -ms-grid-row: span 1;
+              grid-row-start: span 1;
 
               .margin-bottom-medium {
 
@@ -276,6 +304,15 @@
                     font-size: 16px;
                     line-height: 1.6;
                   }   
+                }
+              }
+
+              .timeline_image-wrapper {
+
+                .timeline-image {
+                  max-width: 100%;
+                  vertical-align: middle;
+                  display: inline-block;
                 }
               }
             }
