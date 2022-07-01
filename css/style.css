@@ -4314,6 +4314,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         vertical-align: middle;
         display: inline-block; } }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .timeline-titles-container {
+    height: 50vw;
+    padding: 48px; }
+    .timeline-titles-container h2 {
+      font-size: 33px;
+      line-height: 40px; }
+    .timeline-titles-container p {
+      font-size: 19px;
+      line-height: 28px; } }
+
 .hero-article-container {
   width: 1440px;
   height: 810px;
