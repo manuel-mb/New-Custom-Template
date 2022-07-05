@@ -7,9 +7,47 @@
  * @package Manuel\Theme.
  *
  */
+.header {
+    background-color: #fff;
+    margin: 0;
 
-.header-site-branding {
-    width: 143px;
-    height: 56px; // heights are needed for IE11.
-    margin: 2em 0;
+    .header__container {
+        display: flex;
+        padding: 16px;
+
+        .header-site-branding {
+            width: 143px;
+            height: 56px; // heights are needed for IE11.
+            margin: 0;
+        }
+
+        .header__navigation {
+            .main-menu {
+                .menu {                   
+                    display: flex;
+
+                    li {
+                        list-style: none;
+                        margin-right: 2em;
+                        text-decoration: none;
+
+                        a {
+                            text-decoration: none;
+                            font-family: 'SC Prosper Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 28px;
+                            color: #525355;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

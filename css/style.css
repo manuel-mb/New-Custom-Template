@@ -204,6 +204,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * @package Manuel\Theme.
  *
  */
+body {
+  margin: 0;
+  background-color: #fff; }
+
+.content__title {
+  margin: 0;
+  background-color: #fff;
+  padding: 16px; }
+
 /**
  * Generic clearfix helper.
  *
@@ -797,10 +806,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * @package Manuel\Theme.
  *
  */
-.header-site-branding {
-  width: 143px;
-  height: 56px;
-  margin: 2em 0; }
+.header {
+  background-color: #fff;
+  margin: 0; }
+  .header .header__container {
+    display: flex;
+    padding: 16px; }
+    .header .header__container .header-site-branding {
+      width: 143px;
+      height: 56px;
+      margin: 0; }
+    .header .header__container .header__navigation .main-menu .menu {
+      display: flex; }
+      .header .header__container .header__navigation .main-menu .menu li {
+        list-style: none;
+        margin-right: 2em;
+        text-decoration: none; }
+        .header .header__container .header__navigation .main-menu .menu li a {
+          text-decoration: none;
+          font-family: 'SC Prosper Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 28px;
+          color: #525355; }
+          .header .header__container .header__navigation .main-menu .menu li a:hover {
+            text-decoration: underline; }
 
 /* Footer
 --------------------------------------------- */
@@ -983,7 +1014,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .hero-text-only-container .hero-text-only-title-container {
     padding: 96px 0px 96px 0px;
     width: 1140px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative;
+    right: 94px; }
     .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
       font-style: normal;
@@ -1004,7 +1037,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       position: relative;
       left: 96px;
       color: #ffffff;
-      width: 860px; }
+      width: 945px; }
       .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
         content: "ª";
         display: inline-block;
@@ -1037,53 +1070,56 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       color: #525355; }
 
 @media screen and (max-width: 767px) {
-  .hero-text-only-container .hero-text-only-title-container {
-    padding: 96px 0px 96px 0px;
-    width: 345px;
-    margin: 0 auto; }
-    .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 24px;
-      margin: 16px 0px;
-      position: relative;
-      left: 0;
-      color: rgba(255, 255, 255, 0.7); }
-    .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 48px;
-      line-height: 58px;
-      margin: 0 0 64px;
-      position: relative;
-      left: 0;
-      color: #ffffff;
-      width: 345px; }
-      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
-        content: "ª";
-        display: none;
-        margin: 0;
-        color: #0473EA;
-        position: absolute;
-        left: -15px; }
-      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::after {
-        content: "º";
-        display: none;
-        margin: 0;
-        color: #38D200; }
-    .hero-text-only-container .hero-text-only-title-container .hero-text-only-paragraph {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 23px;
-      line-height: 30px;
-      margin: 0px auto;
-      text-align: left;
-      color: #ffffff;
-      width: 345px; } }
+  .hero-text-only-container {
+    width: 100%;
+    margin: 16px auto; }
+    .hero-text-only-container .hero-text-only-title-container {
+      padding: 96px 0px 96px 0px;
+      width: 345px;
+      margin: 0 auto; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-title-intro {
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0px;
+        position: relative;
+        left: 0;
+        color: rgba(255, 255, 255, 0.7); }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title {
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 58px;
+        margin: 0 0 64px;
+        position: relative;
+        left: 0;
+        color: #ffffff;
+        width: 345px; }
+        .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::before {
+          content: "ª";
+          display: none;
+          margin: 0;
+          color: #0473EA;
+          position: absolute;
+          left: -15px; }
+        .hero-text-only-container .hero-text-only-title-container .hero-text-only-main-title::after {
+          content: "º";
+          display: none;
+          margin: 0;
+          color: #38D200; }
+      .hero-text-only-container .hero-text-only-title-container .hero-text-only-paragraph {
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 30px;
+        margin: 0px auto;
+        text-align: left;
+        color: #ffffff;
+        width: 345px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-text-only-container .hero-text-only-title-container {
@@ -1134,248 +1170,62 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       color: #ffffff;
       width: 470px; } }
 
-.two-columns-hero-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly; }
-  .two-columns-hero-container .hero-two-columns-title-container {
-    width: 458px;
-    margin: 121px 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
-      text-align: left;
-      margin-bottom: 16px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      color: #666666;
-      opacity: 0.5;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
-      font-size: 55px;
-      line-height: 66px;
-      font-style: normal;
-      font-weight: 500;
-      margin-bottom: 16px;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      color: #525355;
-      margin-bottom: 16px; }
-
-.image-hero-two-columns-container {
-  display: inline-block;
-  width: 555px;
-  height: 555px;
-  background-color: #CDF4BF;
-  border-radius: 16px; }
-  .image-hero-two-columns-container .landscape {
-    width: 555px;
-    height: 312px;
-    border-radius: 16px;
-    position: relative;
-    top: 121px;
-    right: 64px; }
-  .image-hero-two-columns-container .square {
+.hero-two-columns-container {
+  background-color: #fff;
+  margin: 16px auto; }
+  .hero-two-columns-container .two-columns-hero-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly; }
+    .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container {
+      width: 458px;
+      margin: 121px 0; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+        text-align: left;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #666666;
+        opacity: 0.5;
+        margin-top: 0; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+        font-size: 55px;
+        line-height: 66px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 16px;
+        margin-top: 0; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #525355;
+        margin-bottom: 16px; }
+  .hero-two-columns-container .image-hero-two-columns-container {
+    display: inline-block;
     width: 555px;
     height: 555px;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border-radius: 16px; }
-    .image-hero-two-columns-container .square.play-button:after {
-      background-image: url(../src/images/play-circle-fill.svg);
-      content: '';
-      background-repeat: no-repeat;
-      background-size: 51px;
-      width: 51px;
-      height: 51px;
-      float: left;
-      position: relative;
-      top: -72px;
-      left: 24px; }
-
-@media screen and (min-width: 320px) and (max-width: 499px) {
-  .two-columns-hero-container {
-    display: block; }
-    .two-columns-hero-container .hero-two-columns-title-container {
-      width: 345px;
-      margin: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
-        text-align: left;
-        margin-bottom: 16px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #666666;
-        opacity: 0.5;
-        margin-top: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
-        font-size: 40px;
-        line-height: 48px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 16px;
-        margin-top: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #525355;
-        margin-bottom: 16px; }
-  .image-hero-two-columns-container {
-    display: inline-block;
-    width: 355px;
-    height: 194px;
-    background-color: #CDF4BF;
-    border-radius: 16px;
-    margin-top: 52px; }
-    .image-hero-two-columns-container .landscape {
-      width: 325px;
-      height: 185px;
-      border-radius: 16px;
-      position: relative;
-      top: -10px;
-      right: 0;
-      left: 15px; }
-    .image-hero-two-columns-container .square {
-      width: 355px;
-      height: 355px;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      border-radius: 16px; }
-      .image-hero-two-columns-container .square.play-button:after {
-        background-image: url(../src/images/play-circle-fill.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 51px;
-        width: 51px;
-        height: 51px;
-        float: left;
-        position: relative;
-        top: -72px;
-        left: 24px; } }
-
-@media screen and (min-width: 500px) and (max-width: 657px) {
-  .two-columns-hero-container {
-    display: block; }
-    .two-columns-hero-container .hero-two-columns-title-container {
-      width: 345px;
-      margin: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
-        text-align: left;
-        margin-bottom: 16px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #666666;
-        opacity: 0.5;
-        margin-top: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
-        font-size: 40px;
-        line-height: 48px;
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: 16px;
-        margin-top: 0; }
-      .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #525355;
-        margin-bottom: 16px; }
-  .image-hero-two-columns-container {
-    display: inline-block;
-    width: 375px;
-    height: 194px;
-    background-color: #CDF4BF;
-    border-radius: 16px;
-    margin-top: 52px; }
-    .image-hero-two-columns-container .landscape {
-      width: 345px;
-      height: 194px;
-      border-radius: 16px;
-      position: relative;
-      top: -10px;
-      right: 0;
-      left: 15px; }
-    .image-hero-two-columns-container .square {
-      width: 375px;
-      height: 375px;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      border-radius: 16px; }
-      .image-hero-two-columns-container .square.play-button:after {
-        background-image: url(../src/images/play-circle-fill.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 51px;
-        width: 51px;
-        height: 51px;
-        float: left;
-        position: relative;
-        top: -72px;
-        left: 24px; } }
-
-@media screen and (min-width: 658px) and (max-width: 700px) {
-  .two-columns-hero-container .hero-two-columns-title-container {
-    width: 345px;
-    margin: 35px 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
-      text-align: left;
-      margin-bottom: 16px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      color: #666666;
-      opacity: 0.5;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
-      font-size: 40px;
-      line-height: 48px;
-      font-style: normal;
-      font-weight: 500;
-      margin-bottom: 16px;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 27px;
-      color: #525355;
-      margin-bottom: 16px; }
-  .image-hero-two-columns-container {
-    display: inline-block;
-    width: 345px;
-    height: 345px;
     background-color: #CDF4BF;
     border-radius: 16px; }
-    .image-hero-two-columns-container .landscape {
-      width: 345px;
-      height: 194px;
+    .hero-two-columns-container .image-hero-two-columns-container .landscape {
+      width: 555px;
+      height: 312px;
       border-radius: 16px;
       position: relative;
-      top: 75px;
-      right: 5px; }
-    .image-hero-two-columns-container .square {
-      width: 345px;
-      height: 345px;
+      top: 121px;
+      right: 64px; }
+    .hero-two-columns-container .image-hero-two-columns-container .square {
+      width: 555px;
+      height: 555px;
       top: 0;
       right: 0;
       background-color: transparent;
       border-radius: 16px; }
-      .image-hero-two-columns-container .square.play-button:after {
+      .hero-two-columns-container .image-hero-two-columns-container .square.play-button:after {
         background-image: url(../src/images/play-circle-fill.svg);
         content: '';
         background-repeat: no-repeat;
@@ -1385,67 +1235,78 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         float: left;
         position: relative;
         top: -72px;
-        left: 24px; } }
+        left: 24px; }
 
-@media screen and (min-width: 701px) and (max-width: 1024px) {
-  .two-columns-hero-container .hero-two-columns-title-container {
-    width: 345px;
-    margin: 35px 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
-      text-align: left;
-      margin-bottom: 16px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      color: #666666;
-      opacity: 0.5;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
-      font-size: 40px;
-      line-height: 48px;
-      font-style: normal;
-      font-weight: 500;
-      margin-bottom: 16px;
-      margin-top: 0; }
-    .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 27px;
-      color: #525355;
-      margin-bottom: 16px; }
-  .image-hero-two-columns-container {
-    display: inline-block;
-    width: 345px;
-    height: 345px;
-    background-color: #CDF4BF;
-    border-radius: 16px; }
-    .image-hero-two-columns-container .landscape {
-      width: 345px;
+@media screen and (max-width: 767px) {
+  .hero-two-columns-container .two-columns-hero-container {
+    display: block;
+    width: 100%;
+    margin: 16px auto; }
+    .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container {
+      margin-right: 0;
+      width: 100%;
       height: 194px;
-      border-radius: 16px;
-      position: relative;
-      top: 75px;
-      right: 25px; }
-    .image-hero-two-columns-container .square {
+      margin-top: 64px; }
+      .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container .square {
+        width: 100%;
+        height: 345px;
+        border-radius: 16px; }
+      .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container .landscape {
+        height: 200px;
+        width: 95%;
+        border-radius: 16px;
+        top: -22px;
+        left: 9px; }
+    .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container {
+      margin: 0 auto;
+      width: 345px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 8px 0px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-two-columns-container .two-columns-hero-container {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    flex-flow: row;
+    justify-content: space-around; }
+    .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container {
+      margin-left: 30px;
       width: 345px;
-      height: 345px;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      border-radius: 16px; }
-      .image-hero-two-columns-container .square.play-button:after {
-        background-image: url(../src/images/play-circle-fill.svg);
-        content: '';
-        background-repeat: no-repeat;
-        background-size: 51px;
-        width: 51px;
-        height: 51px;
-        float: left;
-        position: relative;
-        top: -72px;
-        left: 24px; } }
+      height: 322px; }
+      .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container .square {
+        width: 345px;
+        height: 345px;
+        border-radius: 16px; }
+      .hero-two-columns-container .two-columns-hero-container .image-hero-two-columns-container .landscape {
+        height: 200px;
+        width: 345px;
+        border-radius: 16px;
+        top: 50px;
+        right: 24px; }
+    .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container {
+      margin: 50px 0;
+      width: 345px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-main-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin: 8px 0px; }
+      .hero-two-columns-container .two-columns-hero-container .hero-two-columns-title-container .hero-two-columns-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 8px 0px; } }
 
 .standard-page-hero-container {
   background: #F7F7F7;
@@ -1524,60 +1385,63 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 30px;
         width: 624px; } }
 
-.content-media-container .block-content-media-container {
-  display: flex;
-  width: 1140px;
-  margin: 20px auto;
-  flex-flow: row;
-  justify-content: space-around; }
-  .content-media-container .block-content-media-container .image-media-content-container {
-    margin-right: 127px; }
-    .content-media-container .block-content-media-container .image-media-content-container .square {
-      width: 555px;
-      height: 555px;
-      border-radius: 16px; }
-    .content-media-container .block-content-media-container .image-media-content-container .landscape {
-      height: 311px;
-      width: 555px;
-      border-radius: 16px; }
-  .content-media-container .block-content-media-container.is-style-flipped {
-    flex-flow: row-reverse; }
-    .content-media-container .block-content-media-container.is-style-flipped .image-media-content-container {
-      margin-right: 0;
-      margin-left: 127px; }
-
-.content-media-container .text-media-content-container {
-  position: relative;
-  top: 100px;
-  width: 458px; }
-  .content-media-container .text-media-content-container.landscape {
-    top: 80px; }
-  .content-media-container .text-media-content-container .content-media-title {
-    font-family: 'SC Sans Regular';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 45px;
-    margin: 16px 0px;
-    color: #525355; }
-    .content-media-container .text-media-content-container .content-media-title.white {
-      color: #ffffff; }
-  .content-media-container .text-media-content-container .content-media-paragraph {
-    font-family: 'SC Sans Regular';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    color: #525355;
-    line-height: 27px;
-    margin: 16px 0px 32px; }
-    .content-media-container .text-media-content-container .content-media-paragraph.white {
-      color: #ffffff; }
+.content-media-container {
+  background-color: #fff;
+  margin: 16px auto; }
+  .content-media-container.transparent {
+    background-color: transparent; }
+  .content-media-container .block-content-media-container {
+    display: flex;
+    width: 1140px;
+    margin: 20px auto;
+    flex-flow: row;
+    justify-content: space-around; }
+    .content-media-container .block-content-media-container .image-media-content-container {
+      margin-right: 127px; }
+      .content-media-container .block-content-media-container .image-media-content-container .square {
+        width: 555px;
+        height: 555px;
+        border-radius: 16px; }
+      .content-media-container .block-content-media-container .image-media-content-container .landscape {
+        height: 311px;
+        width: 555px;
+        border-radius: 16px; }
+    .content-media-container .block-content-media-container.is-style-flipped {
+      flex-flow: row-reverse; }
+      .content-media-container .block-content-media-container.is-style-flipped .image-media-content-container {
+        margin-right: 0;
+        margin-left: 127px; }
+  .content-media-container .text-media-content-container {
+    margin-top: 50px;
+    width: 458px; }
+    .content-media-container .text-media-content-container.landscape {
+      margin-top: 80px; }
+    .content-media-container .text-media-content-container .content-media-title {
+      font-family: 'SC Sans Regular';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 45px;
+      margin: 16px 0px;
+      color: #525355; }
+      .content-media-container .text-media-content-container .content-media-title.white {
+        color: #ffffff; }
+    .content-media-container .text-media-content-container .content-media-paragraph {
+      font-family: 'SC Sans Regular';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      color: #525355;
+      line-height: 27px;
+      margin: 16px 0px 32px; }
+      .content-media-container .text-media-content-container .content-media-paragraph.white {
+        color: #ffffff; }
 
 @media screen and (max-width: 767px) {
   .content-media-container .block-content-media-container {
     display: block;
     width: 345px;
-    margin: 20px auto; }
+    margin: 30px auto; }
     .content-media-container .block-content-media-container .image-media-content-container {
       margin-right: 0; }
       .content-media-container .block-content-media-container .image-media-content-container .square {
@@ -1594,11 +1458,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-right: 0;
         margin-left: 0; }
   .content-media-container .text-media-content-container {
-    position: relative;
-    top: 0px;
+    margin-top: 0;
     width: 345px; }
     .content-media-container .text-media-content-container.landscape {
-      top: 0; }
+      margin-top: 0; }
     .content-media-container .text-media-content-container .content-media-title {
       font-size: 28px;
       line-height: 36px;
@@ -1608,7 +1471,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .content-media-container .text-media-content-container .content-media-paragraph {
       font-size: 16px;
       line-height: 24px;
-      margin: 8px 0px; }
+      margin: 16px 0px; }
       .content-media-container .text-media-content-container .content-media-paragraph.white {
         color: #ffffff; } }
 
@@ -1635,11 +1498,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-right: 0;
         margin-left: 30px; }
   .content-media-container .text-media-content-container {
-    position: relative;
-    top: 0px;
+    margin-top: 0;
     width: 345px; }
     .content-media-container .text-media-content-container.landscape {
-      top: 0; }
+      margin-top: 0; }
     .content-media-container .text-media-content-container .content-media-title {
       font-size: 35px;
       line-height: 45px;
@@ -1679,7 +1541,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border-radius: 16px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 20px auto; }
+  margin: 16px auto; }
   .content-in-page-promo-container .content-in-page-promo {
     height: auto;
     width: 555px;
@@ -1719,8 +1581,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 767px) {
   .content-in-page-promo-title-container {
-    width: 345px;
-    margin: 64px auto; }
+    width: 345px; }
     .content-in-page-promo-title-container .content-in-page-promo-title {
       font-size: 33px;
       line-height: 40px;
@@ -1779,7 +1640,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     height: 405px; }
     .content-in-page-promo-container .content-in-page-promo {
       height: auto;
-      width: 282px;
+      width: 300px;
       background: #fff;
       box-shadow: 0px 8px 16px rgba(82, 83, 85, 0.2);
       border-radius: 8px;
@@ -1788,15 +1649,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       top: 32px;
       left: 32px; }
       .content-in-page-promo-container .content-in-page-promo.top-right {
-        left: 404px;
+        left: 390px;
         top: 32px;
         margin-left: 0; }
       .content-in-page-promo-container .content-in-page-promo.bottom-right {
-        left: 404px;
-        top: 277px;
+        left: 390px;
+        top: 175px;
         margin-left: 0; }
       .content-in-page-promo-container .content-in-page-promo.bottom-left {
-        top: 277px; }
+        top: 175px; }
       .content-in-page-promo-container .content-in-page-promo .content-in-page-promo-title {
         width: 234px;
         margin: 0 0 16px; }
@@ -1883,62 +1744,61 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: flex;
         justify-content: center; } }
 
-.content-text-only-container .content-text-only-title-container {
-  padding: 96px 0px 96px 0px;
-  max-width: 1440px;
-  margin: 0 auto; }
-  .content-text-only-container .content-text-only-title-container .content-text-only-title-intro {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1.2;
-    margin: 16px 0px;
-    position: relative;
-    left: 96px;
-    color: #666666; }
-  .content-text-only-container .content-text-only-title-container .content-text-only-main-title {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 86px;
-    line-height: 1.2;
-    margin: 0 0 64px;
-    position: relative;
-    left: 96px;
-    width: 890px;
-    color: #525355; }
-    .content-text-only-container .content-text-only-title-container .content-text-only-main-title::before {
-      content: "ª";
-      display: inline-block;
-      margin: 0;
-      color: #0473EA;
-      position: absolute;
-      left: -15px; }
-    .content-text-only-container .content-text-only-title-container .content-text-only-main-title::after {
-      content: "º";
-      display: inline-block;
-      margin: 0;
-      color: #38D200; }
-  .content-text-only-container .content-text-only-title-container .content-text-only-paragraph {
-    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 1.3;
-    margin: 0px auto;
-    width: 754px;
-    text-align: left;
-    color: #525355; }
-
-.content-text-only-container.is-style-white .content-text-only-title-intro {
-  color: #ffffff; }
-
-.content-text-only-container.is-style-white .content-text-only-main-title {
-  color: #ffffff; }
-
-.content-text-only-container.is-style-white .content-text-only-paragraph {
-  color: #ffffff; }
+.content-text-only-container {
+  background-color: #fff; }
+  .content-text-only-container .content-text-only-title-container {
+    padding: 96px 0px 96px 0px;
+    max-width: 1440px;
+    margin: 0 auto; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-title-intro {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.2;
+      margin: 16px 0px;
+      position: relative;
+      left: 96px;
+      color: #666666; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-main-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 86px;
+      line-height: 1.2;
+      margin: 0 0 64px;
+      position: relative;
+      left: 96px;
+      width: 890px;
+      color: #525355; }
+      .content-text-only-container .content-text-only-title-container .content-text-only-main-title::before {
+        content: "ª";
+        display: inline-block;
+        margin: 0;
+        color: #0473EA;
+        position: absolute;
+        left: -15px; }
+      .content-text-only-container .content-text-only-title-container .content-text-only-main-title::after {
+        content: "º";
+        display: inline-block;
+        margin: 0;
+        color: #38D200; }
+    .content-text-only-container .content-text-only-title-container .content-text-only-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 0px auto;
+      width: 754px;
+      text-align: left;
+      color: #525355; }
+  .content-text-only-container.is-style-white .content-text-only-title-intro {
+    color: #ffffff; }
+  .content-text-only-container.is-style-white .content-text-only-main-title {
+    color: #ffffff; }
+  .content-text-only-container.is-style-white .content-text-only-paragraph {
+    color: #ffffff; }
 
 @media screen and (max-width: 767px) {
   .content-text-only-container .content-text-only-title-container {
@@ -2093,7 +1953,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 767px) {
   .card-container {
     padding: 48px 0px 48px 0;
-    width: 375px; }
+    width: 100%; }
     .card-container .card-titles-container {
       width: 345px;
       text-align: center; }
@@ -2123,7 +1983,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       display: inline-block;
       float: right;
       position: relative;
-      top: 140px;
+      top: 50px;
       right: 0px; } }
 
 .tab-content .info.active {
@@ -2402,6 +2262,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     border-radius: 16px 16px 0 0; }
   .single-standard-card-container a {
     text-decoration: none; }
+  .single-standard-card-container:hover {
+    box-shadow: inset 0px 0px 0px 4px #0473ea;
+    border-radius: 16px; }
   .single-standard-card-container .single-standard-card-main-text {
     font-family: SC Prosper Sans;
     font-style: normal;
@@ -2428,9 +2291,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin-right: 30px;
     padding-bottom: 24px; }
     .single-standard-card-container.is-style-large img {
-      width: 555px;
+      width: 553px;
       height: 312px;
       border-radius: 16px 16px 0 0; }
+    .single-standard-card-container.is-style-large:hover {
+      box-shadow: inset 0px 0px 0px 4px #0473ea;
+      border-radius: 16px; }
     .single-standard-card-container.is-style-large .single-standard-card-main-text {
       font-family: SC Prosper Sans;
       font-style: normal;
@@ -2466,6 +2332,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       width: 360px;
       height: 360px;
       border-radius: 16px 16px 0 0; }
+    .single-standard-card-container.is-style-square:hover {
+      box-shadow: inset 0px 0px 0px 4px #0473ea;
+      border-radius: 16px; }
     .single-standard-card-container.is-style-square .single-standard-card-main-text {
       font-family: SC Prosper Sans;
       font-style: normal;
@@ -2488,15 +2357,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     list-style-type: none;
     padding: 0;
     margin: 0 24px; }
-    .single-standard-card-container ul .content-chip::marker {
-      content: ''; }
-    .single-standard-card-container ul .content-chip-video::marker, .single-standard-card-container ul .content-chip-podcast::marker {
-      content: ''; }
-    .single-standard-card-container ul .content-chip-video a, .single-standard-card-container ul .content-chip-podcast a {
-      text-decoration: none; }
-      .single-standard-card-container ul .content-chip-video a:before, .single-standard-card-container ul .content-chip-podcast a:before {
-        margin-right: 3px;
-        margin-top: 3px; }
+    .single-standard-card-container ul .hero-category {
+      padding: 4px 8px;
+      height: 26px;
+      background: #EBFAE5;
+      border-radius: 14px;
+      margin-right: 10px;
+      min-width: 33px;
+      text-align: center; }
+      .single-standard-card-container ul .hero-category a {
+        font-family: SC Prosper Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 24px;
+        color: #1B6600;
+        text-decoration: none; }
 
 @media screen and (max-width: 767px) {
   .single-standard-card-container {
@@ -2789,7 +2665,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #ffffff;
   margin: 20px auto; }
   .accordions-container .accordions-titles-container {
-    width: 790px;
+    width: 1140px;
     margin: 0 auto; }
     .accordions-container .accordions-titles-container .accordions-container-title {
       font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
@@ -2806,7 +2682,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 18px;
       line-height: 1.5;
       color: #525355;
-      margin: 16px 0px; }
+      margin: 16px auto;
+      width: 750px; }
   .accordions-container .accordion-container {
     width: 790px;
     background: #FFFFFF;
@@ -2814,9 +2691,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     border-radius: 16px;
     padding: 32px;
     margin: 32px auto; }
-    .accordions-container .accordion-container.xlarge {
-      width: 1140px;
-      padding: 0; }
 
 @media screen and (max-width: 767px) {
   .accordions-container {
@@ -2829,14 +2703,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         line-height: 36px; }
       .accordions-container .accordions-titles-container .accordions-container-paragraph {
         font-size: 16px;
-        line-height: 24px; }
+        line-height: 24px;
+        width: 345px;
+        margin: 16px 0; }
     .accordions-container .accordion-container {
       width: 345px;
       border-radius: 8px;
-      padding: 19px; }
-      .accordions-container .accordion-container.xlarge {
-        width: 345px;
-        padding: 0; } }
+      padding: 19px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .accordions-container {
@@ -2847,13 +2720,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       .accordions-container .accordions-titles-container .accordions-container-title {
         font-size: 28px;
         line-height: 36px; }
+      .accordions-container .accordions-titles-container .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        width: 345px; }
     .accordions-container .accordion-container {
       width: 595px;
       border-radius: 12px;
-      padding: 16px 24px; }
-      .accordions-container .accordion-container.xlarge {
-        width: 720px;
-        padding: 0; } }
+      padding: 16px 24px; } }
 
 .accordion-xlarge {
   cursor: pointer;
@@ -3261,19 +3135,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @media screen and (max-width: 767px) {
   .card-link-images-cards-container {
     display: block; }
-    .card-link-images-cards-container .card-link-images-container {
+    .card-link-images-cards-container .card-link-image-container {
       width: 345px;
-      height: auto;
       margin: 16px auto; }
-      .card-link-images-cards-container .card-link-images-container .text-only-button {
+      .card-link-images-cards-container .card-link-image-container .text-only-button {
         top: 1px; }
-      .card-link-images-cards-container .card-link-images-container p {
+      .card-link-images-cards-container .card-link-image-container p {
         margin: 0 0 0 12px; }
-      .card-link-images-cards-container .card-link-images-container:hover .text-only-button.is-style-blue-only-text-download:after {
+      .card-link-images-cards-container .card-link-image-container:hover .text-only-button.is-style-blue-only-text-download:after {
         top: 1px; }
-      .card-link-images-cards-container .card-link-images-container:hover .text-only-button.is-style-blue-only-text-play:after {
+      .card-link-images-cards-container .card-link-image-container:hover .text-only-button.is-style-blue-only-text-play:after {
         top: 1px; }
-      .card-link-images-cards-container .card-link-images-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
+      .card-link-images-cards-container .card-link-image-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
         top: 1px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -3388,14 +3261,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin: 16px auto; }
       .card-link-cards-container .card-link-container .text-only-button {
         top: 1px; }
+        .card-link-cards-container .card-link-container .text-only-button:after {
+          top: -4px;
+          right: -9px; }
+        .card-link-cards-container .card-link-container .text-only-button.is-style-blue-only-text-download:after {
+          top: 1px;
+          right: -25px; }
+        .card-link-cards-container .card-link-container .text-only-button.is-style-blue-only-text-play:after {
+          top: 1px;
+          right: -25px; }
+        .card-link-cards-container .card-link-container .text-only-button.is-style-blue-only-text-external-link:after {
+          top: 1px;
+          right: -25px; }
       .card-link-cards-container .card-link-container p {
-        margin: 0 0 0 12px; }
-      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-download:after {
-        top: 1px; }
-      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-play:after {
-        top: 1px; }
-      .card-link-cards-container .card-link-container:hover .text-only-button.is-style-blue-only-text-external-link:after {
-        top: 1px; } }
+        margin: 0 0 0 12px; } }
 
 .primary-button {
   min-width: 180px;
@@ -3888,9 +3767,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .news-hero-container {
   display: flex;
   width: 1440px;
-  margin: 0 auto;
+  margin: 16px auto;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #fff; }
   .news-hero-container .news-hero-main-post-container {
     margin-right: 30px; }
     .news-hero-container .news-hero-main-post-container .news-hero-main-post .news-hero-main-thumbnail img {
@@ -4082,37 +3962,37 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         font-size: 19px;
         line-height: 28px; } }
 
-.timeline-titles-container {
-  height: 30vw;
-  z-index: 1;
-  padding: 96px 150px;
-  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%); }
-  .timeline-titles-container h2 {
-    font-family: 'SC Prosper Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 55px;
-    line-height: 66px;
-    color: #fff; }
-  .timeline-titles-container p {
-    font-family: 'SC Prosper Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 34px;
-    color: #fff; }
-
 .section-timeline {
   position: relative;
   z-index: -3;
   background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
   margin-bottom: 16px; }
-  .section-timeline .container {
+  .section-timeline .timeline-titles-container {
+    height: 30vw;
+    z-index: 1;
+    padding: 96px 150px;
+    background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+    text-align: center; }
+    .section-timeline .timeline-titles-container h2 {
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 55px;
+      line-height: 66px;
+      color: #fff; }
+    .section-timeline .timeline-titles-container p {
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 34px;
+      color: #fff; }
+  .section-timeline .timeline-container {
     width: 90vw;
     max-width: 1360px;
     margin-right: auto;
     margin-left: auto; }
-    .section-timeline .container .timeline_component {
+    .section-timeline .timeline-container .timeline_component {
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -4134,13 +4014,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      .section-timeline .container .timeline_component .timeline_progress {
+      .section-timeline .timeline-container .timeline_component .timeline_progress {
         position: absolute;
         z-index: -2;
         width: 3px;
         height: 100%;
         background-color: #414141; }
-        .section-timeline .container .timeline_component .timeline_progress .timeline_progress-bar {
+        .section-timeline .timeline-container .timeline_component .timeline_progress .timeline_progress-bar {
           position: fixed;
           left: auto;
           top: 0px;
@@ -4152,7 +4032,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           background-color: #fff;
           background-image: -webkit-gradient(linear, left top, left bottom, from(#ff7448), color-stop(51%, #ff4848), to(#6248ff));
           background-image: linear-gradient(180deg, #ff7448, #ff4848 51%, #6248ff); }
-      .section-timeline .container .timeline_component .single_time .timeline_item {
+      .section-timeline .timeline-container .timeline_component .single_time .timeline_item {
         position: relative;
         z-index: 2;
         display: -ms-grid;
@@ -4166,7 +4046,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         grid-template-columns: 1fr 180px 1fr;
         -ms-grid-rows: auto;
         grid-template-rows: auto; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_left {
           -webkit-box-pack: end;
           -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
@@ -4176,7 +4056,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           -ms-flex-align: stretch;
           align-items: stretch;
           text-align: right; }
-          .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
+          .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
             position: -webkit-sticky;
             position: sticky;
             top: 50vh;
@@ -4185,7 +4065,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             line-height: 1.2;
             font-weight: 500;
             letter-spacing: -0.03em; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_centre {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_centre {
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -4194,7 +4074,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           -webkit-justify-content: center;
           -ms-flex-pack: center;
           justify-content: center; }
-          .section-timeline .container .timeline_component .single_time .timeline_item .timeline_centre .timeline_circle {
+          .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_centre .timeline_circle {
             position: -webkit-sticky;
             position: sticky;
             top: 50vh;
@@ -4207,22 +4087,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
             border-radius: 100%;
             background-color: #fff;
             box-shadow: 0 0 0 8px #0a0a0a; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium {
           margin-bottom: 32px; }
-          .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
+          .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
             color: #fff;
             font-size: 24px;
             line-height: 1.3;
             font-weight: 500; }
-            .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
+            .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
               color: rgba(255, 255, 255, 0.65);
               font-size: 16px;
               line-height: 1.6; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge {
           margin-bottom: 56px; }
-          .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block {
+          .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block {
             display: inline-block; }
-            .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block .timeline_link {
+            .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block .timeline_link {
               display: -webkit-box;
               display: -webkit-flex;
               display: -ms-flexbox;
@@ -4242,34 +4122,34 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
               letter-spacing: 0.8px;
               text-decoration: none;
               text-transform: uppercase; }
-              .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block .timeline_link:hover {
+              .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-xlarge .inline-block .timeline_link:hover {
                 opacity: 1; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper {
           overflow: hidden;
           border-radius: 12px;
           background-image: linear-gradient(138deg, #000, transparent 28%), url("../images/Image-Background.png");
           background-position: 0px 0px, 0px 0px;
           background-size: auto, cover; }
-          .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
+          .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
             max-width: 100%; }
 
 @media screen and (max-width: 767px) {
-  .timeline-titles-container {
-    height: 85vw;
+  .section-timeline .timeline-titles-container {
+    height: 30vw;
     padding: 48px; }
-    .timeline-titles-container h2 {
+    .section-timeline .timeline-titles-container h2 {
       font-size: 33px;
       line-height: 40px; }
-    .timeline-titles-container p {
+    .section-timeline .timeline-titles-container p {
       font-size: 19px;
       line-height: 28px; }
-  .section-timeline .container .timeline_component .timeline_progress {
+  .section-timeline .timeline-container .timeline_component .timeline_progress {
     left: 6px; }
-  .section-timeline .container .timeline_component .single_time .timeline_item {
+  .section-timeline .timeline-container .timeline_component .single_time .timeline_item {
     width: 100%;
     -ms-grid-columns: 48px 1fr;
     grid-template-columns: 48px 1fr; }
-    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left {
+    .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_left {
       text-align: left;
       grid-column-end: 3;
       -ms-grid-column: 2;
@@ -4278,10 +4158,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       grid-row-end: 2;
       -ms-grid-row: 1;
       grid-row-start: 1; }
-      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
+      .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_left .timeline_date-text {
         margin-bottom: 24px;
         font-size: 36px; }
-    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_centre {
+    .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_centre {
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -4294,7 +4174,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       grid-row-end: 3;
       -ms-grid-row: 1;
       grid-row-start: 1; }
-    .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right {
+    .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right {
       -ms-grid-column-span: 1;
       grid-column-end: span 1;
       -ms-grid-column: span 1;
@@ -4303,27 +4183,370 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       grid-row-end: span 1;
       -ms-grid-row: span 1;
       grid-row-start: span 1; }
-      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
+      .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text {
         font-size: 20px; }
-        .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
+        .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .margin-bottom-medium .timeline_text .text-colour-lightgrey {
           color: rgba(255, 255, 255, 0.65);
           font-size: 16px;
           line-height: 1.6; }
-      .section-timeline .container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
+      .section-timeline .timeline-container .timeline_component .single_time .timeline_item .timeline_right .timeline_image-wrapper .timeline-image {
         max-width: 100%;
         vertical-align: middle;
         display: inline-block; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .timeline-titles-container {
+  .section-timeline .timeline-titles-container {
     height: 50vw;
     padding: 48px; }
-    .timeline-titles-container h2 {
+    .section-timeline .timeline-titles-container h2 {
       font-size: 33px;
       line-height: 40px; }
-    .timeline-titles-container p {
+    .section-timeline .timeline-titles-container p {
       font-size: 19px;
       line-height: 28px; } }
+
+.mosaic-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff; }
+  .mosaic-container .photo-container {
+    height: 700px;
+    position: relative;
+    top: 0;
+    left: -58px;
+    flex: 1; }
+    .mosaic-container .photo-container .photo-stripes-container {
+      transform: rotate(-16deg);
+      position: relative;
+      left: -100px;
+      margin: 5px; }
+      .mosaic-container .photo-container .photo-stripes-container img {
+        max-width: 225px;
+        height: auto;
+        border-radius: 10px;
+        display: block; }
+      .mosaic-container .photo-container .photo-stripes-container .column-one {
+        position: absolute;
+        left: -115px;
+        top: -26px;
+        animation-name: rotateup;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      .mosaic-container .photo-container .photo-stripes-container .column-two {
+        position: absolute;
+        left: 124px;
+        top: -65px;
+        animation-name: rotatedown;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      .mosaic-container .photo-container .photo-stripes-container .column-three {
+        position: absolute;
+        left: 364px;
+        top: -25px;
+        animation-name: rotateup;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      .mosaic-container .photo-container .photo-stripes-container .column-four {
+        position: absolute;
+        left: 604px;
+        top: -45px;
+        animation-name: rotatedown;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+
+@keyframes rotateup {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-50%); } }
+
+@keyframes rotatedown {
+  0% {
+    transform: translateY(-50%); }
+  100% {
+    transform: translateY(0); } }
+      .mosaic-container .photo-container .photo-stripes-container .mosaic-img {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        display: block; }
+  .mosaic-container .mosaic-titles {
+    flex: 1;
+    padding: 0 15px; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container {
+      text-align: left;
+      top: 0;
+      position: relative;
+      padding: 0 25px;
+      width: 458px;
+      left: 200px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .title-intro {
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #666666;
+        opacity: 0.5;
+        margin-top: 0; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .main-title {
+        font-size: 56px;
+        line-height: 66px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 16px;
+        margin-top: 0; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .mosaic-paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #525355;
+        margin-bottom: 16px; }
+
+@media screen and (max-width: 767px) {
+  .mosaic-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+    padding-top: 0px;
+    overflow: hidden;
+    height: 500px; }
+    .mosaic-container .photo-container {
+      width: auto;
+      height: 284px;
+      position: relative;
+      top: 90px;
+      left: -125px; }
+      .mosaic-container .photo-container .photo-stripes-container {
+        transform: rotate(-16deg);
+        left: -74px; }
+        .mosaic-container .photo-container .photo-stripes-container img {
+          width: 90px;
+          height: auto;
+          border-radius: 8px;
+          display: block; }
+        .mosaic-container .photo-container .photo-stripes-container .column-one {
+          position: absolute;
+          left: -21px;
+          top: 40px;
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset; }
+        .mosaic-container .photo-container .photo-stripes-container .column-two {
+          position: absolute;
+          left: 76px;
+          top: -13px;
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset; }
+        .mosaic-container .photo-container .photo-stripes-container .column-three {
+          position: absolute;
+          left: 174px;
+          top: 20px;
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset; }
+        .mosaic-container .photo-container .photo-stripes-container .column-four {
+          position: absolute;
+          left: 272px;
+          top: 100px;
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset; }
+        .mosaic-container .photo-container .photo-stripes-container .mosaic-img {
+          margin-top: 8px;
+          margin-bottom: 8px;
+          display: block; }
+    .mosaic-container .mosaic-titles {
+      flex: 1;
+      padding: 0 15px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container {
+        text-align: center;
+        top: 0;
+        position: relative;
+        padding: 0 25px;
+        left: 0;
+        width: 345px; }
+        .mosaic-container .mosaic-titles .mosaic-titles-container .title-intro {
+          font-size: 16px;
+          line-height: 24px; }
+        .mosaic-container .mosaic-titles .mosaic-titles-container .main-title {
+          font-size: 36px;
+          line-height: 47px; }
+        .mosaic-container .mosaic-titles .mosaic-titles-container .mosaic-paragraph {
+          font-size: 16px;
+          line-height: 24px; } }
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .mosaic-container {
+    flex-direction: row;
+    padding-top: 0;
+    align-items: center; }
+    .mosaic-container .photo-container {
+      left: 130px;
+      width: 392px;
+      height: 358px;
+      top: 0;
+      left: 0;
+      flex: 1; }
+      .mosaic-container .photo-container .photo-stripes-container {
+        transform: rotate(-16deg);
+        position: relative;
+        left: -75px;
+        margin: 5px; }
+        .mosaic-container .photo-container .photo-stripes-container img {
+          width: 93px; }
+        .mosaic-container .photo-container .photo-stripes-container .column-one {
+          left: -43px;
+          top: 75px;
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-two {
+          left: 65px;
+          top: -65px;
+          animation-name: rotatedown;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-three {
+          left: 173px;
+          top: -25px;
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-four {
+          left: 281px;
+          top: -57px;
+          animation-name: rotatedown;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container {
+      text-align: left;
+      top: 0;
+      width: 330px;
+      left: 35px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .main-title {
+        font-size: 36px;
+        line-height: 47px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .mosaic-paragraph {
+        font-size: 16px;
+        line-height: 24px; } }
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .mosaic-container {
+    flex-direction: row;
+    padding-top: 0;
+    align-items: center; }
+    .mosaic-container .photo-container {
+      left: 130px;
+      width: 392px;
+      height: 358px;
+      top: 0;
+      left: 0;
+      flex: 1; }
+      .mosaic-container .photo-container .photo-stripes-container {
+        transform: rotate(-16deg);
+        position: relative;
+        left: -75px;
+        margin: 5px; }
+        .mosaic-container .photo-container .photo-stripes-container img {
+          width: 120px; }
+        .mosaic-container .photo-container .photo-stripes-container .column-one {
+          left: -43px;
+          top: 75px;
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-two {
+          left: 92px;
+          top: -65px;
+          animation-name: rotatedown;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-three {
+          left: 227px;
+          top: -25px;
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+        .mosaic-container .photo-container .photo-stripes-container .column-four {
+          left: 362px;
+          top: -57px;
+          animation-name: rotatedown;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container {
+      text-align: left;
+      top: 0;
+      width: 459px;
+      left: 35px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .title-intro {
+        font-size: 16px;
+        line-height: 24px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .main-title {
+        font-size: 56px;
+        line-height: 72px; }
+      .mosaic-container .mosaic-titles .mosaic-titles-container .mosaic-paragraph {
+        font-size: 18px;
+        line-height: 27px; } }
+
+@media screen and (min-width: 1800px) {
+  .mosaic-container .photo-container {
+    width: 1300px;
+    height: 700px;
+    left: 85px; }
+    .mosaic-container .photo-container .photo-stripes-container {
+      transform: rotate(-16deg);
+      left: -170px; }
+      .mosaic-container .photo-container .photo-stripes-container img {
+        min-width: 225px; }
+      .mosaic-container .photo-container .photo-stripes-container .column-one {
+        left: -115px; }
+      .mosaic-container .photo-container .photo-stripes-container .column-two {
+        left: 124px; }
+      .mosaic-container .photo-container .photo-stripes-container .column-three {
+        left: 364px; }
+      .mosaic-container .photo-container .photo-stripes-container .column-four {
+        left: 604px; }
+      .mosaic-container .photo-container .photo-stripes-container .mosaic-img {
+        margin-top: 16px;
+        margin-bottom: 16px; }
+  .mosaic-container .mosaic-titles .mosaic-titles-container {
+    text-align: left;
+    top: 0;
+    width: 600px;
+    left: 0; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container .title-intro {
+      font-size: 20px;
+      line-height: 26px; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container .main-title {
+      font-size: 70px;
+      line-height: 74px; }
+    .mosaic-container .mosaic-titles .mosaic-titles-container .mosaic-paragraph {
+      font-size: 24px;
+      line-height: 27px; } }
 
 .hero-article-container {
   width: 1440px;
@@ -4332,7 +4555,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding: 0px 0px 32px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 16px auto; }
+  margin: 0 auto 16px; }
   .hero-article-container .hero-article {
     position: relative;
     top: 490px;
@@ -4397,7 +4620,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     border-radius: 0;
     padding: 0px 0px 32px;
     background-image: none !important;
-    margin: 0 auto; }
+    margin: 0 auto 16px; }
     .hero-article-container .hero-article {
       position: relative;
       top: 0;
@@ -4452,9 +4675,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-article-container {
-    width: 720px;
+    width: 768px;
     height: 425px;
-    margin: 0 auto; }
+    margin: 0 auto 16px; }
     .hero-article-container .hero-article {
       position: relative;
       top: 122px;
@@ -4491,7 +4714,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #CDF4BF;
   width: 1440px;
   height: 448px;
-  margin: 16px auto; }
+  margin: 0 auto 16px; }
   .hero-article-no-image-container .hero-article-no-image {
     position: relative;
     top: 0;
@@ -4549,12 +4772,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (max-width: 767px) {
   .hero-article-no-image-container {
-    width: 375px;
+    width: 100%;
     height: auto;
     border-radius: 0;
     padding: 0px 0px 32px;
     background-image: none !important;
-    margin: 0 auto; }
+    margin: 0 auto 16px; }
     .hero-article-no-image-container .hero-article-no-image {
       position: relative;
       top: 0;
@@ -4603,8 +4826,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-article-no-image-container {
-    width: 720px;
-    margin: 0 auto; }
+    width: 768px;
+    margin: 0 auto 16px; }
     .hero-article-no-image-container .hero-article-no-image {
       position: relative;
       top: 0;

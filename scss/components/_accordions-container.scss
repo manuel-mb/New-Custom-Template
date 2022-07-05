@@ -4,7 +4,7 @@
   margin: 20px auto;
 
   .accordions-titles-container {
-    width: 790px;
+    width: 1140px;
     margin: 0 auto;
 
     .accordions-container-title {
@@ -24,7 +24,8 @@
       font-size: $font-size-mc-lg-base;
       line-height: $line-height-mc-body;
       color: $color-mc-grey;
-      margin: 16px 0px;
+      margin: 16px auto;
+      width: 750px;
     }
   }
 
@@ -34,12 +35,7 @@
     box-shadow: $box-shadow-mc-blu2;
     border-radius: 16px;
     padding: 32px;
-    margin: 32px auto;
-
-    &.xlarge{
-      width: 1140px;
-      padding:0;
-    }       
+    margin: 32px auto;       
   }
 } 
 
@@ -60,18 +56,15 @@
       .accordions-container-paragraph {
         font-size: 16px;
         line-height: 24px;
+        width: 345px;
+        margin: 16px 0;
       }
     }
 
     .accordion-container {
       width: 345px;
       border-radius: 8px;
-      padding: 19px;
-
-      &.xlarge{
-        width: 345px;
-        padding:0;
-      }    
+      padding: 19px;    
     }
   }
 }
@@ -88,17 +81,17 @@
         font-size: 28px;
         line-height: 36px;
       }
+      .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        width: 345px;
+      }
     }
 
     .accordion-container {
       width: 595px;
       border-radius: 12px;
-      padding: 16px 24px; 
-
-      &.xlarge{
-        width: 720px;
-        padding:0;
-      }   
+      padding: 16px 24px;    
     }
   }
 }

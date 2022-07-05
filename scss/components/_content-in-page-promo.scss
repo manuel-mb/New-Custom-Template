@@ -3,23 +3,23 @@
     margin: 64px auto;
 
     .content-in-page-promo-title {
-        font-family: $font-family-mc-regular;
-        font-style: normal;
-        font-weight: normal;
-        font-size: $font-size-mc-lg-h2;
-        line-height: $line-height-mc-h1;
-        color: $color-mc-blue-dark;
-        margin: 0;
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-h2;
+      line-height: $line-height-mc-h1;
+      color: $color-mc-blue-dark;
+      margin: 0;
     }
 
     .content-in-page-promo-paragraph {
-        font-family: $font-family-mc-regular;
-        font-style: normal;
-        font-weight: normal;
-        font-size: $font-size-mc-lg-base;
-        line-height: $line-height-mc-body;
-        color: $color-mc-grey;
-        margin: 16px 0px;
+      font-family: $font-family-mc-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-mc-lg-base;
+      line-height: $line-height-mc-body;
+      color: $color-mc-grey;
+      margin: 16px 0px;
     }
 }
 
@@ -29,7 +29,7 @@
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 20px auto;
+    margin: 16px auto;
 
   .content-in-page-promo {
     height: auto;
@@ -83,18 +83,17 @@
 @media screen and (max-width: 767px) {
   .content-in-page-promo-title-container {
     width: 345px;
-    margin: 64px auto;
 
     .content-in-page-promo-title {
-        font-size: 33px;
-        line-height: 40px;
-        margin: 64px 0;
+      font-size: 33px;
+      line-height: 40px;
+      margin: 64px 0;
     }
 
     .content-in-page-promo-paragraph {
-        font-size: 19px;
-        line-height: 28px;
-        margin: 20px 0px;
+      font-size: 19px;
+      line-height: 28px;
+      margin: 20px 0px;
     }
   }
 
@@ -166,12 +165,12 @@
   }
 
   .content-in-page-promo-container {
-      width: 720px;
-      height: 405px;
+    width: 720px;
+    height: 405px;
 
     .content-in-page-promo {
       height: auto;
-      width: 282px;
+      width: 300px;
       background: #fff;
       box-shadow: 0px 8px 16px rgba(82, 83, 85, 0.2);
       border-radius: 8px;
@@ -181,19 +180,19 @@
       left: 32px;
 
       &.top-right {
-        left: 404px;
+        left: 390px;
         top: 32px;
         margin-left: 0;    
       }
 
       &.bottom-right {
-        left: 404px;
-        top: 277px;
+        left: 390px;
+        top: 175px;
         margin-left: 0;
       }
 
       &.bottom-left {
-        top: 277px;
+        top: 175px;
       }
 
       .content-in-page-promo-title {

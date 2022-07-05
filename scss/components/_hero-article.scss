@@ -5,7 +5,7 @@
   padding: 0px 0px 32px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 16px auto;
+  margin: 0 auto 16px;
 
   .hero-article {
     position: relative;
@@ -107,7 +107,7 @@
     border-radius: 0;
     padding: 0px 0px 32px;
     background-image: none !important;
-    margin: 0 auto;
+    margin: 0 auto 16px;
 
     .hero-article {
       position: relative;
@@ -199,9 +199,9 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .hero-article-container {
-    width: 720px;
+    width: 768px;
     height: 425px;
-    margin: 0 auto;
+    margin: 0 auto 16px;
 
     .hero-article {
       position: relative;

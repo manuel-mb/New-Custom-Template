@@ -14,21 +14,68 @@
 	}
 
 	a {
-    	text-decoration: none;
-    }
+  	text-decoration: none;
+  }
+
+  &:hover {
+  	box-shadow: inset 0px 0px 0px 4px #0473ea;
+  	border-radius: 16px;
+  }
 
 	.single-standard-card-main-text {
 		font-family: SC Prosper Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: #525355;
+    margin: 24px;
+    width: 312px;
+	} 
+
+	.single-standard-card-paragraph {
+  	font-family: SC Prosper Sans;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-size: 18px;
+  	line-height: 27px;
+  	color: #525355;
+  	padding: 0 24px;
+  }	
+
+	&.is-style-large {
+		
+    width: 555px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: $box-shadow-mc-grey2;
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px;
+
+		img {
+			width: 553px;
+			height: 312px;
+			border-radius: 16px 16px 0 0;
+		}
+
+		&:hover {
+	  	box-shadow: inset 0px 0px 0px 4px #0473ea;
+	  	border-radius: 16px;
+  	}
+
+		.single-standard-card-main-text {
+			font-family: SC Prosper Sans;
 	    font-style: normal;
 	    font-weight: 500;
-	    font-size: 18px;
+	    font-size: 28px;
 	    line-height: 36px;
 	    color: #525355;
 	    margin: 24px;
 	    width: 312px;
-	} 
+		}
 
-	.single-standard-card-paragraph {
+		.single-standard-card-paragraph  {
     	font-family: SC Prosper Sans;
     	font-style: normal;
     	font-weight: normal;
@@ -36,67 +83,29 @@
     	line-height: 27px;
     	color: #525355;
     	padding: 0 24px;
-    }	
+    }
 
-	&.is-style-large {
-		
-	    width: 555px;
-	    height: auto;
-	    background: #FFFFFF;
-	    box-shadow: $box-shadow-mc-grey2;
-	    border-radius: 16px;
-	    margin-right: 30px;
-	    padding-bottom: 24px;
+    &.slick-slide	{
+    	width: 555px !important;
+  	}
 
-		img {
-			width: 555px;
-			height: 312px;
-			border-radius: 16px 16px 0 0;
-		}
+  	&.slick-active{
+  		width: 555px !important;
+  	}
 
-		.single-standard-card-main-text {
-			font-family: SC Prosper Sans;
-		    font-style: normal;
-		    font-weight: 500;
-		    font-size: 28px;
-		    line-height: 36px;
-		    color: #525355;
-		    margin: 24px;
-		    width: 312px;
-		}
-
-		.single-standard-card-paragraph  {
-	    	font-family: SC Prosper Sans;
-	    	font-style: normal;
-	    	font-weight: normal;
-	    	font-size: 18px;
-	    	line-height: 27px;
-	    	color: #525355;
-	    	padding: 0 24px;
-	    }
-
-	    &.slick-slide	{
-	    	width: 555px !important;
-    	}
-
-    	&.slick-active{
-    		width: 555px !important;
-    	}
-
-    	&.slick-cloned {
-    		width: 555px !important;
-    	}
+  	&.slick-cloned {
+  		width: 555px !important;
+  	}
 	}
 
-	&.is-style-square {
-		
-	    width: 360px;
-	    height: auto;
-	    background: #FFFFFF;
-	    box-shadow: $box-shadow-mc-grey2;
-	    border-radius: 16px;
-	    margin-right: 30px;
-	    padding-bottom: 24px;
+	&.is-style-square {		
+    width: 360px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: $box-shadow-mc-grey2;
+    border-radius: 16px;
+    margin-right: 30px;
+    padding-bottom: 24px;
 
 		img {
 			width: 360px;
@@ -104,26 +113,31 @@
 			border-radius: 16px 16px 0 0;
 		}
 
+		&:hover {
+	  	box-shadow: inset 0px 0px 0px 4px #0473ea;
+	  	border-radius: 16px;
+	  }
+
 		.single-standard-card-main-text {
 			font-family: SC Prosper Sans;
-		    font-style: normal;
-		    font-weight: 500;
-		    font-size: 28px;
-		    line-height: 36px;
-		    color: #525355;
-		    margin: 24px;
-		    width: 312px;
+	    font-style: normal;
+	    font-weight: 500;
+	    font-size: 28px;
+	    line-height: 36px;
+	    color: #525355;
+	    margin: 24px;
+	    width: 312px;
 		}
 
 		.single-standard-card-paragraph {
-	    	font-family: SC Prosper Sans;
-	    	font-style: normal;
-	    	font-weight: normal;
-	    	font-size: 18px;
-	    	line-height: 27px;
-	    	color: #525355;
-	    	padding: 0 24px;
-	    }
+    	font-family: SC Prosper Sans;
+    	font-style: normal;
+    	font-weight: normal;
+    	font-size: 18px;
+    	line-height: 27px;
+    	color: #525355;
+    	padding: 0 24px;
+    }
 	}
 
 	ul {
@@ -132,26 +146,24 @@
 		padding: 0;
 		margin: 0 24px;
 
-		.content-chip {
+		.hero-category {
+			padding: 4px 8px;
+			height: 26px;
+			background: #EBFAE5;
+			border-radius: 14px;
+			margin-right: 10px;
+			min-width: 33px;
+			text-align: center;
 
-	    &::marker {
-	        content:'';
-	    }
-
-	    &-video, &-podcast {
-        &::marker {
-            content:'';
-        }
-
-        a {
-          text-decoration: none;
-
-          &:before {
-              margin-right: 3px;
-              margin-top: 3px;
-          }
-        }
-	    }
+			a {
+				font-family: SC Prosper Sans;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 24px;
+				color: #1B6600;
+				text-decoration: none;
+			}
 		}
 	}
 }

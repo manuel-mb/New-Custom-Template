@@ -4,7 +4,7 @@
   background: #CDF4BF;
   width: 1440px;
   height: 448px;
-  margin: 16px auto;
+  margin: 0 auto 16px;
 
   .hero-article-no-image {
     position: relative;
@@ -97,12 +97,12 @@
 @media screen and (max-width: 767px) {
 
   .hero-article-no-image-container {
-    width: 375px;
+    width: 100%;
     height: auto;
     border-radius: 0;
     padding: 0px 0px 32px;
     background-image: none !important;
-    margin: 0 auto;
+    margin: 0 auto 16px;
 
     .hero-article-no-image {
       position: relative;
@@ -186,8 +186,8 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .hero-article-no-image-container {
-    width: 720px;
-    margin: 0 auto;
+    width: 768px;
+    margin: 0 auto 16px;
 
     .hero-article-no-image {
       position: relative;

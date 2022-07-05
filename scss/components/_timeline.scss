@@ -1,35 +1,36 @@
-.timeline-titles-container {
-  height: 30vw;
-  z-index:1;
-  padding: 96px 150px;
-  background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
-
-  h2 {
-    font-family: 'SC Prosper Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 55px;
-    line-height: 66px;
-    color: #fff;
-  }
-
-  p {
-    font-family: 'SC Prosper Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 34px;
-    color: #fff;
-  }
-}
-
 .section-timeline {
   position: relative;
   z-index: -3;
   background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
   margin-bottom: 16px;
 
-  .container {
+  .timeline-titles-container {
+    height: 30vw;
+    z-index:1;
+    padding: 96px 150px;
+    background: linear-gradient(90deg, #2C3A88 0%, #0061C8 100%);
+    text-align: center;
+
+    h2 {
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 55px;
+      line-height: 66px;
+      color: #fff;
+    }
+
+    p {
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 34px;
+      color: #fff;
+    }
+  }
+
+  .timeline-container {
     width: 90vw;
     max-width: 1360px;
     margin-right: auto;
@@ -221,24 +222,24 @@
 
 @media screen and (max-width: 767px) {
 
-  .timeline-titles-container {
-    height: 85vw;
-    padding: 48px;
-
-    h2 {
-      font-size: 33px;
-      line-height: 40px;
-    }
-
-    p {
-      font-size: 19px;
-      line-height: 28px;
-    }
-  }
-
   .section-timeline {
 
-    .container {
+    .timeline-titles-container {
+      height: 30vw;
+      padding: 48px;
+
+      h2 {
+        font-size: 33px;
+        line-height: 40px;
+      }
+
+      p {
+        font-size: 19px;
+        line-height: 28px;
+      }
+    }
+
+    .timeline-container {
       .timeline_component {
         
         .timeline_progress {
@@ -325,18 +326,21 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
 
-  .timeline-titles-container {
-    height: 50vw;
-    padding: 48px;
+  .section-timeline {
 
-    h2 {
-      font-size: 33px;
-      line-height: 40px;
-    }
+    .timeline-titles-container {
+      height: 50vw;
+      padding: 48px;
 
-    p {
-      font-size: 19px;
-      line-height: 28px;
+      h2 {
+        font-size: 33px;
+        line-height: 40px;
+      }
+
+      p {
+        font-size: 19px;
+        line-height: 28px;
+      }
     }
   }
 }

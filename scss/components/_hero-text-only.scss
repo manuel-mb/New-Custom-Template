@@ -6,6 +6,8 @@
     padding: 96px 0px 96px 0px;
     width: 1140px;
     margin: 0 auto;
+    position: relative;
+    right: 94px;
 
     .hero-text-only-title-intro {
       font-family: $font-family-mc-regular;
@@ -29,7 +31,7 @@
       position: relative;
       left: 96px;
       color: $color-mc-white;
-      width: 860px;
+      width: 945px;
 
       &::before {
         content: "ª";
@@ -83,6 +85,8 @@
 
 @media screen and (max-width: 767px) {
   .hero-text-only-container {
+    width: 100%;
+    margin: 16px auto;
     
     .hero-text-only-title-container {
 

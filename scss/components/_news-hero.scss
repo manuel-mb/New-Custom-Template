@@ -1,9 +1,10 @@
 .news-hero-container {
     display: flex;
     width: 1440px;
-    margin: 0 auto;
+    margin: 16px auto;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fff;
 
     .news-hero-main-post-container {
         margin-right: 30px;
