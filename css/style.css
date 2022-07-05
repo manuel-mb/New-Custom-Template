@@ -1942,7 +1942,8 @@ body {
     .card-container #resource-slider .card-cards-container .slide {
       display: flex;
       overflow: hidden;
-      flex-wrap: nowrap; }
+      flex-wrap: nowrap;
+      padding: 16px 0; }
   .card-container .slider-control {
     display: inline-block;
     float: right;
