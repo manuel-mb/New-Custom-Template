@@ -22,6 +22,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <?php wp_body_open(); ?>
 
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'manuel' ); ?></a>

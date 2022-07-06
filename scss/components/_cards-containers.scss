@@ -1,58 +1,121 @@
 .card-container {
     background: $color-mc-blue-lightest;
-    padding: 96px 150px 96px 150px;
-    margin: 20px auto;
-    width: 1440px;
-
+    width:100%;
+    padding: 96px 0 96px 150px;
+    
     &.is-style-white {
         background: $color-mc-white;
     }
+    .card-wrapper { 
+        margin: 20px auto;
+        width: 1440px;
 
-    .card-titles-container {
-        width: 754px;
-        margin-right: 0;
-        display: inline-block;
+        .card-titles-container {
+            width: 754px;
+            margin-right: 0;
+            display: inline-block;
 
-        .card-container-title {
-            font-family: $font-family-mc-regular;
-            font-style: normal;
-            font-weight: normal;
-            font-size: $font-size-mc-lg-h2;
-            line-height: $line-height-mc-h1;
-            color: $color-mc-blue-dark;
-            margin: 0;
+            .card-container-title {
+                font-family: $font-family-mc-regular;
+                font-style: normal;
+                font-weight: normal;
+                font-size: $font-size-mc-lg-h2;
+                line-height: $line-height-mc-h1;
+                color: $color-mc-blue-dark;
+                margin: 0;
+            }
+
+            .card-container-paragraph {
+                font-family: $font-family-mc-regular;
+                font-style: normal;
+                font-weight: normal;
+                font-size: $font-size-mc-lg-base;
+                line-height: $line-height-mc-body;
+                color: $color-mc-grey;
+                margin: 16px 0px;
+            }
         }
-
-        .card-container-paragraph {
-            font-family: $font-family-mc-regular;
-            font-style: normal;
-            font-weight: normal;
-            font-size: $font-size-mc-lg-base;
-            line-height: $line-height-mc-body;
-            color: $color-mc-grey;
-            margin: 16px 0px;
-        }
-    }
-
-    #resource-slider{
-        margin-top: 64px;
 
         .card-cards-container {
             .slide {
                 display: flex;
-                overflow: hidden;
-                flex-wrap: nowrap;
-                padding: 16px 0;
-            }
-        } 
-    } 
+                
+                .slick-next {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 100%;
+                    background-color: $color-mc-blue;
+                    background-image: url(../src/images/forward.svg);
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    transition: all .3s;
+                    cursor: pointer;
+                    border: none;
+                    position: absolute;
+                    top: -48px;
+                    right: 47px;
 
-    .slider-control {
-        display: inline-block;
-        float: right;
-        position: relative;
-        top: 60px;
-        right: 150px;
+                    &:hover {
+                        background-color: $color-mc-blue-darkest;
+                    }
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &.slick-disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            background-color: $color-mc-blue;
+                            opacity: 0.4;
+                        }
+                    }
+                }
+
+                .slick-prev {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 100%;
+                    background-color: $color-mc-blue;
+                    background-image: url(../src/images/backward.svg);
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    transition: all .3s;
+                    cursor: pointer;
+                    border: none;
+                    position: absolute;
+                    top: -48px;
+                    left: 1270px;
+
+                    &:hover {
+                        background-color: $color-mc-blue-darkest;
+                    }
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &.slick-disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            background-color: $color-mc-blue;
+                            opacity: 0.4;
+                        }
+
+                    }
+                }
+
+                .slick-list {
+                    padding-left: 4px;
+                }
+            }
+        }  
     }
 }
 @media screen and (max-width: 767px) {
@@ -103,7 +166,7 @@
         }
 
         #resource-slider {
-            margin-top: 64px;  
+            margin-top: 64px;
         }
         
         .slider-control {

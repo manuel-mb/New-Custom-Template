@@ -399,7 +399,7 @@
 * add the class to a Div 
 */
 
-.btn-circle-forward-blue {
+.btn-circle-forward-blue, .slick-next {
     width: 51px;
     height: 51px;
     border-radius: 100%;
@@ -509,8 +509,36 @@
         }
     }
 
-    &-Post {
-        display: none;
+    &-article {
+        padding: 4px 8px;
+        height: 26px;
+        background: $color-mc-blue-lightest;
+        border-radius: 14px;
+        min-width: 49px;
+        text-align: center;
+        font-family: $font-family-mc-regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $font-size-mc-lg-body-xs;
+        line-height: $line-height-mc-body-xs;
+        color: $color-mc-blue;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: $color-mc-blue;
+            text-decoration: none; 
+        }
+        
+        &:hover {
+            background: $color-mc-blue-darkest;
+            color: $color-mc-white;
+
+            a {
+                color: $color-mc-white;
+            }
+        }
     }
 
     &-video {
@@ -542,7 +570,7 @@
                 width: 13px;
                 height: 13px;
                 float: left;
-                margin-top: 6px;
+                margin-top: 2px;
                 margin-right: 3px;
             }
         }
@@ -562,7 +590,7 @@
                     width: 13px;
                     height: 13px;
                     float: left;
-                    margin-top: 6px;
+                    margin-top: 2px;
                     margin-right: 3px;
                 }
             }
@@ -598,7 +626,7 @@
                 width: 13px;
                 height: 13px;
                 float: left;
-                margin-top: 6px;
+                margin-top: 2px;
                 margin-right: 3px;
             }
         }
@@ -618,7 +646,7 @@
                     width: 13px;
                     height: 13px;
                     float: left;
-                    margin-top: 6px;
+                    margin-top: 2px;
                     margin-right: 3px;
                 }
             }

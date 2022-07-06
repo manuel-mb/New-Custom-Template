@@ -51,3 +51,81 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .header {
+
+        .header__container {
+            display: block;
+            padding: 16px;
+
+            .header__navigation {
+                .main-menu {
+                    .menu {                   
+                        padding-left: 0;
+
+                        li {
+                            list-style: none;
+                            margin-right: 1em;
+                            text-decoration: none;
+
+                            a {
+                                text-decoration: none;
+                                font-family: 'SC Prosper Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 13px;
+                                line-height: 28px;
+                                color: #525355;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+
+        .header__container {
+            display: flex;
+            padding: 16px;
+
+            .header__navigation {
+                .main-menu {
+                    .menu {                   
+                        display: flex;
+
+                        li {
+                            list-style: none;
+                            margin-right: 2em;
+                            text-decoration: none;
+
+                            a {
+                                text-decoration: none;
+                                font-family: 'SC Prosper Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 28px;
+                                color: #525355;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
