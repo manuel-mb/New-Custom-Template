@@ -9,6 +9,11 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    &.slick-slide {
+        width: 360px;
+        height: 504px;
+    }
+
     .single-card-promo-title-container {
         position: relative;
         top: 488px;
@@ -63,6 +68,10 @@
         margin: 1em auto;
         width: 268px;
 
+        &.slick-slide {
+            width: 268px;
+        }
+
         .single-card-promo-title-container {
             
             a {
@@ -100,6 +109,10 @@
     
     .single-promo-card-container {
         width: 345px;
+
+        &.slick-slide {
+            width: 345px;
+        }
 
         .single-card-promo-title-container {
             position: relative;

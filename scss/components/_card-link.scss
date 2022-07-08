@@ -10,6 +10,11 @@
         padding: 16px;
         margin-right: 30px;
 
+        &:hover {
+            box-shadow: 0px 0px 0px 4px #0473ea;
+            border-radius: 16px;
+        }
+
         .text-only-button {
             margin-left: 12px;
             position: relative;
@@ -21,7 +26,7 @@
         }
 
         p {
-            margin: 0 0 0 12px;
+            margin: 6px 0 0 12px;
         }
 
         &:hover {

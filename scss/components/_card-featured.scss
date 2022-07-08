@@ -10,8 +10,12 @@
         margin-right: 0;
     }
 
+    &.slick-slide {
+        width: 555px;
+    }
+
     .single-featured-main-text {
-    	font-family: SC Prosper Sans;
+        font-family: SC Prosper Sans;
         font-style: normal;
         font-weight: 500;
         font-size: 28px;
@@ -22,12 +26,12 @@
     }
 
     .single-featured-paragraph {
-    	font-family: SC Prosper Sans;
-    	font-style: normal;
-    	font-weight: normal;
-    	font-size: 18px;
-    	line-height: 27px;
-    	color: #525355;
+        font-family: SC Prosper Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #525355;
     }
 
     &:hover {
@@ -129,6 +133,11 @@
         margin: 1em auto;
         padding: 24px;
 
+        &.slick-slide {
+            width: 265px;
+            margin-right: 16px;
+        }
+
         &:last-child {
             margin: 1em auto;
         }
@@ -158,6 +167,10 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .single-featured-card-container {
         width: 282px;
+
+        &.slick-slide {
+            width: 282px;
+        }
 
         &:last-child {
             margin-right:0;
