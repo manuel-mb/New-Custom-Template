@@ -31,15 +31,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "header/header";
 
 /* Footer
---------------------------------------------- */
-@import "footer/footer";
+--------------------------------------------- */ 
+@import "footer/footer"; 
 
-/* Components
---------------------------------------------- */
-@import "components/index";
 
 /*--------------------------------------------------------------
-# Plugins
+# Plugins 
 --------------------------------------------------------------*/
 
 /* Jetpack infinite scroll
@@ -57,7 +54,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
-
-@import "bourbon/bourbon";
-@import "bourbon-neat/neat";
 

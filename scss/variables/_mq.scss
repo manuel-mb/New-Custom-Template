@@ -1,34 +1,10 @@
-$sc__1700:   new-breakpoint(min-width 1700px);
-$sc__1580:   new-breakpoint(min-width 1580px);
-$sc__outer:  new-breakpoint(min-width 1410px);
-$sc__1440:   new-breakpoint(min-width 1440px);
-$sc__1400:   new-breakpoint(min-width 1400px);
-$sc__1340:   new-breakpoint(min-width 1340px);
-$sc__1300:   new-breakpoint(min-width 1300px);
-$sc__1250:   new-breakpoint(min-width 1250px);
-$sc__1200:   new-breakpoint(min-width 1200px);
-$sc__wide:   new-breakpoint(min-width 1170px);
-$sc__1140:   new-breakpoint(min-width 1140px);
-$sc__1130:   new-breakpoint(min-width 1130px);
-$sc__1100:   new-breakpoint(min-width 1100px);
-$sc__1090:   new-breakpoint(min-width 1090px);
-$sc__1030:   new-breakpoint(min-width 1030px);
-$sc__1000:   new-breakpoint(min-width 1000px);
-$sc__tablet: new-breakpoint(min-width 992px);
-$sc__940:    new-breakpoint(min-width 940px);
-$sc__920:    new-breakpoint(min-width 920px);
-$sc__900:    new-breakpoint(min-width 900px);
-$sc__mobile: new-breakpoint(min-width 800px);
-$sc__783:    new-breakpoint(min-width 783px);
-$sc__768:    new-breakpoint(min-width 768px);
-$sc__680:    new-breakpoint(min-width 680px);
-$sc__600:    new-breakpoint(min-width 600px);
-$sc__580:    new-breakpoint(min-width 580px);
-$sc__540:    new-breakpoint(min-width 540px);
-$sc__520:    new-breakpoint(min-width 520px);
-$sc__480:    new-breakpoint(min-width 480px);
-$sc__460:    new-breakpoint(min-width 460px);
-$sc__430:    new-breakpoint(min-width 430px);
-$sc__phone:  new-breakpoint(min-width 400px);
-$sc__380:    new-breakpoint(min-width 380px);
-$sc__300:    new-breakpoint(min-width 300px); 
+@mixin for-phone-only {
+  @media (max-width: 767px) { @content; }
+}
+@mixin for-tablet {
+  @media (min-width: 768px) and (max-width: 1200px){ @content; }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
