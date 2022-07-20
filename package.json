@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "acorn-import-assertions": "^1.8.0",
+    "boostrap": "^2.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",

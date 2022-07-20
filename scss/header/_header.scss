@@ -40,10 +40,29 @@
                             line-height: 28px;
                             color: #525355;
 
+                            &:after { 
+                                background-image: $draw-mc-download-button;  
+                            } 
+
                             &:hover {
                                 text-decoration: underline;
                             }
 
+                        }
+
+                        &:after {
+                            display: inline-block;
+                            position: relative;
+                            width: 50px;
+                            height: 100%;
+                            top: 4px;
+                            right: -5px;
+                            background-image: $draw-mc-download-button;
+                            content: '';
+                            background-repeat: no-repeat;
+                            background-size: 18px;
+                            width: 50px;
+                            height: 18px;
                         }
                     }
                 }
