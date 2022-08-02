@@ -1,0 +1,122 @@
+/**
+ * Styles for the Home Hero component.
+ *
+ * @package Manuel.
+ *
+ */
+
+.hero-home-container {
+	background: $gradient-blue;
+	width: 100%;
+	margin: $spacing-em-x2 auto;
+	@include section-padding-top-bottom;
+
+	.hero-home-wrap {
+	    display: flex; 
+	    justify-content: space-around;
+	    padding: 0 px-to-em( 30 );
+	    margin: 0 auto;
+	    flex-direction: row;
+
+	    @include mq( $until:medium ){
+			flex-direction: column;
+			padding: 0 px-to-em( 8 );
+	    }
+
+
+	 	.hero-home-title-container {
+	 		width: px-to-em( 535 );
+			padding-right: px-to-em( 120 );
+    		padding-left: px-to-em( 42 );
+
+    		@include mq( $until:medium ){
+    			width: px-to-em( 345 );
+    			padding-right: px-to-em( 0 );
+    			padding-left: px-to-em( 0 );
+    		}
+
+    		@include mq( $from:medium, $until:content-large ){
+    			width: px-to-em( 251 );
+    			padding-right: px-to-em( 0 );
+    			padding-left: px-to-em( 0 );
+    		}
+
+	 		.hero-home-title-intro {
+	 			@include heading-five;
+				margin: $spacing-em-x2 0px;
+				color: $color-white-70;
+	 		}
+	 		
+	 		.hero-home-main-title {
+				font-family: $font-family-regular;
+				font-style: normal;
+				font-weight: normal;
+				font-size: $font-size-lg-h1;
+				line-height: $line-height-h1;
+				color: $color-white-primary;
+				@include feature-heading;
+				text-indent: -0.3em;
+
+				@include mq( $until:medium ) {
+					font-size: $font-size-xs-h1;
+					text-indent: 0;
+
+					&::before {
+					display: none;
+					}
+
+					&::after {
+					display: none;
+					}
+				}
+				
+				@include mq( $from:medium, $until:content-large ){
+					font-size: $font-size-xs-h1;
+					text-indent: 0;
+				}
+			}
+
+		}
+
+	 	.image-hero-home-container{
+
+	 		.square {
+	 			width: px-to-em( 778 );
+	 			height: px-to-em( 778 );
+	 			border-radius: $border-radius-medium;
+
+	 			@include mq( $until:medium ) {
+	 				width: px-to-em( 345 );
+	 				height: px-to-em( 345 );
+	 				border-radius: $border-radius;
+	 			}
+
+	 			@include mq( $from:medium, $until:content-large ){
+	 				width: px-to-em( 408 );
+	 				height: px-to-em( 408 );
+	 				border-radius: $border-radius-medium;
+	 			}
+		 	}
+		 	
+		 	.landscape {
+		 		width: px-to-em( 778 );
+	 			height: px-to-em( 434 );
+	 			border-radius: $border-radius-medium;
+
+	 			@include mq( $until:medium ) {
+	 				width: px-to-em( 345 );
+	 				height: px-to-em( 195 );
+	 				border-radius: $border-radius;
+	 				margin-top: px-to-em( 55 );
+	 			}
+
+	 			@include mq( $from:medium, $until:content-large ) {
+	 				width: px-to-em( 408 );
+	 				height: px-to-em( 230 );
+	 				border-radius: $border-radius-medium;
+	 				margin-top: px-to-em( 55 );
+	 			}	
+		 	}
+	 	}
+ 	}
+}

@@ -27,7 +27,8 @@ $mq-breakpoints: (
   large: 992px,
   larger: 1024px, // this breakpoint is used in the design system for fonts only
   content-large: 1140px, // Specific breakpoint to account for the width of the widest content container.
-  xlarge: 1440px
+  xlarge: 1440px,
+  xxlarge: 1800px,
 );
 
 /**
@@ -42,4 +43,4 @@ $mq-static-breakpoint: large;
  * right corner of your site during development, add the breakpoints
  * to this list, ordered by width. For example: (mobile, tablet, desktop).
  */
-$mq-show-breakpoints: (small, medium, large, xlarge);
+$mq-show-breakpoints: (small, medium, large, xlarge, xxlarge);

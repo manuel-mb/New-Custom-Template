@@ -16,7 +16,10 @@
     "node-sass": "^7.0.1",
     "normalize.css": "^8.0.1",
     "px2em": "^1.0.0",
+    "sass-math": "^1.0.0",
+    "sass-mixins": "^0.13.0",
     "sass-mq": "^6.0.0",
+    "svg-sass": "^2.0.0",
     "tsutils": "^3.21.0"
   },
   "devDependencies": {

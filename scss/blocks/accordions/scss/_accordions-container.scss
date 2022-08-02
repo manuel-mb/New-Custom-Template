@@ -1,0 +1,97 @@
+.accordions-container {
+  width: 1440px;
+  background: #ffffff;
+  margin: 20px auto;
+
+  .accordions-titles-container {
+    width: 1140px;
+    margin: 0 auto;
+
+    .accordions-container-title {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 44px;
+      line-height: 1.2;
+      color: #0B56A8;
+      margin: 0;
+    }
+
+    .accordions-container-paragraph {
+      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #525355;
+      margin: 16px auto;
+      width: 750px;
+    }
+  }
+
+  .accordion-container {
+    width: 790px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px auto;       
+  }
+} 
+
+@media screen and (max-width: 767px) { 
+
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 375px;
+  
+    .accordions-titles-container {
+      width: 345px;
+
+      .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        width: 345px;
+        margin: 16px 0;
+      }
+    }
+
+    .accordion-container {
+      width: 345px;
+      border-radius: 8px;
+      padding: 19px;    
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordions-container {
+    padding: 48px 0px 48px 0;
+    width: 768px;
+  
+    .accordions-titles-container {
+      width: 595px;
+
+      .accordions-container-title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      .accordions-container-paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        width: 345px;
+      }
+    }
+
+    .accordion-container {
+      width: 595px;
+      border-radius: 12px;
+      padding: 16px 24px;    
+    }
+  }
+}

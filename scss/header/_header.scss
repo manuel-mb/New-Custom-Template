@@ -8,7 +8,7 @@
  *
  */
 .header {
-    background-color: $color-mc-blue;
+    background-color: #fff;
     margin: 0;
 
     .header__container {
@@ -31,38 +31,25 @@
                         margin-right: 2em;
                         text-decoration: none;
 
+
                         a {
                             text-decoration: none;
                             font-family: 'SC Prosper Sans';
                             font-style: normal;
                             font-weight: 400;
-                            font-size: 15px;
+                            font-size: $font-size-lg-base;
                             line-height: 28px;
                             color: #525355;
-
-                            &:after { 
-                                background-image: $draw-mc-download-button;  
-                            } 
 
                             &:hover {
                                 text-decoration: underline;
                             }
-
                         }
 
-                        &:after {
-                            display: inline-block;
-                            position: relative;
-                            width: 50px;
-                            height: 100%;
-                            top: 4px;
-                            right: -5px;
-                            background-image: $draw-mc-download-button;
-                            content: '';
-                            background-repeat: no-repeat;
+                        &:before {
+                            content: "";
+                            @include icon( $color-green-primary, video );
                             background-size: 18px;
-                            width: 50px;
-                            height: 18px;
                         }
                     }
                 }

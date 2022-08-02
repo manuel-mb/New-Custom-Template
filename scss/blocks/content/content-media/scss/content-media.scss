@@ -1,0 +1,119 @@
+.content-media-container {
+  background-color: $color-white-primary;
+  margin: $spacing-em-x2 auto;
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  .block-content-media-container {
+    display: flex;
+    width: $content-width-large;
+    margin: $spacing-em-x2 auto;
+    flex-flow: row;
+    justify-content: space-around;
+
+    @include mq( $until:medium ) {
+      flex-flow: column;
+      width: px-to-rem( 345 );
+    }
+
+    @include mq( $from:medium, $until:content-large  ) {
+      flex-flow: row;
+      width: px-to-rem( 768 );
+    }
+
+    .image-media-content-container {
+      margin-right: px-to-rem( 127 );
+
+      @include mq( $until:medium ) {
+        margin-right: 0;
+      }
+
+      @include mq( $from:medium, $until:content-large  ) {
+        margin-right: px-to-rem( 30 );
+      }
+      
+      .square {
+        width: px-to-rem( 555 );
+        height: px-to-rem( 555 );
+        border-radius: $border-radius-medium;
+
+        @include mq( $until:content-large ) {
+          width: px-to-rem( 345 );
+          height: px-to-rem( 345 );
+          border-radius: $border-radius;
+        }
+      }
+
+      .landscape {
+        height: px-to-rem( 311 );
+        width: px-to-rem( 555 );
+        border-radius: $border-radius-medium;
+
+        @include mq( $until:content-large ) {
+          height: px-to-rem( 200 );
+          width: px-to-rem( 345 );
+          border-radius: $border-radius;
+        }
+      }
+    }
+
+    &.is-style-flipped {
+      flex-flow: row-reverse;
+
+      .image-media-content-container {
+        margin-right: 0;
+        margin-left: px-to-rem( 127 );
+
+        @include mq( $until:medium ) {
+          margin-left: 0;
+        }
+
+        @include mq( $from:medium, $until:content-large  ) {
+          margin-left: px-to-rem( 30 );
+        }
+      }
+    }
+  }
+
+  .text-media-content-container {
+    margin-top: px-to-rem( 50 );
+    width: px-to-rem( 458 );
+
+    @include mq( $until:content-large ) {
+      margin-top: 0;
+      width: px-to-rem( 345 );
+    }
+
+    &.landscape {
+      margin-top: px-to-rem( 80 );
+
+      @include mq( $until:content-large ) {
+        margin-top: 0;
+      }
+    }
+
+    .content-media-title {
+      @include heading-one;
+      color: $color-grey;
+      margin-bottom: $spacing-em-x2;
+      margin-top: 0;
+
+      &.white {
+        color: $color-white-primary;
+      }
+    }
+
+    .content-media-paragraph {
+      @include default-text;
+      color: $color-grey;
+      margin-bottom: $spacing-em-x2;
+      margin-top: 0;
+
+      &.white {
+        color: $color-white-primary;
+      }
+    }
+  }
+}

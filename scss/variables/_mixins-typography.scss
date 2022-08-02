@@ -1,0 +1,298 @@
+/**
+ * SASS Mixins for Typography.
+ *
+ * @package Milton Bayer\Theme.
+ */
+
+/**
+ * Body text
+ *
+ * Default body text styles.
+ */
+
+@mixin body-text {
+	font-family: $font-family-regular;
+	font-style: normal;
+	color: var( --default-text-color );
+	// Smooth out font weights and display cross-browser.
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Default font size & line-height for extra small text.
+ * Used for notices only.
+ */
+
+@mixin body-xs-text {
+	font-size: $font-size-xs-body-xs;
+	line-height: $line-height-body-xs;
+	font-weight: 400;
+
+	@include mq( $from:medium ) {
+		font-size: $font-size-lg-body-xs;
+		line-height: $line-height-body-xs;
+	}
+}
+
+/**
+ * Default font size & line-height for small text.
+ */
+
+@mixin body-sm-text {
+	font-size: $font-size-xs-body-sm;
+	line-height: $line-height-body-sm;
+	font-weight: 400;
+
+	@include mq( $from:medium ) {
+		font-size: $font-size-lg-body-sm;
+		line-height: $line-height-body-sm;
+	}
+}
+
+/**
+ * Default font size & line-height for text.
+ */
+
+@mixin default-text {
+	font-family: $font-family-regular;
+	font-size: $font-size-xs-base;
+	line-height: $line-height-body;
+	font-weight: 400;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-base;
+		line-height: $line-height-body;
+	}
+}
+
+/**
+ * Default font size & line-height for display text.
+ */
+
+@mixin display-text {
+	font-size: $font-size-xs-display;
+	line-height: $line-height-display;
+	font-weight: 500;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-display;
+		line-height: $line-height-display;
+	}
+}
+
+/**
+ * Default font size & line-height for large text.
+ */
+
+@mixin large-text {
+	font-size: $font-size-xs-body-lg;
+	line-height: $line-height-body-lg;
+	font-weight: 400;
+
+	@include mq( $from: large ) {
+		font-size: $font-size-lg-body-lg;
+		line-height: $line-height-body-lg;
+	}
+}
+
+/**
+ * Headings mixins.
+ *
+ * Used to combine font size and corresponding line height
+ * without having to repeat them if they're used on specific
+ * classes as well as the intended heading.
+ */
+
+@mixin heading-one() {
+	font-family: $font-family-medium;
+	font-size: $font-size-xs-h1;
+	line-height: $line-height-h1;
+	font-weight: 500;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-h1;
+	}
+}
+
+@mixin heading-two() {
+	font-family: $font-family-medium;
+	font-size: $font-size-xs-h2;
+	line-height: $line-height-h2;
+	font-weight: 400;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-h2;
+	}
+}
+
+@mixin heading-three() {
+	font-family: $font-family-medium;
+	font-size: $font-size-xs-h3;
+	line-height: $line-height-h3;
+	font-weight: 400;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-h3;
+	}
+}
+
+@mixin heading-four() {
+	font-family: $font-family-medium;
+	font-size: $font-size-xs-h4;
+	line-height: $line-height-h4;
+	font-weight: 400;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-h4;
+	}
+}
+
+@mixin heading-five() {
+	font-family: $font-family-medium;
+	font-size: $font-size-xs-base;
+	line-height: $line-height-h5;
+	font-weight: 400;
+
+	@include mq( $from:large ) {
+		font-size: $font-size-lg-base;
+	}
+}
+
+/**
+ * Quote Text Mixin.
+ *
+ * Expected Usage:
+ * @include quote-text;
+ */
+ 
+@mixin quote-text {
+	@include large-text;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	&:first-child::before {
+		display: inline;
+		content: "“";
+	}
+
+	&:last-of-type::after {
+		display: inline;
+		content: "”";
+	}
+}
+
+/**
+ * Quote Citation Mixin.
+ *
+ * Expected Usage:
+ * @include quote-citation;
+ */
+@mixin quote-citation {
+	@include default-text;
+	font-style: normal;
+	display: inline-block;
+}
+
+/**
+ * Margins for Typography
+ *
+ * These are mostly applied to WP Core Blocks for general body copy,
+ * such as headings, paragraphs, lists.
+ */
+
+/**
+ * Large margins.
+ *
+ * Large margins create the spacing between sections of content.
+ *
+ * This is mostly used for paragraphs atm to create section spacing between a new paragraph and
+ * a previous block of content, because the section spacing is applied to the top.
+ *
+ * For example a h2 is treated as section content when inserted directly into the page
+ * (i.e. not inside another block such as card rows) and therefore will only have a margin-top applied.
+ * This means the first paragraph following that heading also needs margin-top applied.
+ *
+ * Expected Usage:
+ * @include typography-margin-large( top );
+ */
+@mixin typography-margin-large( $position: top ) {
+	@if #{$position} == top {
+		margin-top: $spacing-rem-x2;
+
+		@include mq( $from: content-large ) {
+			margin-top: $spacing-rem-x8;
+		}
+	} @else if #{$position} == bottom {
+		margin-bottom: $spacing-rem-x2;
+
+		@include mq( $from: content-large ) {
+			margin-bottom: $spacing-rem-x8;
+		}
+	}
+}
+
+/**
+ * Small Margins.
+ *
+ * This is the default margin applied to general body copy, such as headings, paragraphs, lists.
+ * This is normally applied to the bottom only so as not to affect section margins and allow
+ * us to place multiple content blocks next to each other without each looking like its own section.
+ *
+ * This is mostly used on large sections of content such as press releases, or inside other blocks,
+ * such as media/text.
+ *
+ * Expected Usage:
+ * @include typography-margin-small( top );
+ */
+@mixin typography-margin-small( $position: top ) {
+	@if #{$position} == top {
+		margin-top: $spacing-rem;
+
+		@include mq( $from: medium ) {
+			margin-top: $spacing-rem-x2;
+		}
+	} @else if #{$position} == bottom {
+		margin-bottom: $spacing-rem;
+
+		@include mq( $from: medium ) {
+			margin-bottom: $spacing-rem-x2;
+		}
+	}
+}
+
+/**
+ * Feature Heading Mixin.
+ *
+ * Expected Usage:
+ * @include feature-heading;
+ */
+@mixin feature-heading {
+	@include mq( $from:medium ) {
+		&::before {
+			content: "ª";
+			color: $color-blue-primary;
+		}
+
+		&::after {
+			content: "º";
+			color: $color-green-primary;
+		}
+	}
+}
+
+/**
+ * Font size & line-height for big display text.
+ * Expected Usage:
+ * @include big-display-text;
+ */
+@mixin big-display-text {
+	font-size: $font-size-xs-display-big;
+	line-height: $line-height-display-big;
+
+	@include mq( $from: large ) {
+		font-size: $font-size-lg-display-big;
+	}
+}

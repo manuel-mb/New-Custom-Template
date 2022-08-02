@@ -1,0 +1,766 @@
+/**
+ * Style for Buttons and CTA.
+ *
+ * @package Manuel\Theme.
+*/
+
+
+/* Button and Cta 
+* 1. Home hero cta
+* 2. a.Primary b.Primary no Arrow
+* 3. a.Text Only  b.Text Only no Arrow
+* 4. Circle carousel buttons 
+* 5. Content Chip  
+*/
+
+/* 1. Home Hero Cta */
+
+.primary-blue-button-home {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: #0473EA;
+    border-style: none;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+
+        &:after { 
+            background-image: url(../img/question-mark.svg);  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        top: 4px;
+        right: -5px;
+        background-image: url(../img/question-mark-white.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        width: 50px;
+        height: 18px;
+    }
+}
+
+.primary-white-button-home {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+
+        &:after { 
+            background-image: url(../img/question-mark-white.svg);
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        top: 4px;
+        right: -5px;
+        background-image: url(../img/question-mark.svg);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 18px;
+        width: 50px;
+        height: 18px;  
+    }
+}
+
+/* 2. 
+* a.Primary Button
+*/ 
+
+.primary-blue-button {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: #0473EA;
+    border-style: none;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+
+        &:after { 
+            color: #ffffff;  
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right'; 
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        color: #ffffff;
+    }
+
+}
+
+.primary-white-button {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+
+        &:after { 
+            color: #ffffff; 
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga'; 
+        color: #0473EA;  
+    }
+}
+
+/* b.Primary button no Arrow */
+
+.primary-blue-button-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 30px 12px 30px;
+    border-radius: 50px;
+    background: #0473EA;
+    border-style: none;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+    }
+}
+
+.primary-white-button-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 30px 12px 30px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+        text-decoration: underline;
+    }
+}
+
+/* 3. 
+* a.Text only cta
+*/
+
+.text-only-blue-cta {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    transition: all .3s;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        font-size: 18px; 
+    }
+
+    a {
+        color: #0473EA;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            font-size: 18px;
+        }
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right'; 
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga';
+        color: #0473EA;
+    }
+}
+
+.text-only-white-cta {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    &:after {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        top: 7px;
+        right: 6px;
+        background-image: none;
+        content: 'chevron_right';
+        font-weight: 300;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-feature-settings: 'liga'; 
+        color: #ffffff;  
+    }
+}
+
+/* b. Text only cta no arrow */
+
+.text-only-blue-cta-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    border-radius: 50px;
+    background: tranparent;
+    border-style: none;
+    border-color: transparent;
+    color: #0473EA;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.text-only-white-cta-no-arrow {
+    min-width: 180px;
+    height: 51px;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    color: #ffffff;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Button Circle  
+* add the class to a Div 
+*/
+
+.btn-circle-forward-blue, .slick-next {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: #0473EA;
+    background-image: url(../img/forward.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #061D33;
+    }
+}
+
+.btn-circle-backward-blue {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: #0473EA;
+    background-image: url(../img/backward.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #061D33;
+    }
+}
+
+.btn-circle-forward-white {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    background-image: url(../img/forward-blue.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #061D33;
+        background-image: url(../img/forward.svg);
+    }
+}
+
+.btn-circle-backward-white {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    background-image: url(../img/backward-blue.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: all .3s;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #061D33;
+        background-image: url(../img/backward.svg);
+    }
+}
+
+/* Content Chip  
+*  Used most for taxonomies
+*/
+
+.content-chip {
+    padding: 4px 8px;
+    height: 26px;
+    background: #EBFAE5;
+    border-radius: 14px;
+    margin-right: 8px;
+    min-width: 49px;
+    text-align: center;
+    font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #1B6600;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+
+    a {
+        color: #1B6600;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background: #061D33;
+        color: #ffffff;
+
+        a {
+            color: #ffffff;
+        }
+    }
+
+    &-article {
+        padding: 4px 8px;
+        height: 26px;
+        background: #E7F1FD;
+        border-radius: 14px;
+        min-width: 49px;
+        text-align: center;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #0473EA;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: #0473EA;
+            text-decoration: none; 
+        }
+        
+        &:hover {
+            background: #061D33;
+            color: #ffffff;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &-video {
+        padding: 4px 8px;
+        height: 26px;
+        background: #E7F1FD;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 49px;
+        text-align: center;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #0473EA;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: #0473EA; 
+
+            &:before {
+                background-image: url(../img/play-circle-fill.svg);
+                content:'' ;
+                background-repeat: no-repeat;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                float: left;
+                margin-top: 2px;
+                margin-right: 3px;
+            }
+        }
+        
+        &:hover {
+            background: #061D33;
+            color: #ffffff;
+
+            a {
+                color: #ffffff;
+
+                &:before {
+                    background-image: url(../img/play-circle-fill-white.svg);
+                    content:'' ;
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    float: left;
+                    margin-top: 2px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    &-podcast {
+        padding: 4px 8px;
+        height: 26px;
+        background: #E7F1FD;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 49px;
+        text-align: center;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #0473EA;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: #0473EA; 
+
+            &:before {
+                background-image: url(../img/podcast.svg);
+                content:'' ;
+                background-repeat: no-repeat;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                float: left;
+                margin-top: 2px;
+                margin-right: 3px;
+            }
+        }
+        
+        &:hover {
+            background: #061D33;
+            color: #ffffff;
+
+            a {
+                color: #ffffff;
+
+                &:before {
+                    background-image: url(../img/podcast-white.svg);
+                    content:'' ;
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    float: left;
+                    margin-top: 2px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    &-webinar {
+        padding: 4px 8px;
+        height: 26px;
+        background: #E7F1FD;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 49px;
+        text-align: center;
+        font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #0473EA;
+        text-decoration: none;
+        transition: all .3s;
+        cursor: pointer;
+
+        a {
+            color: #0473EA; 
+
+            &:before {
+                background-image: url(../img/webinar.svg);
+                content:'' ;
+                background-repeat: no-repeat;
+                background-size: 13px;
+                width: 13px;
+                height: 13px;
+                float: left;
+                margin-top: 2px;
+                margin-right: 3px;
+            }
+        }
+        
+        &:hover {
+            background: #061D33;
+            color: #ffffff;
+
+            a {
+                color: #ffffff;
+
+                &:before {
+                    background-image: url(../img/webinar-white.svg);
+                    content:'' ;
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    float: left;
+                    margin-top: 2px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .content-chip {
+        padding: 2px 6px;
+        height: 21px;
+        border-radius: 14px;
+        margin-right: 8px;
+        min-width: 42px;
+        font-size: 11px;
+        line-height: 16px;
+        
+        &-article {
+            padding: 2px 6px;
+            height: 21px;
+            border-radius: 14px;
+            min-width: 42px;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        &-podcast {
+            padding: 2px 6px;
+            height: 21px;
+            border-radius: 14px;
+            margin-right: 8px;
+            min-width: 42px;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        &-video {
+            padding: 2px 6px;
+            height: 21px;
+            border-radius: 14px;
+            margin-right: 8px;
+            min-width: 42px;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        &-webinar {
+            padding: 2px 6px;
+            height: 21px;
+            border-radius: 14px;
+            margin-right: 8px;
+            min-width: 42px;
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+}

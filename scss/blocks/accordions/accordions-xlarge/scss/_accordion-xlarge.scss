@@ -1,0 +1,198 @@
+.accordions-xlarge-container {
+  width: 1440px;
+  background: #ffffff;
+  padding: 96px 150px;
+  margin: 20px auto;
+
+  .accordions-container-title {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 53px;
+    color: #0B56A8;
+    margin: 0;
+  }
+
+  .accordions-container-paragraph {
+    font-family: 'SC Prosper Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #525355;
+    margin: 16px 0px;
+  }
+
+  .accordion-xlarge-container {
+    max-width: 1140px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+    border-radius: 16px;
+    margin: 16px auto;
+
+    .accordion {
+      &.xlarge {
+        cursor: pointer;
+        padding: 12px 18px;
+        width: 1140px;
+        text-align: left;
+        outline: none;
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        border: 1px solid transparent;
+
+        &:hover {
+          border: 1px solid #0473EA;
+          border-radius: 16px;
+        }
+
+        .custom-collapse-text {
+          display: none;
+        }
+
+        .custom-expand-text {
+          width: 100%;
+          position: relative;
+          left: 992px;
+          font-family: 'SC Prosper Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 27px;
+          color: #0473EA;
+          background-image: url(../src/images/plus-blue.svg);
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          padding-left: 26px;
+        }
+
+        .image-container-accordions-xlarge {
+          width: 130px;
+          height:130px;
+          margin-top: 32px;  
+
+          img {
+            width: 130px;
+            height:130px;
+            object-fit: cover;
+          }
+        }
+
+        &.tab-active {
+          background-color: #0473EA;
+          background: #0473EA;
+          border-bottom: 0px solid #E5E5E5;
+          color: #ffffff;
+          border-radius: 16px 16px 0 0;
+          transition: all .7s ease;
+
+          .custom-expand-text {
+            display: none;
+          }
+          .custom-collapse-text {
+            display: block !important;
+            width: 100%;
+            position: relative;
+            left: 992px;
+            font-family: 'SC Prosper Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #ffffff;
+            background-image: url(../src/images/minus-white.svg);
+            background-position: 0;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            padding-left: 26px;
+          }
+
+          h4,p {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .text-container-accordions-xlarge {
+        width: 922px;
+        margin-top: 32px;  
+
+        h4 {
+          font-family: SC Prosper Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 28px;
+          line-height: 36px;
+          color: #525355;
+          margin: 0;
+        }
+
+        p {
+          font-family: SC Prosper Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          color: #525355;
+          margin-top: 24px;   
+        }
+      }
+
+      &.xlarge {
+        &:after {
+        content: none;
+        font-size: 10px;
+        color: #0473EA;
+        float: right; 
+        transform: scale(.33);
+        }
+
+        &.tab-active:after {
+          content: none;
+          float: right; 
+          font-size: 10px;
+          color: #0473EA;
+          transform: scale(.33);
+        }
+      }
+    }    
+  }
+}
+
+.panel {
+  &.xlarge {
+    padding: 12px 0;
+    background-color: #ffffff;
+    display: none;
+    overflow: hidden;
+    border-bottom: 0px solid #E5E5E5;
+    width: 1140px;
+
+    .custom-collapse-text {
+      display: block !important;
+      width: 100%;
+      position: relative;
+      left: 992px;
+      font-family: 'SC Prosper Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      color: #0473EA;
+      background-image: url(../src/images/minus-blue.svg);
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      padding-left: 26px;
+    }
+  }
+}

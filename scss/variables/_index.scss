@@ -7,10 +7,10 @@
  */
 
 @import "fontface";
-@import "colors";
-@import "structure";
-@import "columns";
-@import "typography";
+@import "variables";
 @import "mq";
-@import "mixing";
-@import "general";
+
+@import "mixins-icons";
+@import "mixins-general";
+@import "mixins-layout";
+@import "mixins-typography";

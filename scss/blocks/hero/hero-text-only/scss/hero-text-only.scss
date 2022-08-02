@@ -1,0 +1,99 @@
+.hero-text-only-container {
+  background: $gradient-blue;
+  width: 100%;
+  margin: $spacing-em-x2 auto;
+
+  .hero-text-only-title-container {
+    @include section-padding-top-bottom;
+    width: $content-width-large;
+    margin: 0 auto;
+
+    @include mq( $until:medium ){
+      width: 345px;
+    }
+
+    @include mq( $from:medium, $until:content-large ){
+       width: 595px;
+    }
+
+    .hero-text-only-title-intro {
+      @include heading-five;
+      margin: $spacing-em-x2 0px;
+      color: $color-white-70;
+    }
+
+    .hero-text-only-main-title {
+      font-family: $font-family-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-lg-display-big;
+      line-height: $line-height-h1;
+      color: $color-white-primary;
+      width: 945px;
+      @include feature-heading;
+      text-indent: -0.3em;
+
+      @include mq( $until:medium ) {
+        font-size: $font-size-xs-display-big;
+        width: 345px;
+        text-indent: 0;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+      @include mq( $from:medium, $until:content-large ){
+        font-size: $font-size-xs-display-big;
+        width: 595px;
+        text-indent: 0;
+      }
+    }
+
+    .hero-text-only-paragraph {
+      font-family: $font-family-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-lg-h4;
+      line-height: $line-height-h4;
+      margin: 0px auto;
+      text-align: left;
+      color: $color-white-primary;
+      width: 756px;
+
+      @include mq( $until:medium ) {
+        font-size: font-size-xs-h4;
+        line-height: $line-height-h4;
+        width: 345px;
+      }
+
+      @include mq( $from:medium, $until:content-large ){
+        font-size: $font-size-xs-h4;
+        line-height: $line-height-h4;
+        width:470px;
+      }
+    }
+  }
+
+  &.white {
+    background: $color-white-primary;
+
+    .hero-text-only-title-container {
+
+      .hero-text-only-title-intro {
+        color: $color-grey;
+      }
+
+      .hero-text-only-main-title {
+        color: $color-grey;
+      }
+
+      .hero-text-only-paragraph {
+        color: $color-grey;
+      }
+    }
+  }
+}

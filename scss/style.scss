@@ -22,13 +22,34 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+@import "node_modules/sass-mq/mq";
+
+
+/* Function
+--------------------------------------------- */
+@import "utilities/functions";
+
+
 /* Variables
 --------------------------------------------------------------*/
 @import "variables/index";
 
+
+/* Blocks
+--------------------------------------------- */
+@import "blocks/accordions/index";
+@import "blocks/buttons/scss/buttons";
+@import "blocks/cards/index";
+@import "blocks/content/index";
+@import "blocks/hero/index";
+@import "blocks/posts/news-hero/scss/news-hero";
+@import "blocks/timeline/scss/timeline";
+
+
 /* Header
 --------------------------------------------- */
 @import "header/header";
+
 
 /* Footer
 --------------------------------------------- */ 
@@ -43,6 +64,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "plugins/jetpack/infinite-scroll";
 
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -51,7 +73,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "utilities/accessibility";
 
+
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+
+
 

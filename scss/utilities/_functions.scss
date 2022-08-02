@@ -1,0 +1,103 @@
+@use "sass:math";
+
+/**
+ * SASS Functions.
+ *
+ * @package Milton Bayer\Theme.
+ *
+ * Notes:
+ *`$base-rem` needs to be defined first in this file to allow
+ * other variables to use mixins relying on the value.
+ *
+ * `$base-em` is defined in this file because it needs to have
+ * a value before the variables file is included to allow the
+ * unit conversions to be used in the variables file.
+ */
+$base-rem: 16px; // Helper for a single rem.
+$base-em: 16px; // Provides default context for px-to-em.
+
+/**
+ * Convert a pixel size to rems.
+ *
+ * The base pixel size uses the value of `$base-rem` defined
+ * above.
+ *
+ * @param $size-pixels string Size in pixels, eg `12px`.
+ *
+ * @return string Size in rem, eg 0.75rem.
+ */
+@function px-to-rem( $size-pixels ) {
+	@return math.div( ( $size-pixels * 1px ), $base-rem ) * 1rem;
+}
+
+/*
+ * Strip unit.
+ *
+ * @param  $num String Strips any non numeric values.
+ *
+ * @return Number The number without non numeric values.
+ */
+@function strip-unit( $num ) {
+	@return math.div( $num, ($num * 0 + 1) );
+}
+
+/*
+ * px to em conversion.
+ *
+ * Expected Usage:
+ * @include px-to-em(32); 32 is desired px size when using browser default base font size.
+ * @include px-to-em(32, 12); 32 is desired px size if base font size is 12.
+ *
+ * @param  $target Number/String Pixel target.
+ * @param  $context Number/String Current context.
+ *
+ * @return String Em value.
+ */
+@function px-to-em( $target, $context: $base-em ) {
+	@return math.div( strip-unit( $target ), strip-unit( $context ) ) * 1em;
+}
+
+
+
+
+/**
+ * Replace string with encoded one.
+ *
+ * @param string $string  SVG String.
+ * @param string $search  Original Characters.
+ * @param string $replace Replacement Characters
+ *
+ * @return string
+ */
+@function str-replace( $string, $search, $replace: "") {
+	$index: str-index( $string, $search );
+	@if $index {
+		@return str-slice($string, 1, $index - 1)
+			+ $replace
+			+ str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+/**
+ * Encode SVG
+ *
+ * @param string $view-box   viewBox attribute value.
+ * @param string $fill-color fill attribute value.
+ * @param string $drawing    SVG Drawing( d attribute )
+ *
+ * @return string
+ */
+ 
+@function svg-encode( $view-box, $fill-color, $drawing ) {
+	$svg:
+		'<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + $view-box + '">'
+		+ '<path fill="' + $fill-color + '" d="' + $drawing + '" fill-rule="nonzero"/></svg>';
+
+	@each $char, $encoded in $encoding-reference {
+		$svg: str-replace( $svg, $char, $encoded );
+	}
+
+	@return url( "data:image/svg+xml," + $svg );
+}

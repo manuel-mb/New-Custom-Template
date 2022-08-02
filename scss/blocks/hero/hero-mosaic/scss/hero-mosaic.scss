@@ -1,0 +1,320 @@
+.mosaic-container {
+  display:flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  margin: 0 auto;
+  background-color: $color-white-primary;
+
+  @include mq( $until:medium ) {
+    flex-direction: column-reverse;
+    padding-top: 0px;
+    height: px-to-em( 500 );
+  }
+  
+  .photo-container {
+    height: px-to-em( 700 );
+    position: relative;
+    top: px-to-em( 0 );
+    left: px-to-em(-58 );
+    flex: 1;
+
+    @include mq( $until:medium ) {
+      height: px-to-em( 284 );
+      top: px-to-em( 90 );
+      left: px-to-em( -125 );
+    }
+
+    @include mq( $from:medium, $until:large  ) {
+      width: px-to-em( 392 );
+      height: px-to-em( 358 );
+      top: 0;
+      left: 0;
+    }
+
+    @include mq( $from:large, $until:content-large  ) {
+      left: px-to-em( 130 );
+      height: px-to-em( 400 );
+    }
+
+    @include mq( $from:xxlarge ) {
+      width: px-to-em( 1300 );
+      height: px-to-em( 700 );
+      left: px-to-em( 150 );
+    }
+
+    .photo-stripes-container {
+      transform: rotate(-16deg);
+      position: relative;
+      left: px-to-em( -100 );
+      margin: px-to-em( 5 );
+
+      @include mq( $until:medium ) {
+        left: px-to-em( -74 );
+      }
+
+      @include mq( $from:medium, $until:large  ) {
+        left: px-to-em( -75 );
+      }
+
+      @include mq( $from:xxlarge ) {
+        left: px-to-em( -170 );
+      }
+
+
+      img {
+        width: px-to-em( 225 );
+        height: auto;
+        border-radius: $border-radius-medium;
+        display: block;
+
+        @include mq( $until:medium ) {
+          width: px-to-em( 90 );
+          border-radius: $border-radius;
+        }
+
+        @include mq( $from:medium, $until:large  ) {
+          width: px-to-em( 93 );
+        }
+
+        @include mq( $from:large, $until:content-large  ) {
+          width: px-to-em( 120 );
+        }
+
+        @include mq( $from:xxlarge ) {
+          width: px-to-em( 225 );
+        }
+      }
+
+      .column-one{
+        position: absolute;
+        left: px-to-em( -115 );
+        top: px-to-em( -26 );
+        animation-name: rotateup;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @include mq( $until:medium ) {
+          position: absolute;
+          left: px-to-em( -21 );
+          top: px-to-em( 40 );
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset;
+        }
+
+        @include mq( $from:medium, $until:large  ) {
+          left: px-to-em( -43 );
+          top: px-to-em( 75 );
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        @include mq( $from:xxlarge) {
+          left: px-to-em( -115 );
+        }
+      }
+
+      .column-two {
+        position: absolute;
+        left: px-to-em( 124 );
+        top: px-to-em( -65 );
+        animation-name: rotatedown;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @include mq( $until:medium ) {
+          position: absolute;
+          left: px-to-em( 76 );
+          top: px-to-em( 13 );
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset;
+        }
+
+        @include mq( $from:medium, $until:large  ) {
+          left: px-to-em( 65 );
+          top: px-to-em( -65 );
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        @include mq( $from:large, $until:content-large  ) {
+          left: px-to-em( 21 );
+          top: px-to-em( -65 );
+        }
+
+        @include mq( $from:xxlarge) {
+          left: px-to-em( 124 );
+        }
+      }
+
+      .column-three {
+        position: absolute;
+        left: px-to-em( 364 );
+        top: px-to-em(-25 );
+        animation-name: rotateup;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @include mq( $until:medium ) {
+          position: absolute;
+          left: px-to-em( 174 );
+          top: px-to-em( 20 );
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset;
+        }
+
+        @include mq( $from:medium, $until:large  ) {
+          left: px-to-em( 173 );
+          top: px-to-em( -25 );
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        @include mq( $from:large, $until:content-large  ) {
+          left: px-to-em( 157 );
+        }
+
+        @include mq( $from:xxlarge) {
+          left: px-to-em( 364 );
+        }
+      }
+
+      .column-four {
+        position: absolute;
+        left: px-to-em( 604 );
+        top: px-to-em(-45 );
+        animation-name: rotatedown;
+        animation-duration: 90s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @include mq( $until:medium ) {
+          position: absolute;
+          left: px-to-em( 272 );
+          top: px-to-em( 100 );
+          animation-name: none;
+          animation-duration: unset;
+          animation-iteration-count: unset;
+          animation-timing-function: unset;
+        }
+
+        @include mq( $from:medium, $until:large  ) {
+          left: px-to-em( 281 );
+          top: px-to-em( -57 );
+          animation-name: rotateup;
+          animation-duration: 90s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        @include mq( $from:large, $until:content-large  ) {
+          left: px-to-em( 293 );
+        }
+
+        @include mq( $from:xxlarge) {
+          left: px-to-em( 604 );
+        }
+      }
+
+      @keyframes rotateup {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+      }
+
+      @keyframes rotatedown {
+        0%   { transform: translateY(-50%); }
+        100% { transform: translateY(0); }
+      }
+
+      .mosaic-img {
+        margin-top: $spacing-em-x2;
+        margin-bottom: $spacing-em-x2;
+        display:block;
+
+        @include mq( $until:large ) {
+          margin-top: $spacing-em;
+          margin-bottom: $spacing-em;
+        } 
+
+        @include mq( $from:xxlarge) {
+          margin-top: $spacing-em-x2;
+          margin-bottom: $spacing-em-x2;
+        }        
+      }
+    }
+  }
+
+  .mosaic-titles {
+    flex: 1;
+    padding: 0 $spacing-em-x2;
+    position: relative;
+
+    .mosaic-titles-container {
+      text-align: left;
+      top: 0;
+      position: relative;
+      padding: 0 px-to-em( 25 );
+      width: px-to-em( 458 );
+      left: px-to-em( 150 );
+
+      @include mq( $until:medium ) {
+        text-align: center;
+        left:0;
+        width: px-to-em( 345 );
+      }
+
+      @include mq( $from:medium, $until:large  ) {
+        text-align: left;
+        width: px-to-em( 330 );
+        left: px-to-em( 35 );
+      }
+
+      @include mq( $from:large, $until:content-large  ) {
+        width: px-to-em( 459 );
+        left: px-to-em( 65 );
+      }
+
+      @include mq( $from:xxlarge  ) {
+        width: px-to-em( 600 );
+        left: 0;
+      }
+
+      .title-intro {
+        @include heading-five;
+        color: $color-grey-medium;
+        opacity: 0.5;
+        margin-bottom: $spacing-em-x2;
+        margin-top: 0;
+      }
+
+      .main-title {
+        @include heading-one;
+        color: $color-grey;
+        margin-bottom: $spacing-em-x2;
+        margin-top: 0;
+      }
+
+      .mosaic-paragraph {
+        @include default-text;
+        color: $color-grey;
+        margin-bottom: $spacing-em-x2;
+        margin-top: 0;
+      }
+    }
+  }
+}

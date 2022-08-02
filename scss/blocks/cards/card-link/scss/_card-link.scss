@@ -1,0 +1,167 @@
+.card-link-cards-container {
+    display: flex;
+
+    .card-link-container {
+        width: 360px;
+        height: auto;
+        background: #fff;
+        box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
+        border-radius: 16px;
+        padding: 16px;
+        margin-right: 30px;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 4px #0473ea;
+            border-radius: 16px;
+        }
+
+        .text-only-button {
+            margin-left: 12px;
+            position: relative;
+            top: 6px;
+
+            &:after {
+                float: right;
+                top: -2px;
+            }
+        }
+
+        p {
+            margin: 6px 0 0 12px;
+        }
+
+        &:hover {
+            background: #0473EA; 
+            box-shadow: 0px 32px 64px rgba(11, 86, 168, 0.2);
+            transition: all .3s;
+
+            p {
+                color: #fff;
+            }
+
+            .text-only-button {
+                transition: all .3s;
+                color: #fff;
+                font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 1.2;
+                text-decoration: underline;
+
+                &:after {
+                    color: #fff;
+                }
+
+                &.is-style-blue-only-text-download {
+
+                    &:after {
+                        background-image: url(../src/images/download-white.svg);
+                        content: '' ;
+                        background-repeat: no-repeat;
+                        background-size: 18px; 
+                        display: inline-block;
+                        position: relative;
+                        width: 50px;
+                        height: 18px;
+                        top: 4px;
+                        right: -5px;
+                        transition: all .3s;
+                    }
+                }
+
+                &.is-style-blue-only-text-play {
+
+                    &:after {
+                        background-image: url(../src/images/play-circle-fill-white.svg);
+                        content: '' ;
+                        background-repeat: no-repeat;
+                        background-size: 18px; 
+                        display: inline-block;
+                        position: relative;
+                        width: 50px;
+                        height: 18px;
+                        top: 4px;
+                        right: -5px;
+                        transition: all .3s;
+                    }
+                }
+
+                &.is-style-blue-only-text-external-link {
+
+                    &:after {
+                        background-image: url(../src/images/external-link-white.svg);
+                        content: '' ;
+                        background-repeat: no-repeat;
+                        background-size: 18px; 
+                        display: inline-block;
+                        position: relative;
+                        width: 50px;
+                        height: 18px;
+                        top: 4px;
+                        right: -5px;
+                        transition: all .3s;
+                    }
+                }
+            }
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+
+                &:after {
+                    color: #fff;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .card-link-cards-container {
+        display: block;
+        
+        .card-link-container {
+            width: 345px;
+            height: auto;
+            margin: 16px auto;
+
+            .text-only-button {
+                top: 1px;
+
+                &:after {
+                    top: -4px;
+                    right: -9px;
+                }
+
+                &.is-style-blue-only-text-download {
+
+                    &:after {
+                        top: 1px;
+                        right: -25px;
+                    }
+                }
+
+                &.is-style-blue-only-text-play {
+
+                    &:after {
+                        top: 1px;
+                        right: -25px;
+                    }
+                }
+
+                &.is-style-blue-only-text-external-link {
+
+                    &:after {
+                        top: 1px;
+                        right: -25px;
+                    }
+                }
+            }
+
+            p {
+                margin: 0 0 0 12px;
+            }
+        } 
+    }
+}

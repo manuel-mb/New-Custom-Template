@@ -1,0 +1,258 @@
+.card-container {
+    background: #E7F1FD;
+    width: 100%;
+    margin-bottom: 16px;
+     
+    &.is-style-white {
+        background: #fff;
+    }
+    .card-wrapper { 
+        padding: 96px 0 96px 150px;
+
+        .card-titles-container {
+            width: 754px;
+            margin-right: 0;
+            display: inline-block;
+
+            .card-container-title {
+                font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 44px;
+                line-height: 1.2;
+                color: #0B56A8;
+                margin: 0;
+            }
+
+            .card-container-paragraph {
+                font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 1.5; 
+                color: #525355;
+                margin: 16px 0px;
+            }
+        }
+
+        .card-cards-container {
+            .slide {
+                
+                .slick-next {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 100%;
+                    background-color: #0473EA;
+                    background-image: url(../assets/forward.svg);
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    transition: all .3s;
+                    cursor: pointer;
+                    border: none;
+                    top: -65px;
+                    position: absolute;
+                    right: 150px;
+
+                    &:hover {
+                        background-color: #061D33;
+                    }
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &.slick-disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            background-color: #0473EA;
+                            opacity: 0.4;
+                        }
+                    }
+                }
+
+                .slick-prev {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 100%;
+                    background-color: #0473EA;
+                    background-image: url(../assets/backward.svg);
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    transition: all .3s;
+                    cursor: pointer;
+                    border: none;
+                    top: -65px;
+                    position: absolute;
+                    right: 217px;
+                    left: unset;
+
+                    &:hover {
+                        background-color: #061D33;
+                    }
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &.slick-disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            background-color: #0473EA;
+                            opacity: 0.4;
+                        }
+
+                    }
+                }
+
+                .slick-list {
+                    padding-left: 4px;
+                    padding-bottom: 24px;
+                    padding-top: 12px;
+                }
+            }
+        }  
+    }
+}
+@media screen and (max-width: 767px) {
+
+    .card-container {
+        width: 100%;
+
+        .card-wrapper { 
+            padding: 48px 15px;
+
+            .card-titles-container {
+                width: 345px;
+                text-align: left;
+
+                .card-container-title {
+                    font-size: 33px;
+                    line-height: 40px;
+                }
+
+                .card-container-paragraph {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            .card-cards-container {
+                .slide {
+                    
+                    .slick-next {
+                        display: none !important;
+                    }
+
+                    .slick-prev {
+                        display: none !important;
+                    }
+
+                    .slick-list {
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    
+    .card-container {
+        width:100%;
+
+        .card-wrapper {
+            padding: 64px 0 64px 24px;
+
+            .card-titles-container {
+                width: 560px;
+                text-align: left;
+            }
+            .card-cards-container {
+                .slide {
+                
+                    .slick-next {
+                        width: 51px;
+                        height: 51px;
+                        border-radius: 100%;
+                        background-color: #0473EA;
+                        background-image: url(../assets/forward.svg);
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                        background-position-y: center;
+                        transition: all .3s;
+                        cursor: pointer;
+                        border: none;
+                        top: -65px;
+                        position: absolute;
+                        right: 150px;
+
+                        &:hover {
+                            background-color: #061D33;
+                        }
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &.slick-disabled {
+                            opacity: 0.4;
+                            cursor: not-allowed;
+
+                            &:hover {
+                                background-color: #0473EA;
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+
+                    .slick-prev {
+                        width: 51px;
+                        height: 51px;
+                        border-radius: 100%;
+                        background-color: #0473EA;
+                        background-image: url(../assets/backward.svg);
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                        background-position-y: center;
+                        transition: all .3s;
+                        cursor: pointer;
+                        border: none;
+                        top: -65px;
+                        position: absolute;
+                        right: 217px;
+                        left: unset;
+
+                        &:hover {
+                            background-color: #061D33;
+                        }
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &.slick-disabled {
+                            opacity: 0.4;
+                            cursor: not-allowed;
+
+                            &:hover {
+                                background-color: #0473EA;
+                                opacity: 0.4;
+                            }
+
+                        }
+                    }
+
+                    .slick-list {
+                        padding-left: 4px;
+                    }
+                }
+            }
+        } 
+    }
+}

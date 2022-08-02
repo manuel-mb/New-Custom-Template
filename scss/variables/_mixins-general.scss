@@ -1,0 +1,178 @@
+/**
+ * Alignment
+ *
+ * Mixin to handle alignment in various directions. Handles mobile styles.
+ *
+ * @param  {string} $direction: left, right or center.
+ *
+ * Usage: @include align( left );
+ * Usage: @include align( right );
+ * Usage: @include align( center );
+ */
+@mixin align( $direction: left ) {
+	float: none;
+	display: block;
+	clear: both;
+	margin: 0 auto;
+
+	@include mq( $from: medium ) {
+		@if #{$direction} == left {
+			display: inline;
+			float: #{$direction};
+			margin-right: $spacing-rem-x4;
+			margin-bottom: 0;
+		} @else if #{$direction} == right {
+			display: inline;
+			float: #{$direction};
+			margin-left: $spacing-rem-x4;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/**
+ * General border radius at different breakpoints, used by several blocks and components.
+ *
+ * Expected Usage:
+ *	@include border-radius;
+ */
+@mixin border-radius {
+	border-radius: $border-radius;
+
+	@include mq( $from: medium ) {
+		border-radius: $border-radius-medium;
+	}
+
+	@include mq( $from: xlarge ) {
+		border-radius: 2 * $border-radius;
+	}
+}
+
+/*
+ * For all those times we really don't need list styles!
+ */
+@mixin cancel-list-styles {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Reset link hover and active styles.
+ */
+@mixin reset-links {
+	&:hover,
+	&:active {
+		background-color: transparent;
+		box-shadow: none;
+	}
+}
+
+/**
+ * General container mixin.
+ * Used in the header and footer.
+ *
+ * Expected Usage:
+ * @include container;
+ */
+@mixin container {
+	width: 100%;
+	max-width: $content-width-max;
+	margin: 0 auto;
+	padding: 0 px-to-em( 20 );
+
+	/**
+	 * Custom breakpoint to ensure padding is not removed at 1400px because the max-width
+	 * of the container is also 1400px. If we remove the padding at 1400px there would be
+	 * screen sizes between 1400px and 1440px where the content is too close to the edge
+	 * of the screen.
+	 */
+	@media ( min-width: px-to-em( 1440 ) ) {
+		padding: 0;
+	}
+}
+
+/**
+ * Tabs wrapper style - this element will scroll, and contains the tab navigation.
+ *
+ * Expected Usage:
+ * @include tabs-wrap;
+ */
+@mixin tabs-wrap {
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+}
+
+/**
+ * Tabs container style - this element wraps the tab navigation buttons.
+ *
+ * Expected Usage:
+ * @include tabs;
+ */
+@mixin tabs {
+	@include background-color( --color-blue-lighter );
+
+	border-radius: px-to-rem( 40 );
+	padding: $spacing-em;
+	list-style: none;
+	display: inline-flex;
+	margin-right: $spacing-em-x2;
+}
+
+/**
+ * Tab style - Individual tab buttons.
+ *
+ * Expected Usage:
+ * @include tab;
+ */
+@mixin tab {
+	@include cancel-button-styles;
+	@include color( --color-blue-darker );
+
+	display: block;
+	font-family: $font-family-bold;
+	font-weight: 700;
+	padding: $spacing-rem $spacing-rem-x2;
+	border-radius: px-to-rem( 100 );
+	cursor: pointer;
+
+	// Ensure that buttons don't wrap as we want the navigation to overflow and scroll.
+	white-space: nowrap;
+
+	@include mq( $from: medium ) {
+		padding: $spacing-rem $spacing-rem-x3;
+	}
+
+	@include mq( $from: xlarge ) {
+		padding: px-to-rem( 12 ) $spacing-rem-x4;
+	}
+
+	&:hover,
+	&:focus {
+		@include background-color(--color-white );
+
+		span {
+			position: relative;
+
+			// Use an absolutely positioned element to control the underline so we can adjust the position.
+			&::after {
+				content: "";
+				display: block;
+				border-bottom: px-to-em( 2 ) solid;
+				width: 100%;
+				position: absolute;
+				bottom: 10%;
+			}
+		}
+
+	}
+
+	&.active {
+		@include background-color( --color-blue-darker );
+		@include color( --color-white );
+
+		span::after {
+			display: none;
+		}
+	}
+}

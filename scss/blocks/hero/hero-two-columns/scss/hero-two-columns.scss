@@ -1,0 +1,112 @@
+.hero-two-columns-container {
+  background-color: $color-white-primary;
+  margin: $spacing-em-x2 auto;
+  width: 100%;
+
+  .two-columns-hero-container {
+    width: $content-width-large;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    @include mq( $until:medium ) {
+      flex-flow: column;
+      width: 375px;
+    }
+
+    @include mq( $from:medium, $until:content-large ) {
+      width: $content-width-sm;
+    }
+
+    .hero-two-columns-title-container {
+      width: 458px;
+      margin: $spacing-em-x15 0;
+
+      @include mq( $until:content-large ) {
+        width: 345px;
+        margin: $spacing-em-x2 0;
+
+      }      
+
+      .hero-two-columns-title-intro {
+        @include heading-five;
+        color: $color-grey-medium;
+        margin-top: 0;
+        margin-bottom: $spacing-em-x2;
+        opacity: 0.5;
+      }
+
+      .hero-two-columns-main-title {
+        @include heading-one;
+        color: $color-grey;
+        margin-bottom: $spacing-em-x2;
+        margin-top: 0;
+
+      }
+
+      .hero-two-columns-paragraph {
+        @include default-text;
+        color: $color-grey;
+        margin-bottom: $spacing-em-x2;
+        margin-top: 0;
+      }
+    }
+  }
+  .image-hero-two-columns-container {
+    display: inline-block;
+    width: 555px;
+    height: 555px;
+    background-color: $color-green-lighter;
+    @include border-radius;
+
+    @include mq( $until:medium ) {
+      margin-right: 0;
+      margin-top: $spacing-em-x8;
+      width: 375px;
+      height: 194px;
+    }
+
+    @include mq( $from:medium, $until:content-large ) {
+      height: 345px;
+      width: 345px;
+    }
+
+    .landscape {
+      width: 555px;
+      height: 312px; 
+      @include border-radius;
+      position: relative;
+      top: 121px;
+      right: 64px;
+
+      @include mq( $until:medium ) {
+        height: 194px;
+        width: 345px;
+        top: -22px;
+        left: 15px;
+      }
+
+      @include mq( $from:medium, $until:content-large ) {
+        top: 50px;
+        right:24px;
+        height: 194px;
+        width: 345px;
+      }
+    } 
+
+    .square {
+      width: 555px;
+      height: 555px;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      @include border-radius;
+
+      @include mq( $until:medium ) {
+        width: 345px;
+        height: 345px;
+      }
+    } 
+  }
+}

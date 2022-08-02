@@ -1,0 +1,74 @@
+.standard-page-hero-container {
+  background: $color-grey-lightest;
+  @include border-radius;
+  width: 100%;
+  margin: $spacing-em-x2 auto;
+
+  .standard-page-hero-title-container { 
+
+    @include section-padding-top-bottom;
+    width: $content-width-hero-home;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mq( $until:medium ) {
+      width: 345px;
+      text-align: left;
+    }
+
+    @include mq( $from:medium, $until:content-large ) {
+      width: 720px;
+    }
+
+    .standard-page-hero-title-intro {
+      @include heading-five;
+      margin: $spacing-em-x2 0px;
+      color: $color-grey;
+    }
+
+    .standard-page-hero-main-title {
+      font-family: $font-family-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-lg-display-big;
+      line-height: $line-height-h1;
+      width: 1264px;
+      color: $color-grey;
+      margin: 0 auto $spacing-em;
+
+      @include mq( $until:medium ) {
+        font-size: $font-size-xs-display-big;
+        width: 313px;
+      }
+
+      @include mq( $from:medium, $until:content-large ){
+        font-size: $font-size-xs-display-big;
+        width: 624px;
+      }
+    }
+
+    .standard-page-hero-paragraph {
+      font-family: $font-family-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-lg-h4;
+      line-height: $line-height-h4;
+      margin: 0px auto;
+      width: 748px;
+      color: $color-grey;
+
+      @include mq( $until:medium ) {
+        font-size: font-size-xs-h4;
+        line-height: $line-height-h4;
+        width: 313px;
+        margin: 0;
+      }
+
+      @include mq( $from:medium, $until:content-large ){
+        font-size: $font-size-xs-h4;
+        line-height: $line-height-h4;
+        width: 624px;
+      }      
+    }
+  }
+}

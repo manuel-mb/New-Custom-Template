@@ -1,0 +1,195 @@
+/**
+ * SASS Mixins for layout.
+ *
+ * @package SCCA\Theme.
+ */
+
+/**
+ * This is the main outer grid layout that controls the positioning of the header.
+ * This differs from other grids used because there is a fixed margin each side.
+ *
+ * This Grid should consist of 3 columns.
+ */
+@mixin header-container-columns {
+	display: grid;
+	display: -ms-grid;
+
+	-ms-grid-columns: $container-gutter-xs 1fr $container-gutter-xs;
+	grid-template-columns:
+		[body-start]
+		$container-gutter-xs
+		[container-max-start]
+		1fr
+		[container-max-end]
+		$container-gutter-xs
+		[body-end];
+
+	@include mq( $from: xlarge ) {
+		-ms-grid-columns: $container-gutter-xlg 1fr $container-gutter-xlg;
+		grid-template-columns:
+			[body-start]
+			$container-gutter-xlg
+			[container-max-start]
+			1fr
+			[container-max-end]
+			$container-gutter-xlg
+			[body-end];
+	}
+}
+
+/**
+ * This is the general outer grid layout for any area that requires the max content width
+ * and collapsible gutters. 
+ */
+
+@mixin site-container-columns {
+	display: grid;
+	display: -ms-grid;
+	-ms-grid-columns: 1fr $content-width-large 1fr;
+	grid-template-columns:
+		[body-start]
+		minmax( $container-gutter-xs, 1fr )
+		[container-max-start]
+		minmax( px-to-em( 288 ), $content-width-large )
+		[container-max-end]
+		minmax( $container-gutter-xs, 1fr )
+		[body-end];
+}
+
+/**
+ * This is the main content container that controls the positioning of
+ * content within the page.
+ *
+ * This Grid is based on site-container-columns above but with additional
+ * columns for more content width options.
+ */
+
+@mixin content-container-columns {
+	display: grid;
+	display: -ms-grid;
+	grid-template-columns:
+		[container-start]
+		minmax( $container-gutter-xs, 1fr )
+		[content-start]
+		0
+		[content-narrow-start]
+		minmax( px-to-em( 288 ), $content-width-sm )
+		[content-narrow-end]
+		0
+		[content-end]
+		minmax( $container-gutter-xs, 1fr )
+		[container-end];
+
+	@include mq( $from: medium ) {
+		grid-template-columns:
+			[container-start]
+			minmax( $container-gutter-xs, 1fr )
+			[content-start]
+			px-to-em( 86 )
+			[content-narrow-start]
+			minmax( px-to-em( 288 ), $content-width-sm )
+			[content-narrow-end]
+			px-to-em( 86 )
+			[content-end]
+			minmax( $container-gutter-xs, 1fr )
+			[container-end];
+	}
+
+	@include mq( $from: content-large ) {
+		-ms-grid-columns: 1fr px-to-em( 195 ) $content-width-sm px-to-em( 195 ) 1fr;
+		grid-template-columns:
+			[container-start]
+			minmax( $container-gutter-xs, 1fr )
+			[content-start]
+			px-to-em( 195 )
+			[content-narrow-start]
+			minmax( px-to-em( 288 ), $content-width-sm )
+			[content-narrow-end]
+			px-to-em( 195 )
+			[content-end]
+			minmax( $container-gutter-xs, 1fr )
+			[container-end];
+	}
+}
+
+
+/**
+ * Applies the default amount of section spacing to the top of each block.
+ * Rem is used so it can be applied to both sections and typography blocks directly.
+ */
+ 
+@mixin section-margin( $position: top ) {
+	@if #{$position} == top {
+		margin-top: $spacing-rem-x6;
+
+		@include mq( $from: medium ) {
+			margin-top: $spacing-rem-x8;
+		}
+
+		@include mq( $from: content-large ) {
+			margin-top: $spacing-rem-x12;
+		}
+	} @else if #{$position} == bottom {
+		margin-bottom: $spacing-rem-x6;
+
+		@include mq( $from: medium ) {
+			margin-bottom: $spacing-rem-x8;
+		}
+
+		@include mq( $from: content-large ) {
+			margin-bottom: $spacing-rem-x12;
+		}
+	}
+}
+
+/**
+ * This applied to elements within the different news listing sections.
+ */
+
+@mixin news-elements-top-margin {
+	margin-top: $spacing-rem;
+
+	@include mq( $from: content-large ) {
+		margin-top: $spacing-rem-x3;
+	}
+}
+
+@mixin news-posts-top-margin {
+	margin-top: $spacing-rem-x6;
+
+	@include mq( $from: medium ) {
+		margin-top: $spacing-rem-x8;
+	}
+}
+
+/**
+ * Applies the default amount of top and bottom padding needed for blocks.
+ *
+ * This applies padding instead of margin for blocks that have colours
+ * applied to the background so need both margin and padding setting.
+ */
+
+@mixin section-padding-top-bottom {
+	padding-top: $spacing-em-x6;
+	padding-bottom: $spacing-em-x6;
+
+	@include mq( $from: medium ) {
+		padding-top: $spacing-em-x8;
+		padding-bottom: $spacing-em-x8;
+	}
+
+	@include mq( $from: content-large ) {
+		padding-top: $spacing-em-x12;
+		padding-bottom: $spacing-em-x12;
+	}
+}
+
+/**
+ * Set to full-width within the block editor.
+ */
+
+@mixin editor-full-width {
+	margin-left: -10px;
+	margin-right: -10px;
+	max-width: none;
+}

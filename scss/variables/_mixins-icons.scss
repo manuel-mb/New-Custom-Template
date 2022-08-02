@@ -1,0 +1,86 @@
+/**
+ * SASS Mixins for Icons.
+ *
+ * These are icons that are used in buttons, link blocks and content chips.
+ *
+ * @package SCCA\Theme.
+ */
+
+/**
+ * Icon Size.
+ * Abstracted styles to create the space for an icon to display.
+ * This is applied to the generic .has-icon class.
+ *
+ * Expected Usage:
+ * @include icon-size;
+ * @include icon-size( small );
+ *
+ * @param $size String Specifies the icon size. Icons are either 16px or 24px.
+ */
+@mixin icon-size(
+	$size: large
+) {
+	content: "";
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: relative;
+
+	@if $size == large {
+		background-size: $icon-large $icon-large;
+		width: $icon-large;
+		height: $icon-large;
+	}
+
+	@if $size == small {
+		background-size: $icon-small $icon-small;
+		width: $icon-small;
+		height: $icon-small;
+	}
+}
+
+/**
+ * Icon Style.
+ * Sets the icon to use, the colour of the icons and the viewbox for the SVG.
+ * This is applied in the class that defines the icon type. For example is-style-download.
+ * and inside buttons where icons are an option.
+ *
+ * Expected Usage:
+ * @include icon-style( file-download, $color-blue-primary );
+ *
+ * @param $icon String Specifies the icon.
+ * @param $color String Specifies the icon colour.
+ */
+@mixin icon(
+	$color: $color-mc-white,
+	$icon: video,
+) {
+	// Used for download buttons and link block.
+	@if $icon == download-arrow {
+		background-image: svg-encode( $vb-24-24, $color, $draw-arrow-download );
+	}
+
+	@if $icon == external-link {
+		background-image: svg-encode( $vb-24-24, $color, $draw-external-link );
+	}
+
+	@if $icon == file-download {
+		background-image: svg-encode( $vb-24-24, $color, $draw-file-download );
+	}
+
+	@if $icon == podcast {
+		background-image: svg-encode( $vb-24-24, $color, $draw-podcast );
+	}
+
+	@if $icon == right-arrow {
+		background-image: svg-encode( $vb-24-24, $color, $draw-arrow-link );
+	}
+
+	@if $icon == video {
+		background-image: svg-encode( $vb-16-16, $color, $draw-video-solid );
+	}
+
+	@if $icon == webinar {
+		background-image: svg-encode( $vb-16-16, $color, $draw-webinar );
+	}
+}
