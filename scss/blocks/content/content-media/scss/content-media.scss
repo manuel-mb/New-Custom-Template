@@ -15,45 +15,45 @@
 
     @include mq( $until:medium ) {
       flex-flow: column;
-      width: px-to-rem( 345 );
+      width: px-to-em( 345 );
     }
 
     @include mq( $from:medium, $until:content-large  ) {
       flex-flow: row;
-      width: px-to-rem( 768 );
+      width: px-to-em( 768 );
     }
 
     .image-media-content-container {
-      margin-right: px-to-rem( 127 );
+      margin-right: px-to-em( 127 );
 
       @include mq( $until:medium ) {
         margin-right: 0;
       }
 
       @include mq( $from:medium, $until:content-large  ) {
-        margin-right: px-to-rem( 30 );
+        margin-right: px-to-em( 30 );
       }
       
       .square {
-        width: px-to-rem( 555 );
-        height: px-to-rem( 555 );
+        width: px-to-em( 555 );
+        height: px-to-em( 555 );
         border-radius: $border-radius-medium;
 
         @include mq( $until:content-large ) {
-          width: px-to-rem( 345 );
-          height: px-to-rem( 345 );
+          width: px-to-em( 345 );
+          height: px-to-em( 345 );
           border-radius: $border-radius;
         }
       }
 
       .landscape {
-        height: px-to-rem( 311 );
-        width: px-to-rem( 555 );
+        height: px-to-em( 311 );
+        width: px-to-em( 555 );
         border-radius: $border-radius-medium;
 
         @include mq( $until:content-large ) {
-          height: px-to-rem( 200 );
-          width: px-to-rem( 345 );
+          height: px-to-em( 200 );
+          width: px-to-em( 345 );
           border-radius: $border-radius;
         }
       }
@@ -64,30 +64,30 @@
 
       .image-media-content-container {
         margin-right: 0;
-        margin-left: px-to-rem( 127 );
+        margin-left: px-to-em( 127 );
 
         @include mq( $until:medium ) {
           margin-left: 0;
         }
 
         @include mq( $from:medium, $until:content-large  ) {
-          margin-left: px-to-rem( 30 );
+          margin-left: px-to-em( 30 );
         }
       }
     }
   }
 
   .text-media-content-container {
-    margin-top: px-to-rem( 50 );
-    width: px-to-rem( 458 );
+    margin-top: px-to-em( 50 );
+    width: px-to-em( 458 );
 
     @include mq( $until:content-large ) {
       margin-top: 0;
-      width: px-to-rem( 345 );
+      width: px-to-em( 345 );
     }
 
     &.landscape {
-      margin-top: px-to-rem( 80 );
+      margin-top: px-to-em( 80 );
 
       @include mq( $until:content-large ) {
         margin-top: 0;

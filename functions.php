@@ -168,6 +168,18 @@ function manuel_scripts() {
 add_action( 'wp_enqueue_scripts', 'manuel_scripts' );
 
 /**
+ * Enqueue block JavaScript and CSS for the editor
+ */
+function my_block_plugin_editor_css() {
+	
+    wp_enqueue_style( 'manuel-editor-style', get_template_directory_uri() . '/css/style.css', array(), time() );
+
+}
+
+// Hook the enqueue functions into the editor
+add_action( 'enqueue_block_editor_assets', 'my_block_plugin_editor_css' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

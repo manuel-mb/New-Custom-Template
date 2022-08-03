@@ -103,7 +103,7 @@
       background-color: transparent;
       @include border-radius;
 
-      @include mq( $until:medium ) {
+      @include mq( $until:content-large ) {
         width: 345px;
         height: 345px;
       }

@@ -1,209 +1,143 @@
 .content-in-page-promo-title-container {
-    width: 1392px;
-    margin: 64px auto;
+    width: $content-width-max-xlg;
+    margin: $spacing-em-x2 auto;
+
+    @include mq( $until:medium ) {
+      width: px-to-em( 345 );
+    }
+
+    @include mq( $from:medium, $until:content-large  ) {
+      width: px-to-em( 768 );
+    }
 
     .content-in-page-promo-title {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 44px;
-      line-height: 1.2;
-      color: #0B56A8;
-      margin: 0;
+      @include heading-one;
+      color: $color-blue-dark;
+      margin-bottom: $spacing-em-x2;
     }
 
     .content-in-page-promo-paragraph {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 1.5;
-      color: #525355;
-      margin: 16px 0px;
+      @include default-text;
+      color: $color-grey;
+      margin-bottom: $spacing-em-x2;
+      margin-top: 0;
     }
 }
 
 .content-in-page-promo-container {
-  width: 1392px;
-  height: 783px;
-  border-radius: 16px;
+  width: $content-width-max-xlg;
+  height: px-to-em( 783 );
+  @include border-radius;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 16px auto;
+  margin: $spacing-em-x2 auto;
+
+  @include mq( $until:medium ) {
+    width: px-to-em( 345 );
+    height: px-to-em( 524 );
+  }
+
+  @include mq( $from:medium, $until:content-large  ) {
+    width: px-to-em( 768 );
+    height: px-to-em( 405 );
+  }
 
   .content-in-page-promo {
     height: auto;
-    width: 555px;
-    background-color: #fff;
-    box-shadow: 0px 4px 16px rgba(82, 83, 85, 0.20);
-    border-radius: 16px;
+    width: px-to-em( 555 );
+    background-color: $color-white-primary;
+    box-shadow: $box-shadow-spread $box-shadow-color-grey;
+    @include border-radius;
     position: relative;
-    padding: 24px;
-    top: 64px;
-    left: 64px;
+    padding: $spacing-em-x3;
+    top: px-to-em( 64 );
+    left: px-to-em( 64 );
+
+    @include mq( $until:medium ) {
+      width: px-to-em( 313 );
+      top: px-to-em( 255 );
+      left: px-to-em( 15 );
+    }
+
+    @include mq( $from:medium, $until:content-large  ) {
+      width: px-to-em( 300 );
+      top: px-to-em( 32 );
+      left: px-to-em( 32 );
+    }
 
     &.top-right {
-      left: 724px;
-      top: 64px;
-      margin-left: 0;    
+      left: px-to-em( 724 );
+      top: px-to-em( 64 );
+      margin-left: 0;
+
+      @include mq( $until:medium ) {
+        top: px-to-em( 255  );
+        left: px-to-em( 15 );
+      }
+
+      @include mq( $from:medium, $until:content-large  ) {
+        left: px-to-em( 390 );
+        top: px-to-em( 32 );
+        margin-left: 0;
+      }    
     }
 
     &.bottom-right {
-      left: 724px;
-      top: 565px;
+      left: px-to-em( 724 );
+      top: px-to-em( 565 );
       margin-left: 0;
+
+      @include mq( $until:medium ) {
+        top: px-to-em( 255 );
+        left: px-to-em( 15 );
+      }
+
+      @include mq( $from:medium, $until:content-large  ) {
+        left: px-to-em( 390 );
+        top: px-to-em( 175 );
+        margin-left: 0; 
+      } 
     }
 
     &.bottom-left {
-      top: 565px;
+      top: px-to-em( 565 );
+
+      @include mq( $until:medium ) {
+        top: px-to-em( 255 );
+        left: px-to-em( 15 );    
+      }
+
+      @include mq( $from:medium, $until:content-large  ) {
+        top: px-to-em( 175 );
+      } 
     } 
 
     .content-in-page-promo-title {
-      width: 507px;
-      font-family: 'SC Prosper Sans';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 36px;
-      margin: 8px 0px 16px;
+      width: px-to-em( 507 );
+      @include heading-four;
+      margin-bottom: $spacing-em-x2;
+
+      @include mq( $until:medium ) {
+        width: px-to-em( 256 );   
+      }
+
+      @include mq( $from:medium, $until:content-large  ) {
+        width: px-to-em( 234 );
+      }
     }
 
     .content-in-page-promo-paragraph {
-      width: 507px;
-      font-family: 'SC Prosper Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 22px;
-      margin: 8px 0px 16px;
-    }
-  }
-}
+      width: px-to-em( 507 );
+      @include body-sm-text;
+      margin-bottom: $spacing-em-x2;
 
-@media screen and (max-width: 767px) {
-  .content-in-page-promo-title-container {
-    width: 345px;
-
-    .content-in-page-promo-title {
-      font-size: 33px;
-      line-height: 40px;
-      margin: 64px 0;
-    }
-
-    .content-in-page-promo-paragraph {
-      font-size: 19px;
-      line-height: 28px;
-      margin: 20px 0px;
-    }
-  }
-
-  .content-in-page-promo-container {
-      width: 345px;
-      height: 524px;
-
-    .content-in-page-promo {
-      height: auto;
-      width: 313px;
-      background: linear-gradient(360deg, #FFFFFF 82%, rgba(255, 255, 255, 0.3) 100%);
-      box-shadow: 0px 8px 16px rgba(82, 83, 85, 0.2);
-      border-radius: 8px;
-      position: relative;
-      padding: 24px;
-      top: 255px;
-      left: 15px;
-
-      &.top-right {
-        top: 255px;
-        left: 15px;
-           
+      @include mq( $until:medium ) {
+        width: px-to-em( 256 );   
       }
 
-      &.bottom-right {
-        top: 255px;
-        left: 15px;
-      }
-
-      &.bottom-left {
-        top: 255px;
-        left: 15px;
-      } 
-
-      .content-in-page-promo-title {
-        width: 256px;
-        font-size: 23px;
-        line-height: 30px;
-        margin: 16px 0px;
-      }
-
-      .content-in-page-promo-paragraph {
-        width: 256px;
-        font-size: 15px;
-        line-height: 22px;
-        margin: 16px 0px;
+      @include mq( $from:medium, $until:content-large  ) {
+        width: px-to-em( 234 );
       }
     }
   }
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  
-  .content-in-page-promo-title-container {
-      width: 768px;
-
-      .content-in-page-promo-title {
-        font-size: 35px;
-        line-height: 45px;
-        margin: 16px 0px;
-      }
-
-      .content-in-page-promo-paragraph {
-        font-size: 18px;
-        line-height: 27px;
-        margin: 16px 0px;
-      }
-  }
-
-  .content-in-page-promo-container {
-      width: 720px;
-      height: 405px;
-
-    .content-in-page-promo {
-      height: auto;
-      width: 300px;
-      background: #fff;
-      box-shadow: 0px 8px 16px rgba(82, 83, 85, 0.2);
-      border-radius: 8px;
-      position: relative;
-      padding: 24px;
-      top: 32px;
-      left: 32px;
-
-      &.top-right {
-        left: 390px;
-        top: 32px;
-        margin-left: 0;    
-      }
-
-      &.bottom-right {
-        left: 390px;
-        top: 175px;
-        margin-left: 0;
-      }
-
-      &.bottom-left {
-        top: 175px;
-      }
-
-      .content-in-page-promo-title {
-        width: 234px;
-        margin: 0 0 16px;
-      }
-
-      .content-in-page-promo-paragraph {
-        width: 234px;
-        margin: 0 0 16px;
-      }
-    }
-  }
-}
- 
