@@ -18,39 +18,39 @@ $font-family-light: "SC Prosper Sans Light", "Helvetica", "Arial", "Lucida Grand
  * Variables are defined $font-size-mc-{viewport-size}-{text-type}-{text-size}
 */
 
-$font-size-lg-display-big: px-to-rem( 86 );
-$font-size-lg-display: px-to-rem( 69 );
+$font-size-lg-display-big: px-to-em( 86 );
+$font-size-lg-display: px-to-em( 69 );
 
-$font-size-lg-base: px-to-rem( 18 );
+$font-size-lg-base: px-to-em( 18 );
 
-$font-size-lg-body-lg: px-to-rem( 23 );
-$font-size-lg-body-sm: px-to-rem( 15 );
-$font-size-lg-body-xs: px-to-rem( 12 );
+$font-size-lg-body-lg: px-to-em( 23 );
+$font-size-lg-body-sm: px-to-em( 15 );
+$font-size-lg-body-xs: px-to-em( 12 );
 
-$font-size-lg-h1: px-to-rem( 55 );
-$font-size-lg-h2: px-to-rem( 44 );
-$font-size-lg-h3: px-to-rem( 35 );
-$font-size-lg-h4: px-to-rem( 28 );
+$font-size-lg-h1: px-to-em( 55 );
+$font-size-lg-h2: px-to-em( 44 );
+$font-size-lg-h3: px-to-em( 35 );
+$font-size-lg-h4: px-to-em( 28 );
 
-$font-size-breadcrumb: px-to-rem( 10 );
+$font-size-breadcrumb: px-to-em( 10 );
 
 /*
  * Font Sizes: XS Viewport (≥ 320px)
  * Variables are defined $font-size-{viewport-size}-{text-type}-{text-size}
  */
-$font-size-xs-display-big: px-to-rem( 48 );
-$font-size-xs-display: px-to-rem( 44 );
+$font-size-xs-display-big: px-to-em( 48 );
+$font-size-xs-display: px-to-em( 44 );
 
-$font-size-xs-base: px-to-rem( 16 );
+$font-size-xs-base: px-to-em( 16 );
 
-$font-size-xs-body-lg: px-to-rem( 19 );
-$font-size-xs-body-sm: px-to-rem( 13 );
-$font-size-xs-body-xs: px-to-rem( 11 );
+$font-size-xs-body-lg: px-to-em( 19 );
+$font-size-xs-body-sm: px-to-em( 13 );
+$font-size-xs-body-xs: px-to-em( 11 );
 
-$font-size-xs-h1: px-to-rem( 40 );
-$font-size-xs-h2: px-to-rem( 33 );
-$font-size-xs-h3: px-to-rem( 28 );
-$font-size-xs-h4: px-to-rem( 23 );
+$font-size-xs-h1: px-to-em( 40 );
+$font-size-xs-h2: px-to-em( 33 );
+$font-size-xs-h3: px-to-em( 28 );
+$font-size-xs-h4: px-to-em( 23 );
 
 /*
  * Line heights
@@ -215,14 +215,14 @@ $box-shadow-color-blue: rgba( $color-blue-primary, 0.2 );
  */
 
 // All spacing, both section and typography are multiples of 8 so we stick to these em and rem optionss.
-$spacing-em: px-to-em( 8 );
-$spacing-em-x2: px-to-em( 16 );
-$spacing-em-x3: px-to-em( 24 );
-$spacing-em-x4: px-to-em( 32 );
-$spacing-em-x6: px-to-em( 48 );
-$spacing-em-x8: px-to-em( 64 );
-$spacing-em-x12: px-to-em( 96 );
-$spacing-em-x15: px-to-em( 120 );
+$spacing-em: px-to-rem( 8 );
+$spacing-em-x2: px-to-rem( 16 );
+$spacing-em-x3: px-to-rem( 24 );
+$spacing-em-x4: px-to-rem( 32 );
+$spacing-em-x6: px-to-rem( 48 );
+$spacing-em-x8: px-to-rem( 64 );
+$spacing-em-x12: px-to-rem( 96 );
+$spacing-em-x15: px-to-rem( 120 );
 
 
 // Left and right gutters ouside all containers. Used with CSS Grids only.
@@ -238,134 +238,40 @@ $container-gutter-xlg: px-to-em( 24 );
 /**
  * The max-width of most content within containers.
  */
-$content-width-max-xlg: px-to-em( 1392 ); // Header & Footer width. In page promos.
-$content-width-large: px-to-em( 1140 ); // Standard content container, across all pages, often below the header.
-$content-width-med: px-to-em( 945 ); // Quotes, search results container, sliders with "full width" slides
-$content-width-sm: px-to-em( 750 ); // Text content on a non-article page
-$content-width-xs: px-to-em( 320 ); // Small column width on two column layouts.
+$content-width-max-xlg: px-to-rem( 1392 ); // Header & Footer width. In page promos.
+$content-width-large: px-to-rem( 1140 ); // Standard content container, across all pages, often below the header.
+$content-width-med: px-to-rem( 945 ); // Quotes, search results container, sliders with "full width" slides
+$content-width-sm: px-to-rem( 750 ); // Text content on a non-article page
+$content-width-xs: px-to-rem( 320 ); // Small column width on two column layouts.
 
-$content-width-one-quarter: px-to-em( 263 ); // 1/4 width content (e.g. cards, slides), header subnav
-$content-width-one-third: px-to-em( 360 ); // 1/3 width content (e.g. cards, slides), article pages sidebar container
-$content-width-one-half: px-to-em( 555 ); // 1/2 width content (e.g. cards, slides), in page promo inset card
+$content-width-one-quarter: px-to-rem( 263 ); // 1/4 width content (e.g. cards, slides), header subnav
+$content-width-one-third: px-to-rem( 360 ); // 1/3 width content (e.g. cards, slides), article pages sidebar container
+$content-width-one-half: px-to-rem( 555 ); // 1/2 width content (e.g. cards, slides), in page promo inset card
 
-$content-width-hero-home: px-to-em( 1440 ); // Home Hero container
-$content-width-faqs: px-to-em( 1100 ); // FAQ container
-$content-width-article: px-to-em( 653 ); // Article pages content container
-$content-width-cookie-bar: px-to-em( 380 ); // Cookie Bar
+$content-width-hero-home: px-to-rem( 1440 ); // Home Hero container
+$content-width-faqs: px-to-rem( 1100 ); // FAQ container
+$content-width-article: px-to-rem( 653 ); // Article pages content container
+$content-width-cookie-bar: px-to-rem( 380 ); // Cookie Bar
 
-$eyebrow-height: px-to-em( 26 );
-$header-container-height: px-to-em( 108 );
+$eyebrow-height: px-to-rem( 26 );
+$header-container-height: px-to-rem( 108 );
 $header-height: $header-container-height + $eyebrow-height;
 
 $menu-mobile-nav-width: calc( 100vw - 2rem );
 $menu-mobile-bg-width: calc( 100vw + 2rem );
 $menu-mobile-links-width: calc( 100% - $spacing-em-x6 );
 
-$logo-desktop-height: px-to-em( 62 );
-$logo-desktop-width: px-to-em( 157 );
+$logo-desktop-height: px-to-rem( 62 );
+$logo-desktop-width: px-to-rem( 157 );
 
-$border-radius: px-to-em( 8 );
-$border-radius-medium: px-to-em( 12 );
-$border-radius-large: px-to-em( 20 );
+$border-radius: px-to-rem( 8 );
+$border-radius-medium: px-to-rem( 12 );
+$border-radius-large: px-to-rem( 20 );
 
 $aspect-ratio-portrait: calc( 504px / 360px ) * 100%;
 $aspect-ratio-landscape:calc( 312px / 555px ) * 100%;
 $aspect-ratio-square: calc( 360px / 360px ) * 100%;
 
-/*
- * Image widths for news archive featured images.
- */
-// Used for popular news layout in archive.
-$news-thumbnail-sq-sm: px-to-em( 57 );
-$news-thumbnail-sq-lg: px-to-em( 119 );
-
-// Used for latest news layout in archive.
-$news-thumbnail-rec-xs: px-to-em( 100 );
-$news-thumbnail-rec-sm: px-to-em( 158 );
-$news-thumbnail-rec-md: px-to-em( 263 );
-
-/*
- * Card widths.
- */
-$card-width-small-mobile: px-to-rem( 265 ); // Used for Promo, standard cards small.
-$card-width-large-mobile: px-to-rem( 305 ); // Used for large and square standard cards.
-
-// 3 per row. Used for Standard cards square.
-$card-width-small-tablet: px-to-em( 220 );
-// 2 per row with 1/3 of next card showing.
-// Used for standard cards small & features cards in content & In Page Promo blocks.
-$card-width-medium-tablet: px-to-em( 282 );
-// 2 per row. Used for Promo, standard large cards and feature cards in hero.
-$card-width-large-tablet: px-to-em( 345 );
-
-// 4 per row. Used for standard cards small.
-$card-width-small-desktop: px-to-em( 263 );
-// 3 per row. Used for standard cards square, promo cards.
-$card-width-medium-desktop: px-to-em( 360 );
-// 2 per row. Used for standard cards large, all feature cards in two columns, share price card.
-$card-width-large-desktop: px-to-em( 555 );
-
-$column-gap: px-to-rem( 30 );
-$news-single-column-gap: px-to-em( 126 );
-
-$form-field-width-large: px-to-em( 360 );
-$form-field-width-small: px-to-em( 290 );
-
-// Although we can set these on the image itself by registering the image size,
-// we need these values in multiple places in the styles too.
-$card-link-block-image-size-sm: px-to-em( 48 );
-$card-link-block-image-size-lg: px-to-em( 96 );
-
-/**
- * Carousel sizing
- */
-$carousel-intro-medium: px-to-em( 570 );
-$carousel-intro-large: px-to-em( 754 );
-
-/**
- * Tiles and Grid sizing
- */
-$card-width-double-tile-mobile: px-to-em( 252 );
-$card-width-double-tile-desktop: px-to-em( 278 );
-$card-width-promo-tile-mobile: px-to-em( 303 );
-$card-width-promo-tile-desktop: $card-width-medium-desktop;
-$card-height-tile-small-mobile: px-to-em( 204 );
-$card-height-tile-small-desktop: px-to-em( 236 );
-
-/**
- * In-page promo carousel sizing
- */
-
-$carousel-promo-width-mobile: px-to-em( 320 );
-$carousel-promo-width-tablet: px-to-em( 720 );
-$carousel-promo-width-desktop: px-to-em( 1074 );
-
-/**
- * Accordion sizing
- */
-$accordion-wide-image-size: 19 * $spacing-em;
-
-/**
- * Quote sizing
- */
-$quote-offset-medium: px-to-em( 85 );
-
-/**
- * Lightbox
- */
-$lightbox-width-md: px-to-em( 736 );
-$lightbox-width-lg: px-to-em( 944 );
-
-/**
- * Icons
- */
-$circle-icon-size: px-to-em( 51 );
-
-/**
- * Admin bar sizes.
- */
-$adminbar-height-mobile: px-to-em( 46 );
-$adminbar-height-desktop: px-to-em( 32 );
 
 /**
  * 5. Z-index values.

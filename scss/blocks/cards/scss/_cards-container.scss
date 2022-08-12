@@ -1,37 +1,45 @@
 .card-container {
-    background: #E7F1FD;
+    background: $color-blue-lightest;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: $spacing-em-x2;
      
     &.is-style-white {
-        background: #fff;
+        background: $color-white-primary;
     }
     .card-wrapper { 
-        padding: 96px 0 96px 150px;
+        @include section-padding-top-bottom;
+        padding-left: px-to-rem( 150 );
+
+        @include mq( $until:medium ){
+            padding-left: px-to-em( 15 );
+        }
+
+        @include mq( $from:medium, $until:content-large ){
+            padding-left: px-to-em( 24 );
+        }
 
         .card-titles-container {
-            width: 754px;
+            width: px-to-rem( 754 );
             margin-right: 0;
-            display: inline-block;
+            text-align: left;
 
+            @include mq( $until:medium ){
+              width: px-to-rem( 345 );
+            }
+
+            @include mq( $from:medium, $until:content-large ){
+               width: px-to-rem( 560 );
+            }
             .card-container-title {
-                font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 44px;
-                line-height: 1.2;
-                color: #0B56A8;
-                margin: 0;
+                @include heading-two;
+                color: $color-blue-dark;
+                margin-bottom: $spacing-em-x2;
             }
 
             .card-container-paragraph {
-                font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 1.5; 
-                color: #525355;
-                margin: 16px 0px;
+                @include default-text;
+                color: $color-grey;
+                margin-bottom: $spacing-em-x2;
             }
         }
 
@@ -39,10 +47,10 @@
             .slide {
                 
                 .slick-next {
-                    width: 51px;
-                    height: 51px;
+                    width: px-to-rem( 51 );
+                    height: px-to-rem( 51 );
                     border-radius: 100%;
-                    background-color: #0473EA;
+                    background-color: $color-blue-primary;
                     background-image: url(../assets/forward.svg);
                     background-repeat: no-repeat;
                     background-position-x: center;
@@ -50,12 +58,17 @@
                     transition: all .3s;
                     cursor: pointer;
                     border: none;
-                    top: -65px;
+                    top: px-to-rem( -65 );
                     position: absolute;
-                    right: 150px;
+                    right: px-to-rem( 150 );
+
+                    @include mq( $until:medium ) {
+
+                        display: none !important;
+                    }
 
                     &:hover {
-                        background-color: #061D33;
+                        background-color: $color-blue-darkest;
                     }
 
                     &:before {
@@ -67,17 +80,17 @@
                         cursor: not-allowed;
 
                         &:hover {
-                            background-color: #0473EA;
+                            background-color: $color-blue-primary;
                             opacity: 0.4;
                         }
                     }
                 }
 
                 .slick-prev {
-                    width: 51px;
-                    height: 51px;
+                    width: px-to-rem( 51 );
+                    height: px-to-rem( 51 );
                     border-radius: 100%;
-                    background-color: #0473EA;
+                    background-color: $color-blue-primary;
                     background-image: url(../assets/backward.svg);
                     background-repeat: no-repeat;
                     background-position-x: center;
@@ -85,13 +98,18 @@
                     transition: all .3s;
                     cursor: pointer;
                     border: none;
-                    top: -65px;
+                    top: px-to-rem( -65 );
                     position: absolute;
-                    right: 217px;
+                    right: px-to-rem( 217 );
                     left: unset;
 
+                    @include mq( $until:medium ) {
+
+                        display: none !important;
+                    }
+
                     &:hover {
-                        background-color: #061D33;
+                        background-color: $color-blue-darkest;
                     }
 
                     &:before {
@@ -103,7 +121,7 @@
                         cursor: not-allowed;
 
                         &:hover {
-                            background-color: #0473EA;
+                            background-color: $color-blue-primary;
                             opacity: 0.4;
                         }
 
@@ -111,148 +129,11 @@
                 }
 
                 .slick-list {
-                    padding-left: 4px;
-                    padding-bottom: 24px;
-                    padding-top: 12px;
+                    padding-left: px-to-rem( 4 );
+                    padding-bottom: px-to-rem( 24 );
+                    padding-top: px-to-rem( 12 );
                 }
             }
         }  
-    }
-}
-@media screen and (max-width: 767px) {
-
-    .card-container {
-        width: 100%;
-
-        .card-wrapper { 
-            padding: 48px 15px;
-
-            .card-titles-container {
-                width: 345px;
-                text-align: left;
-
-                .card-container-title {
-                    font-size: 33px;
-                    line-height: 40px;
-                }
-
-                .card-container-paragraph {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-            }
-            .card-cards-container {
-                .slide {
-                    
-                    .slick-next {
-                        display: none !important;
-                    }
-
-                    .slick-prev {
-                        display: none !important;
-                    }
-
-                    .slick-list {
-                        padding-left: 4px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    
-    .card-container {
-        width:100%;
-
-        .card-wrapper {
-            padding: 64px 0 64px 24px;
-
-            .card-titles-container {
-                width: 560px;
-                text-align: left;
-            }
-            .card-cards-container {
-                .slide {
-                
-                    .slick-next {
-                        width: 51px;
-                        height: 51px;
-                        border-radius: 100%;
-                        background-color: #0473EA;
-                        background-image: url(../assets/forward.svg);
-                        background-repeat: no-repeat;
-                        background-position-x: center;
-                        background-position-y: center;
-                        transition: all .3s;
-                        cursor: pointer;
-                        border: none;
-                        top: -65px;
-                        position: absolute;
-                        right: 150px;
-
-                        &:hover {
-                            background-color: #061D33;
-                        }
-
-                        &:before {
-                            display: none;
-                        }
-
-                        &.slick-disabled {
-                            opacity: 0.4;
-                            cursor: not-allowed;
-
-                            &:hover {
-                                background-color: #0473EA;
-                                opacity: 0.4;
-                            }
-                        }
-                    }
-
-                    .slick-prev {
-                        width: 51px;
-                        height: 51px;
-                        border-radius: 100%;
-                        background-color: #0473EA;
-                        background-image: url(../assets/backward.svg);
-                        background-repeat: no-repeat;
-                        background-position-x: center;
-                        background-position-y: center;
-                        transition: all .3s;
-                        cursor: pointer;
-                        border: none;
-                        top: -65px;
-                        position: absolute;
-                        right: 217px;
-                        left: unset;
-
-                        &:hover {
-                            background-color: #061D33;
-                        }
-
-                        &:before {
-                            display: none;
-                        }
-
-                        &.slick-disabled {
-                            opacity: 0.4;
-                            cursor: not-allowed;
-
-                            &:hover {
-                                background-color: #0473EA;
-                                opacity: 0.4;
-                            }
-
-                        }
-                    }
-
-                    .slick-list {
-                        padding-left: 4px;
-                    }
-                }
-            }
-        } 
     }
 }

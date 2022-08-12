@@ -1,97 +1,53 @@
 .accordions-container {
-  width: 1440px;
+  width: 100%;
   background: #ffffff;
-  margin: 20px auto;
+  @include section-padding-top-bottom;
 
   .accordions-titles-container {
-    width: 1140px;
+    width: px-to-rem( 1140 );
     margin: 0 auto;
+    text-align: left;
+    padding: $spacing-em-x4;
+
+    @include mq( $until:medium ){
+      width: px-to-rem( 345 );
+    }
+
+    @include mq( $from:medium, $until:content-large ){
+       width: px-to-rem( 560 );
+    }
 
     .accordions-container-title {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 44px;
-      line-height: 1.2;
-      color: #0B56A8;
-      margin: 0;
+      @include heading-two;
+      color: $color-blue-dark;
+      margin-bottom: $spacing-em-x2;
     }
 
     .accordions-container-paragraph {
-      font-family: "SC Prosper Sans Regular", "Helvetica", "Arial", "Lucida Grande", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 1.5;
-      color: #525355;
-      margin: 16px auto;
-      width: 750px;
+      @include default-text;
+      color: $color-grey;
+      margin-bottom: $spacing-em-x2;
     }
   }
 
   .accordion-container {
-    width: 790px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(4, 115, 234, 0.2);
-    border-radius: 16px;
-    padding: 32px;
-    margin: 32px auto;       
-  }
-} 
+    width: px-to-rem( 750 );
+    background: $color-white-primary;
+    box-shadow: $box-shadow-spread $box-shadow-color-grey;
+    border-radius: $spacing-em-x2;
+    padding: $spacing-em-x4;
+    margin: $spacing-em-x2 auto;
 
-@media screen and (max-width: 767px) { 
-
-  .accordions-container {
-    padding: 48px 0px 48px 0;
-    width: 375px;
-  
-    .accordions-titles-container {
-      width: 345px;
-
-      .accordions-container-title {
-        font-size: 28px;
-        line-height: 36px;
-      }
-
-      .accordions-container-paragraph {
-        font-size: 16px;
-        line-height: 24px;
-        width: 345px;
-        margin: 16px 0;
-      }
+    @include mq( $until:medium ){
+      width: px-to-rem( 345 );
+      border-radius: $spacing-em;
+      padding: $spacing-em-x2;
     }
 
-    .accordion-container {
-      width: 345px;
-      border-radius: 8px;
-      padding: 19px;    
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .accordions-container {
-    padding: 48px 0px 48px 0;
-    width: 768px;
-  
-    .accordions-titles-container {
-      width: 595px;
-
-      .accordions-container-title {
-        font-size: 28px;
-        line-height: 36px;
-      }
-      .accordions-container-paragraph {
-        font-size: 16px;
-        line-height: 24px;
-        width: 345px;
-      }
-    }
-
-    .accordion-container {
-      width: 595px;
-      border-radius: 12px;
-      padding: 16px 24px;    
-    }
+    @include mq( $from:medium, $until:content-large ){
+       width: px-to-rem( 595 );
+       border-radius: $spacing-em-x2;
+       padding: $spacing-em-x3;
+    }       
   }
 }

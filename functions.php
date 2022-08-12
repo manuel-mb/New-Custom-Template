@@ -173,11 +173,16 @@ add_action( 'wp_enqueue_scripts', 'manuel_scripts' );
 function my_block_plugin_editor_css() {
 	
     wp_enqueue_style( 'manuel-editor-style', get_template_directory_uri() . '/css/style.css', array(), time() );
+    wp_enqueue_style( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
+  wp_enqueue_style( 'slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array(), '1.8.1' );
+  wp_enqueue_script( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true );
 
 }
 
 // Hook the enqueue functions into the editor
 add_action( 'enqueue_block_editor_assets', 'my_block_plugin_editor_css' );
+
+
 
 /**
  * Implement the Custom Header feature.

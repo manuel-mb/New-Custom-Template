@@ -1,148 +1,83 @@
 .accordion {
   cursor: pointer;
-  padding: 12px 0;
-  width: 725px;
+  padding: $spacing-em-x2 0;
+  width: px-to-rem( 750 );
   text-align: left;
   outline: none;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: px-to-rem( 1 ) solid $color-grey-light;
   border-top: none;
   border-left: none;
   border-right: none;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
+  background-color: $color-white-primary;
+
+  @include mq( $until:medium ) {
+    width: px-to-rem( 305 );
+  }
+
+  @include mq( $from:medium, $until:content-large ){
+    width: px-to-rem( 574 );
+  }
 
 
   h4{
-    font-family: SC Prosper Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 36px; 
-    color: #525355;
-    margin: 0;
-    width: 638px;
+    @include heading-four;
+    color: $color-grey;
+    margin-bottom: 0;
+    width: px-to-rem( 720 );
+    background-image: url( "../src/images/plus-blue.svg" );
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: px-to-rem( 19 ) px-to-rem( 24 ) px-to-rem( 19 ) 0;
+
+    @include mq( $until:medium ) {
+      width: px-to-rem( 305 );
+    }
+
+    @include mq( $from:medium, $until:content-large ){
+      width: px-to-rem( 574 );
+    }
   
     &.tab-active {
-      font-family: SC Prosper Sans; 
-      font-style: normal;
-      font-weight: normal;
-      font-size: 28px;
-      line-height: 36px;
-      color: #0473EA;
-      margin: 0;
-      width: 638px;
+      color: $color-blue-primary;
+      background-image: url( "../src/images/minus-blue.svg" );
+      background-position: center right;
+      background-repeat: no-repeat;
+      padding: px-to-rem( 19 ) px-to-rem( 44 ) px-to-rem( 19 ) 0;
     }
-  }
-
-  &:after {
-    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Plus@2x.png");
-    font-size: 16px;
-    color: #0473EA;
-    float: right; 
-    transform: scale(.33);
-    right: -15px;
-    position: relative;
-  }
-
-  &.tab-active:after {
-    content: url("/wp-content/plugins/gutenberg-blocks-acf/blocks/assets/img/Minus@2x.png");
-    float: right; 
-    font-size: 16px;
-    color: #0473EA;
-    transform: scale(.33);
-    right: -15px;
-    position: relative;
   }
 }
 
 .tab-active {
-  background-color: #fff;
-  background: #fff;
-  border-bottom: 0px solid #E5E5E5;
+  background: $color-white-primary;
+  border-bottom: none;
 }
 
 .panel {
-  padding: 12px 0;
-  background-color: white;
+  padding: $spacing-em-x2 0;
+  background-color: $color-white-primary;
   display: none;
   overflow: hidden;
-  border-bottom: 1px solid #E5E5E5;
-  width: 725px;
+  border-bottom: px-to-em( 1 ) solid $color-grey-light;
+  width: px-to-rem( 725 );
+
+  @include mq( $until:medium ) {
+    width: px-to-rem( 305 );
+  }
+
+  @include mq( $from:medium, $until:content-large ){
+    width: px-to-rem( 547 );
+  }
 
   p {
-    width: 638px;
-  }
-}
+    width: px-to-rem( 638 );
+    @include default-text;
 
-@media screen and (max-width: 767px) {
-
-  .accordion {
-    width: 305px;
-
-    h4{
-      font-size: 23px;
-      line-height: 50px;
-      width: 273px;
-    
-      &.tab-active {
-        font-size: 23px;
-        line-height: 30px;
-        width: 273px;
-      }
+    @include mq( $until:medium ) {
+      width: px-to-rem( 273 );
     }
 
-    &:after {
-      right: -15px;
-      position: relative;
-    }
-
-    &.tab-active:after {
-      right: -15px;
-      position: relative;
-    }
-  }
-
-  .panel {
-    width: 305px;
-
-    p {
-      width: 273px;
-    }
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .accordion {
-    width: 547px;
-
-    h4{
-      font-size: 23px;
-      line-height: 50px;
-      width: 507px;
-    
-      &.tab-active {
-        font-size: 23px;
-        line-height: 30px;
-        width: 507px;
-      }
-    }
-
-    &:after {
-      right: -15px;
-      position: relative;
-    }
-
-    &.tab-active:after {
-      right: -15px;
-      position: relative;
-    }
-  }
-
-  .panel {
-    width: 547px;
-
-    p {
-      width: 507px;
+    @include mq( $from:medium, $until:content-large ){
+      width: px-to-rem( 507 );
     }
   }
 }
